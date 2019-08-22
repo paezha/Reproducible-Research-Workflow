@@ -27,3 +27,10 @@ a.	Installing the tools
 b.	Learning how to use them
 c.	Becoming comfortable with various tools
 iv.	Writing the documentation:  Writing documentation takes time.  It takes time and discipline to slow yourself down to document your work. 
+
+Hansen, Karen, Alisa Surkis and Karen Yacobucci. (2012). [Data Sharing and Management SNAFU in 3 Short Acts](https://www.youtube.com/watch?v=66oNv_DJuPc). NYU Health Sciences Libraries
+
+
+
+[ESOF 2018 - Enhancing reproducible research - John Ioannidis](https://www.youtube.com/watch?v=fAeLMEmLIoE)
+
