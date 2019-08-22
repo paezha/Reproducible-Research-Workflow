@@ -2,7 +2,7 @@
 
 ## School of Geography and Earth Sciences, McMaster University
 
-## Course Description[^1]
+## Course Description^[1]
 
 Scientific discovery is typically a collective process, as researchers build their work on the preceding efforts of other researchers. This is certainly the case for theory, empirical evidence, and methods, as empirical researchers use analytical techniques developed by methodologists, theoreticians build on up-to-date evidence, and data collection inspires new methods of analysis. The reality is that contemporary research is not possible in isolation. A key element of the web of research relationships is the basic unit of research output, which typically takes the form of a journal paper, book chapter, or report. This unit of output, however, represents only the face of a multilayered process, and by its very nature is limited in the amount of information that it can communicate. 
 
@@ -81,19 +81,19 @@ _Readings_:	No readings this week
 _For discussion_: Principles of open science, advantages, funding and policy environment, journal policies and the publication process, roadmap for course
 
 **Week 2** (Sept. 18)
-Topic:	Software R + RStudio + GitHub  
-Readings:	TBD  
-Activity 1: 	Post a README notice in GitHub and one document with basic operations in R
+_Topic_:	Software R + RStudio + GitHub  
+_Readings_:	TBD  
+_Activity 1_: 	Post a README notice in GitHub and one document with basic operations in R
 
 **Week 3** (Sept. 25)
-Topic:	Data, data, data  
-Readings:	TBD  
-Activity 2: 	The students will develop a plan for a small data collection exercise with guidance from the instructors
+_Topic_:	Data, data, data  
+_Readings_:	TBD  
+_Activity 2_: 	The students will develop a plan for a small data collection exercise with guidance from the instructors
 
 **Week 4** (Oct. 2)  
-Topic:	Data Management Plans (DMP): Principles  
-Readings:	TBD  
-Activity:	No activity this week McMaster Industrial Liaison Office (Patent data?)
+_Topic_:	Data Management Plans (DMP): Principles  
+_Readings_:	TBD  
+_Activity_:	No activity this week McMaster Industrial Liaison Office (Patent data?)
 
 **Week 5** (Oct. 9) 
 _Topic_:	Data Management Plans (DMP): Tools  
@@ -138,7 +138,7 @@ _Activity_:	Final deliverable due on DATE TBD.
 _Topic_:	Public engagement and knowledge mobilization  
 _Readings_:	TBD  
 
-[^1]:
+[1]:
 The University reserves the right to change any aspect of this course outline.
 
 
