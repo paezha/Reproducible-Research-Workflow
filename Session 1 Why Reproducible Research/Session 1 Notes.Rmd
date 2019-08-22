@@ -2,7 +2,9 @@
 title: "Session 1 Notes"
 author: "Antonio Paez and Krysha Dukacz"
 date: "August 22, 2019"
-output: rmarkdown::github_document
+output: 
+  html_document:
+    keep_md: true
 ---
 
 # GEOG 712 Reproducible Research
