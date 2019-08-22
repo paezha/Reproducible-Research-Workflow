@@ -27,4 +27,3 @@ a.	Installing the tools
 b.	Learning how to use them
 c.	Becoming comfortable with various tools
 iv.	Writing the documentation:  Writing documentation takes time.  It takes time and discipline to slow yourself down to document your work. 
-
