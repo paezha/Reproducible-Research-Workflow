@@ -58,9 +58,9 @@ The majority of the cost of Reproducible Research are associated with Time:
 
 4.	End product
 
-An example of a reproducible research [project.](https://github.com/paezha/Non-Orthogonal-and-Non-Linear-Partitions-in-Decision-Trees-via-Interactive-Basis-Functions)
+  + An example of a reproducible research [project.](https://github.com/paezha/Non-Orthogonal-and-Non-Linear-Partitions-in-Decision-Trees-via-Interactive-Basis-Functions)
 
-An example of an open [paper.](https://github.com/Robinlovelace/integrating-gat#abstract)
+  + An example of an open [paper.](https://github.com/Robinlovelace/integrating-gat#abstract)
 
 ### Suggested readings
 
