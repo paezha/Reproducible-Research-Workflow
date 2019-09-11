@@ -43,7 +43,7 @@ The majority of the cost of Reproducible Research are associated with Time:
 
 ### The what of reproducible research
 
-What are the components of reproducible research?
+[What are the components of reproducible research?](https://www.pnas.org/content/115/11/2584#T2)
 
 ### The how of reproducible research
 
