@@ -41,6 +41,10 @@ The majority of the cost of Reproducible Research are associated with Time:
 
 4.	Institutional and lab policies
 
+### The what of reproducible research
+
+What are the components of reproducible research?
+
 ### The how of reproducible research
 
 1.	Roadmap for the course
