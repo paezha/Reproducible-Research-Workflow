@@ -59,7 +59,7 @@ By the time the errors of Reinhart and Rogoff were revealed, the impact of their
 Vignette 2: The master student
 ========================================================
 
-A master student is working on his dissertation and they have an incentive to publish their research
+A master student is working on their dissertation and they have an incentive to publish their research
 
 The master student
 ========================================================
