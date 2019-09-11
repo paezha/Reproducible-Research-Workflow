@@ -32,9 +32,9 @@ By the end of the course, the students will produce a report with all the necess
 
 | Krysha Dukacz | GWF Data Manager |
 | :------       | :-----------|
-|               | Office:	GSB 305 |
-|               | Office Hours:	Monday 2-3 |
-|               | Phone:	(905) 525-9140, ext. 26334 |
+|               | Office:	GSB 218 |
+|               | Office Hours:	TBD |
+|               | Phone:	(905) 525-9140, ext. 20132 |
 |               | Email:	dukaczka@mcmaster.ca |
 
 ## Organization
