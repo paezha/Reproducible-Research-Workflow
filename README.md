@@ -82,9 +82,9 @@ _For discussion_: Principles of open science, advantages, funding and policy env
 
 **Week 2** (Sept. 18)
 _Topic_:	Software R + RStudio + GitHub  
-_Suggested Readings_:	[What is R?](https://www.r-project.org/about.html)
-                      [R for Data Science](https://r4ds.had.co.nz/) 
-                      [What is GitHub?](https://www.economist.com/the-economist-explains/2018/06/18/what-is-github)
+_Suggested Readings_:	[What is R?](https://www.r-project.org/about.html)  
+                      [R for Data Science](https://r4ds.had.co.nz/)   
+                      [What is GitHub?](https://www.economist.com/the-economist-explains/2018/06/18/what-is-github)  
 _Activity 1_: 	Post a README notice in GitHub and one document with basic operations in R
 
 **Week 3** (Sept. 25)
