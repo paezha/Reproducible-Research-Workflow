@@ -81,12 +81,12 @@ _Readings_:	No readings this week
 _For discussion_: Principles of open science, advantages, funding and policy environment, journal policies and the publication process, roadmap for course
 
 **Week 2** (Sept. 18)
-_Topic_:	Software R + RStudio + GitHub  
+_Topic_:	R + RStudio + markdown   
 _Readings_:	TBD  
-_Activity 1_: 	Post a README notice in GitHub and one document with basic operations in R
+_Activity 1_: 	Use markdown to create a document with basic operations in R
 
 **Week 3** (Sept. 25)
-_Topic_:	Data, data, data  
+_Topic_:	git and GitHub  
 _Readings_:	TBD  
 _Activity 2_: 	The students will develop a plan for a small data collection exercise with guidance from the instructors
 
