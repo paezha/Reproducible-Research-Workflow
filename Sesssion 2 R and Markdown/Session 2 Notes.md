@@ -1,6 +1,6 @@
 # GEOG 712 Reproducible Research
 
-## Session 2. Software
+## Session 2. R and R Markdown
 
 ### Software
 
