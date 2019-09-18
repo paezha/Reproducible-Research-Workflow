@@ -211,6 +211,42 @@ By combining a simple markup language (Markdown) with R we have the tools to beg
 
 Try _knitting_ your first R Mardown document to different files types (html, pdf, Word)
 
+### Think formatting does not matter?
+
+Try reading this:
+
+***
+
+Methods
+Spatial Autocorrelation and Map Pattern
+Spatial autocorrelation is a condition whereby the value of a variable at one location is correlated with the value(s) of the same variable at one or more proximal locations. A tool widely used to measure spatial autocorrelation is Moran’s coefficient of autocorrelation, or $C for short. In matrix form, MC can be formulated as follows:
+MC=1/(n sum_i sum_j w_ij)*(x'Wx)/(x'x)
+where x is a vector (nx1) of mean-centered values of a georeferenced variable, and W is a spatial weights matrix of dimensions (nxn) with elements w_ij. The elements of the spatial weights matrix take non-zero values if locations i and j are deemed to be spatially proximate in some sense, and 0 otherwise. It can be appreciated that the coefficient is composed to two elements: the variance of the random variable (i.e., (x'x)⁄n) and its spatial autocovariance (x'Wx)/(sum_i sum_j w_ij). As an alternative, the numerator of the right-hand term of Equation 1 can be expressed as follows:
+x'(I - (11')/n)W(I - (11')/n)x
+with I as the identity matrix of size nxn and 1 a conformable vector of ones.
+
+***
+
+And this:
+
+***
+
+# Methods
+
+## Spatial Autocorrelation and Map Pattern
+
+Spatial autocorrelation is a condition whereby the value of a variable at one location is correlated with the value(s) of the same variable at one or more proximal locations. A tool widely used to measure spatial autocorrelation is Moran’s coefficient of autocorrelation, or $MC$ for short. In matrix form, $MC$ can be formulated as follows:
+
+\begin{equation} \label{eq:1}MC=\frac{n}{\sum_{i}{\sum_{j}{w_{ij}}}}\frac{x'Wx}{x'x}\end{equation}
+
+where $x$ is a vector $(n\times1)$ of mean-centered values of a georeferenced variable, and $W$ is a spatial weights matrix of dimensions $(n\times n)$ with elements $w_{ij}$. The elements of the spatial weights matrix take non-zero values if locations $i$ and $j$ are deemed to be spatially proximate in some sense, and 0 otherwise. It can be appreciated that the coefficient is composed to two elements: the variance of the random variable (i.e., $(x' x)⁄n$) and its spatial autocovariance $\frac{(x'Wx)}{\sum_{i}{\sum_{j}{w_{ij}}}}$. As an alternative, the numerator of the right-hand term of Equation 1 can be expressed as follows:
+
+\begin{equation} x'\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)x\end{equation}
+
+with $I$ as the identity matrix of size $n\times n$ and $1$ a conformable vector of ones.
+
+***
+
 ### Activity
 
 1. Create a new R Markdown file, name it "Your Name Activity 1"
