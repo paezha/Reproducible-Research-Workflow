@@ -82,12 +82,16 @@ _For discussion_: Principles of open science, advantages, funding and policy env
 
 **Week 2** (Sept. 18)
 _Topic_:	R + RStudio + markdown   
-_Readings_:	TBD  
+_Suggested Readings_:	   
+  [What is R?](https://www.r-project.org/about.html)  
+  [R for Data Science](https://r4ds.had.co.nz/)   
+  [What is Markdown](https://rmoff.net/2017/09/12/what-is-markdown-and-why-is-it-awesome/)
 _Activity 1_: 	Use markdown to create a document with basic operations in R
 
 **Week 3** (Sept. 25)
 _Topic_:	git and GitHub  
-_Readings_:	TBD  
+_Readings_:  
+[What is GitHub?](https://www.economist.com/the-economist-explains/2018/06/18/what-is-github)  
 _Activity 2_: 	The students will develop a plan for a small data collection exercise with guidance from the instructors
 
 **Week 4** (Oct. 2)  
