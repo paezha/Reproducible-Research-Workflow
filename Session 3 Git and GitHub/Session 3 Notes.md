@@ -110,45 +110,53 @@ Fernando | Romero | Economics
 
 In addition to creating an account with GitHub, you will need an app called GitHub Desktop, which can be downloaded [here](https://desktop.github.com/). This app allows you to interact with GitHub from your local system.
 
-At this point, try launching your R application. The core application includes a Graphical User Interface, which will look like this:
+At this point, try launching the GitHub Desktop application, which will look like this:
 
-
-We will not spend much time on this barebones GUI, because there are better alternatives to interact with R. Suffice to say that this GUI gives you a console where you can execute code, and you can also create _scripts_, text files with instructions that can be saved, executed, edited, and so on.
-
-Very simply, you can use the console in this GUI as a calculator and the functionality just grows from there. Try the following:
-
-`print("Hello, World")`
+![GitHub Desktop](Session-3-Figure-7.png)
 
 #### Clone a repository
 
 When a repository is created on GitHub, it first only exists remotely. To create a copy locally, you must _clone_ the repository. You can clone any public repositories, including obviously your own. The system will then synchronize the local version with the remote version.
 
+![Clone a GitGub Repository](Session-3-Figure-8.png)
 
+#### Workflow
 
+The workflow with GitHub Desktop, once you have cloned a repository, is as follows:
 
+1. Make changes to your project (i.e., edit files, create new files, delete files, etc.)
 
+2. You can make multiple changes and save the files as appropriate. For instance, if you are editing an R Markdown file, you can save your changes, make some more, save again and so on
 
+3. The version control system keeps tracks of the changes, but the changes do not become a new version of the repository locally until those changes have been _committed_. A _Commit_ needs a summary and a description of the changes. Sometimes the changes are small and the message does not need to be very detailed, but for major changes, a well-documented Commit Message makes it easier to understand what happened during the update to a new version
+
+4. Once that the changes are commited, you have an updated version of the repository locally. The GitHub repository on the server, however, has not yet been updated. This is done by _Pushing_ your version to the remote GitHub repository. Now the local and remote versions of the project are synched
+
+5. On the other hand, if there are changes to the remote repository (either because you worked online or someone else made/pushed changes to the repository), those changes are not reflected locally until you _Pull_ the changes
+
+6. The system is designed so that you are not allowed to push changes if your local and remote versions of the repository are different. In that case, you will be asked to pull changes (so that the local version is in sync) before pushing any changes
+
+7. The system will try to complete all changes seamlessly - but conflicts can happen! We will discuss conflicts in a later session when we talk about collaboration in more detail  
+  
 ### Activity
 
-1. Create a new R Markdown file, name it "Your Name Activity 1"
+1. Create a new repository and name it "My First Repository"
 
-2. Create a level-1 header and write in less than 200 words what is your main research interest. Use formatting for emphasis as appropriate.
+2. Create a README.md file for the repository
 
-3. Create a new level-1 header and type "Favorites"
+3. Clone the repository to your local system
 
-4. Under this header, create a level-2 header "Favorite Music". Create a numbered list with your 5 favorite songs.
+4. Use R Studio to edit the README.md Ffile; use markdown syntax to introduce yourself and your repository
 
-5. Still under favorites, create a new level-2 header "Favorite Equation" and type your favorite equation
+5. Copy the R Markdown note that you created in Activity 1 to your local repository
 
-6. Still under favoritesm create a new level-2 header "Favorite Artists" and create a table with two columns "Name" and "Achievements". Populate the table with 5 favorite artists.
+6. Use GitHub Desktop to track your changes locally, to commit them, and to push them to the GitHub repository
 
-7. Create a new level-1 header and type "A Chunk of Code". Under this header create a chunk of code, whatever you want R to do immediately for you.
-
-8. Once you have done this, knit your document to PDF and email to both instructors.
+7. Once you have done this, email the link to your repository to both instructors.
 
 ### Suggested readings
 
-[Data Science Training for the Arctic Data Center - Introduction to R and R Markdown](http://training.arcticdata.io/materials/arctic-data-center-training/introduction-to-r-and-rmarkdown.html#rmarkdown)
+[Data Science Training for the Arctic Data Center - Introduction to R and R Markdown](http://training.arcticdata.io/materials/arctic-data-center-training/version-control-with-git-and-github.html)
 
-[R Markdown](http://rmarkdown.rstudio.com)
+[GitHub Hello World Project](https://guides.github.com/activities/hello-world/)
 
