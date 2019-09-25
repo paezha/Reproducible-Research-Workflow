@@ -101,7 +101,7 @@ Ritchie | Lee | Chemistry
 David | Ma | Chemistry
 Megeen | Magee | Geography
 John | Meral | Geography
-Sear | Sean | Engineering
+Sears | Sean | Geography
 Rajveer | Ubhis | Geography
 Tatiane | Ferrari | Economics
 Fernando | Romero | Economics
