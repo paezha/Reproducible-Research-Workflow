@@ -51,8 +51,8 @@ Students will be assessed based on the completion of a sequence of activities. N
 
 |   |   |
 |---|---|
-|Activity 1: GitHub and R Exercise        |	5%|
-|Activity 2: Data 			                  | 5%|
+|Activity 1: R Markdown Exercise          |	5%|
+|Activity 2: Version Control Exercise     | 5%|
 |Activity 3: Initial DMP                  |	10%|
 |Activity 4: Updated DMP                  | 10%|
 |Activity 5: Data Package                 |	15%|
