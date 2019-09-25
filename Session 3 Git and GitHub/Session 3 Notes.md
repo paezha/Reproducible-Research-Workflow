@@ -105,6 +105,7 @@ Sear | Sean | Engineering
 Rajveer | Ubhis | Geography
 Tatiane | Ferrari | Economics
 Fernando | Romero | Economics
+Jane | Doe | Geography
 
 ### GitHub Desktop
 
