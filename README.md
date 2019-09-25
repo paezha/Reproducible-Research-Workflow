@@ -92,12 +92,12 @@ _Activity 1_: 	Use markdown to create a document with basic operations in R
 _Topic_:	git and GitHub  
 _Readings_:  
 [What is GitHub?](https://www.economist.com/the-economist-explains/2018/06/18/what-is-github)  
-_Activity 2_: 	The students will develop a plan for a small data collection exercise with guidance from the instructors
+_Activity 2_: 	Post a README notice in GitHub and one document with basic operations in R
 
 **Week 4** (Oct. 2)  
 _Topic_:	Data Management Plans (DMP): Principles  
 _Readings_:	TBD  
-_Activity_:	No activity this week McMaster Industrial Liaison Office (Patent data?)
+_Activity_:	No activity this week
 
 **Week 5** (Oct. 9) 
 _Topic_:	Data Management Plans (DMP): Tools  
