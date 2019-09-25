@@ -1,6 +1,6 @@
 # GEOG 712 Reproducible Research
 
-## Session 3. Git and Github
+## Session 3. Version Control and Github
 
 ### What is version control
 
