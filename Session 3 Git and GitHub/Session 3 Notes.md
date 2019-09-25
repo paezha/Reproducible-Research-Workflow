@@ -154,6 +154,9 @@ The workflow with GitHub Desktop, once you have cloned a repository, is as follo
 
 7. Once you have done this, email the link to your repository to both instructors.
 
+### Also for next week: 
+Please sign-up for a DMP Assistant @ https://assistant.portagenetwork.ca/?locale=en
+
 ### Suggested readings
 
 [Data Science Training for the Arctic Data Center - Introduction to R and R Markdown](http://training.arcticdata.io/materials/arctic-data-center-training/version-control-with-git-and-github.html)
