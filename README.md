@@ -89,8 +89,9 @@ _Suggested Readings_:
 _Activity 1_: 	Use markdown to create a document with basic operations in R
 
 **Week 3** (Sept. 25)
-_Topic_:	git and GitHub  
+_Topic_:	Git and GitHub  
 _Readings_:  
+[What is version control](https://en.wikipedia.org/wiki/Version_control)
 [What is GitHub?](https://www.economist.com/the-economist-explains/2018/06/18/what-is-github)  
 _Activity 2_: 	Post a README notice in GitHub and one document with basic operations in R
 
