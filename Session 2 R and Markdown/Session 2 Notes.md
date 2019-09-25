@@ -18,7 +18,7 @@ An advantage of R is that its broad user and developer community means that new 
 
 At this point, try launching your R application. The core application includes a Graphical User Interface, which will look like this:
 
-![Base R GUI](Session 2 Figure 1.png)
+![Base R GUI](Session-2-Figure-1.png)
 
 We will not spend much time on this barebones GUI, because there are better alternatives to interact with R. Suffice to say that this GUI gives you a console where you can execute code, and you can also create _scripts_, text files with instructions that can be saved, executed, edited, and so on.
 
@@ -38,7 +38,7 @@ The present notes were developed using R Studio Version 1.2.1335. If you have an
 
 Once that you have installed R Studio, launch it. It should look like this:
 
-![R Studio IDE](Session 2 Figure 2.png)
+![R Studio IDE](Session-2-Figure-2.png)
 
 Lets take a few minutes to explore the different parts of the IDE.
 
