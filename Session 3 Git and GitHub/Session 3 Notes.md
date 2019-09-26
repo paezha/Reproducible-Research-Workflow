@@ -100,11 +100,11 @@ Jaila | Shamal | Geography
 Ritchie | Lee | Chemistry
 David | Ma | Chemistry
 Megeen | Magee | Geography
-John | Meral | Geography
-Sear | Sean | Engineering
+John | Merrall | Geography
+Sears | Sean | Geography
 Rajveer | Ubhis | Geography
 Tatiane | Ferrari | Economics
-Fernando | Romero | Economics
+Fernando | Romero | Engineering
 Jane | Doe | Geography
 
 ### GitHub Desktop
@@ -154,6 +154,9 @@ The workflow with GitHub Desktop, once you have cloned a repository, is as follo
 6. Use GitHub Desktop to track your changes locally, to commit them, and to push them to the GitHub repository
 
 7. Once you have done this, email the link to your repository to both instructors.
+
+### Also for next week: 
+Please sign-up for a DMP Assistant @ https://assistant.portagenetwork.ca/?locale=en
 
 ### Suggested readings
 
