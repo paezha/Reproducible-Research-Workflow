@@ -104,7 +104,7 @@ John | Meral | Geography
 Sears | Sean | Geography
 Rajveer | Ubhis | Geography
 Tatiane | Ferrari | Economics
-Fernando | Romero | Economics
+Fernando | Romero | Engineering
 
 ### GitHub Desktop
 
