@@ -2,7 +2,7 @@
 
 ## School of Geography and Earth Sciences, McMaster University
 
-## Course Description^[1]
+## Course Description^[The University reserves the right to change any aspect of this course outline.]
 
 Scientific discovery is typically a collective process, as researchers build their work on the preceding efforts of other researchers. This is certainly the case for theory, empirical evidence, and methods, as empirical researchers use analytical techniques developed by methodologists, theoreticians build on up-to-date evidence, and data collection inspires new methods of analysis. The reality is that contemporary research is not possible in isolation. A key element of the web of research relationships is the basic unit of research output, which typically takes the form of a journal paper, book chapter, or report. This unit of output, however, represents only the face of a multilayered process, and by its very nature is limited in the amount of information that it can communicate. 
 
@@ -97,7 +97,8 @@ _Activity 2_: 	Post a README notice in GitHub and one document with basic operat
 
 **Week 4** (Oct. 2)  
 _Topic_:	Data Management Plans (DMP): Principles  
-_Readings_:	TBD  
+_Readings_:	  
+[10 aspects of highly effective research data](https://www.elsevier.com/connect/10-aspects-of-highly-effective-research-data)
 _Activity_:	No activity this week
 
 **Week 5** (Oct. 9) 
@@ -142,8 +143,5 @@ _Activity_:	Final deliverable due on DATE TBD.
 **Week 13** (Dec. 4)
 _Topic_:	Public engagement and knowledge mobilization  
 _Readings_:	TBD  
-
-[1]:
-The University reserves the right to change any aspect of this course outline.
 
 
