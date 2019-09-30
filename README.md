@@ -98,9 +98,9 @@ _Activity 2_: 	Post a README notice in GitHub and one document with basic operat
 **Week 4** (Oct. 2)  
 _Topic_:	Data Management Plans (DMP): Principles  
 _Readings_:	  
-[10 aspects of highly effective research data](https://www.elsevier.com/connect/10-aspects-of-highly-effective-research-data)
-_Activity_:	No activity this week
-
+[10 aspects of highly effective research data](https://www.elsevier.com/connect/10-aspects-of-highly-effective-research-data)  
+_Activity_:	Create a list of data that you will be creating and using as part of your project  
+   
 **Week 5** (Oct. 9) 
 _Topic_:	Data Management Plans (DMP): Tools  
 _Readings_:	TBD  
