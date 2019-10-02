@@ -4,10 +4,9 @@
 
 ### What is Research Data Management (RDM)?
 
-Research Data Management is the active organization and maintenance of data throughout the research cycle which use standards and best practices to promote the security and integrity of data resulting in well-described, discoverable and reusable data.
 
-From the McMaster ROADS website:
-https://roads.mcmaster.ca/research-data-management-at-mcmaster
+From the [McMaster ROADS](https://roads.mcmaster.ca/research-data-management-at-mcmaster) website:
+
 > RDM is the active organization and maintenance of data throughout its lifecycle, from its collection, interpretation, dissemination, and the archiving of valuable results. RDM enables reliable verification of research results, and permits innovative, interdisciplinary research built on existing information. The application of RDM improves cumulative research efficiency, and reduces the overall cost of research
 
 ### The Case for RDM?
@@ -140,15 +139,14 @@ The DMPAssistant is one part of their service. The DMPAssistant is similar to to
 
 Data Management Plans are living documents and can evolve over time.
 
-
   
 ### Activity
 
 1. Reflect on the data in your project 
     - Have others collected similar data?
-    - Are there standards and best practices in your lab?  Field?
+    - Are you aware of any standards and best practices in your lab?  Field?
     - Are you doing primary data creation or using building upon/deriving something new from existing datasets?
-    
+    - Who else might be interested in the data you are working with
     
   
 ### Suggested readings
