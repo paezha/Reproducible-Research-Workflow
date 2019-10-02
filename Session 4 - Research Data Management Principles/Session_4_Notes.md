@@ -9,6 +9,14 @@ From the [McMaster ROADS](https://roads.mcmaster.ca/research-data-management-at-
 
 > RDM is the active organization and maintenance of data throughout its lifecycle, from its collection, interpretation, dissemination, and the archiving of valuable results. RDM enables reliable verification of research results, and permits innovative, interdisciplinary research built on existing information. The application of RDM improves cumulative research efficiency, and reduces the overall cost of research
 
+### Key Notions
+
+ - Active
+ - On-going (Throughout the research process)
+ 
+ **Add:** 
+ - Best Practices and Standards
+
 ### The Case for RDM?
 
 [Data Sharing and Management Snafu in 3 Short Acts](https://www.youtube.com/watch?v=N2zK3sAtr-4)
@@ -24,6 +32,8 @@ From the [McMaster ROADS](https://roads.mcmaster.ca/research-data-management-at-
 - **Science/Body of Knowledge**:  Well managed data will be discoverable, accessible and understandable making it ultimitely reusable for new science or study!  
 
 ### Drivers of RDM - Data as a Research Output
+
+The policies of funding agencies around the world have increased their focus on data management in recent years.  In Canada, the Tri-Agency (SSHRC, NSERC, CIHR) have great influence.
 
 **[Tri-Agency Statement of Principles on Digital Data Management (TASPDDM)](http://www.science.gc.ca/eic/site/063.nsf/eng/h_83F7624E.html?OpenDocument)**: Promotes excellence in digital data management practices and data stewardship in agency-funded research
 
@@ -78,42 +88,28 @@ From the [McMaster ROADS](https://roads.mcmaster.ca/research-data-management-at-
   - Deposit data in recognized digital repository
   
   **This document is still in draft and will be implemented gradually to allow capacity to build
-  
+
+Similar calls for action are seen beyond funders.
+
+Journals: 
+
+Science:  
+> After publication, all data and materials necessary to understand, assess, and extend the conclusions of the manuscript must be available to any reader of a Science Journal. After publication, all reasonable requests for data, code, or materials must be fulfilled
+
+Sage - Big Data and Society
+> ...we are committed to facilitating openness, transparency and reproducibility of research. Where relevant, Big Data & Society encourages authors to share their research data in a suitable public repository subject to ethical considerations and to include a data accessibility statement in their manuscript file. 
 
 ### FAIR (Findability, Accessibility, Interoperability, and Reusability) Data Principles
 
-- The term FAIR was coined at a Lorentz workshop in 2014
+- The term FAIR was coined at a Lorentz workshop in 2014.  These principles have a focus on making digital assets discoverable in a machine driven way.
 - The paper "The FAIR Guiding Principles for scientific data management and stewardship" was published in Nature: Scientific Data in 2016
 - Outlines a set of 14 principles to be addressed in making data FAIR:
 
-TO BE FINDABLE:
-F1. (meta)data are assigned a globally unique and eternally persistent identifier.
-F2. data are described with rich metadata.
-F3. (meta)data are registered or indexed in a searchable resource.
-F4. metadata specify the data identifier.
-
-TO BE ACCESSIBLE:
-A1  (meta)data are retrievable by their identifier using a standardized communications protocol.
-A1.1 the protocol is open, free, and universally implementable.
-A1.2 the protocol allows for an authentication and authorization procedure, where necessary.
-A2 metadata are accessible, even when the data are no longer available.
-
-TO BE INTEROPERABLE:
-I1. (meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.
-I2. (meta)data use vocabularies that follow FAIR principles.
-I3. (meta)data include qualified references to other (meta)data.
-
-TO BE RE-USABLE:
-R1. meta(data) have a plurality of accurate and relevant attributes.
-R1.1. (meta)data are released with a clear and accessible data usage license.
-R1.2. (meta)data are associated with their provenance.
-R1.3. (meta)data meet domain-relevant community standards.
-
-### Hierarchy of Needs
-
-![https://www.elsevier.com/connect/10-aspects-of-highly-effective-research-data](Better_RDM_Pyramid.PNG)
+## These are the goals - but how do we achieve excellence in RDM?
 
 ### The Research Data Lifecycle
+
+The Research Data Lifecycle is portrayed in different ways by different organizations but the general flow is:
 
 ![https://biblio.uottawa.ca/sites/biblio.uottawa.ca/files/data_life_cycle.png](data_life_cycle.png)
 
@@ -127,6 +123,10 @@ PRESERVE | Ensure data is saved according best practices (i.e. open formats, wel
 SHARE | Determine appropriate access rights/licensing/citation and a proper long-term storage location for the data (e.g. Domain specific repository, on a controlled access server with open metadata and well defined access procedure).
 REUSE | Data can be reanalysed, secondary analysis can take place, data can be used by others.
 
+The cornerstone of the lifecycle is the Plan.  It is difficult to create excellent data as an afterthought.
+
+The Canadian research community is working towards builind capacity in researchers, one way is through the Portage Network.
+
 ### Portage Network
 
 The Portage Network was launched in 2015 by the Canadian Association of Research Libraries (CARL) and it works within the library community to foster a national research data culture and facilitate shared stewardship of research data in Canada.  This mandate spans sectors, domains, and jurisdictions, requiring national coordination of RDM services and infrastructure. Portage seeks to contribute to this goal through:
@@ -139,14 +139,25 @@ The DMPAssistant is one part of their service. The DMPAssistant is similar to to
 
 Data Management Plans are living documents and can evolve over time.
 
-  
+Put yourself in the shoes of an end user.  What would you want to know about data that you are considering using?
+
+### Quick Hits for Data Management
+
+**Backup**
+
+**File Format**
+
+**File Naming**
+
+**Standards**
+
 ### Activity
 
 1. Reflect on the data in your project 
     - Have others collected similar data?
     - Are you aware of any standards and best practices in your lab?  Field?
     - Are you doing primary data creation or using building upon/deriving something new from existing datasets?
-    - Who else might be interested in the data you are working with
+    - Who else might be interested in the data you are working with?
     
   
 ### Suggested readings
