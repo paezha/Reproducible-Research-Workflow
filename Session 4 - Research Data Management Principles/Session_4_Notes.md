@@ -102,7 +102,7 @@ Sage - Big Data and Society
 ### FAIR (Findability, Accessibility, Interoperability, and Reusability) Data Principles
 
 - The term FAIR was coined at a Lorentz workshop in 2014.  These principles have a focus on making digital assets discoverable in a machine driven way.
-- The paper "The FAIR Guiding Principles for scientific data management and stewardship" was published in Nature: Scientific Data in 2016
+- The paper "[The FAIR Guiding Principles for scientific data management and stewardship](The FAIR Guiding Principles for scientific data management and stewardship)" was published in Nature: Scientific Data in 2016
 - Outlines a set of 14 principles to be addressed in making data FAIR:
 
 ## These are the goals - but how do we achieve excellence in RDM?
