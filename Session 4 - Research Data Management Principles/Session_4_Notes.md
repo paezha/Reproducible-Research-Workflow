@@ -179,5 +179,5 @@ Identify or create standards
 
 [The FAIR Guiding Principles for scientific data management and stewardship](https://www.nature.com/articles/sdata201618)
 
-[DataONE Primer on Data Management:   (https://www.dataone.org/sites/all/documents/DataONE_BP_Primer_020212.pdf)
+[DataONE Primer on Data Management:   ](https://www.dataone.org/sites/all/documents/DataONE_BP_Primer_020212.pdf)
 
