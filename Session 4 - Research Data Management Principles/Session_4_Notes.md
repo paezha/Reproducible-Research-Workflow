@@ -141,7 +141,7 @@ Data Management Plans are living documents and can evolve over time.
 
 Put yourself in the shoes of an end user.  What would you want to know about data that you are considering using?
 
-![Questions](DataQuestions.png)
+![Questions](Data_Questions.png)
 
 ### Quick Hits for Data Management
 
