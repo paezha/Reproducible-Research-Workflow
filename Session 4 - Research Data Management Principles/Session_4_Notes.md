@@ -141,15 +141,30 @@ Data Management Plans are living documents and can evolve over time.
 
 Put yourself in the shoes of an end user.  What would you want to know about data that you are considering using?
 
+![Questions](DataQuestions.png)
+
 ### Quick Hits for Data Management
 
 **Backup**
 
+![BackupPic](Backup.png)
+
 **File Format**
+
+Work with or translate to open formats where possible
+
+![Format](formats.png)
 
 **File Naming**
 
+Create and document a convention for your file naming to store with data
+![FileNaming](FileNaming.png)
+
 **Standards**
+
+Identify or create standards
+
+![Standards](Standards.png)
 
 ### Activity
 
