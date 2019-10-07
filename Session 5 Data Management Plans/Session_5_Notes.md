@@ -98,6 +98,8 @@ Resources:  File format, naming, organization
 #### Reflections and Best Practices
 
     - Best practices/standards (Store approved uses and storage requirements with data)
+    
+### Example Plan
 
 ### Activity
 
