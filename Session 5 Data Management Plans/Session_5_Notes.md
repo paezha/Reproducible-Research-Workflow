@@ -2,16 +2,15 @@
 
 ## Session 5 Data Management Plans
 
-### The Research Data Lifecycle
+![project_management.com](Planning_Buffett.jpg)
 
-The Research Data Lifecycle is portrayed in different ways by different organizations but the general flow is:
+### The Research Data Lifecycle Revisited
+
+### Planning at the start of the project will have positive impacts which cascade through the project and help you achieve a better end product with less stress.  
+
+- Creating a set of policies/procedures will benefit the current project and provide a foundation for future projects as well.  This is another way that we can "reuse" in our research.
 
 ![https://biblio.uottawa.ca/sites/biblio.uottawa.ca/files/data_life_cycle.png](data_life_cycle.png)
-
-
-## Planning at the start of the project will have positive impacts which cascade through the project and help you achieve a better end product with less stress.
-
-![project_management.com](Planning_Buffett.jpg)
 
 ### Portage Data Management Plan Assistant
 
