@@ -1,6 +1,6 @@
 # GEOG 712 Reproducible Research
 
-## Session 5 Data Management Plans
+## Session 5 Data Management Plans (DMP): Tools
 
 ![project_management.com](Planning_Buffett.jpg)
 
