@@ -12,7 +12,7 @@
 
 ![https://biblio.uottawa.ca/sites/biblio.uottawa.ca/files/data_life_cycle.png](data_life_cycle.png)
 
-### Portage Data Management Plan Assistant
+### Portage Data Management Plan Assistant **DEMONSTRATION**
 
 The following are extracted from the Portage Network Data Management Assistant (guiding questions)
 
@@ -98,7 +98,9 @@ Resources:  File format, naming, organization
 #### Reflections and Best Practices
 
     - Best practices/standards (Store approved uses and storage requirements with data)
-    
+
+### Collaboration - share with supervisor - get feedback
+
 ### Example Plan
 
 ### Activity
