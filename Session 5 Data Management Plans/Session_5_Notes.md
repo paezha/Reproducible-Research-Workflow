@@ -109,4 +109,4 @@ Resources:  File format, naming, organization
   
 ### Suggested readings
 
-![Ten Simple Rules for Creating a Good Data Management Plan (Public Library of Science (PLOS)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525)
+[Ten Simple Rules for Creating a Good Data Management Plan (Public Library of Science (PLOS)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525)
