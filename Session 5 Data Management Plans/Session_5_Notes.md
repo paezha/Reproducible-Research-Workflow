@@ -23,14 +23,39 @@ Export to pdf, csv, text, xml, html, json, docx
 
 - What types of data will you collect, create, link to, acquire and/or record?
 - What file formats will your data be collected in? Will these formats allow for data re-use, sharing and long-term access to the data?
+
+Data Description | Production | Acquistion Method |Format_Original| Format_Generic
+-|-|-|-|-
+Precipitation | Primary | Tipping Bucket |DAT| CSV
+Topographic | Secondary | Derive from LiDAR | LAS | CSV 
+Vegetation | Secondary| Identify from imagery| HDF | GEOTIFF  
+Vegetation (Ground Truth) | Primary | In situ sampling/GPS guided | XLS | CSV
+
 - What conventions and procedures will you use to structure, name and version-control your files to help you and others better understand how your data are organized?
+
+Document your folder structure and file naming conventions to assist you in maintaining consistency.  
+
+Develop your conventions with the following in mind:
+
+    -  
+
+
 
 Resources:  File format, naming, organization
 
 #### Reflections and Best Practices
 
-    - File formats
-    - Document structure
+*  File formats
+        +  Open formats, non-proprietary where possible
+        +  Lossless formats for imagery
+*  Document structure
+
+#### Additional Resources
+
+[File Naming and Folder Structure](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/File-naming-and-folder-structure)
+
+[ISO 6801](https://www.cl.cam.ac.uk/~mgk25/iso-time.html)
+
 
 ### DMP Assistant: Documentation and Metadata
 
