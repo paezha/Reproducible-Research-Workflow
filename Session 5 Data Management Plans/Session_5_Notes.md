@@ -105,12 +105,20 @@ Metadata standards
 ### How and where will your data be stored and backed up during your research project?
 ### How will the research team and other collaborators access, modify, and contribute data throughout the project?
 
+### McMaster Storage Resources
+
+![https://reo.mcmaster.ca/download/data-storage-and-security-tools](McMasterStorage.png)
+
 #### Reflections and Best Practices
 *  3-2-1 Backup strategy
 *  Estimate size of files
 *  File Organization
 *  Process Documentation - identfiy media and frequency of backups
 *  Standardization
+
+#### Additional Resources
+
+[MREB (McMaster Research Ethics Board) Data Storage](https://reo.mcmaster.ca/download/data-storage-and-security-tools)
 
 ### DMP Assistant: Preservation  (Project/Supervisor)
 
