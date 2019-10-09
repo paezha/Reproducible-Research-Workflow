@@ -106,18 +106,20 @@ Metadata standards
 ### How will the research team and other collaborators access, modify, and contribute data throughout the project?
 
 #### Reflections and Best Practices
+*  3-2-1 Backup strategy
+*  Estimate size of files
 *  File Organization
 *  Process Documentation - identfiy media and frequency of backups
 *  Standardization
 
-### DMP Assistant: Preservation
+### DMP Assistant: Preservation  (Project/Supervisor)
 
 ### Where will you deposit your data for long-term preservation and access at the end of your research project?
 ### Indicate how you will ensure your data is preservation ready. Consider preservation-friendly file formats, ensuring file integrity, anonymization and de-identification, inclusion of supporting documentation
 
 #### Reflections and Best Practices
 
-*  Process Documentation
+*  Ensure adequate documentation
 *  Identify best formats for preservation
 
 ### DMP Assistant: Sharing and Reuse
@@ -128,7 +130,7 @@ Metadata standards
 
 #### Reflections and Best Practices
 
-* Process Documentation
+* Necessary Documentation
 * Document how data will be provided to your supervisor and/or collaborators/coworkers
 * Collaboration - share with supervisor - get feedback
 
@@ -140,7 +142,7 @@ Metadata standards
 
 #### Reflections and Best Practices
 
-*  Process Documentation - Day to day handling of data
+*  Process Documentation - Day to day handling of data.  Can someone step in and continue the project?
 *  Standardization
 
 ### DMP Assistant: Ethics and Legal Compliance
@@ -169,10 +171,12 @@ This is an interesting document as it identifies positive and negative examples 
 
 ### Activity
 
-1. Reflect on the data in your project 
-    - Define a Best Practice Document to guide your work
-    - Create a brief data management plan for your project
+1. Define a Best Practice Document to guide your work
+2. Complete the Portage DMPAssistant for your project and share with your supervisor (and us) for feedback.
+    
   
 ### Suggested readings
 
 [Ten Simple Rules for Creating a Good Data Management Plan (Public Library of Science (PLOS)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525)
+
+[RDM for Busy People](https://portagenetwork.ca/wp-content/uploads/2019/08/Brief_Guide_RDM_August2019.pdf)
