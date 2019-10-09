@@ -177,8 +177,8 @@ This is an interesting document as it identifies positive and negative examples 
 
 ### Activity
 
-1. Define a Best Practice Document to guide your work
-2. Complete the Portage DMPAssistant for your project and share with your supervisor (and us) for feedback.
+1. Define a Best Practice Document to guide your work (submit to Antonio and Krysha)
+2. Complete the Portage DMPAssistant for your project and share with your supervisor, Antonio and Krysha for feedback via the DMPAssistant Share tools.
     
   
 ### Suggested readings
