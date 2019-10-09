@@ -10,7 +10,7 @@
 
 - Creating a set of policies/procedures will benefit the current project and provide a foundation for future projects as well.  This is another way that we can "reuse" in our research.
 
-![https://biblio.uottawa.ca/sites/biblio.uottawa.ca/files/data_life_cycle.png](data_life_cycle.png)
+![https://biblio.uottawa.ca/sites/biblio.uottawa.ca/files/data_life_cycl](DLC_Plan.png)
 
 ### Portage Data Management Plan Assistant **DEMONSTRATION**
 
