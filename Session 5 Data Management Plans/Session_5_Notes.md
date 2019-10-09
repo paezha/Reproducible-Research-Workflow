@@ -180,3 +180,7 @@ This is an interesting document as it identifies positive and negative examples 
 [Ten Simple Rules for Creating a Good Data Management Plan (Public Library of Science (PLOS)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004525)
 
 [RDM for Busy People](https://portagenetwork.ca/wp-content/uploads/2019/08/Brief_Guide_RDM_August2019.pdf)
+
+
+**NOTE** Krysha, maybe add something about _dependency management_. Here's an example:
+https://docs.gradle.org/current/userguide/introduction_dependency_management.html
