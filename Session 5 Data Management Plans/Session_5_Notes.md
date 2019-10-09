@@ -65,10 +65,10 @@ Elements could include:
     
 Names should: 
 
-    *  Be brief but meaningful (Create a reference document for decoding)
-    *  Avoid special characters and spaces (use hyphens, or underscores)
-    *  Leave the file extension to refer to application-specific file format indicators
-    *  Indicate version
+*  Be brief but meaningful (Create a reference document for decoding)
+*  Avoid special characters and spaces (use hyphens, or underscores)
+*  Leave the file extension to refer to application-specific file format indicators
+*  Indicate version
 
 #### Additional Resources
 
@@ -78,75 +78,80 @@ Names should:
 
 ### DMP Assistant: Documentation and Metadata
 
-### * What documentation will be needed for the data to be read and interpreted correctly in the future?
-### * How will you make sure that documentation is created or captured consistently throughout your project?
-### * If you are using a metadata standard and/or tools to document and describe your data, please list here.
+### What documentation will be needed for the data to be read and interpreted correctly in the future?
+### How will you make sure that documentation is created or captured consistently throughout your project?
+### If you are using a metadata standard and/or tools to document and describe your data, please list here.
 
 #### Reflections and Best Practices
 
-    * Process Documentation
-        +  Instrument guides
-        +  Methods descriptions
-    * Standardization
-        +  Variables
-        +  Model input/output definitions
-        +  Coding methods
-    * Readme files
-    * Metadata standards
+Process Documentation
+
+*  Instrument guides
+*  Methods descriptions
+
+Standardization
+*  Variables
+*  Model input/output definitions
+*  Coding methods
+Readme files
+
+Metadata standards
+*  Domain specific
+*  Repository specific
 
 ### DMP Assistant: Storage and Backup
 
-### * What are the anticipated storage requirements for your project, in terms of storage space (in megabytes, gigabytes, terabytes, etc.) and the length of time you will be storing it?
-### * How and where will your data be stored and backed up during your research project?
-### * How will the research team and other collaborators access, modify, and contribute data throughout the project?
+### What are the anticipated storage requirements for your project, in terms of storage space (in megabytes, gigabytes, terabytes, etc.) and the length of time you will be storing it?
+### How and where will your data be stored and backed up during your research project?
+### How will the research team and other collaborators access, modify, and contribute data throughout the project?
 
 #### Reflections and Best Practices
-
-    * File Organization
-    * Process Documentation - identfiy media and frequency of backups
-    * Standardization
+*  File Organization
+*  Process Documentation - identfiy media and frequency of backups
+*  Standardization
 
 ### DMP Assistant: Preservation
 
-### * Where will you deposit your data for long-term preservation and access at the end of your research project?
-### * Indicate how you will ensure your data is preservation ready. Consider preservation-friendly file formats, ensuring file integrity, anonymization and de-identification, inclusion of supporting documentation
+### Where will you deposit your data for long-term preservation and access at the end of your research project?
+### Indicate how you will ensure your data is preservation ready. Consider preservation-friendly file formats, ensuring file integrity, anonymization and de-identification, inclusion of supporting documentation
 
 #### Reflections and Best Practices
 
-    * Process Documentation
-    * Identify best formats for preservation
+*  Process Documentation
+*  Identify best formats for preservation
 
 ### DMP Assistant: Sharing and Reuse
 
-### * What data will you be sharing and in what form? (e.g. raw, processed, analyzed, final).
-### * Have you considered what type of end-user license to include with your data?
-### * What steps will be taken to help the research community know that your data exists?
+### What data will you be sharing and in what form? (e.g. raw, processed, analyzed, final).
+### Have you considered what type of end-user license to include with your data?
+### What steps will be taken to help the research community know that your data exists?
 
 #### Reflections and Best Practices
 
-    * Process Documentation
-    * Document how data will be provided to your supervisor and/or collaborators/coworkers
+* Process Documentation
+* Document how data will be provided to your supervisor and/or collaborators/coworkers
+* Collaboration - share with supervisor - get feedback
 
 ### DMP Assistant: Responsibilities and Resources
 
-### * Identify who will be responsible for managing this project's data during and after the project and the major data management tasks for which they will be responsible.
-### * How will responsibilities for managing data activities be handled if substantive changes happen in the personnel overseeing the project's data, including a change of Principal Investigator?
-### * What resources will you require to implement your data management plan? What do you estimate the overall cost for data management to be?
+### Identify who will be responsible for managing this project's data during and after the project and the major data management tasks for which they will be responsible.
+### How will responsibilities for managing data activities be handled if substantive changes happen in the personnel overseeing the project's data, including a change of Principal Investigator?
+### What resources will you require to implement your data management plan? What do you estimate the overall cost for data management to be?
 
 #### Reflections and Best Practices
 
-    * Process Documentation - Day to day handling of data
-    * Standardization
+*  Process Documentation - Day to day handling of data
+*  Standardization
 
 ### DMP Assistant: Ethics and Legal Compliance
 
-### * If your research project includes sensitive data, how will you ensure that it is securely managed and accessible only to approved members of the project?
-### * If applicable, what strategies will you undertake to address secondary uses of sensitive data?
-### * How will you manage legal, ethical, and intellectual property issues?
+### If your research project includes sensitive data, how will you ensure that it is securely managed and accessible only to approved members of the project?
+### If applicable, what strategies will you undertake to address secondary uses of sensitive data?
+### How will you manage legal, ethical, and intellectual property issues?
 
 #### Reflections and Best Practices
 
-    * Best practices/standards (Store approved uses and storage requirements with data)
+* Store approved uses and storage requirements with data
 
 ### Collaboration - share with supervisor - get feedback
 
