@@ -107,7 +107,9 @@ Metadata standards
 
 ### McMaster Storage Resources
 
-![https://reo.mcmaster.ca/download/data-storage-and-security-tools](McMasterStorage.png)
+Table of storage resources from [MREB (McMaster Research Ethics Board) Data Storage](https://reo.mcmaster.ca/download/data-storage-and-security-tools) :
+
+![https://reo.mcmaster.ca/download/data-storage-and-security-tools](McMasterStorage.PNG)
 
 #### Reflections and Best Practices
 *  3-2-1 Backup strategy
@@ -115,10 +117,6 @@ Metadata standards
 *  File Organization
 *  Process Documentation - identfiy media and frequency of backups
 *  Standardization
-
-#### Additional Resources
-
-[MREB (McMaster Research Ethics Board) Data Storage](https://reo.mcmaster.ca/download/data-storage-and-security-tools)
 
 ### DMP Assistant: Preservation  (Project/Supervisor)
 
