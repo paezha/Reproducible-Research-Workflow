@@ -128,6 +128,14 @@ Table of storage resources from [MREB (McMaster Research Ethics Board) Data Stor
 *  Ensure adequate documentation
 *  Identify best formats for preservation
 
+#### Where code or proprietary data formats are unavoidable, it is critical to describe software dependencies including:
+
+*  What version of software was used to generate/run code or create data
+*  What dependencies (such as required R packages) exist
+*  Where to obtain required software
+*  Potentially identifying software archives or even archiving software versions yourself
+*  Use tools to manage dependencies such as Packrat in R Studio or similar
+
 ### DMP Assistant: Sharing and Reuse
 
 ### What data will you be sharing and in what form? (e.g. raw, processed, analyzed, final).
