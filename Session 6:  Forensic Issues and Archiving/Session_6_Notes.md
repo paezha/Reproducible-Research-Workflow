@@ -219,6 +219,8 @@ Know your rights! Take time out to read the terms of use and to understand what 
         -  Share plan with your partner so that they can read your DMP and provide feedback
         -  Read and provide feedback to your partner on the DMP that they have shared with you.
     - Export and upload your complete DMP to GitHub. 
+2. For Next Week:
+    -  Bring a sample dataset to class next week to be used in the R exercise
   
 ### Suggested readings
 
