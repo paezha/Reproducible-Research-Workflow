@@ -105,6 +105,12 @@ Metadata standards
 ### How and where will your data be stored and backed up during your research project?
 ### How will the research team and other collaborators access, modify, and contribute data throughout the project?
 
+### McMaster Storage Resources
+
+Table of storage resources from [MREB (McMaster Research Ethics Board) Data Storage](https://reo.mcmaster.ca/download/data-storage-and-security-tools) :
+
+![https://reo.mcmaster.ca/download/data-storage-and-security-tools](McMasterStorage.PNG)
+
 #### Reflections and Best Practices
 *  3-2-1 Backup strategy
 *  Estimate size of files
@@ -121,6 +127,14 @@ Metadata standards
 
 *  Ensure adequate documentation
 *  Identify best formats for preservation
+
+#### Where code or proprietary data formats are unavoidable, it is critical to describe software dependencies including:
+
+*  What version of software was used to generate/run code or create data
+*  What dependencies (such as required R packages) exist
+*  Where to obtain required software
+*  Potentially identifying software archives or even archiving software versions yourself
+*  Use tools to manage dependencies such as Packrat in R Studio or similar
 
 ### DMP Assistant: Sharing and Reuse
 
@@ -171,8 +185,8 @@ This is an interesting document as it identifies positive and negative examples 
 
 ### Activity
 
-1. Define a Best Practice Document to guide your work
-2. Complete the Portage DMPAssistant for your project and share with your supervisor (and us) for feedback.
+1. Define a Best Practice Document to guide your work (submit to Antonio and Krysha)
+2. Complete the Portage DMPAssistant for your project and share with your supervisor, Antonio and Krysha for feedback via the DMPAssistant Share tools.
     
   
 ### Suggested readings
