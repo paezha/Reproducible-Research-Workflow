@@ -1,4 +1,3 @@
-
 ## DMPs and Best Practices review
 
 ### DMPs
@@ -138,91 +137,78 @@ Data ownership and use
 
 https://creativecommons.org/share-your-work/licensing-types-examples/#by
 
-Creative Commons licenses
+### Creative Commons licenses
 There are six main Creative Commons licenses you can use when you choose to publish your work under CC terms. The six CC licenses are based on four conditions. The four conditions and the six licenses are described below.
 
-License Conditions
+### License Conditions
 When using a Creative Commons license, creators choose a set of conditions they wish to apply to their work.
 
-Attribution Attribution (by)
+-  Attribution Attribution (by)
 
 All CC licenses require that others who use your work in any way must give you credit the way you request, but not in a way that suggests you endorse them or their use. If they want to use your work without giving you credit or for endorsement purposes, they must get your permission first.
 
-ShareAlike ShareAlike (sa)
+-  ShareAlike ShareAlike (sa)
 
-You let others copy, distribute, display, perform, and modify your work, as long as they distribute any modified work on the same terms. If they want to distribute modified works under other terms, they must get your permission first.
+You let others copy, distribute, display, perform, and modify your work, as long as they distribute any modified work on the same terms. If they want to distribute modified works under other terms, tey must get your permission first.
 
-NonCommercial NonCommercial (nc)
+-  NonCommercial NonCommercial (nc)
 
 You let others copy, distribute, display, perform, and (unless you have chosen NoDerivatives) modify and use your work for any purpose other than commercially unless they get your permission first.
 
-NoDerivatives NoDerivatives (nd)
+-  NoDerivatives NoDerivatives (nd)
 
 You let others copy, distribute, display and perform only original copies of your work. If they want to modify your work, they must get your permission first.
 
-Attribution (CC BY)image
+-  Attribution (CC BY)image
 This license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licenses offered. Recommended for maximum dissemination and use of licensed materials.
+==================================
 
-View License Deed | View Legal Code
-
-Attribution ShareAlike (CC BY-SA)image
+-  Attribution ShareAlike (CC BY-SA)image
 This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. This license is often compared to “copyleft” free and open source software licenses. All new works based on yours will carry the same license, so any derivatives will also allow commercial use. This is the license used by Wikipedia, and is recommended for materials that would benefit from incorporating content from Wikipedia and similarly licensed projects.
 
-View License Deed | View Legal Code
 
-
-Attribution-NoDerivs (CC BY-ND)image
+-  Attribution-NoDerivs (CC BY-ND)image
 This license lets others reuse the work for any purpose, including commercially; however, it cannot be shared with others in adapted form, and credit must be provided to you.
 
-View License Deed | View Legal Code
-
-
-Attribution-NonCommercial (CC BY-NC)image
+-  Attribution-NonCommercial (CC BY-NC)image
 This license lets others remix, tweak, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don’t have to license their derivative works on the same terms.
 
-View License Deed | View Legal Code
-
-
-Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)image
+-  Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)image
 This license lets others remix, tweak, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms.
 
-View License Deed | View Legal Code
-
-
-Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)image
+-  Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)image
 This license is the most restrictive of our six main licenses, only allowing others to download your works and share them with others as long as they credit you, but they can’t change them in any way or use them commercially.
 
 ## Long Term Preservation and Storage
 
 ### Selecting a Data Repository
 https://www.bu.edu/data/share/selecting-a-data-repository/
-Things to Consider
+
+### Things to Consider
 Many data repositories exist today. Some will be a better fit for your needs more than others. Here are some tips on selecting a data repository for your research:
 
-Reputation
+### Reputation
 Is the repository a reputable source? Check to see if it is endorsed by a funding agency, scholarly journal, professional society, library, or if it is listed in the Registry of Research Data Repositories. Publishing your data, like publishing an article, is best done with a reputable partner that is backed by an institution or your research community.
 
-Sustainability
+### Sustainability
 Having you data deposited in a repository that is unsustainable defeats the point of depositing it. This is why it is important to make sure your repository has the support of an institution, community, or funder. You’ll want to ensure the depository you select will be providing access to your data for well over 5 years. Many repositories will also have preservation plans and contingency plans on the outside chance funding is ceased. Lastly, don’t be afraid to ask about these plans.
 
-Visibility
+### Visibility
 One of the primary reasons to deposit your data in a repository is to obtain a unique identifier that others can use to cite your data. This service will increase the visibility of your data within the scholarly literature and allows researchers to find it later on. Ensure your data repository offers a DOI (digital object identifier), handle, or another unique indentifer.
 
 Another way to think about visibility is to ask if researchers in your field use a repository. Some disciplines have an agreed upon repository that everyone uses and knows about. Ensure that you’re putting your data where the appropriate researchers are likely to find it (and hopefully use it).
 
-Usability
+### Usability
 The usability of a data repository is also important in ensuring that others will be able to access your data. Unfortunately, not all repositories have the funding to create great web interfaces with simple, intuitive interactions. However, if your peers are unable to find and download your data it will limit the effectiveness of sharing your data. A usable data repository should allow for users to easily upload, download, and cite data sets.
 
-Features
+### Features
 Some data repositories have really great features like integrations with Open Science Framework, GitHub, or other commercial storage solutions. While these feature may not be the keystones to providing long-term access to your data, they can help you share your data more frequently and effectively. Additionally, an author dashboard (a place you can view statistics, like downloads, on your data sets) or easy-to-understand licensing, like Creative Commons, can make your life a little easier. Lastly, you’ll want to review the upload and storage limits. Some repositories offer limited free storage before a fee is charged. Be sure to look over each data repository’s features and compare them with comparable services.
 
-Formats
+### Formats
 Most data repositories are able to handle most formats; however, this doesn’t always guarantee that they’ll be able to work with your data. Be sure to take a look at the repositories documentation to ensure they can store the data you’ve generated. In addition, see if the repository can generate previews or provide other user interactions with your data. While these features are not essential from a preservation perspective, they do help users understand and access your data.
 
-Rights
+### Rights
 Know your rights! Take time out to read the terms of use and to understand what permissions you’re giving the data repository. For instance, does your data repository use common licensing agreements (again, like Creative Commons) that will help others understand what they can and cannot do with your data?
-
-It’s best practice for a data repository to clearly state the terms of use and to have a FAQ (frequently asked questions) section to help users understand the service being provided. If you’re unsure about your rights as a user, contact the repository to learn more.
 
 
 ### Activity
