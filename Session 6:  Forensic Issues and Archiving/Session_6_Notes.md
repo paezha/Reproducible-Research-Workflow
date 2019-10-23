@@ -216,7 +216,7 @@ Know your rights! Take time out to read the terms of use and to understand what 
 1. Review Data Management Plan
     - Revise your Data Management Best Practice (as needed) to be easy to follow instructions to guide your work
     - Review the DMP Questionnaire of a colleague to gain additional feedback
-    - Upload your complete DMP to GitHub.  Please feel free to write this as a narrative/methods segment for a research report/proposal
+    - Export and upload your complete DMP to GitHub. 
   
 ### Suggested readings
 
