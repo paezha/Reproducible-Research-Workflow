@@ -1,13 +1,16 @@
-## DMPs and Best Practices review
+# GEOG 712 Reproducible Research
 
-### DMPs
--  Challenges
--  Peer Review
+## Session 6. Data Management Plans (DMP): DMPs and Best Practices review
 
+### DMPs  
+
+-  Challenges  
+-  Peer Review  
+  
 ### Best Practices
-
--  Simple document that lays out step by step how you will implement one aspect of the DMP
--  For instance, define specifically what your naming conventions will be or your file structure.  
+  
+-  Simple document that lays out step by step how you will implement one aspect of the DMP  
+-  For instance, define specifically what your naming conventions will be or your file   structure. 
 -  Actionable reference document to support your work.
 
 ###  Take a few minutes to read another DMP and provide feedback

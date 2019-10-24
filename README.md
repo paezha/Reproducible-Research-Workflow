@@ -85,7 +85,7 @@ _Topic_:	R + RStudio + markdown
 _Suggested Readings_:	   
   [What is R?](https://www.r-project.org/about.html)  
   [R for Data Science](https://r4ds.had.co.nz/)   
-  [What is Markdown](https://rmoff.net/2017/09/12/what-is-markdown-and-why-is-it-awesome/)
+  [What is Markdown](https://rmoff.net/2017/09/12/what-is-markdown-and-why-is-it-awesome/)  
 _Activity 1_: 	Use markdown to create a document with basic operations in R
 
 **Week 3** (Sept. 25)
@@ -117,7 +117,10 @@ _Activity 4_:	Update the DMP and post in GitHub
 
 **Week 8** (Oct. 30)  
 _Topic_:	Creating packages in R and documenting datasets  
-_Readings_:	TBD 
+_Readings_:  
+[R Packages](http://r-pkgs.had.co.nz/)  
+[R Package Primer - A minimal Example](https://kbroman.org/pkg_primer/)  
+[Building R Packages](https://rstats-pkgs.readthedocs.io/en/latest/index.html)  
 _Activity 5_: 	Create a small package with a dataset  
 
 **Week 9** (Nov. 6)
