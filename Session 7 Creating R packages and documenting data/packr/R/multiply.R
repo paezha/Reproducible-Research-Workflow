@@ -3,6 +3,7 @@
 #' @param a A number
 #' @param b A number
 #' @return The product of \code{a} and \code{b}
+#' @export
 #' @examples
 #' multiply(2, 5)
 #' multiply(4, 8)
