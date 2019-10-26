@@ -10,7 +10,7 @@ Creating packages can become quite a sophisticated matter, depending on what the
 
 ### Packages
 
-According to (Wickham)[http://r-pkgs.had.co.nz/], packages in R are "the fundamental units of reproducible code". 
+According to [Wickham](http://r-pkgs.had.co.nz/), packages in R are "the fundamental units of reproducible code". 
 
 Packaging code in this way has been no doubt one of the reasons why the R ecosystem became and has remained hugely popular; another reason being a relatively simple and effective way of finding, installing, and managing packages. Many R packages increase the functionality of R, but a package can serve other functions and distribution is not necessarily the only reason to create a package. Packaging code and data forces you to go through the process of organizing all your materials, documenting them, and possibly creating examples. This might come handy when, in the future, you need to revisit a project. It can help you to explain what you have done. And it can enhance reproducibility of research, if a package is a companion to a paper you write.
 
@@ -226,11 +226,7 @@ The components above constitute a minimal package. Now, we are ready to _build_ 
 
 ![Build tab](Session-7-Figure-18.png)
 
-This tab includes a number of options to work with packages, including nstalling a package and restarting the R Studio session, testing the package, building the package, cleaning and rebuilding, etc. See below:
-
-![Package building actions]
-
-We can begin by _checking_ the build, to make sure that there are no errors This will run an extensive set of diagnostics to reduce the risk of a package not working or having other issues:
+This tab includes a number of options to work with packages, including nstalling a package and restarting the R Studio session, testing the package, building the package, cleaning and rebuilding, etc. We can begin by _checking_ the build, to make sure that there are no errors This will run an extensive set of diagnostics to reduce the risk of a package not working or having other issues:
 
 ![Checking a package build](Session-7-Figure-19.png)
 
