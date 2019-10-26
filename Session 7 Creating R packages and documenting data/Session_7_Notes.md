@@ -21,7 +21,7 @@ install.packages("PATH/packr_0.1.0.tar.gz", repos = NULL, type = "source")
 
 As an alternative, you can install the package directly from GitHub:
 ```
-devtools::install_github("paezha/Reproducible-Research-Workflow/Session 7 Creating R packages and documenting data/packr")
+devtools::install_github("paezha/Reproducible-Research-Workflow/Session 7 Creating R packages and documenting data/packr", build_vignettes = TRUE)
 ```
 
 If you succeeded in installing the package, you can proceed to load it now:
@@ -428,7 +428,7 @@ You can then proceed to edit your vignette file.
 
 This is an example of a vignette:
 ```
-browse_vignette("packr")
+browseVignettes("packr")
 ```
 
 Notice that the vignette is not created by `roxigen2` but rather when the package is built, and therefore it will become available after installing the package from the `.tar.gz`.
