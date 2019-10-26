@@ -25,7 +25,7 @@ CO2 Emissions Data Source: EC Emissions Database for Global Atmospheric Research
 GDP Data Source: Wikipedia (https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)_per_capita) Accessed: September 5, 2017
 }
 \usage{
-data(Dissonance_Santiago)
+data(energy_and_emissions)
 }
 \description{
 A dataset containing information about 188 world countries, including

@@ -19,9 +19,9 @@ We will use an example as we cover the basic steps of creating a package. To see
 install.packages("PATH/packr_0.1.0.tar.gz", repos = NULL, type = "source")
 ```
 
-As an alternative, you can install from GitHub:
+As an alternative, you can install the package directly from GitHub:
 ```
-
+devtools::install_github("paezha/Reproducible-Research-Workflow/Session 7 Creating R packages and documenting data/packr")
 ```
 
 If you succeeded in installing the package, you can proceed to load it now:
@@ -32,6 +32,16 @@ library(packr)
 Try the following:
 ```
 ?packr
+```
+
+And also this to examine all datasets available by package, including data packed with `packr`:
+```
+data(package = "packr")
+```
+
+To see the documentation for the data:
+```
+?energy_and_emissions
 ```
 
 ### What goes in a package?
