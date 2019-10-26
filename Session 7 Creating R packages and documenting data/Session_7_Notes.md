@@ -14,19 +14,14 @@ According to (Wickham)[http://r-pkgs.had.co.nz/], packages in R are "the fundame
 
 Packaging code in this way has been no doubt one of the reasons why the R ecosystem became and has remained hugely popular; another reason being a relatively simple and effective way of finding, installing, and managing packages. Many R packages increase the functionality of R, but a package can serve other functions and distribution is not necessarily the only reason to create a package. Packaging code and data forces you to go through the process of organizing all your materials, documenting them, and possibly creating examples. This might come handy when, in the future, you need to revisit a project. It can help you to explain what you have done. And it can enhance reproducibility of research, if a package is a companion to a paper you write.
 
-<<<<<<< HEAD
 We will use an example as we cover the basic steps of creating a package. To see what the outcome of that might look like, follow this [link](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session%207%20Creating%20R%20packages%20and%20documenting%20data) and download the file `packr_0.1.0.tar.gz`. Save the file in a place where you can find it easily, because the next step will be to install the package (make sure that you type the correct path, or as an alternative, make the folder where the package installer is the working directory):
 ```
 install.packages("PATH/packr_0.1.0.tar.gz", repos = NULL, type = "source")
-=======
-We will use an example as we cover the basic steps of creating a package. To see what the outcome of that might look like, follow this link and download the file `packr_0.1.0.tar.gz`:
-
-
-
-Save the file where you can find it, because the next step will be to install the package (make sure that you type the path, or as an alternative, make the folder where the package installer is the working directory):
 ```
-install.packages("/packr_0.1.0.tar.gz", repos = NULL, type = "source")
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
+
+As an alternative, you can install from GitHub:
+```
+
 ```
 
 If you succeeded in installing the package, you can proceed to load it now:
@@ -39,10 +34,6 @@ Try the following:
 ?packr
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
 ### What goes in a package?
 
 An R package consists of, at a minimum, one function or one dataset, and depending on how the package is created, one or more files that support the package.
@@ -112,11 +103,7 @@ Choose the directory in your system where you want to create your project and pa
 
 ![Initializing an R package](Session-7-Figure-7.png)
 
-<<<<<<< HEAD
 For this example, I am going to call my first package `packr` (a quick Google search suggests that this name is not the name of an existing R package!). You choose your own package name, maybe keeping in mind the Wickham's [naming advice](http://r-pkgs.had.co.nz/package.html#naming).
-=======
-For this example, I am going to call my first package `packr` (a quick Google search suggests that this name is not the name of an existing R package!). 
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
 
 Once that you have created the project, there will be a directory with the following folders/files:
 
@@ -183,28 +170,18 @@ We will add one more component to the package at this point, an `R` script to do
 
 ![Create a new script](Session-7-Figure-16.png)
 
-<<<<<<< HEAD
 The name of the new script should be the same as the name of your package, In my case this is `packr.R`.
-=======
-The name of the new script should be the same as the name of your package, so in this case it will be `packr.R`.
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
 
 This script will consist only of comments, as follows (notice that the comments are in `roxygen2` style):
 ```
 #' packr: A package with a minimum example of package creation.
 #'
-<<<<<<< HEAD
 #' This package is an exercise in package creation using
 #' R studio. The package includes a sample function and
-=======
-#' This package was created as an exercise in package creation
-#' using R studio. The package includes a sample function and 
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
 #' a sample dataset with their respective documentation.
 #'
 #' @docType package
 #' @name packr
-<<<<<<< HEAD
 #' @author Antonio Paez, School of Geography and Earth Sciences, McMaster University \email{paezha@@mcmaster.ca}
 #' @references \url{https://github.com/paezha/Reproducible-Research-Workflow}
 NULL
@@ -229,27 +206,13 @@ There are many other tags that can be used to describe different aspects of a pa
 To learn more about tags in documentation, check [this](https://roxygen2.r-lib.org/articles/rd.html).
 
 Now proceed to regenerate the documentation. Any time that you add a function (or a dataset that needs documentation) this needs to be repeated:
-=======
-NULL
-```
-
-We use the symbol `@` for tags. In the example, there are two types of tags in use: `docType` (package) and `name` (packr). There are many other tags that can be used to describe different aspects of a package, function, or dataset, and if you begin a comment in the script with `@` suggestions for tag will pop up for you:
-
-![Package documentation](Session-7-Figure-17.png)
-
-Now proceed to generate the documentation:
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
 ```
 devtools::document()
 ```
 
 ### Build the package
 
-<<<<<<< HEAD
 The components above constitute a minimal package. Now, we are ready to _build_ the package, that is, convert it from a collection of folders and files into a proper, distributable bundle. Again, we can do this from the command line, or we can do this in R Studio using the `Build` tab:
-=======
-The components above constitute a minimal package. Now, we are ready to _build_ the package, that is, convert it from a collection of files into a proper, distributable bundle. Again, we can do this from the command line, or we can do this in R Studio using the `Build` tab:
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
 
 ![Build tab](Session-7-Figure-18.png)
 
@@ -267,7 +230,6 @@ Having found no warnings and no errors in the diagnostics, it is possible to _bu
 
 ![Building a package](Session-7-Figure-20.png)
 
-<<<<<<< HEAD
 This will bundle everything that goes with the package. Click `Install and restart`:
 
 ![Installing and restarting](Session-7-Figure-21.png)
@@ -287,31 +249,15 @@ This should display the help file for the function.
 
 Now, we will create a new function to add to our package. To do this, create a new `R` script. In that script you can copy this example of a simple function, or feel free to create another function if you wish:
 
-=======
-
-This will generate the documentation for the functions in the package. Next, try:
-```
-?hello
-```
-
-This should display the help file.
-Try now with a new function. A simple function could be:
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
 ```
 multiply <- function(a, b){
 a * b
 }
 ```
-<<<<<<< HEAD
 
 Notice that a function includes a name (`multiply`) and an assignment (`<-`) followed by `function()` with the arguments of the function (`a` and `b`). Then, between curly brackets (`{}`) all the operations that comprise the function (in this case simply `a * b`). Save this as R script as `multiply.R` in the R/ folder (or the name of your function). 
 
 The basic function does something simple, and someone examining it can easily see what is going on. But more complex functions may not be as simple to read. Therefore, it is good practice to document the function. We can do this by adding roxygen comments to the script. Remember that roxygen comments begin with “#’” to distinguish them from regular comments. For this example function, the comments are:
-=======
-Save this as R script `multiply.R` in the R/ folder.
-Add roxygen comments to the script. Roxygen comments begin with “#’” to distinguish them from regular comments.
-For example:
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
 ```
 #' Multiply two numbers
 #'
@@ -325,7 +271,6 @@ multiply <- function(a, b){
   a * b
 }
 ```
-<<<<<<< HEAD
 
 We are using more tags here: to identify the parameters of the function, to describe the output (`@return`), and to include examples (`@examples`).
 
@@ -435,139 +380,10 @@ The documentation for the data set in the example looks like this in the end:
 #'   \item{CO2_1995}{CO_2 emissions in kilotonnes per year - 1995 estimates}
 #'   \item{CO2_2005}{CO_2 emissions in kilotonnes per year - 2005 estimates}
 #'   \item{CO2_2015}{CO_2 emissions in kilotonnes per year - 2015 estimates}
-=======
-Run `devtools::document()` again. Navigate to your man/ folder, and you will see that there is a new documentation file for the function. Also, notice that this file cannot be edited manually – it is linked to the source script, which 1) save you having to work twice; and 2) ensures that you don’t lose track of documentation files.
- 
-
-As an alternative:
- 
-
-## Document package
-Create an R script with the name of the package. This will consist only of comments:
-```
-#' ModeDissonanceSantiago: A package with the data used in the analysis of mode dissonance in Santiago, Chile; it also includes one utility function for cross-tabulations.
-#'
-#' The ModeDissonanceSantiago package includes the following dataset:
-#' Mode_Dissonance_Santiago.RData
-#'
-#' It also includes the following function used to create cross-tabulations: 
-#' crosstabs.R
-#'
-#' @section Foo functions:
-#' The foo functions ...
-#'
-#' @docType package
-#' @name ModeDissonanceSantiago
-NULL
-```
-Rerun `devtools::document()` and check the documentation by typing `?ModeDissonanceSantiago`.
-
-Create a data\ folder in your package directory.
-
-### .Rbuildignore
-It tells R which items to ignore when building the package. These items will not travel with the package. Useful to keep items that are not for sharing or are not necessary for the package confidential.
-For example, to create a private folder, use:
-```
-usethis::use_build_ignore("yourfolder")
-```
-In my case, I created a raw\ folder where I plan to put my raw data.
-Copy any data files (or other documents) that are not meant to be shared into this folder.
-Once that the data file (or files) have been copied to the data\ folder, it is possible to create data documentation. 
-This is done initially in the R script with the documentation for the package, in the present case `ModeDissonanceSantiago.R`.
-Documentation there looks like this:
-```
-#' Primary mode of travel and modes associated with affective values.
-#'
-#' A dataset containing information about 451 travellers in Santiago, Chile,
-#' including their primary mode of travel and the mode or modes that they
-#' associate with several affective  and instrumental values.
-#'
-#'
-#' The modes of transportation (USED, FREEDOM, ENJOYMENT, HAPPINESS, POVERTY, LUXURY, STATUS, SAFETY, TIME, EFFICIENCY) are coded as:
-#'
-#'  \itemize{
-#'     \item "A": Car
-#'     \item"B": Taxi
-#'     \item"C": Colectivo
-#'     \item"D": Moto
-#'     \item"E": Metro
-#'     \item"F": Bus
-#'     \item"G": Bicycle
-#'     \item"H": Walk
-#'}
-#'
-#' AGE is coded as:
-#'
-#'\itemize{
-#'     \item"A": Less than 18 years
-#'     \item"B": 18 to 24 years
-#'     \item"C": 25 to 34 years
-#'     \item"D": 35 to 54 years
-#'     \item"E": 55 to 64 years
-#'     \item"F": 65 and older
-#'}
-#'
-#' EDUCATION is coded as:
-#'
-#'\itemize{
-#'     \item"A": ELEMENTARY
-#'     \item"B": SECUNDARY
-#'     \item"C": PROFESS_TECH
-#'     \item"D": COLLEGE
-#'     \item"E": POSTGRAD
-#'}
-#'
-#' INCOME is coded as (in pesos):
-#'
-#' \itemize{
-#'     \item"A": Less than 423
-#'     \item"B": 423 to 639
-#'     \item"C": 639 to 977
-#'     \item"D": 977 to 1550
-#'     \item"E": 1550 to 2380
-#'     \item"F": More than 2380
-#'}
-#'
-#' TRAVEL_TIME is coded as:
-#'
-#' \itemize{
-#'     \item "A": 0-20 min
-#'     \item"B": 20-40 min
-#'     \item"C": 40-60 min
-#'     \item"D": 1h and more
-#'}
-#'
-#' @format A data frame with 451 rows and 24 variables:
-#' \describe{
-#'   \item{NUMERO}{Respondent ID}
-#'   \item{USED}{Main mode of transportation used by the respondent}
-#'   \item{FREEDOM}{Mode(s) that the respondent associates with feelings of freedom}
-#'   \item{ENJOYMENT}{Mode(s) that the respondent associates with feelings of enjoyment}
-#'   \item{HAPPINESS}{Mode(s) that the respondent associates with feelings of happiness}
-#'   \item{POVERTY}{Mode(s) that the respondent associates with feelings of poverty}
-#'   \item{LUXURY}{Mode(s) that the respondent associates with feelings of luxury}
-#'   \item{POVERTY}{Mode(s) that the respondent associates with feelings of status}
-#'   \item{SAFETY}{Mode(s) that the respondent associates with feelings of safety}
-#'   \item{TIME}{Mode(s) that the respondent associates with feelings of wasted time}
-#'   \item{EFFICIENCY}{Mode(s) that the respondent associates with feelings of efficiency}
-#'   \item{AGE}{Mode(s) that the respondent associates with feelings of efficiency}
-#'   \item{EDUCATION}{Mode(s) that the respondent associates with feelings of efficiency}
-#'   \item{INCOME}{Mode(s) that the respondent associates with feelings of efficiency}
-#'   \item{TRAVEL_TIME}{Mode(s) that the respondent associates with feelings of efficiency}
-#'   \item{WEIGHT_*}{A weight for the responses by affective or instrumental value.
-#'   Some respondents selected more than one mode that they associated with feelings of
-#'   {FREEDOM, ENJOYMENT, HAPPINESS, POVERTY, LUXURY, STATUS, SAFETY, TIME, and EFFICIENCY}.
-#'   To avoid giving greater weight to respondents who indicated several modes of
-#'   transportation, a weight was calculated that is the inverse of the number of
-#'   modes indicated. These weights can be used to weight the frequencies prior to
-#'   any analysis. For example WEIGHT_FREEDOM will be inversely proportional to the
-#'   number of modes that a respondent named with respect to feelings of freedom}
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
 #' }
 #'
 #' @docType data
 #' @keywords datasets
-<<<<<<< HEAD
 #' @name energy_and_emissions
 #' @usage data(Dissonance_Santiago)
 #' @source Energy Consumption Data Source: CIA Factbook, Refined Oil Products Consumption (https://www.cia.gov/library/publications/the-world-factbook/rankorder/2246rank.html) Accessed: September 5, 2017
@@ -620,41 +436,6 @@ Notice that the vignette is not created by `roxigen2` but rather when the packag
 5. Build the package as a source; it will be a `.tar.gz` file.
 
 6. If you created your package outside of your GitHub repository, post the package to the repository.
-=======
-#' @name Dissonance_Santiago
-#' @usage data(Dissonance_Santiago)
-#' @source Beatriz Mella Lira
-"Dissonance_Santiago"
-```
-The package can be built/rebuilt and/or the documentation recreated. This will add the documentation of the dataset.
-## Vignette
-A vignette is a document that illustrates how to use a package. A vignette is initialized as follows:
-```
-
-```
-Note that the vignette will only load when the package is installed from the tar.gz file, that is, if you try to `browse_vignette()` after building the package, it will not show.
-
-
-
-
-### Activity
-
-1. Create a new R Markdown file, name it "Your Name Activity 1"
-
-2. Create a level-1 header and write in less than 200 words what is your main research interest. Use formatting for emphasis as appropriate.
-
-3. Create a new level-1 header and type "Favorites"
-
-4. Under this header, create a level-2 header "Favorite Music". Create a numbered list with your 5 favorite songs.
-
-5. Still under favorites, create a new level-2 header "Favorite Equation" and type your favorite equation
-
-6. Still under favoritesm create a new level-2 header "Favorite Artists" and create a table with two columns "Name" and "Achievements". Populate the table with 5 favorite artists.
-
-7. Create a new level-1 header and type "A Chunk of Code". Under this header create a chunk of code, whatever you want R to do immediately for you.
-
-8. Once you have done this, knit your document to PDF and email to both instructors.
->>>>>>> 16bbe7a9f5c02193d041412033cbba5e9bf840cf
 
 ### Suggested readings
 
