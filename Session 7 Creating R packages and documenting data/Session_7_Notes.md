@@ -226,7 +226,7 @@ The components above constitute a minimal package. Now, we are ready to _build_ 
 
 ![Build tab](Session-7-Figure-18.png)
 
-This tab includes a number of options to work with packages, including nstalling a package and restarting the R Studio session, testing the package, building the package, cleaning and rebuilding, etc. We can begin by _checking_ the build, to make sure that there are no errors This will run an extensive set of diagnostics to reduce the risk of a package not working or having other issues:
+This tab includes a number of options to work with packages, including installing a package and restarting the R Studio session, testing the package, building the package, cleaning and rebuilding, etc. We can begin by _checking_ the build, to make sure that there are no errors This will run an extensive set of diagnostics to reduce the risk of a package not working or having other issues:
 
 ![Checking a package build](Session-7-Figure-19.png)
 
@@ -427,7 +427,7 @@ This is an example of a vignette:
 browseVignettes("packr")
 ```
 
-Notice that the vignette is not created by `roxigen2` but rather when the package is built, and therefore it will become available after installing the package from the `.tar.gz`.
+Notice that the vignette is not created by `roxygen2` but rather when the package is built, and therefore it will become available after installing the package from the `.tar.gz`.
 
 ### Activity
 
