@@ -4,7 +4,7 @@
 
 In the preceding sessions we learned about Data Management Plans. There are several key aspects of these plans, including how to document not only data, but also how data were processed, and also how to transfer it, either to a supervisor, colleagues, students, or other interested parties.
 
-In this session we will learn about packages in R. Although by no means the only way to document and share data (and processes), packages offer a convenient way of bundling up code, data, documentation, and examples in a conveniently shareable and usable unit.
+In this session we will learn about packages in R. Although by no means the only way to document and share data (and processes), packages offer a convenient way of bundling up code, data, documentation, and examples in a shareable and usable unit.
 
 Creating packages can become quite a sophisticated matter, depending on what their objective is. Here, we will work on a small example, and at the end you will find suggested readings that you can follow to deepen your understanding of the art and the technique of package creation.
 
