@@ -126,8 +126,10 @@ _Activity 5_: 	Create a small package with a dataset
 
 **Week 9** (Nov. 6)
 _Topic_:	Documenting data analysis and use of RMarkdown  
-_Readings_:	TBD  
-_Activity 6_: 	Create a notebook with documented data analysis
+_Readings_:	 
+[Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)  
+[Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)  
+_Activity 6_: 	Create an R Makdown file with documented data analysis
 
 **Week 10** (Nov. 13) 
 _Topic_:	Peer review and collaboration  
