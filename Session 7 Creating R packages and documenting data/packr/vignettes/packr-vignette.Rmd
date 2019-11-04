@@ -1,0 +1,80 @@
+---
+title: "packr-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{packr-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This vignette illustrate the use of the dataset and utility functions included in the package `packr`.
+
+## Preliminaries
+
+Load the packages used in this vignette:
+```{r setup}
+library(packr)
+library(tidyverse)
+```
+
+## Loading the data
+
+To load the data, use the function `data()`:
+```{r load-data}
+data("energy_and_emmisions")
+```
+
+## Summarizing the data
+
+To inspect the dataframe, use the function `summary()`
+```{r summary-data}
+summary(energy_and_emissions)
+```
+
+The data frame consists of 10 variables. The variable definitions can be consulted in the help file:
+```{r call-help}
+?energy_and_emissions
+```
+
+## What is the per capita consumption of oil by country?
+
+The dataframe includes information on population, GDP per capita, energy consumption, and emissions for world countries. The consumption of energy (in barrels per day) is for the country. But what is the consumption per capita? We need to divide the variable `bblpd` by `Population`. Use `dplyr::mutate()` to add this variable to the dataframe:
+```{r energy-per-capita}
+energy_and_emissions <- energy_and_emissions %>%
+  mutate(EPC = bblpd/Population)
+```
+
+Check the descriptive statistics of `EPC` (energy consumption in barrels per day per person):
+```{r}
+summary(energy_and_emissions$EPC)
+```
+
+The maximum consumption is approximately `r round(max(energy_and_emissions$EPC), 2)` barrels per person per day. Which country is that?
+```{r country-max-epc}
+energy_and_emissions[energy_and_emissions$EPC == max(energy_and_emissions$EPC), "Country"]
+```
+
+The country with the highest per capita oil consumption in the world according the the data is Singapore.
+
+## Are GDP per capita and energy consumption per capita related?
+
+To answer this question, we can create a scatterplot of the two variables:
+```{r}
+ggplot(data = energy_and_emissions, aes(x = GDPPC, y = EPC)) +
+  geom_point()
+```
+
+Calculate the correlation between these two variables:
+```{r}
+cor(energy_and_emissions$GDPPC, energy_and_emissions$EPC)
+```
+
+There is a moderately strong correlation between these two variables.

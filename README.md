@@ -118,8 +118,9 @@ _Activity 4_:	Update the DMP and post in GitHub
 **Week 8** (Oct. 30)  
 _Topic_:	Creating packages in R and documenting datasets  
 _Readings_:  
-[R Packages](http://r-pkgs.had.co.nz/)  
+[Writing an R package from scratch](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)  
 [R Package Primer - A minimal Example](https://kbroman.org/pkg_primer/)  
+[R Packages](http://r-pkgs.had.co.nz/)  
 [Building R Packages](https://rstats-pkgs.readthedocs.io/en/latest/index.html)  
 _Activity 5_: 	Create a small package with a dataset  
 
