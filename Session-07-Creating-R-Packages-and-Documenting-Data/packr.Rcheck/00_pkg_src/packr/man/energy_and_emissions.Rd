@@ -6,7 +6,7 @@
 \title{Energy and emissions data for world countries.}
 \format{A data frame with 188 rows and 10 variables:
 \describe{
-  \item{Country}{Names of countries as factor}
+  \item{Country name}{Names of countries as factor}
   \item{Area}{Surface land area of country in sq.km}
   \item{Population}{Population estimates}
   \item{PYear}{Year of the population estimate}
