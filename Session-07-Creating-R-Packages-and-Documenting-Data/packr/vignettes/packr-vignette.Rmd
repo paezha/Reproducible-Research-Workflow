@@ -1,12 +1,12 @@
 ---
 title: "packr-vignette"
 output: rmarkdown::html_vignette
+abstract: An important element of reproducible research is documenting all steps of the process, including data analysis. This vignette, developed for the `packr` package (a minimal example of package building), will show how to document data analysis in a self-contained and reproducible document. To this end, the data set `energy_and_emissions` (included in the `packr` package) will be used.
 vignette: >
   %\VignetteIndexEntry{packr-vignette}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
-
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -15,7 +15,14 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Introduction
+
+
 This vignette illustrate the use of the dataset and utility functions included in the package `packr`.
+
+## Knitr and chunk options
+
+Words go here.
 
 ## Preliminaries
 
@@ -31,8 +38,6 @@ To load the data, use the function `data()`:
 ```{r load-data}
 data("energy_and_emmisions")
 ```
-
-## Summarizing the data
 
 To inspect the dataframe, use the function `summary()`
 ```{r summary-data}
