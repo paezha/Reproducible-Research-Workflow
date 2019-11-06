@@ -22,10 +22,7 @@ This vignette illustrate the use of the dataset and utility functions included i
 
 1. On the side of technology, the students are learning to work with R Notebooks and R. For this reason, all code is documented so that the students can see _how_ things are done.
 
-2. On the side of transportation geography, the students are learning to discern trends, and in particular how some 
-
-
-, the students learn how to introduce chunks of code in R Notebooks/
+2. On the side of transportation geography, the students are learning to discern trends in transportation.
 
 ## Preliminaries
 
