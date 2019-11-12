@@ -76,12 +76,12 @@ The following illustrates only three forms of academic dishonesty:
 ## Course Schedule (September 2019)
 
 **Week 1** (Sept. 11)  
-_Topic_:	Course overview and introduction: Why reproducible research?  
+_Topic_:	[Course overview and introduction: Why reproducible research?](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-01-Why-Reproducible-Research)    
 _Readings_:	No readings this week  
 _For discussion_: Principles of open science, advantages, funding and policy environment, journal policies and the publication process, roadmap for course
 
 **Week 2** (Sept. 18)
-_Topic_:	R + RStudio + markdown   
+_Topic_:	[R + RStudio + markdown](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-02-R-and-Markdown)     
 _Suggested Readings_:	   
   [What is R?](https://www.r-project.org/about.html)  
   [R for Data Science](https://r4ds.had.co.nz/)   
@@ -89,20 +89,20 @@ _Suggested Readings_:
 _Activity 1_: 	Use markdown to create a document with basic operations in R
 
 **Week 3** (Sept. 25)
-_Topic_:	Version Control and GitHub  
+_Topic_:	[Version Control and GitHub](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-03-Git-and-GitHub)  
 _Readings_:  
 [What is version control?](https://en.wikipedia.org/wiki/Version_control)  
 [What is GitHub?](https://www.economist.com/the-economist-explains/2018/06/18/what-is-github)  
 _Activity 2_: 	Post a README notice in GitHub and one document with basic operations in R
 
 **Week 4** (Oct. 2)  
-_Topic_:	Data Management Plans (DMP): Principles  
+_Topic_:	[Data Management Plans (DMP): Principles](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-04-Research-Data-Management-Principles)  
 _Readings_:	  
 [10 aspects of highly effective research data](https://www.elsevier.com/connect/10-aspects-of-highly-effective-research-data)  
 _Activity_:	Create a list of data that you will be creating and using as part of your project  
    
 **Week 5** (Oct. 9) 
-_Topic_:	Data Management Plans (DMP): Tools  
+_Topic_:	[Data Management Plans (DMP): Tools](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-05-Data-Management-Plans)  
 _Readings_:	TBD  
 _Activity 3_: 	Write an initial DMP and post in GitHub
 
@@ -111,12 +111,12 @@ _Topic_:	Reading week
 _Readings_:	N/A
 
 **Week 7** (Oct. 23)  
-_Topic_:	Forensic issues and archiving  
+_Topic_:	[Forensic issues and archiving](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-06-Forensic-Issues-and-Archiving)  
 _Readings_:	TBD  
 _Activity 4_:	Update the DMP and post in GitHub  
 
 **Week 8** (Oct. 30)  
-_Topic_:	Creating packages in R and documenting datasets  
+_Topic_:	[Creating packages in R and documenting datasets](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-07-Creating-R-Packages-and-Documenting-Data)  
 _Readings_:  
 [Writing an R package from scratch](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)  
 [R Package Primer - A minimal Example](https://kbroman.org/pkg_primer/)  
@@ -125,7 +125,7 @@ _Readings_:
 _Activity 5_: 	Create a small package with a dataset  
 
 **Week 9** (Nov. 6)
-_Topic_:	Documenting data analysis and use of RMarkdown  
+_Topic_:	[Documenting data analysis and use of RMarkdown](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-08-Documenting-Data-Analysis-with-RMarkdown)  
 _Readings_:	 
 [Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)  
 [Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)  
