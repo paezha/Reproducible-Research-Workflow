@@ -129,12 +129,12 @@ _Topic_:	[Documenting data analysis and use of RMarkdown](https://github.com/pae
 _Readings_:	 
 [Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)  
 [Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)  
-_Activity 6_: 	Create an R Makdown file with documented data analysis
+_Activity 6_: 	Create an R Makdown file with documented data analysis (a vignette for your package)
 
 **Week 10** (Nov. 13) 
-_Topic_:	Peer review and collaboration  
-_Readings_: TBD  
-_Activity 7_: 	In-class activity peer reviewing notebooks, and revisions due in GitHub
+_Topic_:	[Peer review and collaboration](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-09-Peer-Review-and-Collaboration)  
+_Readings_: Review readings of Sessions 7 and 8  
+_Activity 7_: 	In-class activity peer reviewing packages, vignettes, and revisions due in GitHub
 
 **Week 11** (Nov. 20)
 _Topic_:	`Rticles` and practical issues preparing self-contained open research documents (math notation and figures)  
