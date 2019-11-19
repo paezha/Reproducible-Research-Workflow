@@ -126,7 +126,7 @@ _Activity 5_: 	Create a small package with a dataset
 
 **Week 9** (Nov. 6)
 _Topic_:	[Documenting data analysis and use of RMarkdown](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-08-Documenting-Data-Analysis-with-RMarkdown)  
-_Readings_:	 
+_Readings_:  	 
 [Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)  
 [Best Practices for Scientific Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745)  
 _Activity 6_: 	Create an R Makdown file with documented data analysis (a vignette for your package)
@@ -137,7 +137,7 @@ _Readings_: Review readings of Sessions 7 and 8
 _Activity 7_: 	In-class activity peer reviewing packages, vignettes, and revisions due in GitHub
 
 **Week 11** (Nov. 20)
-_Topic_:	`Rticles` and practical issues preparing self-contained open research documents (math notation and figures)  
+_Topic_:	[`Rticles` and practical issues preparing self-contained open research documents (math notation and figures)](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-10-Rticles-Math-and-Figures)  
 _Readings_:	TBD  
 _Activity_: 	No activity this week
 
