@@ -94,4 +94,4 @@ NULL
 
 This same file can be used to document data sets. As an alternative, you can create R scripts to document each individual data set. When doing so, the names must be concordant.
 
-During the seminar we will troublshoot any other issues you may have.
+During the seminar we will troubleshoot any other issues you may have.
