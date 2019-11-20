@@ -1,6 +1,6 @@
 # GEOG 712 Reproducible Research
 
-## Session 10. `rticles` and practical issues: math notation and figures
+## Session 10. `rticles` and practical issues: mathematical notation and figures
 
 A package with a vignette is a neat example of a self-contained reproducible research unit. The package can be used to share data, documentation, code, and a document with data analysis.
 
@@ -374,8 +374,139 @@ with the caption or title of the figure between the square brackets, and the pat
 
 One of the most appealing aspects of working with R Markdown is that the figures can be produced internally as part of the document. We saw examples of this before, with vignettes, for instance.
 
-Suppose that I want to do report some analysis using data set in the package `packr`.
+Suppose that I want to do report some analysis using data set in the package `packr`. Loading this and other packages is not part of what I wish to present, so I want that to happen under the hood, as it were, in the output document. This is how I would prepare my document for data analysis:
 
+```{r load-packages, include = FALSE}
+
+# Run only if you need to install `packr`
+#devtools::install_github("paezha/Reproducible-Research-Workflow/Session-07-Creating-R-Packages-and-Documenting-Data/packr", build_vignettes = TRUE)
+
+library(packr)
+library(tidyverse)
+library(gridExtra)
+```
+
+The chunk option `include = FALSE` means that the chunk will be evaluated (the code will run), but the code and any output will not be included in the output. This chunk of code could go at the top of my document, right after the YAML header (see [here](https://github.com/paezha/Reproducible-Research-Workflow/blob/master/Session-10-Rticles-Math-and-Figures/Elsevier-Template/Elsevier-Template.Rmd)).
+
+Notice that the chunk is named. Its name is `load-packages`. Naming chunks is good practice for both for reference and ease of navigation. Furthermore, I included a comment with instructions on how to install `packr` if needed. The other two packages can be obtained from CRAN, but `packr` is not available there, so I need to direct the reader to its location.
+
+I can load the data in another chunk, also with the option `include` set to false, since I want this to happen in the background.
+
+```{r load-data, include = FALSE}
+data("energy_and_emissions")
+```
+
+The analysis requires that I create two new variables, GDP and energy consumption per capita. This is done in the following chunk:
+
+```{r data-preparation, include = FALSE}
+# Use `dplyr::mutate` to create two new variables: GDP, obtained as the product of GDP per capita times the population, and ECP, the energy consumption per capita, obtained as the ratio of bblpd to population
+
+energy_and_emissions <- energy_and_emissions %>%
+  mutate(GDP = GDPPC * Population, EPC = bblpd / Population)
+```
+
+It is likely that I have already done some analysis elsewhere (probably a notebook, where I documented the analysis). When transplanting the analysis to an article, I do not necessarily want to describe every step of the analysis in the output document; however, it is still important that I document what is going on. I do this by including comments in the chunks of code with explanations about the process.
+
+Once that I have prepared the data, I am ready to begin writing my article. For instance:
+
+```
+Introduction
+============
+
+The economy of a nation is tied to its consumption of energy, since every process of production requires energy as an input. However, the strength of the relationship between the economy and the consumption of energy varies. Some countries (e.g., Japan) were more successful than others in terms of decoupling their productive processes from energy after the oil shocks of the 1970s. This was achieved by increasing the efficiency of production, so that the same output could be produced using less energy, or in somewhat different terms, by improving their energy intensity.
+
+The relationship between economic output and energy consumption is of interest at a time when the effects of a carbon-intense economy is creating a heavy environmental burden. A relevant question is, what countries are more energy-efficient, and can we learn from them. To explore this question we will consider data on national energy use (in barrels of oil per day), economic output (GDP), and $CO_2$ emissions.
+```
+
+At this point, I would like to show a scatterplot with some of these relationships. The scatterplot can be created using different strategies. In base R, a scatterplot is created using the `plot` function:
+```
+plot(x = energy_and_emissions$bblpd, y = energy_and_emissions$GDP, main = "Energy and Economic Output",
+     xlab = "Energy (bblpd)", ylab = "GDP",
+     pch = 19, frame = FALSE)
+```
+
+The package [`ggplot2`](https://ggplot2.tidyverse.org/) has become a standard for 2-D graphs in R due to its flexibility and extensibility. A chunk to create a `ggplot2` scatterplot is as follows:
+```{r fig-energy-to-gdp, echo = FALSE, fig.cap="\\label{fig:energy-to-gdp} The relationship between energy consumption and economic output by world countries"}
+ggplot(data = energy_and_emissions, aes(x = GDP, y = bblpd)) +
+  geom_point() +
+  ggtitle("Energy and Economic Output") +
+  xlab("Energy (bblpd)") +
+  ylab("GDP")
+```
+
+Notice that the option `echo` is set to `FALSE`: I do not want the code to show in the output document, but I do want the output (i.e., the figure) to be in the output. Also, notice the use of the `fig.cap` chunk option. This option allows us to write a caption for the figure. And the caption can include a `\\label{}` so that the figure can be referenced in the text. For example:
+```
+Figure \ref{fig:energy-to-gdp} is a scatterplot of energy consumption to GPD. It can be seen that in general, greater economic output is associated with greater consumption of energy. 
+```
+
+More complex figures can be obtained by using the package [`gridExtra`](https://cran.r-project.org/web/packages/gridExtra/vignettes/arrangeGrob.html), which is used to arrange multiple graphic objects (or _grobs_). A convenient way to do this is to name the graphic objects so that they can be called for the output. A chunk that arranges two plots side by side is as follows:
+```{r fig-two-panel-plot, echo = FALSE, fig.cap="\\label{fig:two-panel-plot} Two plots in a single figure; left panel is Figure 1 and right panel is Figure 2"}
+
+# Recreate Figure 1
+fig1 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = bblpd)) +
+  geom_point() +
+  ggtitle("Energy and Economic Output") +
+  xlab("Energy (bblpd)") +
+  ylab("GDP")
+
+# Recreate Figure 2
+fig2 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = bblpd)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  ggtitle("Energy and Economic Output: Expected vs Observed") +
+  xlab("Energy (bblpd)") +
+  ylab("GDP")
+
+grid.arrange(fig1, fig2, ncol = 2)
+```
+
+Here, I used `ggplot2` to create two plots, which I named `fig1` and `fig1`. The function `grid.arrange()` takes as input the graphic objects and the number of columns (`ncol`) and/or the number of rows (`nrow`) for the output figure. This command essentially creates a _table_ of graphic objects.
+
+Another way of creating multi-panel figures is by means of the faceting functionality in `ggplot2`. Faceting is an elegant way of doing this, but often requires data to be organized in a certain way. For example, suppose that I wanted to show a plot with $CO_2$ emissions in the three years for which I have data. I could do that using `grid.arrange()` in this way:
+```
+co2_1995 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_1995)) +
+  geom_point() +
+  ggtitle("GDP and Emissions (1995)") +
+  xlab("GDP") +
+  ylab("CO_2 Emissions")
+
+co2_2005 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_2005)) +
+  geom_point()  +
+  ggtitle("GDP and Emissions (1995)") +
+  xlab("GDP") +
+  ylab("CO_2 Emissions")
+
+co2_2015 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_2015)) +
+  geom_point() +
+    ggtitle("GDP and Emissions (1995)") +
+  xlab("GDP") +
+  ylab("CO_2 Emissions")
+
+grid.arrange(co2_1995, co2_2005, co2_2015, nrow = 3)
+```
+
+Alternatively, I could rearrange the data so that $CO_2$ emissions are in a single column, and year is an attribute. This is done using the `dplyr` function `gather()`, which gathers several columns into a single column. This is the task of the following chunk:
+```{r gather-co2, include=FALSE}
+
+# I will gather all CO_2 variables into a single column
+
+co2_95to15 <- energy_and_emissions %>% 
+  dplyr::select(Country, GDP, CO2_1995, CO2_2005, CO2_2015) %>% # First select relevant variables
+  gather(Year, CO2, -c(Country, GDP)) %>% # Gather CO2 columns: it is important to exclude from this operation the columns Country and GDP
+  mutate(Year = factor(Year, 
+                       levels = c("CO2_1995", "CO2_2005", "CO2_2015"),
+                       labels = c("1995", "2005", "2015"))) # Relabel the years
+```
+
+Then, I can use the variable `Year` to facet using `facet_wrap()`:
+```{r fig-gdp-emissions-by-year, echo = FALSE, fig.cap="\\label{fig:gdp-emissions-by-year} CO_2 emissions versus GDP by year"}
+ggplot(data = co2_95to15, aes(x = GDP, y = CO2)) +
+  geom_point() +
+  ggtitle("GDP and Emissions by Year") +
+  xlab("GDP") +
+  ylab("CO_2 Emissions") +
+  facet_wrap(~ Year)
+```
 
 ## More examples of mathematical notation
 

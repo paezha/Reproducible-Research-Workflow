@@ -33,6 +33,16 @@
 % use microtype if available
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 \bibliographystyle{elsarticle-harv}
+\usepackage{graphicx}
+% We will generate all images so they have a width \maxwidth. This means
+% that they will get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+\else\Gin@nat@width\fi}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
 \ifxetex
   \usepackage[setpagesize=false, % page size defined by xetex
               unicode=false, % unicode breaks when used with xetex
@@ -77,6 +87,90 @@
   \end{abstract}
   
  \end{frontmatter}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+The economy of a nation is tied to its consumption of energy, since
+every process of production requires energy as an input. However, the
+strength of the relationship between the economy and the consumption of
+energy varies. Some countries (e.g., Japan) were more successful than
+others in terms of decoupling their productive processes from energy
+after the oil shocks of the 1970s. This was achieved by increasing the
+efficiency of production, so that the same output could be produced
+using less energy, or in somewhat different terms, by improving their
+energy intensity.
+
+The relationship between economic output and energy consumption is of
+interest at a time when the effects of a carbon-intense economy is
+creating a heavy environmental burden. A relevant question is, what
+countries are more energy-efficient, and can we learn from them. To
+explore this question we will consider data on national energy use (in
+barrels of oil per day), economic output (GDP), and \(CO_2\) emissions.
+
+Figure \ref{fig:energy-to-gdp} is a scatterplot of energy consumption to
+GPD. It can be seen that in general, greater economic output is
+associated with greater consumption of energy. However, there are some
+important differences. If we fit a regression line to this relationship,
+the line would indicate the \emph{expected} economic output for a given
+level of energy consumption. Points below the line would use more energy
+for a lower level of economic output than expected, whereas points above
+the line would represent greater economic output than expected, given
+their energy consumption.
+
+\begin{figure}
+\centering
+\includegraphics{Elsevier-Template_files/figure-latex/fig-energy-to-gdp-1.pdf}
+\caption{\label{fig:energy-to-gdp} The relationship between energy
+consumption and economic output by world countries}
+\end{figure}
+
+The regression line is estimated as follows: \[
+GDP_i = \beta_0 + \beta_1\text{bblpd}_i + \epsilon_i
+\]
+
+This is a linear model and can be estimated using ordinary least
+squares. The scatterplot of energy to GDP with this line is shown in
+Figure \ref{fig:energy-to-gdp-with-line}. Clearly, some countries are
+more efficient than others in that they can produce more with less
+energy. The more a point deviates from the regression line, the more
+efficient that economy is. It would be interesting to
+
+\begin{figure}
+\centering
+\includegraphics{Elsevier-Template_files/figure-latex/fig-energy-to-gdp-with-line-1.pdf}
+\caption{\label{fig:energy-to-gdp-with-line} A regression line gives the
+expected values of GDP given energy consumption}
+\end{figure}
+
+Figure \ref{fig:right-left-panel-plot} shows Figures
+\ref{fig:energy-to-gdp} and \ref{fig:energy-to-gdp-with-line} side by
+side.
+
+\begin{figure}
+\centering
+\includegraphics{Elsevier-Template_files/figure-latex/fig-right-left-panel-plot-1.pdf}
+\caption{\label{fig:right-left-panel-plot} Two plots in a single figure;
+left panel is Figure 1 and right panel is Figure 2}
+\end{figure}
+
+Figure \ref{fig:top-bottom-panel-plot} shows Figures
+\ref{fig:energy-to-gdp} and \ref{fig:energy-to-gdp-with-line} as a
+two-panel figure with one column and two rows.
+
+\begin{figure}
+\centering
+\includegraphics{Elsevier-Template_files/figure-latex/fig-top-bottom-panel-plot-1.pdf}
+\caption{\label{fig:top-bottom-panel-plot} Two plots in a single figure;
+top panel is Figure 1 and bottom panel is Figure 2}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{Elsevier-Template_files/figure-latex/fig-gdp-emissions-by-year-1.pdf}
+\caption{\label{fig:gdp-emissions-by-year} CO\_2 emissions versus GDP by
+year}
+\end{figure}
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
