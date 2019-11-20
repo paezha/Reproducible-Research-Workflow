@@ -363,14 +363,18 @@ $$
 
 More examples of mathematical notation can be seen below.
 
-## Plots
+## Figures
 
 You have already seen that figures can be introduced into Markdown files as follows:
 ```
 ![caption](my-figure.png)
 ```
 
-with the caption or title of the figure between the square brackets, and the path to the file between the brackets.
+with the caption or title of the figure between the square brackets, and the path to the file between the brackets. If you save all your figures as files, you could easily use this approach to populate your paper with your graphical output. This assumes that the figures were produced elsewhere and then that they were saved. While possible, this is not a very attractive alternative, because it separates a key element of the process of your analysis (visualization) from the rest of your paper. 
+
+One of the most appealing aspects of working with R Markdown is that the figures can be produced internally as part of the document. We saw examples of this before, with vignettes, for instance.
+
+Suppose that I want to do report some analysis using data set in the package `packr`.
 
 
 ## More examples of mathematical notation
