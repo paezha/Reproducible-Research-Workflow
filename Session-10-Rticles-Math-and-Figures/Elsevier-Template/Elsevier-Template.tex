@@ -78,98 +78,69 @@
   
  \end{frontmatter}
 
-\emph{Text based on elsarticle sample manuscript, see
-\url{http://www.elsevier.com/author-schemas/latex-instructions\#elsarticle}}
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
 
-\hypertarget{the-elsevier-article-class}{%
-\section{The Elsevier article class}\label{the-elsevier-article-class}}
+\hypertarget{spatial-autocorrelation-and-map-pattern}{%
+\subsection{Spatial Autocorrelation and Map
+Pattern}\label{spatial-autocorrelation-and-map-pattern}}
 
-\hypertarget{installation}{%
-\paragraph{Installation}\label{installation}}
+Spatial autocorrelation is a condition whereby the value of a variable
+at one location is correlated with the value(s) of the same variable at
+one or more proximal locations. A tool widely used to measure spatial
+autocorrelation is Moran's coefficient of autocorrelation, or \(MC\) for
+short. In matrix form, \(MC\) can be formulated as follows:
 
-If the document class \emph{elsarticle} is not available on your
-computer, you can download and install the system package
-\emph{texlive-publishers} (Linux) or install the LaTeX package
-\emph{elsarticle} using the package manager of your TeX installation,
-which is typically TeX Live or MikTeX.
+\begin{equation} 
+\label{eq:1}
+MC=\frac{n}{\sum_{i}{\sum_{j}{w_{ij}}}}\frac{x'Wx}{x'x}
+\end{equation}
 
-\hypertarget{usage}{%
-\paragraph{Usage}\label{usage}}
+where \(x\) is a vector \((n\times1)\) of mean-centered values of a
+georeferenced variable, and \(W\) is a spatial weights matrix of
+dimensions \((n\times n)\) with elements \(w_{ij}\). The elements of the
+spatial weights matrix take non-zero values if locations \(i\) and \(j\)
+are deemed to be spatially proximate in some sense, and 0 otherwise. It
+can be appreciated that the coefficient is composed to two elements: the
+variance of the random variable (i.e., \((x' x)⁄n\)) and its spatial
+autocovariance \(\frac{(x'Wx)}{\sum_{i}{\sum_{j}{w_{ij}}}}\). As an
+alternative, the numerator of the right-hand term of Equation \ref{eq:1}
+can be expressed as follows:
 
-Once the package is properly installed, you can use the document class
-\emph{elsarticle} to create a manuscript. Please make sure that your
-manuscript follows the guidelines in the Guide for Authors of the
-relevant journal. It is not necessary to typeset your manuscript in
-exactly the same way as an article, unless you are submitting to a
-camera-ready copy (CRC) journal.
+\begin{equation} 
+\label{eq:2}
+x'\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)x
+\end{equation}
 
-\hypertarget{functionality}{%
-\paragraph{Functionality}\label{functionality}}
+with \(I\) as the identity matrix of size \(n\times n\) and \(1\) a
+conformable vector of ones.
 
-The Elsevier article class is based on the standard article class and
-supports almost all of the functionality of that class. In addition, it
-features commands and options to format the
+One possible interpretation of spatial autocorrelation is as map
+pattern. More concretely, the eigenvalues of the following matrix
+represent the range of possible values of \(MC\) given a spatial weights
+matrix \(W\), and the extreme eigenvalues are in fact associated with
+the minimum and maximum values of \(MC\) for the system of relationships
+represented by \(W\):
 
-\begin{itemize}
-\item
-  document style
-\item
-  baselineskip
-\item
-  front matter
-\item
-  keywords and MSC codes
-\item
-  theorems, definitions and proofs
-\item
-  lables of enumerations
-\item
-  citation style and labeling.
-\end{itemize}
+\begin{equation} 
+\label{eq:3}
+\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)
+\end{equation}
 
-\hypertarget{front-matter}{%
-\section{Front matter}\label{front-matter}}
-
-The author names and affiliations could be formatted in two ways:
-
-\begin{enumerate}
-\def\labelenumi{(\arabic{enumi})}
-\item
-  Group the authors per affiliation.
-\item
-  Use footnotes to indicate the affiliations.
-\end{enumerate}
-
-See the front matter of this document for examples. You are recommended
-to conform your choice to the journal you are submitting to.
-
-\hypertarget{bibliography-styles}{%
-\section{Bibliography styles}\label{bibliography-styles}}
-
-There are various bibliography styles available. You can select the
-style of your choice in the preamble of this document. These styles are
-Elsevier styles based on standard styles like Harvard and Vancouver.
-Please use BibTeX~to generate your bibliography and include DOIs
-whenever available.
-
-Here are two sample references: Feynman and Vernon Jr. (1963; Dirac,
-1953).
+A remarkable discovery is that the eigenvectors associated with the
+eigenvalues of the matrix in Expression \ref{eq:3} represent a catalogue
+of latent map patterns, each with a level of autocorrelation (as
+measured by \(MC\)) given by its corresponding eigenvalue. Furthermore,
+the patterns represented by the eigenvectors are orthogonal by design,
+and so they furnish \(n\) maps that are independent from each other.
+Since these map patterns depend only on the spatial weights matrix --
+and not the spatial random variable -- they constitute an extensive set
+of latent map patterns that can be used in regression analysis as
+filters. This is explained next.
 
 \hypertarget{references}{%
 \section*{References}\label{references}}
 \addcontentsline{toc}{section}{References}
-
-\hypertarget{refs}{}
-\leavevmode\hypertarget{ref-Dirac1953888}{}%
-Dirac, P.A., 1953. The lorentz transformation and absolute time. Physica
-19, 888--896.
-doi:\href{https://doi.org/10.1016/S0031-8914(53)80099-6}{10.1016/S0031-8914(53)80099-6}
-
-\leavevmode\hypertarget{ref-Feynman1963118}{}%
-Feynman, R.P., Vernon Jr., F.L., 1963. The theory of a general quantum
-system interacting with a linear dissipative system. Annals of Physics
-24, 118--173.
-doi:\href{https://doi.org/10.1016/0003-4916(63)90068-X}{10.1016/0003-4916(63)90068-X}
 
 
 \end{document}
