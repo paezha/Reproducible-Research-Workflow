@@ -376,10 +376,11 @@ One of the most appealing aspects of working with R Markdown is that the figures
 
 Suppose that I want to do report some analysis using data set in the package `packr`. Loading this and other packages is not part of what I wish to present, so I want that to happen under the hood, as it were, in the output document. This is how I would prepare my document for data analysis:
 
-```{r load-packages, include = FALSE}
 
-# Run only if you need to install `packr`
-#devtools::install_github("paezha/Reproducible-Research-Workflow/Session-07-Creating-R-Packages-and-Documenting-Data/packr", build_vignettes = TRUE)
+```
+{r load-packages, include = FALSE}
+# Run only if you need to install `packr``
+#devtools::install_github("paezha/Reproducible-Research-Workflow/Session-07-Creating-R-Packages-and-Documenting-Data/packr", build_vignettes = TRUE)`
 
 library(packr)
 library(tidyverse)
@@ -392,13 +393,15 @@ Notice that the chunk is named. Its name is `load-packages`. Naming chunks is go
 
 I can load the data in another chunk, also with the option `include` set to false, since I want this to happen in the background.
 
-```{r load-data, include = FALSE}
+```
+{r load-data, include = FALSE}
 data("energy_and_emissions")
 ```
 
 The analysis requires that I create two new variables, GDP and energy consumption per capita. This is done in the following chunk:
 
-```{r data-preparation, include = FALSE}
+```
+{r data-preparation, include = FALSE}
 # Use `dplyr::mutate` to create two new variables: GDP, obtained as the product of GDP per capita times the population, and ECP, the energy consumption per capita, obtained as the ratio of bblpd to population
 
 energy_and_emissions <- energy_and_emissions %>%
@@ -426,6 +429,7 @@ plot(x = energy_and_emissions$bblpd, y = energy_and_emissions$GDP, main = "Energ
 ```
 
 The package [`ggplot2`](https://ggplot2.tidyverse.org/) has become a standard for 2-D graphs in R due to its flexibility and extensibility. A chunk to create a `ggplot2` scatterplot is as follows:
+```
 ```{r fig-energy-to-gdp, echo = FALSE, fig.cap="\\label{fig:energy-to-gdp} The relationship between energy consumption and economic output by world countries"}
 ggplot(data = energy_and_emissions, aes(x = GDP, y = bblpd)) +
   geom_point() +
@@ -440,6 +444,7 @@ Figure \ref{fig:energy-to-gdp} is a scatterplot of energy consumption to GPD. It
 ```
 
 More complex figures can be obtained by using the package [`gridExtra`](https://cran.r-project.org/web/packages/gridExtra/vignettes/arrangeGrob.html), which is used to arrange multiple graphic objects (or _grobs_). A convenient way to do this is to name the graphic objects so that they can be called for the output. A chunk that arranges two plots side by side is as follows:
+```
 ```{r fig-two-panel-plot, echo = FALSE, fig.cap="\\label{fig:two-panel-plot} Two plots in a single figure; left panel is Figure 1 and right panel is Figure 2"}
 
 # Recreate Figure 1
@@ -486,6 +491,7 @@ grid.arrange(co2_1995, co2_2005, co2_2015, nrow = 3)
 ```
 
 Alternatively, I could rearrange the data so that $CO_2$ emissions are in a single column, and year is an attribute. This is done using the `dplyr` function `gather()`, which gathers several columns into a single column. This is the task of the following chunk:
+```
 ```{r gather-co2, include=FALSE}
 
 # I will gather all CO_2 variables into a single column
@@ -499,6 +505,7 @@ co2_95to15 <- energy_and_emissions %>%
 ```
 
 Then, I can use the variable `Year` to facet using `facet_wrap()`:
+```
 ```{r fig-gdp-emissions-by-year, echo = FALSE, fig.cap="\\label{fig:gdp-emissions-by-year} CO_2 emissions versus GDP by year"}
 ggplot(data = co2_95to15, aes(x = GDP, y = CO2)) +
   geom_point() +
