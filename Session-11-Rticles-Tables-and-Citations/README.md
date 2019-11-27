@@ -211,7 +211,163 @@ This gives the following table in the output:
 
 ![First not very successful example of table](Session-11-Figure-9.png)
 
-As you can see, this is not a great-looking table. It is too wide and difficult to read. I can improve this table in several different ways.
+As you can see, this is not a great-looking table. It is too wide and difficult to read. I can improve this table in several different ways. First, it is possible to run `kable()` with `latex_options()`, one of which is to scale down the table so that it fits within the margins of the page:
+
+```
+kable(descriptive.df) %>%
+  kable_styling(latex_options = c("scale_down"))
+```
+
+The result is a table that does not overflow, but now the font is too small for comfort. See:
+
+![Second example of table: latex_options](Session-11-Figure-10.png)
+
+A reason why the table is so wide in the first place is that the numbers reported are humongous. I can scale the values upstream to report smaller, easier to read numbers, and then pass that dataframe to `kable()`:
+
+```
+descriptive.df <- data.frame(Statistic = c("Mean", "Min", "Max", "Standard Deviation"),
+                             Population = c(mean(energy_and_emissions$Population/1e6),
+                                            min(energy_and_emissions$Population/1e6),
+                                            max(energy_and_emissions$Population/1e6),
+                                            sd(energy_and_emissions$Population/1e6)),
+                             GDPPC = c(mean(energy_and_emissions$GDPPC),
+                                       min(energy_and_emissions$GDPPC),
+                                       max(energy_and_emissions$GDPPC),
+                                       sd(energy_and_emissions$GDPPC)),
+                             bblpd = c(mean(energy_and_emissions$bblpd/1e6),
+                                       min(energy_and_emissions$bblpd/1e6),
+                                       max(energy_and_emissions$bblpd/1e6),
+                                       sd(energy_and_emissions$bblpd/1e6)),
+                             CO2_1995 = c(mean(energy_and_emissions$CO2_1995/1e6),
+                                       min(energy_and_emissions$CO2_1995/1e6),
+                                       max(energy_and_emissions$CO2_1995/1e6),
+                                       sd(energy_and_emissions$CO2_1995/1e6)),
+                             CO2_2005 = c(mean(energy_and_emissions$CO2_2005/1e6),
+                                       min(energy_and_emissions$CO2_2005/1e6),
+                                       max(energy_and_emissions$CO2_2005/1e6),
+                                       sd(energy_and_emissions$CO2_2005/1e6)),
+                             CO2_2015 = c(mean(energy_and_emissions$CO2_2015/1e6),
+                                       min(energy_and_emissions$CO2_2015/1e6),
+                                       max(energy_and_emissions$CO2_2015/1e6),
+                                       sd(energy_and_emissions$CO2_2015/1e6)))
+
+kable(descriptive.df) %>%
+  kable_styling(latex_options = c("scale_down"))
+```
+
+This improves to some extent the aspect of the table: it is not as wide and the numbers are easier to comprehend. See:
+
+![Third example of table: manipulating data upstream](Session-11-Figure-11.png)
+
+But I still have way too many decimals which are not particularly informative (typically only two to four [significant digits](https://en.wikipedia.org/wiki/Significant_figures) are needed). I can define the number of digits to use in the figure by using the argument `digits` in the call to `kable`:
+
+```
+kable(descriptive.df,
+      digits = 3) %>%
+  kable_styling(latex_options = c("scale_down"))
+```
+
+This gives a more compact table without all the trailing, less informative digits:
+
+![Fourth example of table: rounding numbers](Session-11-Figure-12.png)
+
+I can further make the table easier to read by adding stripes; also, I like the aspect of tables with booktabs, which removes unnecessary elements from the tables (like all those horizontal and vertical lines). The stripes are added as one of the `latex_options`, whereas booktabs are obtained by setting `booktabs = TRUE` in the call to `kable`:
+
+```
+kable(descriptive.df,
+      digits = 3,
+      booktabs = TRUE) %>%
+  kable_styling(latex_options = c("striped", "scale_down"))
+```
+
+The table now is more pleasant to the eye, easier to read, and easier to understand too:
+
+![Fifth example of table: booktabs and stripes as a latex_option](Session-11-Figure-13.png)
+
+An issue after transforming the variables is that the units have changed! It is important to inform the reader of the units. I can change the names of the columns by creating a string for `col.names` as follows:
+
+```
+kable(descriptive.df,
+      digits = 3,
+      booktabs = TRUE,
+      col.names = c("Statistic", 
+                    "Population (in millions)", 
+                    "GDP per capita", 
+                    "Energy use (in millions of barrels per day)", 
+                    "CO2 emissions (in millions, 1995)", 
+                    "CO2 emissions (in millions, 1995)", 
+                    "CO2 emissions (in millions, 1995)")) %>%
+  kable_styling(latex_options = c("striped", "scale_down"))
+```
+
+Unfortunately, the long names of the columns again make the table too wide and the font too small:
+
+![Sixth example of table: changing the column names](Session-11-Figure-14.png)
+
+To introduce line breaks in the names of the columns, we need to use the function `linebreak()`. Line breaks are identified by `\n`. At this point, I also want to label the table for referencing purposes. The label is created by using a `caption` in the call to `kable`. The caption looks very similar to `fig.cap`, the captions of figures created within a chunk of code; see below:
+
+```
+kable(descriptive.df,
+      digits = 3,
+      booktabs = TRUE,
+      escape = FALSE,
+      col.names = linebreak(c("Statistic", 
+                              "Population\n(millions)",
+                              "GDP per capita\n(USD)",
+                              "Energy use\n(millions of \nbarrels per day)", 
+                              "CO2 1995\n(millions\nkilotonnes)", 
+                              "CO2 2005\n(millions\nkilotonnes)", 
+                              "CO2 2015\n(millions\nkilotonnes)"),
+                            align = "c"), #Lower case "c" for center
+      caption = "\\label{tab:descriptive-statistics} Descriptive statistics: energy and emissions of world countries") %>% 
+  kable_styling(latex_options = c("striped", "scale_down"))
+```
+
+This leads to my final table:
+
+![Final table: fixing the column names and using a caption](Session-11-Figure-15.png)
+
+It is possible to create tables with the results of different kinds of analysis, and the only trick is knowing where to extract the different parts of the analysis that you wish to report (for example the coefficients, p-values, coefficients of determination, etc.)
+
+The following code is an example of a table that reports the results of regressing $CO_2$ emissions on GDP by year:
+
+```
+```{r table-emissions-models-results, echo=FALSE}
+models.df <- data.frame(Estimate.1 = mod_1995$coefficients, 
+                        pval.1 = paste(ifelse(summary(mod_1995)$coefficients[,4] > 0.0001, 
+                                              round(summary(mod_1995)$coefficients[,4], 4), 
+                                              "< 0.0001")),
+                        Estimate.2 = mod_2005$coefficients, 
+                        pval.2 = paste(ifelse(summary(mod_2005)$coefficients[,4] > 0.0001, 
+                                              round(summary(mod_2005)$coefficients[,4], 4), 
+                                              "< 0.0001")),
+                        Estimate.3 = mod_2015$coefficients, 
+                        pval.3 = paste(ifelse(summary(mod_2015)$coefficients[,4] > 0.0001, 
+                                              round(summary(mod_2015)$coefficients[,4], 4), 
+                                              "< 0.0001")))
+
+kable(models.df,
+      digits = 4,
+      booktabs = TRUE,
+      escape = FALSE,
+      col.names = c("$\\beta$", "p-val", "$\\beta$", "p-val", "$\\beta$", "p-val"),
+      caption = "\\label{tab:gdp-emissions-model-results} Regression results: Emissions by GDP by year") %>%
+  add_header_above(c("Variable" = 1, 
+                     "1995" = 2, 
+                     "2005" = 2, 
+                     "2015" = 2),
+                   escape = FALSE) %>%
+  footnote(c(paste("$R^2$ (1995) = ", as.character(round(summary(mod_1995)$r.squared, 2))),
+             paste("$R^2$ (2005) = ", as.character(round(summary(mod_2005)$r.squared, 2))),
+             paste("$R^2$ (2015) = ", as.character(round(summary(mod_2015)$r.squared, 2)))),
+           escape = FALSE)
+```
+
+The table in the output document is this:
+
+![Example of table with regression results](Session-11-Figure-16.png)
+
+With this, we have most of the elements to write a self-contained paper that reports reproducible research.
 
 ## Suggested readings
 
