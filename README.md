@@ -142,7 +142,7 @@ _Readings_:	TBD
 _Activity_: 	No activity this week
 
 **Week 12** (Nov. 27)
-_Topic_:	Rticles and practical issues preparing self-contained open research documents (tables and citations)  
+_Topic_:	[`Rticles` and practical issues preparing self-contained open research documents (tables and citations)](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-11-Rticles-Tables-and-Citations)  
 _Readings_:	TBD  
 _Activity_:	Final deliverable due on DATE TBD.
 

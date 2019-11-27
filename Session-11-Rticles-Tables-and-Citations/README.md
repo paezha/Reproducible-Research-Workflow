@@ -371,6 +371,6 @@ With this, we have most of the elements to write a self-contained paper that rep
 
 ## Suggested readings
 
-[BibTeX](http://www.bibtex.org/)
-[KableExtra for HTML](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
+[BibTeX](http://www.bibtex.org/)  
+[KableExtra for HTML](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)  
 [KableExtra for PDF](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)
