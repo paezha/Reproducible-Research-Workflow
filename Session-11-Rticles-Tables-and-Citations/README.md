@@ -212,3 +212,9 @@ This gives the following table in the output:
 ![First not very successful example of table](Session-11-Figure-9.png)
 
 As you can see, this is not a great-looking table. It is too wide and difficult to read. I can improve this table in several different ways.
+
+## Suggested readings
+
+[BibTeX](http://www.bibtex.org/)
+[KableExtra for HTML](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
+[KableExtra for PDF](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)

@@ -2,7 +2,7 @@
 %%% Begin My package additions %%%%%%%%%%%%%%%%%%%
 \usepackage[hyphens]{url}
 
-  \journal{An awesome journal} % Sets Journal name
+  \journal{A Journal of Imaginary Results} % Sets Journal name
 
 
 \usepackage{lineno} % add
@@ -53,7 +53,7 @@
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={},
-            pdftitle={Short Paper},
+            pdftitle={An Example of a Term Paper},
             colorlinks=false,
             urlcolor=blue,
             linkcolor=magenta,
@@ -64,26 +64,42 @@
 % Pandoc toggle for numbering sections (defaults to be off)
 \setcounter{secnumdepth}{0}
 % Pandoc header
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 
 
 
 \begin{document}
 \begin{frontmatter}
 
-  \title{Short Paper}
-    \author[Some Institute of Technology]{Alice Anonymous\corref{c1}}
-   \ead{alice@example.com} 
+  \title{An Example of a Term Paper}
+    \author[School of Geography and Earth Sciences]{Antonio Paez\corref{c1}}
+   \ead{paezha@mcmaster.ca} 
    \cortext[c1]{Corresponding Author}
-    \author[Another University]{Bob Security}
-   \ead{bob@example.com} 
-  
-      \address[Some Institute of Technology]{Department, Street, City, State, Zip}
-    \address[Another University]{Department, Street, City, State, Zip}
+      \address[School of Geography and Earth Sciences]{McMaster University, 1280 Main St W, Hamilton, ON, L8S 4K1 Canada}
   
   \begin{abstract}
-  This is the abstract.
+  This is an example of a paper created using the package
+  \texttt{rticles}. It is an example of the final deliverable in the
+  course GEO 712 Reproducible Research Workflow. The objective of the
+  paper is to put into practice skills learned in the course, in the form
+  of a self-contained, reproducible document in the format of a journal
+  article.
   
-  It consists of two paragraphs.
+  Notice that for this paper, the instructors will not evaluate the
+  research per se, but rather the reproducibility of the research.
   \end{abstract}
   
  \end{frontmatter}
@@ -92,14 +108,14 @@
 \section{Introduction}\label{introduction}}
 
 The economy of a nation is tied to its consumption of energy, since
-every process of production requires energy as an input. However, the
-strength of the relationship between the economy and the consumption of
-energy varies. Some countries (e.g., Japan) were more successful than
-others in terms of decoupling their productive processes from energy
-after the oil shocks of the 1970s. This was achieved by increasing the
-efficiency of production, so that the same output could be produced
-using less energy, or in somewhat different terms, by improving their
-energy intensity.
+every process of production requires energy as an input (Warr et al.,
+2010). However, the strength of the relationship between the economy and
+the consumption of energy varies. Some countries were more successful
+than others in terms of decoupling their productive processes from
+energy after the oil shocks of the 1970s (MacKillop, 1989). This was
+achieved by increasing the efficiency of production, so that the same
+output could be produced using less energy, or in somewhat different
+terms, by improving their energy intensity.
 
 The relationship between economic output and energy consumption is of
 interest at a time when the effects of a carbon-intense economy is
@@ -107,6 +123,41 @@ creating a heavy environmental burden. A relevant question is, what
 countries are more energy-efficient, and can we learn from them. To
 explore this question we will consider data on national energy use (in
 barrels of oil per day), economic output (GDP), and \(CO_2\) emissions.
+
+\hypertarget{data-analysis}{%
+\section{Data Analysis}\label{data-analysis}}
+
+Data were collected from a variety of sources as documented in the
+package \texttt{packr} (see
+{[}paezha/Reproducible-Research-Workflow/Session-07-Creating-R-Packages-and-Documenting-Data/packr{]}).
+The summary statistics of the data appear in Table
+\ref{tab:descriptive-statistics}. Very large disparities can be observed
+in terms of all indicators of interest: while some countries have a GDP
+per capita measures in hundreds of dollars, others measure their GDP per
+capita in tens of thousands of dollars. Similarly, the difference in
+consumption of oil between the country with the lowest to the highest
+use of this resource is three orders of magnitude higher. The table also
+illustrates how emissions of \(CO_2\) for the worst polluters increased
+by a factor of two between 1995 and 2015; emissions at the bottom, in
+contrast, increased by a factor of approximately 1.5 in the same period
+of time.
+
+\begin{table}
+
+\caption{\label{tab:descriptive-statistics-7}\label{tab:descriptive-statistics} Descriptive statistics: energy and emissions of world countries}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{lrrrrrr}
+\toprule
+Statistic & \makecell[c]{Population\\(millions)} & \makecell[c]{GDP per capita\\(USD)} & \makecell[c]{Energy use\\(millions of \\barrels per day)} & \makecell[c]{CO2 1995\\(millions\\kilotonnes)} & \makecell[c]{CO2 2005\\(millions\\kilotonnes)} & \makecell[c]{CO2 2015\\(millions\\kilotonnes)}\\
+\midrule
+\rowcolor{gray!6}  Mean & 38.466 & 13572.01 & 0.491 & 0.121 & 0.153 & 0.185\\
+Min & 0.005 & 145.00 & 0.000 & 0.000 & 0.000 & 0.000\\
+\rowcolor{gray!6}  Max & 1379.303 & 100161.00 & 19.530 & 5.295 & 6.175 & 10.642\\
+Standard Deviation & 142.048 & 18550.58 & 1.752 & 0.489 & 0.649 & 0.892\\
+\bottomrule
+\end{tabular}}
+\end{table}
 
 Figure \ref{fig:energy-to-gdp} is a scatterplot of energy consumption to
 GPD. It can be seen that in general, greater economic output is
@@ -134,7 +185,7 @@ squares. The scatterplot of energy to GDP with this line is shown in
 Figure \ref{fig:energy-to-gdp-with-line}. Clearly, some countries are
 more efficient than others in that they can produce more with less
 energy. The more a point deviates from the regression line, the more
-efficient that economy is. It would be interesting to
+efficient that economy is.
 
 \begin{figure}
 \centering
@@ -143,9 +194,16 @@ efficient that economy is. It would be interesting to
 expected values of GDP given energy consumption}
 \end{figure}
 
-Figure \ref{fig:right-left-panel-plot} shows Figures
-\ref{fig:energy-to-gdp} and \ref{fig:energy-to-gdp-with-line} side by
-side.
+\begin{quote}
+\begin{quote}
+(Note: figures can also be multi-panel plots. One ways of doing this is
+by using the package \texttt{gridExtra}, which creates \emph{tables} of
+figures. As an example, see Figure \ref{fig:right-left-panel-plot},
+which reproduces Figures \ref{fig:energy-to-gdp} and
+\ref{fig:energy-to-gdp-with-line} but using a side-by-side paneling
+format.
+\end{quote}
+\end{quote}
 
 \begin{figure}
 \centering
@@ -154,9 +212,14 @@ side.
 left panel is Figure 1 and right panel is Figure 2}
 \end{figure}
 
-Figure \ref{fig:top-bottom-panel-plot} shows Figures
+\begin{quote}
+\begin{quote}
+A second example that uses \texttt{gridExtra} is Figure
+\ref{fig:top-bottom-panel-plot}, which shows Figures
 \ref{fig:energy-to-gdp} and \ref{fig:energy-to-gdp-with-line} as a
-two-panel figure with one column and two rows.
+two-panel figure with one column and two rows).
+\end{quote}
+\end{quote}
 
 \begin{figure}
 \centering
@@ -165,6 +228,11 @@ two-panel figure with one column and two rows.
 top panel is Figure 1 and bottom panel is Figure 2}
 \end{figure}
 
+Another question of interest is the way energy is related to the
+emission of Greenhouse Gases (GHG), particularly \(CO_2\). Figure
+\ref{fig:gdp-emissions-by-year} suggests that for some countries,
+emissions increased over time more than proportionally relative to GDP.
+
 \begin{figure}
 \centering
 \includegraphics{Elsevier-Template_files/figure-latex/fig-gdp-emissions-by-year-1.pdf}
@@ -172,69 +240,83 @@ top panel is Figure 1 and bottom panel is Figure 2}
 year}
 \end{figure}
 
-\hypertarget{methods}{%
-\section{Methods}\label{methods}}
+To quantify the change in emissions by economic output, we can estimate
+regression models as follows: \[
+CO2_{iy} = \beta GDP_{iy} + \epsilon_{iy}
+\] for country \(i\) and years \(y=1995, 2005, 2015\).
 
-\hypertarget{spatial-autocorrelation-and-map-pattern}{%
-\subsection{Spatial Autocorrelation and Map
-Pattern}\label{spatial-autocorrelation-and-map-pattern}}
+The estimated models are found in Table
+\ref{tab:gdp-emissions-model-results}. It is noteworthy that the amount
+of \(CO_2\) per million dollars of economic output increased from an
+average of 0.2899 kilotonnes in 1995, to 0.3749 kilotonnes in 2005, to
+0.4481 in 2015. As well, notice how the coefficient of determination
+\(R^2\) declines over that period of time, which indicates that there
+amount of unexplained variance has increased as well. Whereas in 1995,
+approximately 94\% of the variance in \(CO_2\) emissions by world
+countries was explained by GDP, by 2015 less than 70\% was. Could this
+be a result of increased decoupling of the economy from energy? This is
+a question for future research.
 
-Spatial autocorrelation is a condition whereby the value of a variable
-at one location is correlated with the value(s) of the same variable at
-one or more proximal locations. A tool widely used to measure spatial
-autocorrelation is Moran's coefficient of autocorrelation, or \(MC\) for
-short. In matrix form, \(MC\) can be formulated as follows:
+\begin{table}
 
-\begin{equation} 
-\label{eq:1}
-MC=\frac{n}{\sum_{i}{\sum_{j}{w_{ij}}}}\frac{x'Wx}{x'x}
-\end{equation}
+\caption{\label{tab:table-emissions-models-results}\label{tab:gdp-emissions-model-results} Regression results: Emissions by GDP by year}
+\centering
+\begin{tabular}[t]{lrlrlrl}
+\toprule
+\multicolumn{1}{c}{Variable} & \multicolumn{2}{c}{1995} & \multicolumn{2}{c}{2005} & \multicolumn{2}{c}{2015} \\
+\cmidrule(l{3pt}r{3pt}){1-1} \cmidrule(l{3pt}r{3pt}){2-3} \cmidrule(l{3pt}r{3pt}){4-5} \cmidrule(l{3pt}r{3pt}){6-7}
+  & $\beta$ & p-val & $\beta$ & p-val & $\beta$ & p-val\\
+\midrule
+GDP & 0.2899 & < 0.0001 & 0.3749 & < 0.0001 & 0.4481 & < 0.0001\\
+\bottomrule
+\multicolumn{7}{l}{\textit{Note: }}\\
+\multicolumn{7}{l}{$R^2$ (1995) =  0.94}\\
+\multicolumn{7}{l}{$R^2$ (2005) =  0.9}\\
+\multicolumn{7}{l}{$R^2$ (2015) =  0.69}\\
+\end{tabular}
+\end{table}
 
-where \(x\) is a vector \((n\times1)\) of mean-centered values of a
-georeferenced variable, and \(W\) is a spatial weights matrix of
-dimensions \((n\times n)\) with elements \(w_{ij}\). The elements of the
-spatial weights matrix take non-zero values if locations \(i\) and \(j\)
-are deemed to be spatially proximate in some sense, and 0 otherwise. It
-can be appreciated that the coefficient is composed to two elements: the
-variance of the random variable (i.e., \((x' x)⁄n\)) and its spatial
-autocovariance \(\frac{(x'Wx)}{\sum_{i}{\sum_{j}{w_{ij}}}}\). As an
-alternative, the numerator of the right-hand term of Equation \ref{eq:1}
-can be expressed as follows:
+\hypertarget{conclusions}{%
+\section{Conclusions}\label{conclusions}}
 
-\begin{equation} 
-\label{eq:2}
-x'\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)x
-\end{equation}
+This document is an example of a term paper, and illustrates the
+following features:
 
-with \(I\) as the identity matrix of size \(n\times n\) and \(1\) a
-conformable vector of ones.
+\begin{itemize}
+\tightlist
+\item
+  An R Markdown document created using the package \texttt{rticles} and
+  the template for Elsevier articles
+\item
+  Mathematical notation in LaTeX
+\item
+  Graphical output
+\item
+  References, including bibliographical references using BibTeX
+\item
+  Tables
+\end{itemize}
 
-One possible interpretation of spatial autocorrelation is as map
-pattern. More concretely, the eigenvalues of the following matrix
-represent the range of possible values of \(MC\) given a spatial weights
-matrix \(W\), and the extreme eigenvalues are in fact associated with
-the minimum and maximum values of \(MC\) for the system of relationships
-represented by \(W\):
+The PDF file was produced from source files in R Markdown. The analysis
+presented in this paper is self-contained and reproducible. The source
+documents can be downloaded from the link below:
 
-\begin{equation} 
-\label{eq:3}
-\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)
-\end{equation}
-
-A remarkable discovery is that the eigenvectors associated with the
-eigenvalues of the matrix in Expression \ref{eq:3} represent a catalogue
-of latent map patterns, each with a level of autocorrelation (as
-measured by \(MC\)) given by its corresponding eigenvalue. Furthermore,
-the patterns represented by the eigenvectors are orthogonal by design,
-and so they furnish \(n\) maps that are independent from each other.
-Since these map patterns depend only on the spatial weights matrix --
-and not the spatial random variable -- they constitute an extensive set
-of latent map patterns that can be used in regression analysis as
-filters. This is explained next.
+https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-11-Rticles-Tables-and-Citations/Elsevier-Template
 
 \hypertarget{references}{%
 \section*{References}\label{references}}
 \addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-Mackillop1989decoupling}{}%
+MacKillop, A., 1989. Decoupling---recoupling and oil shock. Energy
+Policy 17, 311--322.
+
+\leavevmode\hypertarget{ref-Warr2010energy}{}%
+Warr, B., Ayres, R., Eisenmenger, N., Krausmann, F., Schandl, H., 2010.
+Energy use and economic development: A comparative analysis of useful
+work supply in austria, japan, the united kingdom and the us during 100
+years of economic growth. Ecological Economics 69, 1904--1917.
 
 
 \end{document}

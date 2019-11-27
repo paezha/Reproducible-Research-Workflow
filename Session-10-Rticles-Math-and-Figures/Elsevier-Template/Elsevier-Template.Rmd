@@ -1,19 +1,24 @@
 ---
-title: An Example of a Term Paper
+title: Short Paper
 author:
-  - name: Antonio Paez
-    email: paezha@mcmaster.ca
-    affiliation: School of Geography and Earth Sciences
+  - name: Alice Anonymous
+    email: alice@example.com
+    affiliation: Some Institute of Technology
     footnote: Corresponding Author
+  - name: Bob Security
+    email: bob@example.com
+    affiliation: Another University
 address:
-  - code: School of Geography and Earth Sciences
-    address: McMaster University, 1280 Main St W, Hamilton, ON, L8S 4K1 Canada
+  - code: Some Institute of Technology
+    address: Department, Street, City, State, Zip
+  - code: Another University
+    address: Department, Street, City, State, Zip
 abstract: |
-  This is an example of a paper created using the package `rticles`. It is an example of the final deliverable in the course GEO 712 Reproducible Research Workflow. The objective of the paper is to put into practice skills learned in the course, in the form of a self-contained, reproducible document in the format of a journal article.
+  This is the abstract.
 
-  Notice that for this paper, the instructors will not evaluate the research per se, but rather the reproducibility of the research.
+  It consists of two paragraphs.
 
-journal: "A Journal of Imaginary Results"
+journal: "An awesome journal"
 date: "`r Sys.Date()`"
 bibliography: mybibfile.bib
 #linenumbers: true
@@ -30,7 +35,6 @@ output: rticles::elsevier_article
 library(packr)
 library(tidyverse)
 library(gridExtra)
-library(kableExtra)
 ```
 
 ```{r load-data, include = FALSE}
@@ -47,254 +51,9 @@ energy_and_emissions <- energy_and_emissions %>%
 Introduction
 ============
 
-The economy of a nation is tied to its consumption of energy, since every process of production requires energy as an input [@Warr2010energy]. However, the strength of the relationship between the economy and the consumption of energy varies. Some countries were more successful than others in terms of decoupling their productive processes from energy after the oil shocks of the 1970s [@Mackillop1989decoupling]. This was achieved by increasing the efficiency of production, so that the same output could be produced using less energy, or in somewhat different terms, by improving their energy intensity.
+The economy of a nation is tied to its consumption of energy, since every process of production requires energy as an input. However, the strength of the relationship between the economy and the consumption of energy varies. Some countries (e.g., Japan) were more successful than others in terms of decoupling their productive processes from energy after the oil shocks of the 1970s. This was achieved by increasing the efficiency of production, so that the same output could be produced using less energy, or in somewhat different terms, by improving their energy intensity.
 
 The relationship between economic output and energy consumption is of interest at a time when the effects of a carbon-intense economy is creating a heavy environmental burden. A relevant question is, what countries are more energy-efficient, and can we learn from them. To explore this question we will consider data on national energy use (in barrels of oil per day), economic output (GDP), and $CO_2$ emissions. 
-
-Data Analysis
-============
-
-Data were collected from a variety of sources as documented in the package `packr` (see [paezha/Reproducible-Research-Workflow/Session-07-Creating-R-Packages-and-Documenting-Data/packr]). The summary statistics of the data appear in Table \ref{tab:descriptive-statistics}. Very large disparities can be observed in terms of all indicators of interest: while some countries have a GDP per capita measures in hundreds of dollars, others measure their GDP per capita in tens of thousands of dollars. Similarly, the difference in consumption of oil between the country with the lowest to the highest use of this resource is three orders of magnitude higher. The table also illustrates how emissions of $CO_2$ for the worst polluters increased by a factor of two between 1995 and 2015; emissions at the bottom, in contrast, increased by a factor of approximately 1.5 in the same period of time.
-
-```{r descriptive-statistics-1, include=FALSE}
-descriptive.df <- data.frame(Statistic = c("Mean", "Min", "Max", "Standard Deviation"),
-                             Population = c(mean(energy_and_emissions$Population),
-                                            min(energy_and_emissions$Population),
-                                            max(energy_and_emissions$Population),
-                                            sd(energy_and_emissions$Population)),
-                             GDPPC = c(mean(energy_and_emissions$GDPPC),
-                                       min(energy_and_emissions$GDPPC),
-                                       max(energy_and_emissions$GDPPC),
-                                       sd(energy_and_emissions$GDPPC)),
-                             bblpd = c(mean(energy_and_emissions$bblpd),
-                                       min(energy_and_emissions$bblpd),
-                                       max(energy_and_emissions$bblpd),
-                                       sd(energy_and_emissions$bblpd)),
-                             CO2_1995 = c(mean(energy_and_emissions$CO2_1995),
-                                       min(energy_and_emissions$CO2_1995),
-                                       max(energy_and_emissions$CO2_1995),
-                                       sd(energy_and_emissions$CO2_1995)),
-                             CO2_2005 = c(mean(energy_and_emissions$CO2_2005),
-                                       min(energy_and_emissions$CO2_2005),
-                                       max(energy_and_emissions$CO2_2005),
-                                       sd(energy_and_emissions$CO2_2005)),
-                             CO2_2015 = c(mean(energy_and_emissions$CO2_2015),
-                                       min(energy_and_emissions$CO2_2015),
-                                       max(energy_and_emissions$CO2_2015),
-                                       sd(energy_and_emissions$CO2_2015)))
-
-kable(descriptive.df)
-```
-
-```{r descriptive-statistics-2, include=FALSE}
-descriptive.df <- data.frame(Statistic = c("Mean", "Min", "Max", "Standard Deviation"),
-                             Population = c(mean(energy_and_emissions$Population),
-                                            min(energy_and_emissions$Population),
-                                            max(energy_and_emissions$Population),
-                                            sd(energy_and_emissions$Population)),
-                             GDPPC = c(mean(energy_and_emissions$GDPPC),
-                                       min(energy_and_emissions$GDPPC),
-                                       max(energy_and_emissions$GDPPC),
-                                       sd(energy_and_emissions$GDPPC)),
-                             bblpd = c(mean(energy_and_emissions$bblpd),
-                                       min(energy_and_emissions$bblpd),
-                                       max(energy_and_emissions$bblpd),
-                                       sd(energy_and_emissions$bblpd)),
-                             CO2_1995 = c(mean(energy_and_emissions$CO2_1995),
-                                       min(energy_and_emissions$CO2_1995),
-                                       max(energy_and_emissions$CO2_1995),
-                                       sd(energy_and_emissions$CO2_1995)),
-                             CO2_2005 = c(mean(energy_and_emissions$CO2_2005),
-                                       min(energy_and_emissions$CO2_2005),
-                                       max(energy_and_emissions$CO2_2005),
-                                       sd(energy_and_emissions$CO2_2005)),
-                             CO2_2015 = c(mean(energy_and_emissions$CO2_2015),
-                                       min(energy_and_emissions$CO2_2015),
-                                       max(energy_and_emissions$CO2_2015),
-                                       sd(energy_and_emissions$CO2_2015)))
-
-kable(descriptive.df) %>%
-  kable_styling(latex_options = c("scale_down"))
-```
-
-```{r descriptive-statistics-3, include=FALSE}
-descriptive.df <- data.frame(Statistic = c("Mean", "Min", "Max", "Standard Deviation"),
-                             Population = c(mean(energy_and_emissions$Population/1e6),
-                                            min(energy_and_emissions$Population/1e6),
-                                            max(energy_and_emissions$Population/1e6),
-                                            sd(energy_and_emissions$Population/1e6)),
-                             GDPPC = c(mean(energy_and_emissions$GDPPC),
-                                       min(energy_and_emissions$GDPPC),
-                                       max(energy_and_emissions$GDPPC),
-                                       sd(energy_and_emissions$GDPPC)),
-                             bblpd = c(mean(energy_and_emissions$bblpd/1e6),
-                                       min(energy_and_emissions$bblpd/1e6),
-                                       max(energy_and_emissions$bblpd/1e6),
-                                       sd(energy_and_emissions$bblpd/1e6)),
-                             CO2_1995 = c(mean(energy_and_emissions$CO2_1995/1e6),
-                                       min(energy_and_emissions$CO2_1995/1e6),
-                                       max(energy_and_emissions$CO2_1995/1e6),
-                                       sd(energy_and_emissions$CO2_1995/1e6)),
-                             CO2_2005 = c(mean(energy_and_emissions$CO2_2005/1e6),
-                                       min(energy_and_emissions$CO2_2005/1e6),
-                                       max(energy_and_emissions$CO2_2005/1e6),
-                                       sd(energy_and_emissions$CO2_2005/1e6)),
-                             CO2_2015 = c(mean(energy_and_emissions$CO2_2015/1e6),
-                                       min(energy_and_emissions$CO2_2015/1e6),
-                                       max(energy_and_emissions$CO2_2015/1e6),
-                                       sd(energy_and_emissions$CO2_2015/1e6)))
-
-kable(descriptive.df) %>%
-  kable_styling(latex_options = c("scale_down"))
-```
-
-```{r descriptive-statistics-4, include=FALSE}
-descriptive.df <- data.frame(Statistic = c("Mean", "Min", "Max", "Standard Deviation"),
-                             Population = c(mean(energy_and_emissions$Population/1e6),
-                                            min(energy_and_emissions$Population/1e6),
-                                            max(energy_and_emissions$Population/1e6),
-                                            sd(energy_and_emissions$Population/1e6)),
-                             GDPPC = c(mean(energy_and_emissions$GDPPC),
-                                       min(energy_and_emissions$GDPPC),
-                                       max(energy_and_emissions$GDPPC),
-                                       sd(energy_and_emissions$GDPPC)),
-                             bblpd = c(mean(energy_and_emissions$bblpd/1e6),
-                                       min(energy_and_emissions$bblpd/1e6),
-                                       max(energy_and_emissions$bblpd/1e6),
-                                       sd(energy_and_emissions$bblpd/1e6)),
-                             CO2_1995 = c(mean(energy_and_emissions$CO2_1995/1e6),
-                                       min(energy_and_emissions$CO2_1995/1e6),
-                                       max(energy_and_emissions$CO2_1995/1e6),
-                                       sd(energy_and_emissions$CO2_1995/1e6)),
-                             CO2_2005 = c(mean(energy_and_emissions$CO2_2005/1e6),
-                                       min(energy_and_emissions$CO2_2005/1e6),
-                                       max(energy_and_emissions$CO2_2005/1e6),
-                                       sd(energy_and_emissions$CO2_2005/1e6)),
-                             CO2_2015 = c(mean(energy_and_emissions$CO2_2015/1e6),
-                                       min(energy_and_emissions$CO2_2015/1e6),
-                                       max(energy_and_emissions$CO2_2015/1e6),
-                                       sd(energy_and_emissions$CO2_2015/1e6)))
-
-kable(descriptive.df,
-      digits = 3) %>%
-  kable_styling(latex_options = c("scale_down"))
-```
-
-```{r descriptive-statistics-5, include=FALSE}
-descriptive.df <- data.frame(Statistic = c("Mean", "Min", "Max", "Standard Deviation"),
-                             Population = c(mean(energy_and_emissions$Population/1e6),
-                                            min(energy_and_emissions$Population/1e6),
-                                            max(energy_and_emissions$Population/1e6),
-                                            sd(energy_and_emissions$Population/1e6)),
-                             GDPPC = c(mean(energy_and_emissions$GDPPC),
-                                       min(energy_and_emissions$GDPPC),
-                                       max(energy_and_emissions$GDPPC),
-                                       sd(energy_and_emissions$GDPPC)),
-                             bblpd = c(mean(energy_and_emissions$bblpd/1e6),
-                                       min(energy_and_emissions$bblpd/1e6),
-                                       max(energy_and_emissions$bblpd/1e6),
-                                       sd(energy_and_emissions$bblpd/1e6)),
-                             CO2_1995 = c(mean(energy_and_emissions$CO2_1995/1e6),
-                                       min(energy_and_emissions$CO2_1995/1e6),
-                                       max(energy_and_emissions$CO2_1995/1e6),
-                                       sd(energy_and_emissions$CO2_1995/1e6)),
-                             CO2_2005 = c(mean(energy_and_emissions$CO2_2005/1e6),
-                                       min(energy_and_emissions$CO2_2005/1e6),
-                                       max(energy_and_emissions$CO2_2005/1e6),
-                                       sd(energy_and_emissions$CO2_2005/1e6)),
-                             CO2_2015 = c(mean(energy_and_emissions$CO2_2015/1e6),
-                                       min(energy_and_emissions$CO2_2015/1e6),
-                                       max(energy_and_emissions$CO2_2015/1e6),
-                                       sd(energy_and_emissions$CO2_2015/1e6)))
-
-kable(descriptive.df,
-      digits = 3,
-      booktabs = TRUE) %>%
-  kable_styling(latex_options = c("striped", "scale_down"))
-```
-
-```{r descriptive-statistics-6, include=FALSE}
-descriptive.df <- data.frame(Statistic = c("Mean", "Min", "Max", "Standard Deviation"),
-                             Population = c(mean(energy_and_emissions$Population/1e6),
-                                            min(energy_and_emissions$Population/1e6),
-                                            max(energy_and_emissions$Population/1e6),
-                                            sd(energy_and_emissions$Population/1e6)),
-                             GDPPC = c(mean(energy_and_emissions$GDPPC),
-                                       min(energy_and_emissions$GDPPC),
-                                       max(energy_and_emissions$GDPPC),
-                                       sd(energy_and_emissions$GDPPC)),
-                             bblpd = c(mean(energy_and_emissions$bblpd/1e6),
-                                       min(energy_and_emissions$bblpd/1e6),
-                                       max(energy_and_emissions$bblpd/1e6),
-                                       sd(energy_and_emissions$bblpd/1e6)),
-                             CO2_1995 = c(mean(energy_and_emissions$CO2_1995/1e6),
-                                       min(energy_and_emissions$CO2_1995/1e6),
-                                       max(energy_and_emissions$CO2_1995/1e6),
-                                       sd(energy_and_emissions$CO2_1995/1e6)),
-                             CO2_2005 = c(mean(energy_and_emissions$CO2_2005/1e6),
-                                       min(energy_and_emissions$CO2_2005/1e6),
-                                       max(energy_and_emissions$CO2_2005/1e6),
-                                       sd(energy_and_emissions$CO2_2005/1e6)),
-                             CO2_2015 = c(mean(energy_and_emissions$CO2_2015/1e6),
-                                       min(energy_and_emissions$CO2_2015/1e6),
-                                       max(energy_and_emissions$CO2_2015/1e6),
-                                       sd(energy_and_emissions$CO2_2015/1e6)))
-
-kable(descriptive.df,
-      digits = 3,
-      booktabs = TRUE,
-      col.names = c("Statistic", 
-                    "Population (in millions)", 
-                    "GDP per capita", 
-                    "Energy use (in millions of barrels per day)", 
-                    "CO2 emissions (in millions, 1995)", 
-                    "CO2 emissions (in millions, 1995)", 
-                    "CO2 emissions (in millions, 1995)")) %>%
-  kable_styling(latex_options = c("striped", "scale_down"))
-```
-
-```{r descriptive-statistics-7, echo=FALSE}
-descriptive.df <- data.frame(Statistic = c("Mean", "Min", "Max", "Standard Deviation"),
-                             Population = c(mean(energy_and_emissions$Population/1e6),
-                                            min(energy_and_emissions$Population/1e6),
-                                            max(energy_and_emissions$Population/1e6),
-                                            sd(energy_and_emissions$Population/1e6)),
-                             GDPPC = c(mean(energy_and_emissions$GDPPC),
-                                       min(energy_and_emissions$GDPPC),
-                                       max(energy_and_emissions$GDPPC),
-                                       sd(energy_and_emissions$GDPPC)),
-                             bblpd = c(mean(energy_and_emissions$bblpd/1e6),
-                                       min(energy_and_emissions$bblpd/1e6),
-                                       max(energy_and_emissions$bblpd/1e6),
-                                       sd(energy_and_emissions$bblpd/1e6)),
-                             CO2_1995 = c(mean(energy_and_emissions$CO2_1995/1e6),
-                                       min(energy_and_emissions$CO2_1995/1e6),
-                                       max(energy_and_emissions$CO2_1995/1e6),
-                                       sd(energy_and_emissions$CO2_1995/1e6)),
-                             CO2_2005 = c(mean(energy_and_emissions$CO2_2005/1e6),
-                                       min(energy_and_emissions$CO2_2005/1e6),
-                                       max(energy_and_emissions$CO2_2005/1e6),
-                                       sd(energy_and_emissions$CO2_2005/1e6)),
-                             CO2_2015 = c(mean(energy_and_emissions$CO2_2015/1e6),
-                                       min(energy_and_emissions$CO2_2015/1e6),
-                                       max(energy_and_emissions$CO2_2015/1e6),
-                                       sd(energy_and_emissions$CO2_2015/1e6)))
-
-kable(descriptive.df,
-      digits = 3,
-      booktabs = TRUE,
-      escape = FALSE,
-      col.names = linebreak(c("Statistic", 
-                              "Population\n(millions)",
-                              "GDP per capita",
-                              "Energy use\n(millions of \nbarrels per day)", 
-                              "CO2 1995\n(millions ton)", 
-                              "CO2 2005\n(millions ton)", 
-                              "CO2 2015\n(millions ton)"),
-                            align = "c"), #Lower case "c" for center
-      caption = "\\label{tab:descriptive-statistics} Descriptive statistics: energy and emissions of world countries") %>% 
-  kable_styling(latex_options = c("striped", "scale_down"))
-```
 
 Figure \ref{fig:energy-to-gdp} is a scatterplot of energy consumption to GPD. It can be seen that in general, greater economic output is associated with greater consumption of energy. However, there are some important differences. If we fit a regression line to this relationship, the line would indicate the _expected_ economic output for a given level of energy consumption. Points below the line would use more energy for a lower level of economic output than expected, whereas points above the line would represent greater economic output than expected, given their energy consumption.
 
@@ -352,12 +111,7 @@ Figure \ref{fig:top-bottom-panel-plot} shows Figures \ref{fig:energy-to-gdp} and
 grid.arrange(fig1, fig2, nrow = 2)
 ```
 
-Another question of interest is the way energy is related to the emission of Greenhouse Gases (GHG), particularly $CO_2$. Figure \ref{fig:gdp-emissions-by-year} shows that for some countries, emissions increased over time more than proportionally relative to GDP.
-
 ```{r sample-plot, include=FALSE}
-
-# This plot is not included in the output document, its purpose is to illustrate one possible way of generating a multi-panel figure by creating multiple plots.
-
 co2_1995 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_1995)) +
   geom_point() +
   ggtitle("GDP and Emissions (1995)") +
@@ -381,7 +135,7 @@ grid.arrange(co2_1995, co2_2005, co2_2015, nrow = 3)
 
 ```{r gather-co2, include=FALSE}
 
-# There is a lot of repetition in the code above. An alternative is to use faceting in `ggplot2`. Faceting requires that the data be organized in a certain way; in this case, there are three columns with CO_2 data, for three different years. The format of the table is wide. For faceting, we need all CO_2 data in a single column, and the year to be a variable. The format of the table needs to be changed to long. In this chunk I will gather all CO_2 variables into a single column.
+# I will gather all CO_2 variables into a single column
 
 co2_95to15 <- energy_and_emissions %>% 
   dplyr::select(Country, GDP, CO2_1995, CO2_2005, CO2_2015) %>% # First select relevant variables
@@ -391,10 +145,8 @@ co2_95to15 <- energy_and_emissions %>%
                        labels = c("1995", "2005", "2015"))) # Relabel the years
 ```
 
+
 ```{r fig-gdp-emissions-by-year, echo = FALSE, fig.cap="\\label{fig:gdp-emissions-by-year} CO_2 emissions versus GDP by year"}
-
-# This creates a multipanel figure using faceting. Compared to the approach above where multiple figures are created, this simplifies the coding of the plots and ensure a consistent aspect across all plots (including among other things same plot extents)
-
 ggplot(data = co2_95to15, aes(x = GDP, y = CO2)) +
   geom_point() +
   ggtitle("GDP and Emissions by Year") +
@@ -403,8 +155,35 @@ ggplot(data = co2_95to15, aes(x = GDP, y = CO2)) +
   facet_wrap(~ Year)
 ```
 
-Conclusions
-==========
+Methods
+============
+
+## Spatial Autocorrelation and Map Pattern
+
+Spatial autocorrelation is a condition whereby the value of a variable at one location is correlated with the value(s) of the same variable at one or more proximal locations. A tool widely used to measure spatial autocorrelation is Moran’s coefficient of autocorrelation, or $MC$ for short. In matrix form, $MC$ can be formulated as follows:
+
+\begin{equation} 
+\label{eq:1}
+MC=\frac{n}{\sum_{i}{\sum_{j}{w_{ij}}}}\frac{x'Wx}{x'x}
+\end{equation}
+
+where $x$ is a vector $(n\times1)$ of mean-centered values of a georeferenced variable, and $W$ is a spatial weights matrix of dimensions $(n\times n)$ with elements $w_{ij}$. The elements of the spatial weights matrix take non-zero values if locations $i$ and $j$ are deemed to be spatially proximate in some sense, and 0 otherwise. It can be appreciated that the coefficient is composed to two elements: the variance of the random variable (i.e., $(x' x)⁄n$) and its spatial autocovariance $\frac{(x'Wx)}{\sum_{i}{\sum_{j}{w_{ij}}}}$. As an alternative, the numerator of the right-hand term of Equation \ref{eq:1} can be expressed as follows:
+
+\begin{equation} 
+\label{eq:2}
+x'\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)x
+\end{equation}
+
+with $I$ as the identity matrix of size $n\times n$ and $1$ a conformable vector of ones.
+
+One possible interpretation of spatial autocorrelation is as map pattern. More concretely, the eigenvalues of the following matrix represent the range of possible values of $MC$ given a spatial weights matrix $W$, and the extreme eigenvalues are in fact associated with the minimum and maximum values of $MC$ for the system of relationships represented by $W$:
+
+\begin{equation} 
+\label{eq:3}
+\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)
+\end{equation}
+
+A remarkable discovery is that the eigenvectors associated with the eigenvalues of the matrix in Expression \ref{eq:3} represent a catalogue of latent map patterns, each with a level of autocorrelation (as measured by $MC$) given by its corresponding eigenvalue. Furthermore, the patterns represented by the eigenvectors are orthogonal by design, and so they furnish $n$ maps that are independent from each other. Since these map patterns depend only on the spatial weights matrix – and not the spatial random variable – they constitute an extensive set of latent map patterns that can be used in regression analysis as filters. This is explained next.
 
 References {#references .unnumbered}
 ==========
