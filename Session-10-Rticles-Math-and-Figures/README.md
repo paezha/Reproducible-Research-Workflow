@@ -549,6 +549,7 @@ $$
 
 ## Suggested readings
 
-[LaTeX for Beginners](http://www.docs.is.ed.ac.uk/skills/documents/3722/3722-2014.pdf)
+[LaTeX for Beginners](http://www.docs.is.ed.ac.uk/skills/documents/3722/3722-2014.pdf)  
+[`ggplot2`: A Package for a Grammar of Graphics](https://ggplot2.tidyverse.org/)  
 
 

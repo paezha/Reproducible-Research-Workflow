@@ -138,17 +138,22 @@ _Activity 7_: 	In-class activity peer reviewing packages, vignettes, and revisio
 
 **Week 11** (Nov. 20)
 _Topic_:	[`Rticles` and practical issues preparing self-contained open research documents (math notation and figures)](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-10-Rticles-Math-and-Figures)  
-_Readings_:	TBD  
+_Readings_:  
+[LaTeX for Beginners](http://www.docs.is.ed.ac.uk/skills/documents/3722/3722-2014.pdf)  
+[`ggplot2`: A Package for a Grammar of Graphics](https://ggplot2.tidyverse.org/)  
 _Activity_: 	No activity this week
 
 **Week 12** (Nov. 27)
 _Topic_:	[`Rticles` and practical issues preparing self-contained open research documents (tables and citations)](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-11-Rticles-Tables-and-Citations)  
-_Readings_:	TBD  
+_Readings_:	 
+[BibTeX](http://www.bibtex.org/)  
+[KableExtra for HTML](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)  
+[KableExtra for PDF](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)  
 _Activity_:	Final deliverable due on DATE TBD.
 
 **Week 13** (Dec. 4)
-_Topic_:	Public engagement and knowledge mobilization  
-_Readings_:	TBD  
+_Topic_:	Extras: 3D plots  
+_Readings_:	No readings assigned  
 
 [^1]:
 The University reserves the right to change any aspect of this course outline.
