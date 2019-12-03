@@ -28,6 +28,7 @@ NULL
 #'   \item{CO2_1995}{CO_2 emissions in kilotonnes per year - 1995 estimates}
 #'   \item{CO2_2005}{CO_2 emissions in kilotonnes per year - 2005 estimates}
 #'   \item{CO2_2015}{CO_2 emissions in kilotonnes per year - 2015 estimates}
+#'   \item{Continent}{Names of continents as factor}
 #' }
 #'
 #' @docType data
@@ -37,6 +38,7 @@ NULL
 #' @source Energy Consumption Data Source: CIA Factbook, Refined Oil Products Consumption (https://www.cia.gov/library/publications/the-world-factbook/rankorder/2246rank.html) Accessed: September 5, 2017
 #' @source CO2 Emissions Data Source: EC Emissions Database for Global Atmospheric Research (http://edgar.jrc.ec.europa.eu/overview.php?v=CO2ts1990-2015) Accessed: September 5, 2017
 #' @source GDP Data Source: Wikipedia (https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)_per_capita) Accessed: September 5, 2017
+#' @source Continent names were extracted from package \code{countrycode} (https://CRAN.R-project.org/package=countrycode)
 #' @examples
 #'  data(energy_and_emissions)
 #'  GDPPC <- energy_and_emissions$GDPPC
