@@ -16,7 +16,7 @@ NULL
 #' population estimates, GDP per capita, energy consumption estimates,
 #' and CO_2 emissions.
 #'
-#' @format A data frame with 188 rows and 10 variables:
+#' @format A data frame with 188 rows and 11 variables:
 #' \describe{
 #'   \item{Country}{Names of countries as factor}
 #'   \item{Area}{Surface land area of country in sq.km}
