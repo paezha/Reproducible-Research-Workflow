@@ -1,0 +1,345 @@
+---
+title: "3D Plotting in R: Examples"
+output: html_notebook
+---
+
+Plotting in 3D has many useful applications. This notebook will illustrate some techniques used to create 3D plots in `R`. There are numerous resources that can be used for this purpose. 
+
+## Preliminaries
+
+Load the packages used in this notebook. `packr` contains a sample data set, `tidyverse` is a collection of packages for data manipulation and visualization, `plot3D` is a package for creating 3D plots, `plot3Drgl` is a package to convert `plot3D` static plots into interactive plots, and `plotly` is a package for creating interactive plots:
+```{r message=FALSE}
+library(packr)
+library(tidyverse)
+library(plot3D)
+library(plot3Drgl)
+library(plotly)
+```
+
+Summon the data set:
+```{r}
+data(energy_and_emissions)
+```
+
+Quickly review the contents of the data set:
+```{r}
+summary(energy_and_emissions)
+```
+
+Some variables are absolute values (e.g., population) and others are rates (e.g., GDP per capita). Mutate the dataframe to obain variables for energy consumption and emissions that are rates:
+```{r}
+energy_and_emissions <- energy_and_emissions %>%
+  mutate(GDPPC = GDPPC / 100000,
+         EPC = bblpd/Population, 
+         CO2PC_1995 = CO2_1995/Population, 
+         CO2PC_2005 = CO2_2005/Population, 
+         CO2PC_2015 = CO2_2015/Population)
+```
+
+## Pseudo-3D plots
+
+The first thing to note is that any plots rendered on a flat surface such as a page in a book or a computer screen are pseudo-3D in the sense that they only exist in 2D. That said, there are different ways of representing 3 and even higher dimensions in a 2D surface.
+
+We will begin with some plots that are more pseudo-3D than others.
+
+Perhaps the simplest way to represent a 3D plot in two dimensions is by _projecting_ one of the dimensions on the other two, effectively flattening it but in such a way that an aspect of the 3D is still legible from the plot.
+
+Consider the `energy_and_emissions` data set. It contains several variables, including population GDPPC, oil consumption in barrels of oil per day, and $CO_2$ emissions.
+
+
+```{r}
+ggplot(data = energy_and_emissions, aes(x = GDPPC, y = CO2PC_1995)) + geom_point()
+```
+
+
+```{r}
+ggplot(data = energy_and_emissions, aes(x = EPC, y = CO2PC_1995)) + geom_point()
+```
+
+
+```{r}
+ggplot(data = energy_and_emissions, aes(x = GDPPC, y = EPC, color = CO2PC_1995)) + 
+  geom_point() + 
+  scale_color_viridis_c(direction = -1)
+```
+
+In this plot, we "flatten" the variable for emissions, projecting it on the 2D plane of GDP per capita and energy consumptions per capita, and represent the "height" by means of colors. We can further emphasize the "height" of the emissions variable (its implied projection on the z axis) by further manipulating the attributes of the geometric objects, for instance their size:
+```{r}
+ggplot(data = energy_and_emissions, aes(x = GDPPC, y = EPC, color = CO2PC_1995, size = CO2PC_1995)) + 
+  geom_point() + 
+  scale_color_viridis_c(direction = -1)
+```
+
+With some imagination, you can maybe visualize in your mind the scatter of points on the flattened third-dimension (the z-axis).
+
+## 3D plots with `plot3D`
+
+```{r}
+GDPPC <- energy_and_emissions$GDPPC
+EPC <- energy_and_emissions$EPC
+CO2PC_1995 <- energy_and_emissions$CO2PC_1995
+```
+
+
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995)
+```
+
+### Color palettes
+
+There are preset palettes (the default is `jet.col(n)` with `n`, the number of colors to generate, set to 100). Alternatives include: `jet2.col(n)`. This palette is similar to `jet.col` but brighter, since it lacks the deeper blues and reds:
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995,
+          col = jet2.col(n = 100))
+```
+
+Palette `gg.col(n)` uses colors similar to those used in `ggplot2`:
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995,
+          col = gg.col(n = 50))
+```
+
+The function `ramp.col()` creates a sequence of colors by interpolation, and is based on two or three colors, for example:
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995,
+          col = ramp.col(col = c("green", "red"), n = 50, alpha = 1))
+```
+
+And with three colors:
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995,
+          col = ramp.col(col = c("blue", "yellow", "red"), n = 50, alpha = 1))
+```
+
+### Aspect of plot and annotations
+
+The shape of the markers can be changed by means of the argument `pch`. Here is a [list of symbols](http://www.sthda.com/english/wiki/r-plot-pch-symbols-the-different-point-shapes-available-in-r) available for plotting, The size of the symbol is controled by the argument `cex`:
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+          pch = 0,
+          cex = 1.5)
+```
+
+We can also add annotations, such as labels and a legend:
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+          pch = 20,
+          cex = 1.5,
+          xlab = "GDPPC", ylab = "EPC", zlab = "CO2",
+          clab = c("CO2 Emissions", "per Capita", "(kilotonnes)"))
+```
+
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+          pch = 20,
+          cex = 1.5,
+          labels = row.names(energy_and_emissions),
+          xlab = "GDPPC", ylab = "EPC", zlab = "CO2",
+          clab = c("CO2 Emissions", "per Capita", "(kilotonnes)"))
+
+text3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+       cex = 0.75,
+       labels = energy_and_emissions$Continent,
+       add = TRUE)
+```
+
+### Changing the perspective
+
+Two arguments control the viewing direction: `theta` and `phi`. These two are angles, `theta` is the angle with respect to the azimuth, whereas `phi` is the colatitude. The default values are $\theta = 40$ and $\phi = 40$ (in degrees).
+
+We can see the effect of changing these values. For instance, if we change the value of `theta`, the perspective rotates with respect to the z-axis:
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+          pch = 20,
+          cex = 1.5,
+          theta = 0,
+          labels = row.names(energy_and_emissions),
+          xlab = "GDPPC", ylab = "EPC", zlab = "CO2",
+          clab = c("CO2 Emissions", "per Capita", "(kilotonnes)"))
+```
+
+If we change the value of `phi`, the perspective rotates with respect to the x-y plane:
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+          pch = 20,
+          cex = 1.5,
+          theta = 40,
+          phi = 0,
+          labels = row.names(energy_and_emissions),
+          xlab = "GDPPC", ylab = "EPC", zlab = "CO2",
+          clab = c("CO2 Emissions", "per Capita", "(kilotonnes)"))
+```
+
+### Interactive 3D plots with `plot3Drgl`
+
+Package `plot3Drgl` can be used to create interactive plots based on objects created with `plot3D`. The function `plotrgl()` will create an interactive version of the most recent `plot3D` object:
+```{r eval=FALSE}
+scatter_labels <- scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+          pch = 20,
+          cex = 1.5,
+          labels = row.names(energy_and_emissions),
+          xlab = "GDPPC", ylab = "EPC", zlab = "CO2",
+          clab = c("CO2 Emissions", "per Capita", "(kilotonnes)"))
+
+text3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+       cex = 0.75,
+       labels = energy_and_emissions$Continent,
+       add = TRUE)
+
+plotrgl()
+```
+
+### Other 3D objects
+
+There are other types of objects (besides points and text) that can be plotted in 3D using `plot3D`, including:
+
+- 3D lines
+- 3D ribbons
+- 3D slices
+- 3D surfaces
+
+Compute the linear regression (z = ax + by + d)
+```{r}
+mod <- lm(CO2PC_1995 ~ GDPPC + EPC)
+summary(mod)
+```
+
+Predict values on regular xy grid
+```{r}
+grid.lines = 40
+GDPPC.pred <- seq(min(GDPPC), max(GDPPC), length.out = grid.lines)
+EPC.pred <- seq(min(EPC), max(EPC), length.out = grid.lines)
+xy <- expand.grid(GDPPC = GDPPC.pred, EPC = EPC.pred)
+CO2.pred <- matrix(predict(mod, newdata = xy), 
+                 nrow = grid.lines, ncol = grid.lines)
+```
+
+Fitted points for droplines to surface
+```{r}
+fitpoints <- predict(mod)
+```
+
+Scatter plot with regression plane
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+          pch = 20,
+          cex = 1.5,
+          theta = 30,
+          phi = 20,
+          labels = row.names(energy_and_emissions),
+          xlab = "GDPPC", ylab = "EPC", zlab = "CO2",
+          clab = c("CO2 Emissions", "per Capita", "(kilotonnes)"),
+          surf = list(x = GDPPC.pred, 
+                y = EPC.pred, 
+                z = CO2.pred,  
+                facets = NA, 
+                fit = fitpoints))
+```
+
+```{r}
+scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+          pch = 20,
+          cex = 1.5,
+          theta = 30,
+          phi = 20,
+          labels = row.names(energy_and_emissions),
+          xlab = "GDPPC", ylab = "EPC", zlab = "CO2",
+          clab = c("CO2 Emissions", "per Capita", "(kilotonnes)"),
+          surf = list(x = GDPPC.pred, 
+                y = EPC.pred, 
+                z = CO2.pred,  
+                facets = NA, 
+                fit = fitpoints))
+
+text3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
+       cex = 0.75,
+       labels = energy_and_emissions$Country,
+       add = TRUE)
+
+plotrgl()
+```
+
+## Interactive 3D plots with `plotly`
+
+
+```{r message=FALSE, warning=FALSE}
+colors <- c('#4AC6B7', '#1972A4', '#965F8A', '#FF7070', '#C61951')
+
+plot_ly(energy_and_emissions, x = ~GDPPC, y = ~EPC, z = ~CO2PC_1995, color = ~Continent, size = ~CO2PC_1995, colors = colors,
+             marker = list(symbol = 'circle', sizemode = 'diameter',
+                      line = list(width = 2, color = '#000000')), 
+                      sizes = c(5, 40),
+             text = ~paste('Country:', Country, 
+                           '<br>GDP per capita:', round(GDPPC, 3), 
+                           '<br>Energy Consumption:', round(EPC,3),
+                           '<br>CO2 emmissions 1995:',  round(CO2PC_1995, 3))) %>%
+  layout(title = 'GDP per capita v. Energy consumption per capita',
+         scene = list(xaxis = list(title = 'GDP per capita',
+                      gridcolor = 'rgb(255, 255, 255)',
+                      zerolinewidth = 1,
+                      ticklen = 5,
+                      gridwidth = 2),
+               yaxis = list(title = 'Energy Consumption',
+                      gridcolor = 'rgb(255, 255, 255)',
+                      zerolinewidth = 1,
+                      ticklen = 5,
+                      gridwith = 2),
+               zaxis = list(title = 'CO2 Emissions',
+                            gridcolor = 'rgb(255, 255, 255)',
+                            zerolinewidth = 1,
+                            ticklen = 5,
+                            gridwith = 2)),
+         paper_bgcolor = 'rgb(243, 243, 243)',
+         plot_bgcolor = 'rgb(243, 243, 243)')
+```
+
+
+
+
+```{r}
+co2_95to15 <- energy_and_emissions %>% 
+  dplyr::select(Country, Continent, GDPPC, EPC, CO2PC_1995, CO2PC_2005, CO2PC_2015) %>% # First select relevant variables
+  gather(Year, CO2, -c(Country, Continent, GDPPC, EPC)) %>% # Gather CO2 columns: it is important to exclude from this operation the columns Country and GDP
+  mutate(Year = factor(Year, 
+                       levels = c("CO2PC_1995", "CO2PC_2005", "CO2PC_2015"),
+                       labels = c("1995", "2005", "2015"))) # Relabel the years
+```
+
+
+
+```{r message=FALSE, warning=FALSE}
+plot_ly(co2_95to15, x = ~GDPPC, y = ~EPC, z = ~CO2, 
+        color = ~Continent, 
+        size = ~CO2, 
+        colors = colors,
+        frame = ~Year,
+        marker = list(symbol = 'circle', sizemode = 'diameter',
+                      line = list(width = 2, color = '#000000')), 
+                      sizes = c(5, 40),
+        text = ~paste('Country:', Country, 
+                      '<br>GDP per capita:', round(GDPPC, 3), 
+                      '<br>Energy Consumption:', round(EPC,3),
+                      '<br>CO2 emmissions 1995:',  round(CO2PC_1995, 3))) %>%
+  layout(title = 'GDP per capita v. Energy consumption per capita',
+         scene = list(xaxis = list(title = 'GDP per capita',
+                      gridcolor = 'rgb(255, 255, 255)',
+                      zerolinewidth = 1,
+                      ticklen = 5,
+                      gridwidth = 2),
+               yaxis = list(title = 'Energy Consumption',
+                      gridcolor = 'rgb(255, 255, 255)',
+                      zerolinewidth = 1,
+                      ticklen = 5,
+                      gridwith = 2),
+               zaxis = list(title = 'CO2 Emissions',
+                            gridcolor = 'rgb(255, 255, 255)',
+                            range = c(0, 0.1),
+                            zerolinewidth = 1,
+                            ticklen = 5,
+                            gridwith = 2)),
+         paper_bgcolor = 'rgb(243, 243, 243)',
+         plot_bgcolor = 'rgb(243, 243, 243)') %>% 
+  animation_opts(
+    1300, redraw = FALSE
+  )
+```
