@@ -65,7 +65,7 @@ ggplot(data = energy_and_emissions, aes(x = GDPPC, y = EPC, color = CO2PC_1995))
 
 In this plot, we "flatten" the variable for emissions, projecting it on the 2D plane of GDP per capita and energy consumptions per capita, and represent the "height" by means of colors. We can further emphasize the "height" of the emissions variable (its implied projection on the z axis) by further manipulating the attributes of the geometric objects, for instance their size:
 ```{r}
-ggplot(data = energy_and_emissions, aes(x = GDPPC, y = EPC, color = CO2PC_1995, size = CO2PC_1995)) + 
+ggplot(data = energy_and_emissions, aes(x = GDPPC, y = EPC, color = CO2PC_1995, size = CO2PC_1995, shape = Continent)) + 
   geom_point() + 
   scale_color_viridis_c(direction = -1)
 ```
@@ -156,7 +156,7 @@ We can see the effect of changing these values. For instance, if we change the v
 scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995, 
           pch = 20,
           cex = 1.5,
-          theta = 0,
+          theta = 90,
           labels = row.names(energy_and_emissions),
           xlab = "GDPPC", ylab = "EPC", zlab = "CO2",
           clab = c("CO2 Emissions", "per Capita", "(kilotonnes)"))
@@ -168,7 +168,7 @@ scatter3D(x = GDPPC, y = EPC, z = CO2PC_1995,
           pch = 20,
           cex = 1.5,
           theta = 40,
-          phi = 0,
+          phi = 90,
           labels = row.names(energy_and_emissions),
           xlab = "GDPPC", ylab = "EPC", zlab = "CO2",
           clab = c("CO2 Emissions", "per Capita", "(kilotonnes)"))
@@ -335,6 +335,8 @@ energy_and_emissions %>%
 
 Putting this together:
 ```{r}
+colors <- c('#4AC6B7', '#1972A4', '#965F8A', '#FF7070', '#C61951')
+
 energy_and_emissions %>%
   plot_ly(x = ~GDPPC, 
           y = ~EPC, 
