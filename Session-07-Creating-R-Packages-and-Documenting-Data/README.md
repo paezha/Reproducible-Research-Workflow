@@ -21,7 +21,7 @@ install.packages("PATH/packr_0.1.0.tar.gz", repos = NULL, type = "source")
 
 As an alternative, you can install the package directly from GitHub:
 ```
-devtools::install_github("paezha/Reproducible-Research-Workflow/Session 7 Creating R packages and documenting data/packr", build_vignettes = TRUE)
+devtools::install_github("paezha/Reproducible-Research-Workflow/Session-07-Creating-R-Packages-and-Documenting-Data/packr", build_vignettes = TRUE)
 ```
 
 If you succeeded in installing the package, you can proceed to load it now:
