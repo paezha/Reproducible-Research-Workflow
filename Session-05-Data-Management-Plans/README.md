@@ -49,7 +49,7 @@ Develop your conventions with the following in mind:
 *  Think about how you would search for information, (e.g. by location, by experiment, by variable).  Also consider how colleagues may search for data/information.
 
 ![https://www.ukdataservice.ac.uk/manage-data/format/organising](folderstructure.gif)
-
+##### From UK Data Service: https://www.ukdataservice.ac.uk/manage-data/format/organising
 ### File Naming
 
 Identify what elements you want in your file name to assist you and others to find data quickly.
@@ -110,6 +110,8 @@ Metadata standards
 Table of storage resources from [MREB (McMaster Research Ethics Board) Data Storage](https://reo.mcmaster.ca/download/data-storage-and-security-tools) :
 
 ![https://reo.mcmaster.ca/download/data-storage-and-security-tools](McMasterStorage.PNG)
+
+![https://rdm.mcmaster.ca/finder]Research Data Storage Finder Tool 
 
 #### Reflections and Best Practices
 *  3-2-1 Backup strategy
