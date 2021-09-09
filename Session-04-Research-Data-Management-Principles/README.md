@@ -25,7 +25,7 @@ From the [McMaster ROADS](https://roads.mcmaster.ca/research-data-management-at-
 
 - **You and your Collaborators**:  Setting up processes and standards for how you collect, document and organize your data will mean that you spend less time on data management over the course of your research.  You will spend less time searching for files and trying to "figure things out" when you have properly managed your data.  Collaborators (including your future self) will have an easier time understanding and using the data too!  Additionally, getting data to a point where it is accessible by others will increase impact and citations.
 
-- **Journals**:  RDM is critical in providing the supporting data that journals are requiring more and more often.  Provision of data is critical to reproducability and credibility.  
+- **Journals**:  RDM practices make it easier to compile and provide the supporting data that many journals now require alongside submitted articles.  Provision of data is critical to reproducability and credibility.  
 
 - **Funders**:  Funding agencies, particularly public funding agencies are under pressure to increase their accountability and show value for their investment in research.  They also understand that data that is discoverable/reusable may prevent duplication of effort and accelerate new research. 
 
@@ -71,10 +71,10 @@ The policies of funding agencies around the world have increased their focus on 
 - Promoting data management
 - Providing peer reviewers
 
-### DRAFT:  [Tri-Agency Policy on Research Data Management](http://www.science.gc.ca/eic/site/063.nsf/eng/h_97610.html)
-**Acceptance of funds indicated the acceptance of the the terms of the policy**
+##[Tri-Agency Policy on Research Data Management](http://www.science.gc.ca/eic/site/063.nsf/eng/h_97610.html)
+**Acceptance of funds indicates the acceptance of the the terms of the policy**
 
-**Calls upon institutions a strategy to "provide its researchers with an environment that enables and supports world-class research data management practices including:**
+**Calls upon institutions to publish their strategy to "provide its researchers with an environment that enables and supports world-class research data management practices including:**
  - Recognizing data as a research output
  - Supporting the implementation of data management practices in accordance with ethical/legal/commercial obligations
  - promotion of the importance os data management to researchers, staff and students
@@ -86,8 +86,6 @@ The policies of funding agencies around the world have increased their focus on 
  **Calls on Researchers to:**
   - Complete Data Management Plans
   - Deposit data in recognized digital repository
-  
-  **This document is still in draft and will be implemented gradually to allow capacity to build
 
 Similar calls for action are seen beyond funders.
 
@@ -127,15 +125,15 @@ The cornerstone of the lifecycle is the Plan.  It is difficult to create excelle
 
 The Canadian research community is working towards builind capacity in researchers, one way is through the Portage Network.
 
-### Portage Network
+### Portage Network - now part of Canada's New Digital Research Infrastructure Organization (NDRIO)
 
-The Portage Network was launched in 2015 by the Canadian Association of Research Libraries (CARL) and it works within the library community to foster a national research data culture and facilitate shared stewardship of research data in Canada.  This mandate spans sectors, domains, and jurisdictions, requiring national coordination of RDM services and infrastructure. Portage seeks to contribute to this goal through:
+The Portage Network was launched in 2015 by the Canadian Association of Research Libraries (CARL) and it works largely through the library community to foster a national research data culture and facilitate shared stewardship of research data in Canada.  This mandate spans sectors, domains, and jurisdictions, requiring national coordination of RDM services and infrastructure. Portage seeks to contribute to this goal through:
 
 - The coordination of RDM expertise, services, and technology
 - Collaboration with other research data management stakeholders
 - Education and training
 
-The DMPAssistant is one part of their service. The DMPAssistant is similar to tools offered through other jurisdictions (e.g. DMPTool (U.S.)).  The tool serves as a guide to help researchers develop a comprehensive snapshot of the data involved in their project.  
+The DMPAssistant is one part of their service. The DMPAssistant is similar to Data Management Plan creation tools offered through other jurisdictions (e.g. DMPTool (U.S.)).  The tool serves as a guide to help researchers develop a comprehensive snapshot of the data involved in their project.  
 
 Data Management Plans are living documents and can evolve over time.
 
