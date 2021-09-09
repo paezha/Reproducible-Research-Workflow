@@ -111,7 +111,9 @@ Table of storage resources from [MREB (McMaster Research Ethics Board) Data Stor
 
 ![https://reo.mcmaster.ca/download/data-storage-and-security-tools](McMasterStorage.PNG)
 
-![https://rdm.mcmaster.ca/finder]Research Data Storage Finder Tool 
+#### The [Research Data Storage Finder tool](https://rdm.mcmaster.ca/finder) provided by the Research Data Management team (Mills Library) helps to identify suitable storage resources depending on your data:
+
+![https://rdm.mcmaster.ca/finder](ResearchDataStorageFinder.PNG) 
 
 #### Reflections and Best Practices
 *  3-2-1 Backup strategy
