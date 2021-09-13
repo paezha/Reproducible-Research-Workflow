@@ -267,7 +267,7 @@ with $I$ as the identity matrix of size $n\times n$ and $1$ a conformable vector
 
 ### Suggested readings
 
-[Data Science Training for the Arctic Data Center - Introduction to R and R Markdown](http://training.arcticdata.io/materials/arctic-data-center-training/introduction-to-r-and-rmarkdown.html#rmarkdown)
+[Data Science Training for the Arctic Data Center - Introduction to R and R Markdown](https://training.arcticdata.io/2020-10-arctic/)
 
 [R Markdown](http://rmarkdown.rstudio.com)
 
