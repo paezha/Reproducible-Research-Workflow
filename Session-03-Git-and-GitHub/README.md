@@ -106,6 +106,7 @@ Rajveer | Ubhis | Geography
 Tatiane | Ferrari | Economics
 Fernando | Romero | Engineering
 Jane | Doe | Geography
+Anastasia | Soukhov | Geography
 
 ### GitHub Desktop
 
