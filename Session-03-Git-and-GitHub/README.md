@@ -95,9 +95,11 @@ For example:
 
 Student Name | Last Name | Program
 -|-|-
+Niloofar | Nalaee | Geography
 Ricardo | Barros Lourenco | Geography
 Anastasia | Soukhov | Geography
 Daniel W.| Van Veghel | GeographyElise | Desjardins | Physics
+Elise | Desjardins | Physics
 Jaila | Shamal | Geography
 Ritchie | Lee | Chemistry
 David | Ma | Chemistry
