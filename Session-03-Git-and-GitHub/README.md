@@ -95,6 +95,7 @@ For example:
 
 Student Name | Last Name | Program
 -|-|-
+Anastasia | Soukhov | Geography
 Daniel | Van Veghel | Geography
 Elise | Desjardins | Physics
 Jaila | Shamal | Geography
@@ -107,7 +108,6 @@ Rajveer | Ubhis | Geography
 Tatiane | Ferrari | Economics
 Fernando | Romero | Engineering
 Jane | Doe | Geography
-Anastasia | Soukhov | Geography
 
 ### GitHub Desktop
 
