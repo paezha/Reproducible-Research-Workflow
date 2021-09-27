@@ -96,8 +96,7 @@ For example:
 Student Name | Last Name | Program
 -|-|-
 Anastasia | Soukhov | Geography
-Daniel | Van Veghel | Geography
-Elise | Desjardins | Physics
+Daniel W.| Van Veghel | GeographyElise | Desjardins | Physics
 Jaila | Shamal | Geography
 Ritchie | Lee | Chemistry
 David | Ma | Chemistry
