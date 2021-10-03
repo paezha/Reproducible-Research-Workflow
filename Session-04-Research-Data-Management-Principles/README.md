@@ -110,7 +110,10 @@ Sage - Big Data and Society
 
 - The term FAIR was coined at a Lorentz workshop in 2014.  These principles have a focus on making digital assets discoverable in a machine driven way.
 - The paper [_The FAIR Guiding Principles for scientific data management and stewardship_](https://www.nature.com/articles/sdata201618) was published in Nature: Scientific Data in 2016
-- Outlines a set of 14 principles to be addressed in making data FAIR:
+- Outlines a set of 14 principles to be addressed in making data FAIR. The following table is a summary of the FAIR Guiding Principles adapted from Wilkinson et al 2016 and presented on the [FAIR Toolkit webiste](https://fairtoolkit.pistoiaalliance.org/fair-guiding-principles/):
+
+![https://fairtoolkit.pistoiaalliance.org/wp-content/uploads/2020/05/FAIR-Life-Science-Industry-Picture1-768x655.png](FAIR-Life-Science-Industry-Picture1-768x655.png)
+
 
 ## These are the goals - but how do we achieve excellence in RDM?
 
