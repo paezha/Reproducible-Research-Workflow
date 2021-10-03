@@ -33,7 +33,8 @@ From the [McMaster ROADS](https://roads.mcmaster.ca/research-data-management-at-
 
 ### Drivers of RDM - Data as a Research Output
 
-The policies of funding agencies around the world have increased their focus on data management in recent years.  In Canada, the Tri-Agency (SSHRC, NSERC, CIHR) have great influence.
+#### 1. Funder Policy:
+The policies of funding agencies around the world have increased their focus on data management in recent years.  In Canada, the Tri-Agency (SSHRC, NSERC, CIHR) have great influence. The following Tri-Agency policies highlight expectations for RDM excellence.
 
 **[Tri-Agency Statement of Principles on Digital Data Management (TASPDDM)](http://www.science.gc.ca/eic/site/063.nsf/eng/h_83F7624E.html?OpenDocument)**: Promotes excellence in digital data management practices and data stewardship in agency-funded research
 
@@ -71,25 +72,32 @@ The policies of funding agencies around the world have increased their focus on 
 - Promoting data management
 - Providing peer reviewers
 
-##[Tri-Agency Policy on Research Data Management](http://www.science.gc.ca/eic/site/063.nsf/eng/h_97610.html)
-**Acceptance of funds indicates the acceptance of the the terms of the policy**
+**[Tri-Agency Policy on Research Data Management](http://www.science.gc.ca/eic/site/063.nsf/eng/h_97610.html)** (published March 15, 2021 - gradual implementation through 2022/2023)
 
-**Calls upon institutions to publish their strategy to "provide its researchers with an environment that enables and supports world-class research data management practices including:**
- - Recognizing data as a research output
- - Supporting the implementation of data management practices in accordance with ethical/legal/commercial obligations
- - promotion of the importance os data management to researchers, staff and students
- - Providing guidance on managing data in accordance with principles outlined in TASPDDM
- - Development of institutional data management policies and standards for data management plans
- - Ensuring researchers have data management plans in place
- - Providing access/support for preservation/curation platforms
- 
- **Calls on Researchers to:**
-  - Complete Data Management Plans
-  - Deposit data in recognized digital repository
+**Policy excerpts:**
+
+**Policy objective:**	 ‘The objective of this policy is to support Canadian research excellence by promoting sound RDM and data stewardship practices. This policy is not an open data policy’.
+
+**Goal excerpts:**	
+"‘The agencies believe that **research data collected through the use of public funds should be responsibly and securely managed and be, where ethical, legal and commercial obligations allow, available for reuse by others.** To this end, the agencies **support the findable, accessible, interoperable, and reusable (FAIR) guiding principles for research data management and stewardship’."**
+
+"[‘(T)]he agencies **recognize that data related to research by and with the First Nations, Métis, or Inuit whose traditional and ancestral territories are in Canada must be managed in accordance with data management principles developed and approved by these communities**, and on the basis of free, prior and informed consent. This includes, but is not limited to, considerations of Indigenous data sovereignty, as well as data collection, ownership, protection, use, and sharing."
+
+**Requirements:	**
+**Institutional Strategy:** Institutions eligible for Tri-Agency funds must develop and post an institutional RDM strategy that recognizes the importance of data as a research output and describes institutional ability to support and build capacity in RDM. (Implementation date: Posted by March 2023)
+
+**Data Management Planning:** Grants will be required to include demonstration of RDM methods that align with best practices. Some funding opportunities will require full data management plans (DMPs) be submitted for inclusion in the adjudication process. (Implementation date: Initial set of funding opportunities requiring a DMP will be identified by Spring 2022)
+
+**Data Deposit by Researchers:** All digital research data, metadata, and code that directly support research conclusions in journal publications and pre‐prints must be deposited in a digital repository (preferably with a persistent digital identifier). ‘Grant recipients are not required to share their data [but are expected to] provide appropriate access to the data where ethical, cultural, legal and commercial requirements allow, and in accordance with the FAIR principles and stands of their discipline’ (Implementation date: Current requirements exist for CIHR‐funded research and will be updated to include other cohorts in the future)
+
+**Indigenous peoples:**	Data related to research by and with Indigenous stakeholders must be managed with RDM principles developed and approved by these communities, and on the basis of free, prior and informed consent. 
+
+**Notable that acceptance of funds indicates the acceptance of the the terms of the policy**
+
 
 Similar calls for action are seen beyond funders.
 
-Journals: 
+#### 2. Journals 
 
 Science:  
 > After publication, all data and materials necessary to understand, assess, and extend the conclusions of the manuscript must be available to any reader of a Science Journal. After publication, all reasonable requests for data, code, or materials must be fulfilled
@@ -97,6 +105,7 @@ Science:
 Sage - Big Data and Society
 > ...we are committed to facilitating openness, transparency and reproducibility of research. Where relevant, Big Data & Society encourages authors to share their research data in a suitable public repository subject to ethical considerations and to include a data accessibility statement in their manuscript file. 
 
+#### 3. Research Community Initiatives
 ### FAIR (Findability, Accessibility, Interoperability, and Reusability) Data Principles
 
 - The term FAIR was coined at a Lorentz workshop in 2014.  These principles have a focus on making digital assets discoverable in a machine driven way.
