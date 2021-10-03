@@ -106,13 +106,29 @@ Sage - Big Data and Society
 > ...we are committed to facilitating openness, transparency and reproducibility of research. Where relevant, Big Data & Society encourages authors to share their research data in a suitable public repository subject to ethical considerations and to include a data accessibility statement in their manuscript file. 
 
 #### 3. Research Community Initiatives
+
+There are numerous initiatives that aim to increase the reusability of data and strengthen the ethical use of data. Some examples include:
+
+
 ### FAIR (Findability, Accessibility, Interoperability, and Reusability) Data Principles
 
-- The term FAIR was coined at a Lorentz workshop in 2014.  These principles have a focus on making digital assets discoverable in a machine driven way.
+- A broadly applied set of principles that have a focus on making digital assets discoverable in a machine driven way.
 - The paper [_The FAIR Guiding Principles for scientific data management and stewardship_](https://www.nature.com/articles/sdata201618) was published in Nature: Scientific Data in 2016
-- Outlines a set of 14 principles to be addressed in making data FAIR. The following table is a summary of the FAIR Guiding Principles adapted from Wilkinson et al 2016 and presented on the [FAIR Toolkit webiste](https://fairtoolkit.pistoiaalliance.org/fair-guiding-principles/):
+- Outlines a set of 14 principles to be addressed in making data FAIR. The following table is a summary of the FAIR Guiding Principles adapted from Wilkinson et al 2016 and presented on the [FAIR Toolkit webiste](https://fairtoolkit.pistoiaalliance.org/fair-guiding-principles/)
 
 ![https://fairtoolkit.pistoiaalliance.org/wp-content/uploads/2020/05/FAIR-Life-Science-Industry-Picture1-768x655.png](FAIR-Life-Science-Industry-Picture1-768x655.png)
+
+### Indigenous Data Management/Stewardship Frameworks - OCAP and CARE
+
+### OCAP(Ownership, Control, Access, Possession) Principles: A framework developed by the First Nations Information Governance Centre to establish guidance for the collection, protection, use and sharing of First Nations data and information. The following excerpt from the ![FNIGC website](https://fnigc.ca/ocap-training/) outline the OCAP Principles aimed to establish rules around the collection, protection, use and sharing of First Nations data and information:
+
+"**Ownership** refers to the relationship of First Nations to their cultural knowledge, data, and information. This principle states that a community or group owns information collectively in the same way that an individual owns his or her personal information.
+
+**Control** affirms that First Nations, their communities, and representative bodies are within their rights in seeking to control over all aspects of research and information management processes that impact them. First Nations control of research can include all stages of a particular research project-from start to finish. The principle extends to the control of resources and review processes, the planning process, management of the information and so on.
+
+**Access** refers to the fact that First Nations must have access to information and data about themselves and their communities regardless of where it is held. The principle of access also refers to the right of First Nations’ communities and organizations to manage and make decisions regarding access to their collective information. This may be achieved, in practice, through standardized, formal protocols.
+
+**Possession** While ownership identifies the relationship between a people and their information in principle, possession or stewardship is more concrete: it refers to the physical control of data. Possession is the mechanism by which ownership can be asserted and protected.
 
 
 ## These are the goals - but how do we achieve excellence in RDM?
