@@ -2,14 +2,14 @@
 
 ## Session 4.  Research Data Management Principles
 
-### What is Research Data Management (RDM)?
+## What is Research Data Management (RDM)?
 
 
 From the [McMaster Research Office for Administration, Development and Support (ROADS)](https://roads.mcmaster.ca/research-data-management-at-mcmaster) website:
 
 > RDM is the active organization and maintenance of data throughout its lifecycle, from its collection, interpretation, dissemination, and the archiving of valuable results. RDM enables reliable verification of research results, and permits innovative, interdisciplinary research built on existing information. The application of RDM improves cumulative research efficiency, and reduces the overall cost of research
 
-### Key Notions
+## Key Notions
 
  - Active
  - On-going (Throughout the research process)
@@ -17,7 +17,7 @@ From the [McMaster Research Office for Administration, Development and Support (
  **Add:** 
  - Best Practices and Standards
 
-### The Case for RDM?
+## The Case for RDM?
 
 [Data Sharing and Management Snafu in 3 Short Acts](https://www.youtube.com/watch?v=N2zK3sAtr-4)
 
@@ -31,12 +31,12 @@ From the [McMaster Research Office for Administration, Development and Support (
 
 - **Science/Body of Knowledge**:  Well managed data will be discoverable, accessible and understandable making it ultimitely reusable for new science or study!  
 
-### Drivers of RDM - Data as a Research Output
+## Drivers of RDM - Data as a Research Output
 
-#### 1. Funder Policy:
+### 1. Funder Policy:
 The policies of funding agencies around the world have increased their focus on data management in recent years.  In Canada, the Tri-Agency (SSHRC, NSERC, CIHR) have great influence. The following Tri-Agency policies highlight expectations for RDM excellence.
 
-**[Tri-Agency Statement of Principles on Digital Data Management (TASPDDM)](http://www.science.gc.ca/eic/site/063.nsf/eng/h_83F7624E.html?OpenDocument)**: Promotes excellence in digital data management practices and data stewardship in agency-funded research
+### **[Tri-Agency Statement of Principles on Digital Data Management (TASPDDM)](http://www.science.gc.ca/eic/site/063.nsf/eng/h_83F7624E.html?OpenDocument)**: Promotes excellence in digital data management practices and data stewardship in agency-funded research
 
 **Expectations:**
 
@@ -72,7 +72,7 @@ The policies of funding agencies around the world have increased their focus on 
 - Promoting data management
 - Providing peer reviewers
 
-**[Tri-Agency Policy on Research Data Management](http://www.science.gc.ca/eic/site/063.nsf/eng/h_97610.html)** (published March 15, 2021 - gradual implementation through 2022/2023)
+### **[Tri-Agency Policy on Research Data Management](http://www.science.gc.ca/eic/site/063.nsf/eng/h_97610.html)** (published March 15, 2021 - gradual implementation through 2022/2023)
 
 **Policy excerpts:**
 
@@ -99,7 +99,7 @@ The policies of funding agencies around the world have increased their focus on 
 
 Similar calls for action are seen beyond funders.
 
-#### 2. Journals 
+### 2. Journals 
 
 Science:  
 > After publication, all data and materials necessary to understand, assess, and extend the conclusions of the manuscript must be available to any reader of a Science Journal. After publication, all reasonable requests for data, code, or materials must be fulfilled
@@ -107,12 +107,12 @@ Science:
 Sage - Big Data and Society
 > ...we are committed to facilitating openness, transparency and reproducibility of research. Where relevant, Big Data & Society encourages authors to share their research data in a suitable public repository subject to ethical considerations and to include a data accessibility statement in their manuscript file. 
 
-#### 3. Research Community Initiatives
+### 3. Research Community Initiatives
 
 There are numerous initiatives that aim to maintain the value of data, strengthen the ethical use of data and as possible facilitate the sharing of data. Some examples include:
 
 
-### FAIR (Findability, Accessibility, Interoperability, and Reusability) Data Principles
+#### FAIR (Findability, Accessibility, Interoperability, and Reusability) Data Principles
 
 - A broadly applied set of principles that have a focus on making digital assets discoverable in a machine driven way.
 - The paper [_The FAIR Guiding Principles for scientific data management and stewardship_](https://www.nature.com/articles/sdata201618) was published in Nature: Scientific Data in 2016
@@ -122,13 +122,13 @@ There are numerous initiatives that aim to maintain the value of data, strengthe
 
 ### Indigenous Data Management/Stewardship Frameworks - CARE and OCAP
 
-### CARE Principles for Indigenous Data Governance (Global Indigenous Data Alliance - GIDA)
+#### CARE Principles for Indigenous Data Governance (Global Indigenous Data Alliance - GIDA)
 
 The CARE Principles aim to complement the FAIR Principles and encourage the consideration of power differentials, historical context, people and purpose in the endeavor. 
 
 ![https://www.adalovelaceinstitute.org/blog/care-principles-operationalising-indigenous-data-governance/](CARE-1.png)
 
-### OCAP(Ownership, Control, Access, Possession) Principles (First Nations Information Governance Centre - FNIGC) 
+#### OCAP(Ownership, Control, Access, Possession) Principles (First Nations Information Governance Centre - FNIGC) 
 
 OCAP is a data governance framework developed by FNIGC to establish guidance for the collection, protection, use and sharing of First Nations data and information. The following excerpts from [FNIGC](https://fnigc.ca/ocap-training/) outline the OCAP Principles aimed to establish rules around the collection, protection, use and sharing of First Nations data and information:
 
@@ -170,56 +170,55 @@ REUSE | Data can be reanalysed, secondary analysis can take place, data can be u
 
 The cornerstone of the lifecycle is the Plan.  It is difficult to create excellent data as an afterthought so it is critical to devote some time to developing and revising a data management plan throughout your research project. Next session we will take a look at formal Data Management Plans but for now let's consider some of the basic elements of good data management practices.
 
-### Quick Hits for Data Management
+## Quick Hits for Data Management
 
 In order to protect data and safeguard its usability there are a few basic practices that will set you up for success:
 
-**Keep Raw Data Raw**
+### **Keep Raw Data Raw**
 
 Ensure that you maintain a raw copy of your data. This includes collected primary data or data that you have downloaded. Place the raw data out of harms way where it cannot be accidently overwritten. One possibility is to archive raw data in a zip or tar file.
 
-**Backup**
+### **Backup**
 
 Data loss is a real risk. Coffee spills, laptops are stolen and drives can be damaged. It is good practice to regularly back data up and as previously stated, keep raw data raw. One approach is the 3-2-1 rule - store data in 3 locations, on at least 2 media and have 1 remote copy. One of the advantages of scripting data preparation and analysis is that it may well simply start with the raw data.  Another advantage of scripting analysis is that it is one form of documentation for your processes. 
 
 ![BackupPic](Backup.png)
 
-**File Format**
+### **File Format**
 
 Many instruments may use proprietary formats or data may be collected or aggregated in commercial applications. Where possible, work with or translate to open formats to maximize its broad accessibility and to protect against losses due to deprecated systems.  Consider the format of your project data and how you could make it more accessible and enduring?
 
 ![Format](formats.png)
 
-**File Naming**
+### **File Naming**
 Thoughtful filenames can make files more findable and help to prevent errors in analysis resulting from using the wrong input. As well, it is critical to take care in creating filenames when accessing files programmatically as there can be limitations to path length and applications may have restricted characters. Dates are often a component in filenames and one format that keeps things chronological is the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format YYYYMMDD. 
 
 Create and document a convention for your file naming to store with data
 ![FileNaming](FileNaming.png)
 
-**Standards**
+### **Standards**
 
 Some research domains have very explicit standards such as some water quality standards such as the United States Environmental Protection Agency(USEPA) WQX standard or the community standards implemented by the Genomic Data Commons. Standards provide guidance for the collection of new data and makes data from diverse sources more comparable. From an individual standpoint, standards take the guess work out of data management. Look for domain or field standards, or even standards used by your research lab or group. Where there are none, document your own standards for naming conventions, units, methods so that you can easily reference them to keep your data files organized and consistent. The complilation of your own standards will reduce the mental load and make your files more readily interpretable. 
 
 ![Standards](Standards.png)
 
-**Documentation**
+### **Documentation**
 
-Documentation or metadata is a critical component of a dataset. It provides context and the key to help users understand the data and its fitness for use. Put yourself in the shoes of an end user.  What would you want to know about data that you are considering using?
+Documentation or metadata is a critical component of a dataset. It provides context and the key to help users understand the data and its fitness for use. Put yourself in the shoes of an end user.  What would you want to know about data that you are considering using? Examples of data documentation include using Read Me files and using thorough commenting within data management processing files. Metadata or information about data will be used to help discover and use data. Questions to consider include:
 
 ![Questions](Data_Questions.png)
 
 
-### Activity - Please add this activity to your course GitHub repository.
+### Activity to be added to your course GitHub repository.
 
-1. Reflect on the data in your project 
+1. Project Data Analysis 
     - List the data that you expect to use, collect or create in your project. Identify if you are generating or collecting the data and if you are using existing datasets? 
     - Are there legal or ethicial restrictions that you will need to address?
-    - Are you aware of any standards and best practices in your lab?  Field?
     - Go through the Quick Hits for Data Management and identify possible strategies to build and protect the value of your data.  
       - Where will you keep raw data and how will you back it up?
       - What file formats do you anticipate your data will be in? Are the formats open or can they be converted to open formats?
       - Create a File naming convention for your project data
-      - What standards are relevant to your project? What standards might you want to create to help you manage your data?
+      - What standards are relevant to your project? List any existing standards or best practices in use in your field or in your lab? This could include instrument procedures         or file management standards. What standards might you want to create to help you manage your data?
       - List possible strategies you might use to document your data throughout your project.
     
   
