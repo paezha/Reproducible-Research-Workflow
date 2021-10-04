@@ -5,7 +5,7 @@
 ### What is Research Data Management (RDM)?
 
 
-From the [McMaster ROADS](https://roads.mcmaster.ca/research-data-management-at-mcmaster) website:
+From the [McMaster Research Office for Administration, Development and Support (ROADS)](https://roads.mcmaster.ca/research-data-management-at-mcmaster) website:
 
 > RDM is the active organization and maintenance of data throughout its lifecycle, from its collection, interpretation, dissemination, and the archiving of valuable results. RDM enables reliable verification of research results, and permits innovative, interdisciplinary research built on existing information. The application of RDM improves cumulative research efficiency, and reduces the overall cost of research
 
@@ -79,9 +79,10 @@ The policies of funding agencies around the world have increased their focus on 
 **Policy objective:**	 ‘The objective of this policy is to support Canadian research excellence by promoting sound RDM and data stewardship practices. This policy is not an open data policy’.
 
 **Goal excerpts:**	
-"‘The agencies believe that **research data collected through the use of public funds should be responsibly and securely managed and be, where ethical, legal and commercial obligations allow, available for reuse by others.** To this end, the agencies **support the findable, accessible, interoperable, and reusable (FAIR) guiding principles for research data management and stewardship’."**
 
-"[‘(T)]he agencies **recognize that data related to research by and with the First Nations, Métis, or Inuit whose traditional and ancestral territories are in Canada must be managed in accordance with data management principles developed and approved by these communities**, and on the basis of free, prior and informed consent. This includes, but is not limited to, considerations of Indigenous data sovereignty, as well as data collection, ownership, protection, use, and sharing."
+> "‘The agencies believe that **research data collected through the use of public funds should be responsibly and securely managed and be, where ethical, legal and commercial obligations allow, available for reuse by others.** To this end, the agencies **support the findable, accessible, interoperable, and reusable (FAIR) guiding principles for research data management and stewardship’."**
+
+>"[‘(T)]he agencies **recognize that data related to research by and with the First Nations, Métis, or Inuit whose traditional and ancestral territories are in Canada must be managed in accordance with data management principles developed and approved by these communities**, and on the basis of free, prior and informed consent. This includes, but is not limited to, considerations of Indigenous data sovereignty, as well as data collection, ownership, protection, use, and sharing."
 
 **Requirements:**
 
@@ -108,7 +109,7 @@ Sage - Big Data and Society
 
 #### 3. Research Community Initiatives
 
-There are numerous initiatives that aim to increase the reusability of data and strengthen the ethical use of data. Some examples include:
+There are numerous initiatives that aim to maintain the value of data, strengthen the ethical use of data and as possible facilitate the sharing of data. Some examples include:
 
 
 ### FAIR (Findability, Accessibility, Interoperability, and Reusability) Data Principles
@@ -119,28 +120,41 @@ There are numerous initiatives that aim to increase the reusability of data and 
 
 ![https://fairtoolkit.pistoiaalliance.org/wp-content/uploads/2020/05/FAIR-Life-Science-Industry-Picture1-768x655.png](FAIR-Life-Science-Industry-Picture1-768x655.png)
 
-### Indigenous Data Management/Stewardship Frameworks - OCAP and CARE
-
-### OCAP(Ownership, Control, Access, Possession) Principles: A framework developed by the First Nations Information Governance Centre to establish guidance for the collection, protection, use and sharing of First Nations data and information. The following excerpt from the ![FNIGC website](https://fnigc.ca/ocap-training/) outline the OCAP Principles aimed to establish rules around the collection, protection, use and sharing of First Nations data and information:
-
-"**Ownership** refers to the relationship of First Nations to their cultural knowledge, data, and information. This principle states that a community or group owns information collectively in the same way that an individual owns his or her personal information.
-
-**Control** affirms that First Nations, their communities, and representative bodies are within their rights in seeking to control over all aspects of research and information management processes that impact them. First Nations control of research can include all stages of a particular research project-from start to finish. The principle extends to the control of resources and review processes, the planning process, management of the information and so on.
-
-**Access** refers to the fact that First Nations must have access to information and data about themselves and their communities regardless of where it is held. The principle of access also refers to the right of First Nations’ communities and organizations to manage and make decisions regarding access to their collective information. This may be achieved, in practice, through standardized, formal protocols.
-
-**Possession** While ownership identifies the relationship between a people and their information in principle, possession or stewardship is more concrete: it refers to the physical control of data. Possession is the mechanism by which ownership can be asserted and protected.
+### Indigenous Data Management/Stewardship Frameworks - CARE and OCAP
 
 ### CARE Principles for Indigenous Data Governance (Global Indigenous Data Alliance - GIDA)
 
+The CARE Principles aim to complement the FAIR Principles and encourage the consideration of power differentials, historical context, people and purpose in the endeavor. 
 
+![https://www.adalovelaceinstitute.org/blog/care-principles-operationalising-indigenous-data-governance/](CARE-1.png)
 
+### OCAP(Ownership, Control, Access, Possession) Principles (First Nations Information Governance Centre - FNIGC) 
+
+OCAP is a data governance framework developed by FNIGC to establish guidance for the collection, protection, use and sharing of First Nations data and information. The following excerpts from [FNIGC](https://fnigc.ca/ocap-training/) outline the OCAP Principles aimed to establish rules around the collection, protection, use and sharing of First Nations data and information:
+
+>"**Ownership** refers to the relationship of First Nations to their cultural knowledge, data, and information. This principle states that a community or group owns information collectively in the same way that an individual owns his or her personal information.
+
+>**Control** affirms that First Nations, their communities, and representative bodies are within their rights in seeking to control over all aspects of research and information management processes that impact them. First Nations control of research can include all stages of a particular research project-from start to finish. The principle extends to the control of resources and review processes, the planning process, management of the information and so on.
+
+>**Access** refers to the fact that First Nations must have access to information and data about themselves and their communities regardless of where it is held. The principle of access also refers to the right of First Nations’ communities and organizations to manage and make decisions regarding access to their collective information. This may be achieved, in practice, through standardized, formal protocols.
+
+>**Possession** While ownership identifies the relationship between a people and their information in principle, possession or stewardship is more concrete: it refers to the physical control of data. Possession is the mechanism by which ownership can be asserted and protected.
+
+### Summary of Considerations
+
+When approaching the data in the context of reproducible research, it is necessary to respect legal and ethical obligations that may restrict access.  It is also important to distinguish between open data (data which is freely available) and accessible data (which is discoverable but may have a process to follow or requirements to meet in order to access data).  
+
+Well managed data is planned out and has robust documentation that communicates context and thorough understanding to future users (including yourself) including the source, purpose, methods, restrictions and citations for the data.
+
+The building of data value and the foundation of the resuable data is rooted in proper planning and project level data management. The planning requires that you consider the sources and eventual outcomes of your research data. Are there requirements or expectations set out by your supervisor, the lab group, domain standards, funders, partners and stakeholders? Knowing where you need to end up will help you determine the path to meet the requirements.
+
+![RDM Kernal](DM_Graphic.PNG)
 
 ## These are the goals - but how do we achieve excellence in RDM?
 
 ### The Research Data Lifecycle
 
-The Research Data Lifecycle is portrayed in different ways by different organizations but the general flow is:
+As mentioned, RDM will start with a plan and it is best to consider the whole Research Data Lifecycle which is portrayed in different ways by different organizations but the general flow is:
 
 ![https://biblio.uottawa.ca/sites/biblio.uottawa.ca/files/data_life_cycle.png](data_life_cycle.png)
 
@@ -154,56 +168,59 @@ PRESERVE | Ensure data is saved according best practices (i.e. open formats, wel
 SHARE | Determine appropriate access rights/licensing/citation and a proper long-term storage location for the data (e.g. Domain specific repository, on a controlled access server with open metadata and well defined access procedure).
 REUSE | Data can be reanalysed, secondary analysis can take place, data can be used by others.
 
-The cornerstone of the lifecycle is the Plan.  It is difficult to create excellent data as an afterthought.
-
-The Canadian research community is working towards builind capacity in researchers, one way is through the Portage Network.
-
-### Portage Network - now part of Canada's New Digital Research Infrastructure Organization (NDRIO)
-
-The Portage Network was launched in 2015 by the Canadian Association of Research Libraries (CARL) and it works largely through the library community to foster a national research data culture and facilitate shared stewardship of research data in Canada.  This mandate spans sectors, domains, and jurisdictions, requiring national coordination of RDM services and infrastructure. Portage seeks to contribute to this goal through:
-
-- The coordination of RDM expertise, services, and technology
-- Collaboration with other research data management stakeholders
-- Education and training
-
-The DMPAssistant is one part of their service. The DMPAssistant is similar to Data Management Plan creation tools offered through other jurisdictions (e.g. DMPTool (U.S.)).  The tool serves as a guide to help researchers develop a comprehensive snapshot of the data involved in their project.  
-
-Data Management Plans are living documents and can evolve over time.
-
-Put yourself in the shoes of an end user.  What would you want to know about data that you are considering using?
-
-![Questions](Data_Questions.png)
+The cornerstone of the lifecycle is the Plan.  It is difficult to create excellent data as an afterthought so it is critical to devote some time to developing and revising a data management plan throughout your research project. Next session we will take a look at formal Data Management Plans but for now let's consider some of the basic elements of good data management practices.
 
 ### Quick Hits for Data Management
 
+In order to protect data and safeguard its usability there are a few basic practices that will set you up for success:
+
+**Keep Raw Data Raw**
+
+Ensure that you maintain a raw copy of your data. This includes collected primary data or data that you have downloaded. Place the raw data out of harms way where it cannot be accidently overwritten. One possibility is to archive raw data in a zip or tar file.
+
 **Backup**
+
+Data loss is a real risk. Coffee spills, laptops are stolen and drives can be damaged. It is good practice to regularly back data up and as previously stated, keep raw data raw. One approach is the 3-2-1 rule - store data in 3 locations, on at least 2 media and have 1 remote copy. One of the advantages of scripting data preparation and analysis is that it may well simply start with the raw data.  Another advantage of scripting analysis is that it is one form of documentation for your processes. 
 
 ![BackupPic](Backup.png)
 
 **File Format**
 
-Work with or translate to open formats where possible
+Many instruments may use proprietary formats or data may be collected or aggregated in commercial applications. Where possible, work with or translate to open formats to maximize its broad accessibility and to protect against losses due to deprecated systems.  Consider the format of your project data and how you could make it more accessible and enduring?
 
 ![Format](formats.png)
 
 **File Naming**
+Thoughtful filenames can make files more findable and help to prevent errors in analysis resulting from using the wrong input. As well, it is critical to take care in creating filenames when accessing files programmatically as there can be limitations to path length and applications may have restricted characters. Dates are often a component in filenames and one format that keeps things chronological is the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format YYYYMMDD. 
 
 Create and document a convention for your file naming to store with data
 ![FileNaming](FileNaming.png)
 
 **Standards**
 
-Identify or create standards
+Some research domains have very explicit standards such as some water quality standards such as the United States Environmental Protection Agency(USEPA) WQX standard or the community standards implemented by the Genomic Data Commons. Standards provide guidance for the collection of new data and makes data from diverse sources more comparable. From an individual standpoint, standards take the guess work out of data management. Look for domain or field standards, or even standards used by your research lab or group. Where there are none, document your own standards for naming conventions, units, methods so that you can easily reference them to keep your data files organized and consistent. The complilation of your own standards will reduce the mental load and make your files more readily interpretable. 
 
 ![Standards](Standards.png)
 
-### Activity
+**Documentation**
+
+Documentation or metadata is a critical component of a dataset. It provides context and the key to help users understand the data and its fitness for use. Put yourself in the shoes of an end user.  What would you want to know about data that you are considering using?
+
+![Questions](Data_Questions.png)
+
+
+### Activity - Please add this activity to your course GitHub repository.
 
 1. Reflect on the data in your project 
-    - Have others collected similar data?
+    - List the data that you expect to use, collect or create in your project. Identify if you are generating or collecting the data and if you are using existing datasets? 
+    - Are there legal or ethicial restrictions that you will need to address?
     - Are you aware of any standards and best practices in your lab?  Field?
-    - Are you doing primary data creation or using building upon/deriving something new from existing datasets?
-    - Who else might be interested in the data you are working with?
+    - Go through the Quick Hits for Data Management and identify possible strategies to build and protect the value of your data.  
+      - Where will you keep raw data and how will you back it up?
+      - What file formats do you anticipate your data will be in? Are the formats open or can they be converted to open formats?
+      - Create a File naming convention for your project data
+      - What standards are relevant to your project? What standards might you want to create to help you manage your data?
+      - List possible strategies you might use to document your data throughout your project.
     
   
 ### Suggested readings
