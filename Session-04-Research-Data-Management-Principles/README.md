@@ -83,7 +83,8 @@ The policies of funding agencies around the world have increased their focus on 
 
 "[‘(T)]he agencies **recognize that data related to research by and with the First Nations, Métis, or Inuit whose traditional and ancestral territories are in Canada must be managed in accordance with data management principles developed and approved by these communities**, and on the basis of free, prior and informed consent. This includes, but is not limited to, considerations of Indigenous data sovereignty, as well as data collection, ownership, protection, use, and sharing."
 
-**Requirements:	**
+**Requirements:**
+
 **Institutional Strategy:** Institutions eligible for Tri-Agency funds must develop and post an institutional RDM strategy that recognizes the importance of data as a research output and describes institutional ability to support and build capacity in RDM. (Implementation date: Posted by March 2023)
 
 **Data Management Planning:** Grants will be required to include demonstration of RDM methods that align with best practices. Some funding opportunities will require full data management plans (DMPs) be submitted for inclusion in the adjudication process. (Implementation date: Initial set of funding opportunities requiring a DMP will be identified by Spring 2022)
@@ -129,6 +130,10 @@ There are numerous initiatives that aim to increase the reusability of data and 
 **Access** refers to the fact that First Nations must have access to information and data about themselves and their communities regardless of where it is held. The principle of access also refers to the right of First Nations’ communities and organizations to manage and make decisions regarding access to their collective information. This may be achieved, in practice, through standardized, formal protocols.
 
 **Possession** While ownership identifies the relationship between a people and their information in principle, possession or stewardship is more concrete: it refers to the physical control of data. Possession is the mechanism by which ownership can be asserted and protected.
+
+### CARE Principles for Indigenous Data Governance (Global Indigenous Data Alliance - GIDA)
+
+
 
 
 ## These are the goals - but how do we achieve excellence in RDM?
