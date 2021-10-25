@@ -207,8 +207,6 @@ Data management is critical to accountable, trusted research.  Reproducibility i
 ### Activity
 
 1. Complete the Data In Brief activity - place in ReadMe file to make it accessible by others to review. Enable comments through the Issues tools.
-2. For Next Week:
-    -  Bring a sample dataset to class next week to be used in the R exercise
 
   
 ### Suggested readings
