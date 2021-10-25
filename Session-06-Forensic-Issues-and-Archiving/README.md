@@ -10,10 +10,9 @@
 ### Best Practices
   
 -  Simple document that lays out step by step how you will implement one aspect of the DMP  
--  For instance, define specifically what your naming conventions will be or your file   structure. 
--  Actionable reference document to support your work.
+-  Peer review allows an unbiased assessment of reusability. Having someone who is less familiar with the project or even the field can be very useful in identifying areas that need clarification.
 
-###  Take a few minutes to read another DMP and provide feedback
+###  Take a few minutes to read another Data In Brief submission and provide feedback
 
 ## Forensic Issues and Archiving
 
