@@ -41,6 +41,10 @@ The majority of the cost of Reproducible Research are associated with Time:
 
 4.	Institutional and lab policies
 
+### What is reproducible research?
+
+https://www.acm.org/publications/policies/artifact-review-and-badging-current
+
 ### The what of reproducible research
 
 [What are the components of reproducible research?](https://www.pnas.org/content/115/11/2584#T2)
