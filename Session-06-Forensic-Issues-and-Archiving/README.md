@@ -11,10 +11,35 @@ Create documentation for your project data using the requirements for the[ Elsev
 -  Challenges 
 
   
-###
+### Goal: Easy to Understand and Explicit Documentation 
   
--  Simple document that provides adequate information to understand the source of the data, the structure of the data and facilitate proper use of the data  
--  Ask a colleague or friend to review data documentation. This will process can offer an unbiased assessment of reusability.  Asking for a review by someone who is less familiar with the project or fieldcan be very useful in identifying areas that need clarification.
+The aim of data documentation is straightforward information that provides adequate information to understand the source of the data, the structure of the data and facilitate proper use of the data.  
+
+One way to accomplish this is to ask a colleague or friend to review data documentation. This process can provide an assessment of reusability without the burden of pre-existing knowledge that can fill in omissions.  Asking for a review by someone who is less familiar with the project or field can be very useful in identifying areas that need clarification.
+
+## Review
+
+### Motivation
+
+![Hierarchy of Responsibilty](HierarchyOfResponsibility.PNG)
+![Expectations](HQP_DMExpectations.PNG)
+![Open Science Rational from NASA Open Science presentation](NASA_OSS_PresentationSlide.PNG)
+### Data Management is an integral part of the research process
+When researchers develop a project plan, data is already a key part of the inquiry. 
+
+![RDM Part of the Process](RDM_PartofProcess.PNG)
+
+![DMPEvolution](DMEvolution.PNG)
+![Data Road Map](DataRoadMap.PNG)
+![Part of the Process](PartofResProcess.PNG)
+
+
+
+
+![Start](WheretoStart.PNG)
+
+
+
 
 
 
