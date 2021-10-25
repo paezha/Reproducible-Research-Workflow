@@ -8,21 +8,23 @@
 
 ### Planning at the start of the project will have positive impacts which cascade through the project and help you achieve a better end product with less stress.  
 
-*  Creating a set of policies/procedures will benefit the current project and provide a foundation for future projects as well.  This is another way that we can "reuse" in our research.
-
 ![https://biblio.uottawa.ca/sites/biblio.uottawa.ca/files/data_life_cycl](DLC_Plan.png)
 
-### Portage Data Management Plan Assistant **DEMONSTRATION**
+### Portage Data Management Plan Assistant 
+
+As discussed last session, many project or funding proposals require data management to be factored into the research process. Often this requirement will be a formal Data Management Plan (DMP). Even if not required, the process of creating a DMP can help solidify the data acquisition and management processes necessary to generate the data outputs necessary to support reproducible research, funding and journal requirements as well as institutional or project needs. To support researchers in developing DMPs, the Portage Network (now part of the Digital Research Alliance of Canada) provides an online tool that can be used to develop, collaborate/share, and output DMPs (Export to pdf, csv, text, xml, html, json, docx).  The guiding questions help to assess data needs from start to finish.
 
 The following are extracted from the Portage Network Data Management Assistant (guiding questions)
 
 URL:   https://assistant.portagenetwork.ca/
-Export to pdf, csv, text, xml, html, json, docx
+
 
 ### DMP Assistant: Data Collection
 
 ### What types of data will you collect, create, link to, acquire and/or record?
 ### What file formats will your data be collected in? Will these formats allow for data re-use, sharing and long-term access to the data? 
+
+From this, a researcher can take an inventory of the data that they will need to collect or obtain for their project, for example:
 
 Data Description | Production | Acquistion Method |Format_Original| Format_Generic
 -|-|-|-|-
@@ -31,6 +33,7 @@ Topographic | Secondary | Derive from LiDAR | LAS | CSV
 Vegetation | Secondary| Identify from imagery| HDF | GEOTIFF  
 Vegetation (Ground Truth) | Primary | In situ sampling/GPS guided | XLS | CSV
 
+To reiterate the quick hits from last meeting, consider:
 ### File formats
 
 * Open formats, non-proprietary where possible
@@ -84,6 +87,7 @@ Names should:
 
 #### Reflections and Best Practices
 
+Creating a set of policies/procedures will benefit the current project and provide a foundation for future projects as well.  This is another way that we can "reuse" in our research.
 Process Documentation
 
 *  Instrument guides
@@ -93,6 +97,7 @@ Standardization
 *  Variables
 *  Model input/output definitions
 *  Coding methods
+
 Readme files
 
 Metadata standards
@@ -111,7 +116,7 @@ Table of storage resources from [MREB (McMaster Research Ethics Board) Data Stor
 
 ![https://reo.mcmaster.ca/download/data-storage-and-security-tools](McMasterStorage.PNG)
 
-#### The [Research Data Storage Finder tool](https://rdm.mcmaster.ca/finder) provided by the Research Data Management team (Mills Library) helps to identify suitable storage resources depending on your data:
+#### The [Research Data Storage Finder tool](https://rdm.mcmaster.ca/finder) provided by the Research Data Management team (Mills Library) helps to identify suitable storage resources depending on your data (*Note: Descriptions and access information are provided for the listed options when checked):
 
 ![https://rdm.mcmaster.ca/finder](ResearchDataStorageFinder.PNG) 
 
@@ -172,17 +177,17 @@ Table of storage resources from [MREB (McMaster Research Ethics Board) Data Stor
 #### Reflections and Best Practices
 
 * Store approved uses and storage requirements with data
+* Consider sharing metadata in instances that the data itself cannot be shared
+* Consider if partial, anonymized, or aggregated data may be shared if raw data is restricted
 
-### Collaboration - share with supervisor - get feedback
+### The following provide additional guidance on the development of DMPs
 
-### Data Management Plans as integrated components of proposals
-
-### Data Management Plan elements described with sample text for each:
+#### Data Management Plan elements described with sample text for each:
 From North Carolina State University Library:
 
 [Elements of a Data Management Plan - with examples](https://www.lib.ncsu.edu/data-management/how_to_dmp)
 
-### Example Plan
+#### Sample Plan
 
 This is an interesting document as it identifies positive and negative examples of answers for the various sections.  
 [NSF ENG Data Management Plan Template for the University of Michigan College of Engineering](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/86586/CoE_DMP_template_v1.pdf?sequence=1&isAllowed=y)
