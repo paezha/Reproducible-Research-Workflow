@@ -194,8 +194,7 @@ This is an interesting document as it identifies positive and negative examples 
 
 ### Activity
 
-1. Define a Best Practice Document to guide your work (submit to Antonio and Krysha)
-2. Complete the Portage DMPAssistant for your project and share with your supervisor, Antonio and Krysha for feedback via the DMPAssistant Share tools.
+1. Create documentation for your project data using the requirements for the[ Elsevier Data in Brief submissions](https://www.elsevier.com/journals/data-in-brief/2352-3409/guide-for-authors) as a guide. Note the [Data in Brief at a Glance](https://www.elsevier.com/__data/promis_misc/Data%20in%20Brief%20Article%20at%20a%20Glance%20illustration.pdf) gives a nice overview of what is needed and the template can be used to develop the document. Put your work in your course GitHub repository and notify instructors when ready for review.
     
   
 ### Suggested readings
@@ -205,5 +204,5 @@ This is an interesting document as it identifies positive and negative examples 
 [RDM for Busy People](https://portagenetwork.ca/wp-content/uploads/2019/08/Brief_Guide_RDM_August2019.pdf)
 
 
-**NOTE** Krysha, maybe add something about _dependency management_. Here's an example:
+**NOTE**  _dependency management_. 
 https://docs.gradle.org/current/userguide/introduction_dependency_management.html
