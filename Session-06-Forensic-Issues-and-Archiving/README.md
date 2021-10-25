@@ -1,8 +1,8 @@
 # GEOG 712 Reproducible Research
 
-## Session 6. Data Management Plans (DMP): DMPs and Best Practices review
+## Session 6. Data Management Planning and Best Practices review:  Building Blocks for Reproducibility and Reusability
 
-### Data In Brief 
+### Data In Brief Activity
 
 Review of Activity from last session: 
 - Assignment: 
@@ -10,64 +10,29 @@ Create documentation for your project data using the requirements for the[ Elsev
 -  Example from [Data In Brief Example](https://www.sciencedirect.com/science/article/pii/S2352340920310568) publication
 -  Challenges 
 
+### Goal of Data Management Practices: Self-Described Datasets
   
-### Goal: Easy to Understand and Explicit Documentation 
-  
-The aim of data documentation is straightforward information that provides adequate information to understand the source of the data, the structure of the data and facilitate proper use of the data.  
+The aim of data documentation is straightforward information that provides adequate information to understand the source of the data, the structure of the data and facilitate proper use of the data. 
 
 One way to accomplish this is to ask a colleague or friend to review data documentation. This process can provide an assessment of reusability without the burden of pre-existing knowledge that can fill in omissions.  Asking for a review by someone who is less familiar with the project or field can be very useful in identifying areas that need clarification.
 
-## Review
+### Goal of Open Data and Science
+
+![Open Science Rational from NASA Open Science presentation](NASA_OSS_PresentationSlide.PNG)
 
 ### Motivation
 
+The requirements for strong data management practices are growing through the funding and publishing mechanisms in academia. The Principal Investigator (PI) is ultimately responsible for dictating the project practices.  
+
 ![Hierarchy of Responsibilty](HierarchyOfResponsibility.PNG)
-![Expectations](HQP_DMExpectations.PNG)
-![Open Science Rational from NASA Open Science presentation](NASA_OSS_PresentationSlide.PNG)
-### Data Management is an integral part of the research process
-When researchers develop a project plan, data is already a key part of the inquiry. 
 
-![RDM Part of the Process](RDM_PartofProcess.PNG)
-
-![DMPEvolution](DMEvolution.PNG)
-![Data Road Map](DataRoadMap.PNG)
-![Part of the Process](PartofResProcess.PNG)
-
-
-
-
-![Start](WheretoStart.PNG)
-
-
-![Finish](WheretoFinish.PNG)
-
-
-
-### Have you considered what type of end-user license to include with your data?
-
-- Have you considered what type of end-user license to include with your data? The license towards the data set will use the Creative Commons License.
-
-- My experience in the past with sharing data indicates that licenses mean nothing in countries that do not respect intellectual property, and enforcement is impossible.  I am worried that HWDSB and HWCDSB may speciously assert intellectual property rights.
-
-- The researchers have not considered an end-user license but will discuss closer to the publication of the research.
-
-- General liscence requirements state that after one year papers have to be open acess or available to public. The specificis on liscences are dependent on the journal that the data is being published in. This question may be updated or changed in the future when the DMP is revisited throughout the research project's progression.
-
-- It is not expected to deposit the data in a public repository
-
-## Sustainability
-
-## Internal Management/Archiving –
+As a Highly Qualified Personnel (HQP), your role in DM is to be attentive to your data throughout the research process. The results of your work may not be to archive datasets but chances are that data deposit will be required to support publications or simply to ensure that your supervisor has complete research data and artifacts when you graduate.
 
 Succession planning – reporting and who needs to know what
 
 -  What measures do we put in place to make sure data does not get lost or orphaned? 
 -  What measures do we put in place to make sure that hand-offs are smooth and effective when project is concluded?
 -  How to track changes and keep people aware so that all using the data are using the correct copy (Authoritative files and Version control.)
-
-
-##  Considerations
-
 ### Who has a stake in the data?
 
 https://secretariat.mcmaster.ca/app/uploads/2019/06/Ownership-of-Student-Work.pdf
@@ -121,16 +86,38 @@ https://artsandscience.usask.ca/psychology/documents/student-supervisor-agreemen
 -  What is the approximate date for completion of lab/field work/collection of data?
 -  What is the approximate date for completion of data analysis?
 
-## Licensing 
+![Expectations](HQP_DMExpectations.PNG)
 
-The data producer or licensor has expended significant resources gathering, assembling and compiling data.  The data is the valuable property of licensor and they should be able to reap some benefit from sharing the data.  One benefit of data sharing is through the acknowledgement and citations included in the work of researchers accessing data. The licensor is able to set out the terms sharing.  This can be done through a Data Use Agreement, a Terms of Use agreement or through licensing.  
+### Data Management is an integral part of the research process
+As we take another pass at developing a successful data management strategy it is important to note that when researchers develop a project plan, data is already a key part of the inquiry. The quick hits and reflection that you have completed on the data from your project start to set you up for success. The key to generating data that can be sustainably used is documenting the data development process from beginning to end.  You want your data documentation to be like writing a journal, not like doing a historical review requiring you to dig up artifacts and piece things together.
 
-### Licenses describe data ownership and Permitted Uses.  
+![RDM Part of the Process](RDM_PartofProcess.PNG)
 
--  Documentation should indicate the licensor's ownership of and the licensee's permitted use of the data.
--  Ideally, researchers should be explicit in how they wish the data to be used and how they wish to be acknowledegesd.
+These data activities that are already being done can be reframed as a Road Map and as items to address in the key areas of RDM.
 
-### Creative Commons
+![Data Road Map](DataRoadMap.PNG)
+
+At the start of research it is critical to think about not only the inputs but also the eventual outputs of research. When we think about our starting point and where we want to end up we can plot a course.
+
+![Start](WheretoStart.PNG)
+
+![Finish](WheretoFinish.PNG)
+
+As we identify the key outcomes we can develop the work plan to achieve them.
+
+![Part of the Process](PartofResProcess.PNG)
+
+At a certain point in your research you will be required to or simply choose to share your data - for instanct to support a journal article or collaborate with other researchers.
+### Licensing Considerations
+
+- The licensor has expended significant resources gathering, assembling and compiling the data, and that the data is the valuable property of licensor
+
+Data ownership and use.  
+
+-  licensor's ownership of and the licensee's permitted use of the data.
+-  specific acknowledgment from the licensee of the source
+
+## Creative Commons
 
 https://creativecommons.org/share-your-work/licensing-types-examples/#by
 
@@ -266,36 +253,77 @@ Other jurisdictions have also adopted variations of open licenses for their data
 
 If you are using data that you did not primarily collect, it is a good idea to understand what your rights as a user are, especially if you wish to ensure that research is reproducible.
 
-## Long Term Preservation and Storage
 
-### Selecting a Data Repository
-https://www.bu.edu/data/share/selecting-a-data-repository/
+![DMPEvolution](DMEvolution.PNG)
 
-### Things to Consider
-Many data repositories exist today. Some will be a better fit for your needs more than others. Here are some tips on selecting a data repository for your research:
 
-### Reputation
-Is the repository a reputable source? Check to see if it is endorsed by a funding agency, scholarly journal, professional society, library, or if it is listed in the Registry of Research Data Repositories. Publishing your data, like publishing an article, is best done with a reputable partner that is backed by an institution or your research community.
+## Sustainability
 
-### Sustainability
-Having you data deposited in a repository that is unsustainable defeats the point of depositing it. This is why it is important to make sure your repository has the support of an institution, community, or funder. You’ll want to ensure the depository you select will be providing access to your data for well over 5 years. Many repositories will also have preservation plans and contingency plans on the outside chance funding is ceased. Lastly, don’t be afraid to ask about these plans.
+## Internal Management/Archiving –
 
-### Visibility
-One of the primary reasons to deposit your data in a repository is to obtain a unique identifier that others can use to cite your data. This service will increase the visibility of your data within the scholarly literature and allows researchers to find it later on. Ensure your data repository offers a DOI (digital object identifier), handle, or another unique indentifer.
+Succession planning – reporting and who needs to know what
 
-Another way to think about visibility is to ask if researchers in your field use a repository. Some disciplines have an agreed upon repository that everyone uses and knows about. Ensure that you’re putting your data where the appropriate researchers are likely to find it (and hopefully use it).
+-  What measures do we put in place to make sure data does not get lost or orphaned? 
+-  What measures do we put in place to make sure that hand-offs are smooth and effective when project is concluded?
+-  How to track changes and keep people aware so that all using the data are using the correct copy (Authoritative files and Version control.)
 
-### Usability
-The usability of a data repository is also important in ensuring that others will be able to access your data. Unfortunately, not all repositories have the funding to create great web interfaces with simple, intuitive interactions. However, if your peers are unable to find and download your data it will limit the effectiveness of sharing your data. A usable data repository should allow for users to easily upload, download, and cite data sets.
 
-### Features
-Some data repositories have really great features like integrations with Open Science Framework, GitHub, or other commercial storage solutions. While these feature may not be the keystones to providing long-term access to your data, they can help you share your data more frequently and effectively. Additionally, an author dashboard (a place you can view statistics, like downloads, on your data sets) or easy-to-understand licensing, like Creative Commons, can make your life a little easier. Lastly, you’ll want to review the upload and storage limits. Some repositories offer limited free storage before a fee is charged. Be sure to look over each data repository’s features and compare them with comparable services.
+##  Considerations
 
-### Formats
-Most data repositories are able to handle most formats; however, this doesn’t always guarantee that they’ll be able to work with your data. Be sure to take a look at the repositories documentation to ensure they can store the data you’ve generated. In addition, see if the repository can generate previews or provide other user interactions with your data. While these features are not essential from a preservation perspective, they do help users understand and access your data.
+### Who has a stake in the data?
 
-### Rights
-Know your rights! Take time out to read the terms of use and to understand what permissions you’re giving the data repository. For instance, does your data repository use common licensing agreements (again, like Creative Commons) that will help others understand what they can and cannot do with your data?
+https://secretariat.mcmaster.ca/app/uploads/2019/06/Ownership-of-Student-Work.pdf
+ -  property of the student and the research supervisor, either of whom has the right to make them available to other
+individuals as well. 
+-  Both student and supervisor are responsible for insuring that
+proper acknowledgement of the contributions of the student, supervisor, and
+other members of the research team is made when the data are released in any
+form.
+-  When the data are acquired through the student's individual effort, and without
+the use of University laboratories or funding, then they are usually the property of
+the student making that effort. 
+- When the student collects data using research instruments including interview schedules and
+questionnaires developed wholly or in part by the research supervisor or by some
+other person or agency the right to ownership and/or use of
+the data may be shared among the parties involved.
+-  Given the range of possible alternatives it is not possible to set absolute guidelines in advance covering all
+such situations. Consequently, it is recommended that students and supervisors
+make clear agreements in advance concerning the ownership and use of data
+collected in this fashion.
+-  Ownership of data may also be affected by the terms of
+a research contract that has supported the work. 
+
+## Student-Supervisor Agreements
+
+https://students.usask.ca/documents/graduate/student-supervisor-agreement.pdf
+
+-  The Student will keep orderly records of all research data produced or developed.
+-  Where research data is produced or developed, both the Student and Supervisor(s) will have
+access to the data at all times.
+-  Both Student and Supervisor(s) understand that the provisions of the University’s Intellectual
+Property Policy pertaining to work done while a graduate student, as well as the guidelines
+around publication and access to research data, remain in place even after the Student is no
+longer attending the University
+
+https://students.usask.ca/graduate/supervisors.php#Whattodiscuss
+
+-  Can my supervisor use my research, written work, and/or take first authorship on articles or presentations using that research or data if, after some fixed amount of time has passed, I have not used the research or data myself?
+-  Who has access to my research or data?
+-  Am I expected to publish my research or findings, in addition to writing my thesis?
+-  Could you tell me about how you manage collaborative projects in terms of such things as who has access to data?
+-  If I take a leave, can my supervisor or other students or members of the department use my data for their research or graduate program?
+
+https://ihpme.utoronto.ca/wp-content/uploads/2015/05/memo-of-understanding-2011.pdf
+
+In addition, the student and supervisor should discuss/define:
+-  Ownership and use of data 
+
+https://artsandscience.usask.ca/psychology/documents/student-supervisor-agreement-template.pdf
+
+-  What is the approximate date for completion of lab/field work/collection of data?
+-  What is the approximate date for completion of data analysis?
+
+
 
 
 ### Activity
