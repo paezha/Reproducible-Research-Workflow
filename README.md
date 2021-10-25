@@ -103,7 +103,7 @@ final deliverable, so it is not advisable to skip any of them.
 | Activity 1: R Markdown Exercise         | 5%  |
 | Activity 2: Version Control Exercise    | 5%  |
 | Activity 3: Initial DMP                 | 10% |
-| Activity 4: Updated DMP                 | 10% |
+| Activity 4: Data Brief                  | 10% |
 | Activity 5: Data Package                | 15% |
 | Activity 6: Data Analysis Documentation | 15% |
 | Activity 7: Peer Review Exercise        | 20% |
