@@ -123,21 +123,11 @@ https://creativecommons.org/share-your-work/licensing-types-examples/#by
 
 Creative Commons is a prevalent licensing choice.  Each license has varied restrictions on sharing and use.
 
+![https://open.ed.ac.uk/how-to-guides/choosing-a-creative-commons-licence-for-your-resource/](cc_licences-1024x730.png)
 
+There are other licensing types that may be more appropriate to your data or code.
 
-### Licensing data
-
-This is a complex area. [Wickham](http://r-pkgs.had.co.nz/description.html#license), for instance, notes that data are not copyrightable in the United States, so if you put data out in the wild you are not giving up much by using a license such as Creative Commons (CC0). 
-
-In practical terms, this means that if you wish to retain control over your data, you should most definitely _not_ put it in the wild, which may be the objective in many situations (e.g., proprietary data, sensitive data, etc.). You can include in lieu of license a notice stating:
-
-```
-PROPRIETARY  
-  
-Do not distribute outside of McMaster Hydrometeorology & Climatology Group
-```
-
-This practice, however, is at odds with policy directions by funding organizations to make research data available to the public. What this means is that, if you are the _author_ of the data, that is, you are the primary collector of the data, and you received funding from an organization that encourages or requires data sharing, you might be expected to make the data public at some point, perhaps after a reasonable sequestration period. In that case, the Creative Commons license would be appropriate.
+### Third Party Data
 
 The situation becomes somewhat more complex if you are _not_ the author of the data. In the social sciences it is common to work with secondary data, either from Statistics Canada or various other organizations, some of which may have data policies, but other may not.
 
@@ -207,20 +197,15 @@ Other jurisdictions have also adopted variations of open licenses for their data
 
 If you are using data that you did not primarily collect, it is a good idea to understand what your rights as a user are, especially if you wish to ensure that research is reproducible.
 
-
-![DMPEvolution](DMEvolution.PNG)
-
-
 ## Sustainability
 
-## Internal Management/Archiving –
+### Internal Management/Archiving –
 
 Succession planning – reporting and who needs to know what
 
 -  What measures do we put in place to make sure data does not get lost or orphaned? 
 -  What measures do we put in place to make sure that hand-offs are smooth and effective when project is concluded?
 -  How to track changes and keep people aware so that all using the data are using the correct copy (Authoritative files and Version control.)
-
 
 ##  Considerations
 
@@ -277,18 +262,17 @@ https://artsandscience.usask.ca/psychology/documents/student-supervisor-agreemen
 -  What is the approximate date for completion of lab/field work/collection of data?
 -  What is the approximate date for completion of data analysis?
 
+## Data Management Wrap-up
 
+Data management is critical to accountable, trusted research.  Reproducibility is the ultimate goal but it is an iterative process that will evolve over time.
 
+![DMPEvolution](DMEvolution.PNG)
 
 ### Activity
 
-1. Review Data Management Plan
-    - Revise your Data Management Best Practice (as needed) to be easy to follow instructions to guide your work
-    - Review the DMP Questionnaire of a colleague to gain additional feedback 
-        -  Share plan with your partner so that they can read your DMP and provide feedback
-        -  Read and provide feedback to your partner on the DMP that they have shared with you.
-    - Export and upload your complete DMP to GitHub. 
-2. For Next Week:
+1. Complete the Data In Brief activity
+2. Share your work with another student to review and review another student's work.
+3. For Next Week:
     -  Bring a sample dataset to class next week to be used in the R exercise
   
 ### Suggested readings
