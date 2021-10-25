@@ -210,6 +210,7 @@ Data management is critical to accountable, trusted research.  Reproducibility i
 2. Share your work with another student to review and review another student's work.
 3. For Next Week:
     -  Bring a sample dataset to class next week to be used in the R exercise
+
   
 ### Suggested readings
 
@@ -220,3 +221,10 @@ Data management is critical to accountable, trusted research.  Reproducibility i
 https://help.data.world/hc/en-us/articles/115006114287-Common-license-types-for-datasets
 
 https://legal.thomsonreuters.com/en/insights/articles/data-licensing-taking-into-account-data-ownership
+
+
+* Add Issues/Bug enabling
+* Define use_read_me_rmd instructions
+* Note on wayback machine - 
+* Importance of noting date of download
+
