@@ -169,19 +169,7 @@ Statistics Canada, on the other hand, operates under an [Open License](https://w
 >> - not present the Information in such a manner that gives the appearance that you may have received, or had access to, information held by Statistics Canada about any identifiable individual person, business or organization; and  
 >> - not disassemble, decompile or in any way attempt to reverse engineer any software provided as part of the Information.
 
-Notice that although Statistics Canada may modify this license at any time, use of publicly available data products is governed by the license in force _at the date and time that the information was accessed_. Therefore, it is advisable to document accession date and time with any datasets obtained from Statistics Canada.
-
-Which datasets are covered by this license? Pretty much all publicly available data products:
-
-- data files
-- databases
-- public use microdata files
-- publications
-- tables
-- graphs
-- maps
-- reports
-- texts
+Notice that although Statistics Canada may modify this license at any time, use of publicly available data products is governed by the license in force _at the date and time that the information was accessed_. Therefore, it is advisable to document the access date and time with any datasets obtained from Statistics Canada.
 
 The license also specifies the following:
 
@@ -195,7 +183,7 @@ The license also specifies the following:
 
 Other jurisdictions have also adopted variations of open licenses for their data portals, including the [City of Toronto](https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-licence/) and the [City of Hamilton](https://www.hamilton.ca/city-initiatives/strategies-actions/open-data-licence-terms-and-conditions).
 
-If you are using data that you did not primarily collect, it is a good idea to understand what your rights as a user are, especially if you wish to ensure that research is reproducible.
+### If you are using data that you did not primarily collect, it is a good idea to understand what your rights as a user are, especially if you wish to ensure that research is reproducible.
 
 
 ## Data Management Wrap-up
