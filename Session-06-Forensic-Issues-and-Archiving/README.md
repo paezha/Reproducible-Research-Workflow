@@ -5,8 +5,9 @@
 ### Data In Brief 
 
 Review of Activity from last session: 
-- Assignment: Create documentation for your project data using the requirements for the[ Elsevier Data in Brief submissions](https://www.elsevier.com/journals/data-in-    brief/2352-3409/guide-for-authors) as a guide. Note the [Data in Brief at a Glance](https://www.elsevier.com/__data/promis_misc/Data%20in%20Brief%20Article%20at%20a%20Glance%20illustration.pdf) gives a nice overview of what is needed and the template can be used to develop the document. Put your work in your course GitHub repository and notify instructors when ready for review.  
--  Example from [Data In Brief](https://www.sciencedirect.com/science/article/pii/S2352340920310568) publication
+- Assignment: 
+Create documentation for your project data using the requirements for the[ Elsevier Data in Brief submissions](https://www.elsevier.com/journals/data-in-brief/2352-3409/guide-for-authors) as a guide. Note the [Data in Brief at a Glance](https://www.elsevier.com/__data/promis_misc/Data%20in%20Brief%20Article%20at%20a%20Glance%20illustration.pdf) gives a nice overview of what is needed and the template can be used to develop the document. Put your work in your course GitHub repository and notify instructors when ready for review.  
+-  Example from [Data In Brief Example](https://www.sciencedirect.com/science/article/pii/S2352340920310568) publication
 -  Challenges 
 
   
