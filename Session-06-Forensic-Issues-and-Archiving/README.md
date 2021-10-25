@@ -2,7 +2,7 @@
 
 ## Session 6. Data Management Plans (DMP): DMPs and Best Practices review
 
-### DMPs  
+### Data In Brief 
 
 -  Challenges  
 -  Peer Review  
