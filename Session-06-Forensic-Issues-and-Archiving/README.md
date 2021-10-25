@@ -4,19 +4,20 @@
 
 ### Data In Brief 
 
--  Challenges  
--  Peer Review  
-  
-### Best Practices
-  
--  Simple document that lays out step by step how you will implement one aspect of the DMP  
--  Peer review allows an unbiased assessment of reusability. Having someone who is less familiar with the project or even the field can be very useful in identifying areas that need clarification.
+Review of Activity from last session: 
+- Assignment: Create documentation for your project data using the requirements for the[ Elsevier Data in Brief submissions](https://www.elsevier.com/journals/data-in-    brief/2352-3409/guide-for-authors) as a guide. Note the [Data in Brief at a Glance](https://www.elsevier.com/__data/promis_misc/Data%20in%20Brief%20Article%20at%20a%20Glance%20illustration.pdf) gives a nice overview of what is needed and the template can be used to develop the document. Put your work in your course GitHub repository and notify instructors when ready for review.  
+-  Example from [Data In Brief](https://www.sciencedirect.com/science/article/pii/S2352340920310568) publication
+-  Challenges 
 
-###  Take a few minutes to read another Data In Brief submission and provide feedback
+  
+###
+  
+-  Simple document that provides adequate information to understand the source of the data, the structure of the data and facilitate proper use of the data  
+-  Ask a colleague or friend to review data documentation. This will process can offer an unbiased assessment of reusability.  Asking for a review by someone who is less familiar with the project or fieldcan be very useful in identifying areas that need clarification.
+
+
 
 ## Forensic Issues and Archiving
-
-### From the DMP submissions
 
 ### How will responsibilities for managing data activities be handled if substantive
 ### changes happen in the personnel overseeing the project's data, including a
