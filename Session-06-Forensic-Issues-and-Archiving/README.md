@@ -1,67 +1,38 @@
 # GEOG 712 Reproducible Research
 
-## Session 6. Data Management Plans (DMP): DMPs and Best Practices review
+## Session 6. Data Management Planning and Best Practices review:  Building Blocks for Reproducibility and Reusability
 
-### DMPs  
+### Data In Brief Activity
 
--  Challenges  
--  Peer Review  
+Review of Activity from last session: 
+- Assignment: 
+Create documentation for your project data using the requirements for the[ Elsevier Data in Brief submissions](https://www.elsevier.com/journals/data-in-brief/2352-3409/guide-for-authors) as a guide. Note the [Data in Brief at a Glance](https://www.elsevier.com/__data/promis_misc/Data%20in%20Brief%20Article%20at%20a%20Glance%20illustration.pdf) gives a nice overview of what is needed and the template can be used to develop the document. Put your work in your course GitHub repository and notify instructors when ready for review.  
+-  Example from [Data In Brief Example](https://www.sciencedirect.com/science/article/pii/S2352340920310568) publication
+-  Challenges 
+
+### Goal of Data Management Practices: Self-Described Datasets
   
-### Best Practices
-  
--  Simple document that lays out step by step how you will implement one aspect of the DMP  
--  For instance, define specifically what your naming conventions will be or your file   structure. 
--  Actionable reference document to support your work.
+The aim of data documentation is straightforward information that provides adequate information to understand the source of the data, the structure of the data and facilitate proper use of the data. 
 
-###  Take a few minutes to read another DMP and provide feedback
+One way to accomplish this is to ask a colleague or friend to review data documentation. This process can provide an assessment of reusability without the burden of pre-existing knowledge that can fill in omissions.  Asking for a review by someone who is less familiar with the project or field can be very useful in identifying areas that need clarification.
 
-## Forensic Issues and Archiving
+### Goal of Open Data and Science
 
-### From the DMP submissions
+![Open Science Rational from NASA Open Science presentation](NASA_OSS_PresentationSlide.PNG)
 
-### How will responsibilities for managing data activities be handled if substantive
-### changes happen in the personnel overseeing the project's data, including a
-### change of Principal Investigator?
+### Motivation
 
-- It is unlikely that there will be a change in Principal Investigator. In the event that the thesis supervisor begins working at a different institution, he will retain the responsibility for overseeing the management of the data. The thesis supervisor will continue to own the private repository where the data is stored and the student investigator will keep access
+The requirements for strong data management practices are growing through the funding and publishing mechanisms in academia. The Principal Investigator (PI) is ultimately responsible for dictating the project practices.  
 
-- Within the Data Plan Management, it is considered that professor Juan Gomez will be responsible for the data in case the current responsible leaves the project.
+![Hierarchy of Responsibilty](HierarchyOfResponsibility.PNG)
 
-- Once I have completed my project and have completed my master's program, the student that will replace me, along with my supervisor or any other collaborators will be given the data and informed on how the data has been stored so that they may continue to preserve the data until it becomes no longer necessary. This question may be updated or changed in the future when the DMP is revisited throughout the research project's progression. 
-
-- data activities will cease and data will remain on Github
-
-- The data will be managed by the supervisor and or the future student that continues the project afterwards. They will be responsible for maintaining the storage mediums and ensuring they are in working order.
-
-- Back up copies of all data are kept on the institute server. Given major changes, the most recently deposited data and associated information would be available. The memoing associated with the coding process would guide an individual if they were to over take the process mid way.
-
-### Have you considered what type of end-user license to include with your data?
-
-- Have you considered what type of end-user license to include with your data? The license towards the data set will use the Creative Commons License.
-
-- My experience in the past with sharing data indicates that licenses mean nothing in countries that do not respect intellectual property, and enforcement is impossible.  I am worried that HWDSB and HWCDSB may speciously assert intellectual property rights.
-
-- The researchers have not considered an end-user license but will discuss closer to the publication of the research.
-
-- General liscence requirements state that after one year papers have to be open acess or available to public. The specificis on liscences are dependent on the journal that the data is being published in. This question may be updated or changed in the future when the DMP is revisited throughout the research project's progression.
-
-- It is not expected to deposit the data in a public repository
-
-## What happens when life happens...
-
-### What if one of the people working on your data was suddenly gone (death, illness, another opportunity, lottery winner!)
-
-## Internal Management/Archiving –
+As a Highly Qualified Personnel (HQP), your role in DM is to be attentive to your data throughout the research process. The results of your work may not be to archive datasets but chances are that data deposit will be required to support publications or simply to ensure that your supervisor has complete research data and artifacts when you graduate.
 
 Succession planning – reporting and who needs to know what
 
 -  What measures do we put in place to make sure data does not get lost or orphaned? 
 -  What measures do we put in place to make sure that hand-offs are smooth and effective when project is concluded?
 -  How to track changes and keep people aware so that all using the data are using the correct copy (Authoritative files and Version control.)
-
-
-##  Considerations
-
 ### Who has a stake in the data?
 
 https://secretariat.mcmaster.ca/app/uploads/2019/06/Ownership-of-Student-Work.pdf
@@ -115,20 +86,28 @@ https://artsandscience.usask.ca/psychology/documents/student-supervisor-agreemen
 -  What is the approximate date for completion of lab/field work/collection of data?
 -  What is the approximate date for completion of data analysis?
 
-## Have you considered what type of end-user license to include with your data? 
+![Expectations](HQP_DMExpectations.PNG)
 
-### Some common situations
+### Data Management is an integral part of the research process
+As we take another pass at developing a successful data management strategy it is important to note that when researchers develop a project plan, data is already a key part of the inquiry. The quick hits and reflection that you have completed on the data from your project start to set you up for success. The key to generating data that can be sustainably used is documenting the data development process from beginning to end.  You want your data documentation to be like writing a journal, not like doing a historical review requiring you to dig up artifacts and piece things together.
 
--  My experience in the past with sharing data indicates that licenses mean nothing in countries that do not respect intellectual property, and enforcement is impossible. This document was generated by DMP Assistant (https://assistant.portagenetwork.ca) 3 of 5 Intellectual property rights have not been considered at this stage. I am worried that HWDSB and HWCDSB may speciously assert intellectual property rights.
+![RDM Part of the Process](RDM_PartofProcess.PNG)
 
--  The researchers have not considered an end-user license but will discuss closer to the publication of the research.
+These data activities that are already being done can be reframed as a Road Map and as items to address in the key areas of RDM.
 
--  General license requirements state that after one year papers have to be open access or available to public. The specifics on licenses are dependent on the journal that the data is being published in. This question may be updated or changed in the future when the DMP is revisited throughout the research project's progression.
+![Data Road Map](DataRoadMap.PNG)
 
--  It is not expected to deposit the data in a public repository
+At the start of research it is critical to think about not only the inputs but also the eventual outputs of research. When we think about our starting point and where we want to end up we can plot a course.
 
--  The license towards the data set will use the Creative Commons License.
+![Start](WheretoStart.PNG)
 
+![Finish](WheretoFinish.PNG)
+
+As we identify the key outcomes we can develop the work plan to achieve them.
+
+![Part of the Process](PartofResProcess.PNG)
+
+At a certain point in your research you will be required to or simply choose to share your data - for instanct to support a journal article or collaborate with other researchers.
 ### Licensing Considerations
 
 - The licensor has expended significant resources gathering, assembling and compiling the data, and that the data is the valuable property of licensor
@@ -142,69 +121,13 @@ Data ownership and use.
 
 https://creativecommons.org/share-your-work/licensing-types-examples/#by
 
-### Creative Commons licenses
+Creative Commons is a prevalent licensing choice.  Each license has varied restrictions on sharing and use.
 
-There are six main Creative Commons licenses you can use when you choose to publish your work under CC terms. The six CC licenses are based on four conditions. The four conditions and the six licenses are described below.
+![https://open.ed.ac.uk/how-to-guides/choosing-a-creative-commons-licence-for-your-resource/](cc_licences-1024x730.png)
 
-### License Conditions
+There are other licensing types that may be more appropriate to your data or code.
 
-When using a Creative Commons license, creators choose a set of conditions they wish to apply to their work.
-
--  Attribution Attribution (by)
-
-  All CC licenses require that others who use your work in any way must give you credit the way you request, but not in a way that suggests you endorse them or their use. If they want to use your work without giving you credit or for endorsement purposes, they must get your permission first.
-
--  ShareAlike ShareAlike (sa)
-
-  You let others copy, distribute, display, perform, and modify your work, as long as they distribute any modified work on the same terms. If they want to distribute modified works under other terms, tey must get your permission first.
-
--  NonCommercial NonCommercial (nc)
-
-  You let others copy, distribute, display, perform, and (unless you have chosen NoDerivatives) modify and use your work for any purpose other than commercially unless they get your permission first.
-
--  NoDerivatives NoDerivatives (nd)
-
-  You let others copy, distribute, display and perform only original copies of your work. If they want to modify your work, they must get your permission first.
-
--  Attribution (CC BY)image
-
-
-  This license lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licenses offered. Recommended for maximum dissemination and use of licensed materials.
-
-==================================
-
--  Attribution ShareAlike (CC BY-SA)image
-This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. This license is often compared to “copyleft” free and open source software licenses. All new works based on yours will carry the same license, so any derivatives will also allow commercial use. This is the license used by Wikipedia, and is recommended for materials that would benefit from incorporating content from Wikipedia and similarly licensed projects.
-
--  Attribution-NoDerivs (CC BY-ND)image  
-
-This license lets others reuse the work for any purpose, including commercially; however, it cannot be shared with others in adapted form, and credit must be provided to you.
-
--  Attribution-NonCommercial (CC BY-NC)image  
-
-  This license lets others remix, tweak, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don’t have to license their derivative works on the same terms.
-
--  Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)image  
-
-  This license lets others remix, tweak, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms.
-
--  Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)image  
-
-  This license is the most restrictive of our six main licenses, only allowing others to download your works and share them with others as long as they credit you, but they can’t change them in any way or use them commercially.
-  
-### Licensing data
-
-This is a complex area. [Wickham](http://r-pkgs.had.co.nz/description.html#license), for instance, notes that data are not copyrightable in the United States, so if you put data out in the wild you are not giving up much by using a license such as Creative Commons (CC0). 
-
-In practical terms, this means that if you wish to retain control over your data, you should most definitely _not_ put it in the wild, which may be the objective in many situations (e.g., proprietary data, sensitive data, etc.). You can include in lieu of license a notice stating:
-
-```
-PROPRIETARY  
-  
-Do not distribute outside of McMaster Hydrometeorology & Climatology Group
-```
-
-This practice, however, is at odds with policy directions by funding organizations to make research data available to the public. What this means is that, if you are the _author_ of the data, that is, you are the primary collector of the data, and you received funding from an organization that encourages or requires data sharing, you might be expected to make the data public at some point, perhaps after a reasonable sequestration period. In that case, the Creative Commons license would be appropriate.
+### Third Party Data
 
 The situation becomes somewhat more complex if you are _not_ the author of the data. In the social sciences it is common to work with secondary data, either from Statistics Canada or various other organizations, some of which may have data policies, but other may not.
 
@@ -274,48 +197,17 @@ Other jurisdictions have also adopted variations of open licenses for their data
 
 If you are using data that you did not primarily collect, it is a good idea to understand what your rights as a user are, especially if you wish to ensure that research is reproducible.
 
-## Long Term Preservation and Storage
 
-### Selecting a Data Repository
-https://www.bu.edu/data/share/selecting-a-data-repository/
+## Data Management Wrap-up
 
-### Things to Consider
-Many data repositories exist today. Some will be a better fit for your needs more than others. Here are some tips on selecting a data repository for your research:
+Data management is critical to accountable, trusted research.  Reproducibility is the ultimate goal but it is an iterative process that will evolve over time.
 
-### Reputation
-Is the repository a reputable source? Check to see if it is endorsed by a funding agency, scholarly journal, professional society, library, or if it is listed in the Registry of Research Data Repositories. Publishing your data, like publishing an article, is best done with a reputable partner that is backed by an institution or your research community.
-
-### Sustainability
-Having you data deposited in a repository that is unsustainable defeats the point of depositing it. This is why it is important to make sure your repository has the support of an institution, community, or funder. You’ll want to ensure the depository you select will be providing access to your data for well over 5 years. Many repositories will also have preservation plans and contingency plans on the outside chance funding is ceased. Lastly, don’t be afraid to ask about these plans.
-
-### Visibility
-One of the primary reasons to deposit your data in a repository is to obtain a unique identifier that others can use to cite your data. This service will increase the visibility of your data within the scholarly literature and allows researchers to find it later on. Ensure your data repository offers a DOI (digital object identifier), handle, or another unique indentifer.
-
-Another way to think about visibility is to ask if researchers in your field use a repository. Some disciplines have an agreed upon repository that everyone uses and knows about. Ensure that you’re putting your data where the appropriate researchers are likely to find it (and hopefully use it).
-
-### Usability
-The usability of a data repository is also important in ensuring that others will be able to access your data. Unfortunately, not all repositories have the funding to create great web interfaces with simple, intuitive interactions. However, if your peers are unable to find and download your data it will limit the effectiveness of sharing your data. A usable data repository should allow for users to easily upload, download, and cite data sets.
-
-### Features
-Some data repositories have really great features like integrations with Open Science Framework, GitHub, or other commercial storage solutions. While these feature may not be the keystones to providing long-term access to your data, they can help you share your data more frequently and effectively. Additionally, an author dashboard (a place you can view statistics, like downloads, on your data sets) or easy-to-understand licensing, like Creative Commons, can make your life a little easier. Lastly, you’ll want to review the upload and storage limits. Some repositories offer limited free storage before a fee is charged. Be sure to look over each data repository’s features and compare them with comparable services.
-
-### Formats
-Most data repositories are able to handle most formats; however, this doesn’t always guarantee that they’ll be able to work with your data. Be sure to take a look at the repositories documentation to ensure they can store the data you’ve generated. In addition, see if the repository can generate previews or provide other user interactions with your data. While these features are not essential from a preservation perspective, they do help users understand and access your data.
-
-### Rights
-Know your rights! Take time out to read the terms of use and to understand what permissions you’re giving the data repository. For instance, does your data repository use common licensing agreements (again, like Creative Commons) that will help others understand what they can and cannot do with your data?
-
+![DMPEvolution](DMEvolution.PNG)
 
 ### Activity
 
-1. Review Data Management Plan
-    - Revise your Data Management Best Practice (as needed) to be easy to follow instructions to guide your work
-    - Review the DMP Questionnaire of a colleague to gain additional feedback 
-        -  Share plan with your partner so that they can read your DMP and provide feedback
-        -  Read and provide feedback to your partner on the DMP that they have shared with you.
-    - Export and upload your complete DMP to GitHub. 
-2. For Next Week:
-    -  Bring a sample dataset to class next week to be used in the R exercise
+1. Complete the Data In Brief activity - place in ReadMe file to make it accessible by others to review. Enable comments through the Issues tools.
+
   
 ### Suggested readings
 
@@ -326,3 +218,10 @@ Know your rights! Take time out to read the terms of use and to understand what 
 https://help.data.world/hc/en-us/articles/115006114287-Common-license-types-for-datasets
 
 https://legal.thomsonreuters.com/en/insights/articles/data-licensing-taking-into-account-data-ownership
+
+
+* Add Issues/Bug enabling
+* Define use_read_me_rmd instructions
+* Note on wayback machine - 
+* Importance of noting date of download
+
