@@ -5,8 +5,8 @@
 #' @return The product of \code{a} and \code{b}
 #' @export
 #' @examples
-#' multiply(2, 5)
-#' multiply(4, 8)
-multiply <- function(a, b){
+#' multiplyr(2, 5)
+#' multiplyr(4, 8)
+multiplyr <- function(a, b){
   a * b
 }
