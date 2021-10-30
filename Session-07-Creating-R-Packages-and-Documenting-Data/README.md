@@ -6,15 +6,15 @@
 ## Session 7. Creating packages in R and documenting datasets
 
 In the preceding sessions we learned about Data Management Plans. There
-are several key aspects of these plans, including how to document not
-only data, but also how data were processed, and also how to transfer
-it, either to a supervisor, colleagues, students, or other interested
-parties.
+are several key aspects of these plans, including how to document data
+and data preparation processes. An important aspects of planning for the
+long term life of the data is also how to transfer it, either to a
+supervisor, colleagues, students, or other interested parties.
 
-In this session we will learn about packages in R. Although by no means
-the only way to document and share data (and processes), packages offer
-a convenient way of bundling up code, data, documentation, and examples
-in a conveniently shareable and usable unit.
+In this session we will learn about packages in `R`. Although by no
+means the only way to document and share data (and processes), packages
+offer a convenient way of bundling up code, data, documentation, and
+examples in a conveniently shareable and usable unit.
 
 Creating packages can become quite a sophisticated matter, depending on
 what their objective is. Here, we will work on a small example, and at
@@ -23,53 +23,60 @@ your understanding of the art and the technique of package creation.
 
 ### Packages
 
-According to (Wickham)\[<http://r-pkgs.had.co.nz/>\], packages in R are
+According to [Wickham](http://r-pkgs.had.co.nz/), packages in `R` are
 “the fundamental units of reproducible code”.
 
 Packaging code in this way has been no doubt one of the reasons why the
-R ecosystem became and has remained hugely popular; another reason being
-a relatively simple and effective way of finding, installing, and
-managing packages. Many R packages increase the functionality of R, but
-a package can serve other functions and distribution is not necessarily
-the only reason to create a package. Packaging code and data forces you
-to go through the process of organizing all your materials, documenting
-them, and possibly creating examples. This might come handy when, in the
-future, you need to revisit a project. It can help you to explain what
-you have done. And it can enhance reproducibility of research, if a
-package is a companion to a paper you write.
+`R` ecosystem became and has remained hugely popular; another reason
+being a relatively simple and effective way of finding, installing, and
+managing packages. Many `R` packages increase the functionality of `R`,
+but a package can serve other functions and distribution is not
+necessarily the only reason to create a package. Packaging code and data
+forces you to go through the process of organizing all your materials,
+documenting them, and possibly creating examples. This might come handy
+when, in the future, you need to revisit a project. It can help you to
+explain what you have done. And it can enhance reproducibility of
+research, if a package is a companion to a paper you write.
 
 We will use an example as we cover the basic steps of creating a
-package. To see what the outcome of that might look like, follow this
-[link](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session%207%20Creating%20R%20packages%20and%20documenting%20data)
-and download the file `packr_0.1.0.tar.gz`. Save the file in a place
-where you can find it easily, because the next step will be to install
-the package (make sure that you type the correct path, or as an
-alternative, make the folder where the package installer is the working
-directory):
+package. To see what the outcome of that might look like, run the
+following code, which will install the package used in this session
+directly from GitHub:
 
-    install.packages("PATH/packr_0.1.0.tar.gz", repos = NULL, type = "source")
-
-As an alternative, you can install the package directly from GitHub:
-
-    devtools::install_github("paezha/Reproducible-Research-Workflow/Session-07-Creating-R-Packages-and-Documenting-Data/packr", build_vignettes = TRUE)
+``` r
+if(!require(remotes)){
+    install.packages("remotes")
+    library(remotes)
+}
+remotes::install_github("paezha/packr", 
+                         build_vignettes = TRUE)
+```
 
 If you succeeded in installing the package, you can proceed to load it
 now:
 
-    library(packr)
+``` r
+library(packr)
+```
 
 Try the following:
 
-    ?packr
+``` r
+?packr
+```
 
 And also this to examine all datasets available by package, including
 data packed with `packr`:
 
-    data(package = "packr")
+``` r
+data(package = "packr")
+```
 
 To see the documentation for the data:
 
-    ?energy_and_emissions
+``` r
+?energy_and_emissions
+```
 
 ### What goes in a package?
 
@@ -81,30 +88,76 @@ Over time, a standardized folder structure has been refined to ensure
 that package creation and distribution is as seamless as possible. This
 is how a package folder might look like once that it has been developed:
 
-![Folder sructure of a package](Session-7-Figure-1.png)
+![Folder sructure of a package](Session-7-Figure-0.png)
 
 Notice the following *essential* components:
 
--   A folder `R/`: this is where code goes
--   A folder `man/`: this is where documentation goes
+-   A folder `R/`: this is where code goes.
+-   A folder `man/`: this is where documentation goes.
 
 A package must include these two. In addition, it can include:
 
--   A folder `data/`: this is where datasets in `.RData` format go. Raw
-    data (for instance, Excel files, `.csv` files, `.shp` files, etc.)
-    is stored elsewhere depending on whether it will be shared or not.
+-   A folder `data/`: this is where data sets in format `.RData` or
+    `.rda` go. Raw data (for instance, Excel files, `.csv` files, `.shp`
+    files, etc.) are stored elsewhere depending on whether they will be
+    shared with the package or not.
+-   A folder `data-raw/` to store raw data that are processed to produce
+    `.RData` or `.rda` files.
+-   A folder `tests/` where files for testing functions live.
 -   A folder `vignettes/`: this is where more extended examples of use
-    of the package go
+    of the package go.
 
-There is in addition an `Rproj.user/` that is created when the R project
-associated with the package is created in R Studio. This folder may not
-exist if the package is created from the command line. Finally, there is
-a `raw/` folder; this is a custom folder that I created to put things
-that I used in the process of creating the package, but that are *not*
-part of the package. More on this next.
+There are a few additional folders, a `git/` folder for files associated
+with the versioning system git; a folder `github/` to store files needed
+to work with the online service GitHub; and an `Rproj.user/` folder that
+is created when the `R` project associated with the package is created
+in R Studio.
 
 Now, lets look at some of the files there:
 
+-   `.RBuildignore`: this is a text file that tells `R` to ignore files
+    or folders when building the package. For instance, the
+    `.Rbuildignore` file in this particular package contains the
+    following lines:
+
+<!-- -->
+
+    ^packr\.Rproj$
+    ^\.Rproj\.user$
+    ^LICENSE\.md$
+    ^README\.Rmd$
+    ^data-raw$
+    ^\.github$
+
+None of these files or folders will be part of the built package. There
+are some rules to write the names of things to exclude in the
+`.Rbuildignore` file. If I write only `raw`, it will exclude
+*everything* that contains the characters “raw”. For instance, if I had
+a script named `withdraw.R`, it would be excluded. So we need to define
+more clearly what it is that we wish to exclude. The character `^` is
+used to indicate the beginning of an expression and the character `$`
+indicates the end of an expression. By writting `^raw$` I ensure that
+only things that are named *exactly* `raw` are excluded. The easiest way
+to edit the `.Rbuildignore` file is by using the package {usethis}:
+
+``` r
+use_build_ignore()
+```
+
+-   `.gitignore`: this is a text file that tells git to ignore files or
+    folders when keeping versions of the project. This is used to keep
+    files or folders private and not shared in the repository beyond
+    your local version of the project. The easiest way to edit the
+    `.gitignore` file is by using the package {usethis}:
+
+``` r
+use_git_ignore()
+```
+
+-   `DESCRIPTION`: A text file that describes the package in a standard
+    way.
+-   `LICENSE`/`LICENSE.md`: Files with the license information for the
+    package.
 -   `NAMESPACE`: A text file with space for *names* that map the value
     of objects to their names. Sounds confusing? It is because it is one
     of the most confusing aspects of creating a package, but fortunately
@@ -114,39 +167,13 @@ Now, lets look at some of the files there:
     `NAMESPACE` helps to avoid conflicts between packages, among other
     things. See more about `NAMESPACE`
     [here](http://r-pkgs.had.co.nz/namespace.html).
--   `DESCRIPTION`: A text file that describes in a standard way the
-    package
--   `.RBuildignore`: this is a text file that tells R to ignore files or
-    folders when building the package. For instance, the `.Rbuildignore`
-    file in this particular package contains the following three lines:
-
-<!-- -->
-
-    ^.*\.Rproj$
-    ^\.Rproj\.user$
-    ^raw$
-
-Which means that the project files and folder as well as my custom
-`raw/` folder will be ignored when building the package.
-
-There are some rules to write the names of things to exclude in the
-`.Rbuildignore` file. If I write only `raw`, it will exclude
-*everything* that contains the characters “raw”. For instance, if I had
-a script named `withdraw.R`, it would be excluded. So we need to define
-more clearly what it is that we wish to exclude.
-
-The character `^` is used to indicate the beginning of an expression and
-the character `$` indicates the end of an expression. By writting
-`^raw$` I ensure that only things that are named *exactly* `raw` are
-excluded.
+-   `packr.RProj`: R Studio project file.
+-   `README.Rmd`/`README.md`: Readme files for the GitHub repository.
 
 This should give you a broad panoramic of what goes into a package. Lets
 now review these elements in turn by means of an example.
 
 ### Initializing a package
-
-As mentioned above, there are two ways to create a package: using the
-command line, or using R Studio. We will use the latter.
 
 Package creation (and maintenance) in R Studio is linked to the use of
 *Projects*. Creating a project in R Studio creates a file and an
@@ -154,79 +181,146 @@ invisible folder to store auto-saves and other items. The advantage of
 working in projects is that work can be compartmentalized: the project
 will *remember* where its files are, what options are used, and so on.
 
-We will begin by creating a project, which can be done by going to the
-drop-down menu at the top and clicking `File > New Project`:
+Before you create a package you need to think of a name for it. Package
+names can only include letters, numbers, and periods (no other special
+symbols), and the use of periods is not advised because they can create
+confusion with file extensions. For this example, I have called my
+minimal package example `packr` (a quick Google search suggests that
+this name is not the name of an existing `R` package!). When you choose
+your own package name, keep in mind Wickham’s [naming
+advice](http://r-pkgs.had.co.nz/package.html#naming).
 
-![Creating a new project from the File menu](Session-7-Figure-2.png)
+The package {usethis} has numerous functions that assist in the creation
+of packages. For this example, we will begin by initializing a package
+with the following function that specifies *where* to create the
+package, and the name of the package:
 
-As an alternative, a new project can be created using the Create a
-Project button under the `Edit` drop-down menu:
+``` r
+usethis::create_package("C:/Antonio/packages/packr")
+```
 
-![Creating a new project using the Create a Project
-button](Session-7-Figure-3.png)
+The function `create_package()` will check if the name you have chosen
+is a valid name for CRAN, and if the name is valid, it will initialize a
+project in the directory indicated:
 
-Or using the Projects menu near the right-top corner of the window:
+![Creating a new package](Session-7-Figure-1.png) Immediately, a new R
+Studio session is launched, and you will find yourself in the project
+folder where you will see that the required folders and files have been
+created:
 
-![Creating a new project using the Project menu](Session-7-Figure-4.png)
+![New package after running `create_package()`](Session-7-Figure-2.png)
 
-We create a new project to initialize a package. This is done by
-choosing a new directory:
-
-![Creating a new project in a new directory](Session-7-Figure-5.png)
-
-Notice that you can create different types of projects (a plain vanilla
-project, or an R package, or R packages with various additions, such as
-Rcpp, devtools, etc.) Each of these alternatives will initialize
-different packages and options for you. We will choose
-`Create a new R package`:
-
-![Creating a new project for an R package](Session-7-Figure-6.png)
-
-Choose the directory in your system where you want to create your
-project and package. This could be under a directory that already has
-version control, or version control can be added by clicking the tick
-box `Create a git repository`. You also need to give your package a
-name. Package names must include only letters, numbers, and periods (no
-other special symbols), and the use of periods is not advised because
-they can create confusion with file extensions:
-
-![Initializing an R package](Session-7-Figure-7.png)
-
-For this example, I am going to call my first package `packr` (a quick
-Google search suggests that this name is not the name of an existing R
-package!). You choose your own package name, maybe keeping in mind the
-Wickham’s [naming advice](http://r-pkgs.had.co.nz/package.html#naming).
-
-Once that you have created the project, there will be a directory with
-the following folders/files:
-
-![Package components](Session-7-Figure-8.png)
-
-What are these? Lets take a look at some of the key components of the
-package.
+What are these items? Let us take a look at some of the key components
+of the package.
 
 ### `DESCRIPTION`
 
 A `DESCRIPTION` file was initialized with the package. This is a text
-file that includes some basic information about the package:
+file that includes some basic information about the package. After
+editing this file with specific information it contains a minimal
+description of the package. There will be an opportunity to describe the
+package more fully elsewhere, and for the time being, this is my
+`DESCRIPTION`:
 
-![Initial DESCRIPTION file](Session-7-Figure-9.png)
-
-I am going to edit this file with specific information. This is a
-minimal description of the package, and there will be an opportunity to
-describe the package more fully elsewhere. For the time being, this is
-my `DESCRIPTION`:
-
-![Revised DESCRIPTION file](Session-7-Figure-10.png)
+![Initial DESCRIPTION file](Session-7-Figure-3.png)
 
 ### `R/`
 
-In this folder will go all R code that you wish to include in the
-package. The folder was initialized with a `hello.R` function, a simple
-“Hello, world!” function. You can verify that it is there:
+This folder is currently empty, but here will go all `R` code that you
+wish to include in the package.
 
-![Sample “Hello, world!” function created with
-package](Session-7-Figure-11.png)
+### `LICENSE`
+
+A license is initialized when the package is created, and it can be
+customized by using one of the following functions from the {usethis}
+package:
+
+    usethis::use_mit_license("Antonio Paez")
+    usethis::use_ccby_license()
+
+### Add `README`
+
+It is useful to have a README file, and you can add one with the
+following function:
+
+``` r
+usethis::use_readme_rmd()
+```
+
+This will create an Rmarkdown file called `README.Rmd` that will become
+the `README.md` document used, for example, in a GitHub repository. An
+advantage of working with `README.Rmd` is that it allows you to include
+code, equations, figures, etc. This is how I create the `README` files
+for the package `packr`:
+
+![Create README](Session-7-Figure-4.png)
+
+Notice that this is only a template and needs to be edited with
+information relevant to the package. This
+[file](https://github.com/paezha/Reproducible-Research-Workflow/blob/Session-07/Session-07-Creating-R-Packages-and-Documenting-Data/packr-README.Rmd)
+includes the information in the `README.Rmd` file, and it looks like
+this:
+
+![Create README](Session-7-Figure-5.png)
+
+The header was edited to include the argument `pandoc_args: --webtex`
+used to display equations. The rest of the file describes the package
+and how to get started with it.
+
+### Create an `R` script to document the package
+
+The next item that we need is folders/files for documentation. We
+initialize this as follows:
+
+``` r
+usethis::use_package_doc()
+```
+
+This creates an `R` script in the `R/` folder with the name of the
+package. This file will open in the editor in R Studio:
+
+![Initialize a package documentation File](Session-7-Figure-6.png)
+Again, this file is just a template, so we need to edit it with
+information relevant to the package. We add the following text after the
+pre-scripted blocks (beginning on line 10):
+
+    #' packr: A package with a minimum example of package creation.
+    #'
+    #' This package is an exercise in package creation using
+    #' R studio. The package includes a sample function and
+    #' a sample dataset with their respective documentation.
+    #'
+    #' @docType package
+    #' @name packr-package
+    #' @author Antonio Paez, School of Earth, Environment and Society, McMaster University \email{paezha@@mcmaster.ca}
+    #' @references \url{https://github.com/paezha/packr}
+    NULL
+
+The file now looks like this: ![Initialize a package documentation
+File](Session-7-Figure-7.png) You can customize the comments in your
+package now. The symbol `@` is used for tags. In the example, there are
+four types of tags in use:
+
+1.  `@docType`: the type of document (package)
+
+2.  `@name`: the name of the document (`packr-package`).
+
+3.  `@author`: the name of the author of the package, followed possibly
+    by other information such as affiliation and email (use double `@@`
+    in email addresses; this is to distinguish the “at” mark from a tag
+    mark).
+
+4.  References (possibly with links).
+
+At the end, *uncommented* we write `NULL`.
+
+There are many other tags that can be used to describe different aspects
+of a package, function, or data set, and if you begin a comment in the
+script with `@` suggestions for tag will pop up for you. To learn more
+about tags in documentation, check
+[this](https://roxygen2.r-lib.org/articles/rd.html).
+
+&lt;!–
 
 ### `man/`
 
@@ -291,57 +385,6 @@ attempt](Session-7-Figure-15.png)
 
 Now the documentation has been generated all using `roxygen2`, and there
 is a warning not to edit by hand!
-
-### Create an `R` script to document the package
-
-We will add one more component to the package at this point, an `R`
-script to document the package. Create a new script, for instance by
-using the drop-down menu `File > New File > R Script`:
-
-![Create a new script](Session-7-Figure-16.png)
-
-The name of the new script should be the same as the name of your
-package, In my case this is `packr.R`.
-
-This script will consist only of comments, as follows (notice that the
-comments are in `roxygen2` style):
-
-    #' packr: A package with a minimum example of package creation.
-    #'
-    #' This package is an exercise in package creation using
-    #' R studio. The package includes a sample function and
-    #' a sample dataset with their respective documentation.
-    #'
-    #' @docType package
-    #' @name packr
-    #' @author Antonio Paez, School of Geography and Earth Sciences, McMaster University \email{paezha@@mcmaster.ca}
-    #' @references \url{https://github.com/paezha/Reproducible-Research-Workflow}
-    NULL
-
-Create your own comments for your package now. The symbol `@` is used
-for tags. In the example, there are four types of tags in use:
-
-1.  `@docType`: the type of document (package)
-
-2.  `@name`: the name of the document (`packr`).
-
-3.  `@author`: the name of the author of the package, followed possibly
-    by other information such as affiliation and email (notice the
-    double `@@` in the email address; this is to distinguish it from a
-    tag mark).
-
-4.  References (possibly with links).
-
-At the end, *uncommented* we write `NULL`.
-
-There are many other tags that can be used to describe different aspects
-of a package, function, or dataset, and if you begin a comment in the
-script with `@` suggestions for tag will pop up for you:
-
-![Package documentation](Session-7-Figure-17.png)
-
-To learn more about tags in documentation, check
-[this](https://roxygen2.r-lib.org/articles/rd.html).
 
 Now proceed to regenerate the documentation. Any time that you add a
 function (or a dataset that needs documentation) this needs to be

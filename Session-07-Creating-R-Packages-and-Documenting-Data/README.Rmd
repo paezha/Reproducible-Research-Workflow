@@ -23,7 +23,7 @@ Creating packages can become quite a sophisticated matter, depending on what the
 
 ### Packages
 
-According to (Wickham)[http://r-pkgs.had.co.nz/], packages in `R` are "the fundamental units of reproducible code". 
+According to [Wickham](http://r-pkgs.had.co.nz/), packages in `R` are "the fundamental units of reproducible code". 
 
 Packaging code in this way has been no doubt one of the reasons why the `R` ecosystem became and has remained hugely popular; another reason being a relatively simple and effective way of finding, installing, and managing packages. Many `R` packages increase the functionality of `R`, but a package can serve other functions and distribution is not necessarily the only reason to create a package. Packaging code and data forces you to go through the process of organizing all your materials, documenting them, and possibly creating examples. This might come handy when, in the future, you need to revisit a project. It can help you to explain what you have done. And it can enhance reproducibility of research, if a package is a companion to a paper you write.
 
