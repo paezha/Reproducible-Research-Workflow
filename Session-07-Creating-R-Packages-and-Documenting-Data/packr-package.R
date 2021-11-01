@@ -1,3 +1,12 @@
+#' @keywords internal
+"_PACKAGE"
+
+# The following block is used by usethis to automatically manage
+# roxygen namespace tags. Modify with care!
+## usethis namespace: start
+## usethis namespace: end
+NULL
+
 #' packr: A package with a minimum example of package creation.
 #'
 #' This package is an exercise in package creation using
@@ -5,9 +14,9 @@
 #' a sample dataset with their respective documentation.
 #'
 #' @docType package
-#' @name packr
-#' @author Antonio Paez, School of Geography and Earth Sciences, McMaster University \email{paezha@@mcmaster.ca}
-#' @references \url{https://github.com/paezha/Reproducible-Research-Workflow}
+#' @name packr-package
+#' @author Antonio Paez, School of Earth, Environment and Society, McMaster University \email{paezha@@mcmaster.ca}
+#' @references \url{https://github.com/paezha/packr}
 NULL
 
 #' Energy and emissions data for world countries.

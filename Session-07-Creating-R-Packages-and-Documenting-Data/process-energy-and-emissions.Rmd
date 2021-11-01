@@ -1,0 +1,107 @@
+---
+title: "Process Energy and Emissions File"
+---
+
+I have an Excel file with data compiled from a few different sources about energy use and emissions for world countries.
+
+The name of the file is `Energy and Emissions.xlsx` and it contains two sheets, as follows:
+
+- Energy_Emissions: the data
+- Source: notes about the source and a data dictionary
+
+To make it easy to share this dataset I will read it, convert it to an `.RData` file, and then document it so that it can be bundled with package `packr`.
+
+Load the packages needed to preprocess the data:
+```{r}
+library(tidyverse)
+library(readxl)
+library(countrycode)
+```
+
+Read the Excel file as a dataframe:
+```{r}
+energy_and_emissions <- read_excel("Energy and Emissions.xlsx")
+```
+
+The dataframe consists of 188 observations of 10 variables. Get a summary of the dataframe:
+```{r}
+summary(energy_and_emissions)
+```
+
+The names of the countries, the year for the population estimates, and the year for the energy estimates are character, so will change to factor:
+```{r}
+energy_and_emissions <- energy_and_emissions %>%
+  mutate(Country = factor(Country), PYear = factor(PYear), EYear = factor(EYear))
+```
+
+New summary of the dataframe:
+```{r}
+summary(energy_and_emissions)
+```
+
+The sources of these data are as follows:
+
+- Energy Consumption Data Source: CIA Factbook, Refined Oil Products Consumption (https://www.cia.gov/library/publications/the-world-factbook/rankorder/2246rank.html) Accessed: September 5, 2017
+
+- CO2 Emissions Data Source: EC Emissions Database for Global Atmospheric Research (http://edgar.jrc.ec.europa.eu/overview.php?v=CO2ts1990-2015) Accessed: September 5, 2017
+
+- GDP Data Source: Wikipedia (https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)_per_capita) Accessed: September 5, 2017
+
+In addition, I want to append the continent to the countries. I will use the dataframe `codelist` from the package `countrycode`. Notice that country names in `energy_and_emissions` are in upper case, so I will change that from `codelist`:
+```{r}
+country_continent <- codelist %>% transmute(Country = toupper(country.name.en), Continent = factor(continent))
+```
+
+Join the continent information to the table:
+```{r}
+energy_and_emissions <- left_join(energy_and_emissions, country_continent, by = "Country")
+```
+
+The data defintions are as follows:
+
+- Country	Country name
+- Area	Surface land area of country in sq.km
+- Population	Population
+- PYear	Year of estimated population
+- GDPPC	GDP per capita (nominal) in US dollars
+- bblpd	barrels of oil per day
+- EYear	Year of estimated usage of barrels of oil per day
+- CO2_1995	CO2 emissions in kilotonnes per year (1995)
+- CO2_2005	CO2 emissions in kilotonnes per year (2005)
+- CO2_2015	CO2 emissions in kilotonnes per year (2015)
+- Continent Continent name
+
+Make sure that there are no missing data:
+```{r}
+summary(energy_and_emissions)
+```
+
+There are 15 NAs in continent. Wonder what those are...
+
+Some countries the names don't match or are not in the country code table, apparently. Fill manually:
+```{r}
+energy_and_emissions <- energy_and_emissions %>%
+  mutate(Continent = case_when(Country == "ANTIGUA AND BARBUDA" ~ "Americas",
+                               Country == "BOSNIA AND HERZEGOVINA" ~ "Europe",
+                               Country == "CABO VERDE" ~ "Africa",
+                               Country == "CONGO, DEMOCRATIC REPUBLIC OF THE" ~ "Africa",
+                               Country == "CONGO, REPUBLIC OF THE" ~ "Africa",
+                               Country == "COTE D'IVOIRE" ~ "Africa",
+                               Country == "GAMBIA, THE" ~ "Africa",
+                               Country == "KOREA, NORTH" ~ "Asia",
+                               Country == "KOREA, SOUTH" ~ "Asia",
+                               Country == "SAINT KITTS AND NEVIS" ~ "Americas",
+                               Country == "SAINT LUCIA" ~ "Americas",
+                               Country == "SAINT VINCENT AND THE GRENADINES" ~ "Americas",
+                               Country == "SAO TOME AND PRINCIPE" ~ "Africa",
+                               Country == "TRINIDAD AND TOBAGO" ~ "Americas",
+                               Country == "TURKS AND CAICOS ISLANDS" ~ "Americas",
+                               TRUE ~ as.character(Continent)),
+         Continent = factor(Continent))
+```
+
+Save to data folder:
+```{r}
+usethis::use_data(energy_and_emissions,
+                  overwrite = TRUE)
+```

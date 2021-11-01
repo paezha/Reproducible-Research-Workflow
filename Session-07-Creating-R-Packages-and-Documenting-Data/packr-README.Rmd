@@ -1,0 +1,67 @@
+---
+output: 
+  github_document:
+    pandoc_args: --webtex
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# packr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of packr is to present a minimal example of package creation in `R`. It uses {usethis} functions to create the package, the license, and README.Rmd file, as well as the documentation and appropriate folders for data. 
+
+## Installation
+
+You can install the development version of packr from [GitHub](https://github.com) with:
+
+``` r
+if(!require(remotes)){
+    install.packages("remotes")
+    library(remotes)
+}
+remotes::install_github("paezha/packr")
+```
+
+## Example
+
+This is a basic example which shows you how to use the package:
+```{r example}
+library(packr)
+```
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+```{r cars}
+summary(energy_and_emissions)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
+
+You can also embed plots, for example:
+```{r scatterplot, echo = FALSE}
+# Simple Scatterplot
+attach(energy_and_emissions)
+plot(Population, bblpd, 
+     main="Scatterplot Example",
+     xlab="Population ", 
+     ylab="Barrels of oil per day ", 
+     pch=19)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+
+And, you can include equations:
+$$
+x^2 + y^2 = z^2
+$$
