@@ -854,6 +854,10 @@ when the updates are pushed.
 
 6.  Commit and push the package to GitHub.
 
+A script with the steps for creating a package from a scratch is
+available
+[here](https://github.com/paezha/Reproducible-Research-Workflow/blob/Session-07/Session-07-Creating-R-Packages-and-Documenting-Data/procedure-to-create-package.R)
+
 ### Suggested readings
 
 Parker, H. (2014) [Writing an R package from
