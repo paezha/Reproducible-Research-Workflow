@@ -1,0 +1,97 @@
+---
+title: "packr-vignette"
+output: rmarkdown::html_vignette
+abstract: An important element of reproducible research is documenting all steps of the process, including data analysis. This vignette, developed for the `packr` package (a minimal example of package building), will show how to document data analysis in a self-contained and reproducible document. To this end, the data set `energy_and_emissions` (included in the `packr` package) will be used.
+keywords: R packages; reproducible research; data analysis
+vignette: >
+  %\VignetteIndexEntry{packr-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+This vignette illustrate the use of the dataset and utility functions included in the package `packr`. I collected this data set initially to use in my course GEOG 3LT3: Transportation Geography. As part of this course, students examine some trends in transportation, including the use of energy and emissions. The objective of the practice is two-fold:
+
+1. On the side of technology, the students are learning to work with R Notebooks and R. For this reason, all code is documented so that the students can see _how_ things are done.
+
+2. On the side of transportation geography, the students are learning to discern trends in transportation.
+
+## Preliminaries
+
+Load the packages used in this vignette:
+```{r setup}
+library(packr)
+library(tidyverse)
+```
+
+## Loading the data
+
+To load the data, use the function `data()`:
+```{r load-data}
+data("energy_and_emmisions")
+```
+
+To inspect the dataframe, use the function `summary()`
+```{r summary-data}
+summary(energy_and_emissions)
+```
+
+The data frame consists of 10 variables. The variable definitions can be consulted in the help file:
+```{r call-help}
+?energy_and_emissions
+```
+
+## Are population and oil consumption related?
+
+The dataframe includes information on population, GDP per capita, energy consumption, and emissions for world countries. The consumption of energy (in barrels per day) is for the country. We can plot these two variables to see if there is a trend. We use `ggplot2` to create a plot and the geometric object _points_ (`geom_points`) to create a scatterplot, with aesthetic values `x = Population` and `y = bblpd`, so that the values of population are mapped to the x-axis, and the values of energy consumption are mapped to the y-axis:
+```{r energy-by-population}
+ggplot(data = energy_and_emissions, aes(x = Population, y = bblpd)) +
+  geom_point()
+```
+
+Not suprisingly, there is a strong association between these two variables, since countries with big populations will consume more energy than small countries with small populations. This is not very informative, because the underlying relationship is simply size. 
+
+## What is the per capita consumption of oil by country?
+
+Instead of exploring energy consumption by population, we will look at energy consumption per capita. This is a more informative variable, because it normalizes by size, and potentially can tell us something about the _intensity_ and/or _efficiency_ of energy use. However, energy consumption per capita is not one of the variables in the dataset. We need to divide the variable `bblpd` by `Population`. Use `dplyr::mutate()` to add this variable to the dataframe:
+```{r energy-per-capita}
+energy_and_emissions <- energy_and_emissions %>%
+  mutate(EPC = bblpd/Population)
+```
+
+Check the descriptive statistics of `EPC` (energy consumption in barrels per day per person):
+```{r}
+summary(energy_and_emissions$EPC)
+```
+
+The maximum consumption is approximately `r round(max(energy_and_emissions$EPC), 2)` barrels per person per day. Which country is that?
+```{r country-max-epc}
+energy_and_emissions[energy_and_emissions$EPC == max(energy_and_emissions$EPC), "Country"]
+```
+
+The country with the highest per capita oil consumption in the world according the the data is Singapore.
+
+## Are GDP per capita and energy consumption per capita related?
+
+To answer this question, we can create a scatterplot of the two variables:
+```{r}
+ggplot(data = energy_and_emissions, aes(x = GDPPC, y = EPC)) +
+  geom_point()
+```
+
+Calculate the correlation between these two variables:
+```{r}
+cor(energy_and_emissions$GDPPC, energy_and_emissions$EPC)
+```
+
+There is a moderately strong correlation between these two variables.
+
+What do we learn from this analysis? And how would you extend this analysis?
