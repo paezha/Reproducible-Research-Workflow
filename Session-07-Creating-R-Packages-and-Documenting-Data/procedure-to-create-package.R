@@ -2,9 +2,9 @@
 
 # PACKAGE CREATION
 # Create package
-usethis::create_package("C:/Antonio/packages/packr")
+usethis::create_package("C:/Antonio/packages/packr3")
 # Modify license
-usethis::use_mit_license("Antonio Paez")
+usethis::use_gpl3_license()
 # As an alternative use_ccby_license()
 #usethis::use_tidy_description()
 # Use README.Rmd which is superior to README.md
@@ -61,8 +61,28 @@ usethis::use_git_ignore("data-raw")
 # Set up git 
 usethis::use_git()
 usethis::use_github()
-usethis::use_github_action("pkgdown")
+# OPTIONAL
+#usethis::use_github_action("pkgdown")
 # Commit and push
 
+
+# TO CREATE PACKAGE WEBSITE
+usethis::use_pkgdown()
+
+# Create vignette
+usethis::use_vignette(name = "packr3", title = "How to use this package")
+# Remove docs/ from gitignore
+# Recheck and reinstall
+devtools::check()
+devtools::build()
+# SET build_vignettes to TRUE
+devtools::install(build_vignettes = TRUE)
+
+# IMPORTANT: make sure that you've set up github pages for your repository publishing from /docs
+
+# Build site
+pkgdown::build_site()
+
+# Push to github
 
 #####################################
