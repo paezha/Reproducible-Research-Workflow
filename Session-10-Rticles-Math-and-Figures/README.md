@@ -680,18 +680,18 @@ Y=f\\big(\[X^+, E\_q\],\[\\beta,\\delta\_q\]\\big)+\\epsilon
 Y=f\big([X^+, E_q],[\beta,\delta_q]\big)+\epsilon
 ")
 
-    \begin{array}
+    \begin{array}{l r}
     V_{i,\text{N}} - V_{i,\text{P}} & = \beta_1\text{cost}_{i,\text{N}} + \beta_2\text{ speed}_{i,\text{N}} + \beta_3\text{income}_i - \mu - \beta_1\text{cost}_{i,\text{P}} - \beta_1\text{speed}_{\text{i, P}} - \beta_1\text{income}_i\\ 
     & = \beta_1(\text{cost}_{i, \text{N}} - \text{cost}_{i, \text{P}}) + \beta_2(\text{ speed}_{i, \text{N}} - \text{ speed}_{i, \text{P}}) + \beta_3(\text{ income}_i - \text{ income}_i) - \mu
     \end{array}
 
 ![
-\\begin{array}\\\\
+\\begin{array}{l r}\\\\
 V\_{i,\\text{N}} - V\_{i,\\text{P}} & = \\beta\_1\\text{cost}\_{i,\\text{N}} + \\beta\_2\\text{ speed}\_{i,\\text{N}} + \\beta\_3\\text{income}\_i - \\mu - \\beta\_1\\text{cost}\_{i,\\text{P}} - \\beta\_1\\text{speed}\_{\\text{i, P}} - \\beta\_1\\text{income}\_i\\\\ 
 & = \\beta\_1(\\text{cost}\_{i, \\text{N}} - \\text{cost}\_{i, \\text{P}}) + \\beta\_2(\\text{ speed}\_{i, \\text{N}} - \\text{ speed}\_{i, \\text{P}}) + \\beta\_3(\\text{ income}\_i - \\text{ income}\_i) - \\mu
 \\end{array}
-](https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Barray%7D%5C%5C%0AV_%7Bi%2C%5Ctext%7BN%7D%7D%20-%20V_%7Bi%2C%5Ctext%7BP%7D%7D%20%26%20%3D%20%5Cbeta_1%5Ctext%7Bcost%7D_%7Bi%2C%5Ctext%7BN%7D%7D%20%2B%20%5Cbeta_2%5Ctext%7B%20speed%7D_%7Bi%2C%5Ctext%7BN%7D%7D%20%2B%20%5Cbeta_3%5Ctext%7Bincome%7D_i%20-%20%5Cmu%20-%20%5Cbeta_1%5Ctext%7Bcost%7D_%7Bi%2C%5Ctext%7BP%7D%7D%20-%20%5Cbeta_1%5Ctext%7Bspeed%7D_%7B%5Ctext%7Bi%2C%20P%7D%7D%20-%20%5Cbeta_1%5Ctext%7Bincome%7D_i%5C%5C%20%0A%26%20%3D%20%5Cbeta_1%28%5Ctext%7Bcost%7D_%7Bi%2C%20%5Ctext%7BN%7D%7D%20-%20%5Ctext%7Bcost%7D_%7Bi%2C%20%5Ctext%7BP%7D%7D%29%20%2B%20%5Cbeta_2%28%5Ctext%7B%20speed%7D_%7Bi%2C%20%5Ctext%7BN%7D%7D%20-%20%5Ctext%7B%20speed%7D_%7Bi%2C%20%5Ctext%7BP%7D%7D%29%20%2B%20%5Cbeta_3%28%5Ctext%7B%20income%7D_i%20-%20%5Ctext%7B%20income%7D_i%29%20-%20%5Cmu%0A%5Cend%7Barray%7D%0A "
-\begin{array}\\
+](https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Barray%7D%7Bl%20r%7D%5C%5C%0AV_%7Bi%2C%5Ctext%7BN%7D%7D%20-%20V_%7Bi%2C%5Ctext%7BP%7D%7D%20%26%20%3D%20%5Cbeta_1%5Ctext%7Bcost%7D_%7Bi%2C%5Ctext%7BN%7D%7D%20%2B%20%5Cbeta_2%5Ctext%7B%20speed%7D_%7Bi%2C%5Ctext%7BN%7D%7D%20%2B%20%5Cbeta_3%5Ctext%7Bincome%7D_i%20-%20%5Cmu%20-%20%5Cbeta_1%5Ctext%7Bcost%7D_%7Bi%2C%5Ctext%7BP%7D%7D%20-%20%5Cbeta_1%5Ctext%7Bspeed%7D_%7B%5Ctext%7Bi%2C%20P%7D%7D%20-%20%5Cbeta_1%5Ctext%7Bincome%7D_i%5C%5C%20%0A%26%20%3D%20%5Cbeta_1%28%5Ctext%7Bcost%7D_%7Bi%2C%20%5Ctext%7BN%7D%7D%20-%20%5Ctext%7Bcost%7D_%7Bi%2C%20%5Ctext%7BP%7D%7D%29%20%2B%20%5Cbeta_2%28%5Ctext%7B%20speed%7D_%7Bi%2C%20%5Ctext%7BN%7D%7D%20-%20%5Ctext%7B%20speed%7D_%7Bi%2C%20%5Ctext%7BP%7D%7D%29%20%2B%20%5Cbeta_3%28%5Ctext%7B%20income%7D_i%20-%20%5Ctext%7B%20income%7D_i%29%20-%20%5Cmu%0A%5Cend%7Barray%7D%0A "
+\begin{array}{l r}\\
 V_{i,\text{N}} - V_{i,\text{P}} & = \beta_1\text{cost}_{i,\text{N}} + \beta_2\text{ speed}_{i,\text{N}} + \beta_3\text{income}_i - \mu - \beta_1\text{cost}_{i,\text{P}} - \beta_1\text{speed}_{\text{i, P}} - \beta_1\text{income}_i\\ 
 & = \beta_1(\text{cost}_{i, \text{N}} - \text{cost}_{i, \text{P}}) + \beta_2(\text{ speed}_{i, \text{N}} - \text{ speed}_{i, \text{P}}) + \beta_3(\text{ income}_i - \text{ income}_i) - \mu
 \end{array}
