@@ -1,105 +1,148 @@
+
+<!-- badges: start -->
+<!-- badges: end -->
+
 # GEOG 712 Reproducible Research
 
 ## Session 10. `rticles` and practical issues: mathematical notation and figures
 
-A package with a vignette is a neat example of a self-contained reproducible research unit. The package can be used to share data, documentation, code, and a document with data analysis.
+A package with a vignette is a neat example of a self-contained
+reproducible research unit. The package can be used to share data,
+documentation, code, and a document with data analysis.
 
-Vignettes, however, are not the most common vehicle for research dissemination, and they are better seen as training documents. For most of us, a key format for research dissemination is the journal paper. In this and the following sessions we will introduce some useful tools for writing research in the form of a paper. To this end, we will build on our previous work with R Markdown. To recap, Markdown is a lightweight markup language that can be used to render documents into different kinds of outputs, such as html, pdf, and Word.
+Vignettes, however, are not the most common vehicle for research
+dissemination, and they are better seen as training documents. For most
+of us, a key format for research dissemination is the journal paper. In
+this and the following sessions we will introduce some useful tools for
+writing research in the form of a paper. To this end, we will build on
+our previous work with R Markdown. To recap, Markdown is a lightweight
+markup language that can be used to render documents into different
+kinds of outputs, such as html, pdf, and Word.
 
-R Markdown expands on Markdown by allowing a document to include executable code. Previously we saw how chunks of code could be used in a Markdown document, and a number of different options to control the behavior of the code. Since R Markdown can be rendered into different formats, producing an article is a matter of presentation. A package to support the creation of a wide array of article formats was created by [Allaire et al.](https://github.com/rstudio/rticles). Here we will see how to create an article using `rticles`, with a focus on the use of mathematical notation and graphical output.
+R Markdown expands on Markdown by allowing a document to include
+executable code. Previously we saw how chunks of code could be used in a
+Markdown document, and a number of different options to control the
+behavior of the code. Since R Markdown can be rendered into different
+formats, producing an article is a matter of presentation. A package to
+support the creation of a wide array of article formats was created by
+[Allaire et al.](https://github.com/rstudio/rticles). Here we will see
+how to create an article using `rticles`, with a focus on the use of
+mathematical notation and graphical output.
 
 ### The package `rticles` and article templates
 
-To begin, you will need to install the package `rticles`. You can do this from the console as follows:
+To begin, you will need to install the package `rticles`. You can do
+this from the console as follows:
 
 `install.packages("rticles")`
 
-Or using the package management utilities in RStudio (see the `Packages` tab):
+Or using the package management utilities in RStudio (see the `Packages`
+tab):
 
 ![1. Packages Tab](Session-10-Figure-1.png)
 
-Once you have installed `rticles`, you can create a new R Markdown file from a template as follows, using the command line:
+Once you have installed `rticles`, you can create a new R Markdown file
+from a template as follows, using the command line:
 
-```
-rmarkdown::draft("My-Paper.Rmd", template = "jss_article", package = "rticles")
-```
+    rmarkdown::draft("My-Paper.Rmd", template = "jss_article", package = "rticles")
 
-Or, conveniently, you can create a new R Markdown file from the `File` drop-down menu:
+Or, conveniently, you can create a new R Markdown file from the `File`
+drop-down menu:
 
 ![Fig. 2 New R Markdown File](Session-10-Figure-2.png)
 
-And then selecting the option to create an R Markdown file from a template:
+And then selecting the option to create an R Markdown file from a
+template:
 
 ![Fig. 3 R Markdown Templates](Session-10-Figure-3.png)
 
-As you can see, there is a large selection of templates to choose from, based on different publisher's specifications. Begin by selecting the template for an Elsevier Journal Article. You need to select a location for the new R Markdown file. Once you do so, and create the new file, a folder for it will be created in the designated location. It will look like this:
+As you can see, there is a large selection of templates to choose from,
+based on different publisher’s specifications. Begin by selecting the
+template for an Elsevier Journal Article. You need to select a location
+for the new R Markdown file. Once you do so, and create the new file, a
+folder for it will be created in the designated location. It will look
+like this:
 
 ![Fig. 4 Folder with New R Markdown File](Session-10-Figure-4.png)
 
-The R Markdown file is accompanied by a set of support files that include the document configurations preferred by the publisher (with the extension .cls). Another file that accompanies the R Markdown document is `nuncompress.sty`; this includes styling descriptions for the output. Finally, there is a file called `mybibfile.bib`; this is a [BibTex](https://en.wikipedia.org/wiki/BibTeX) file used to store and manage references (more on this in the following session). 
+The R Markdown file is accompanied by a set of support files that
+include the document configurations preferred by the publisher (with the
+extension .cls). Another file that accompanies the R Markdown document
+is `nuncompress.sty`; this includes styling descriptions for the output.
+Finally, there is a file called `mybibfile.bib`; this is a
+[BibTex](https://en.wikipedia.org/wiki/BibTeX) file used to store and
+manage references (more on this in the following session).
 
 ## The R Markdown Template
 
-If you open the R Markdown document in R Studio, this is what you will see:
+If you open the R Markdown document in R Studio, this is what you will
+see:
 
-![Fig. 5 R Markdown File based on Elsevier Article Template](Session-10-Figure-5.png)
+![Fig. 5 R Markdown File based on Elsevier Article
+Template](Session-10-Figure-5.png)
 
 Recall that the first part of the document is the YAML header:
 
-```
----
-title: Short Paper
-author:
-  - name: Alice Anonymous
-    email: alice@example.com
-    affiliation: Some Institute of Technology
-    footnote: Corresponding Author
-  - name: Bob Security
-    email: bob@example.com
-    affiliation: Another University
-address:
-  - code: Some Institute of Technology
-    address: Department, Street, City, State, Zip
-  - code: Another University
-    address: Department, Street, City, State, Zip
-abstract: |
-  This is the abstract.
+    ---
+    title: Short Paper
+    author:
+      - name: Alice Anonymous
+        email: alice@example.com
+        affiliation: Some Institute of Technology
+        footnote: Corresponding Author
+      - name: Bob Security
+        email: bob@example.com
+        affiliation: Another University
+    address:
+      - code: Some Institute of Technology
+        address: Department, Street, City, State, Zip
+      - code: Another University
+        address: Department, Street, City, State, Zip
+    abstract: |
+      This is the abstract.
 
-  It consists of two paragraphs.
+      It consists of two paragraphs.
 
-journal: "An awesome journal"
-date: "`r Sys.Date()`"
-bibliography: mybibfile.bib
-#linenumbers: true
-#numbersections: true
-csl: elsevier-harvard.csl
-output: rticles::elsevier_article
----
-```
+    journal: "An awesome journal"
+    date: "2021-11-22"
+    bibliography: mybibfile.bib
+    #linenumbers: true
+    #numbersections: true
+    csl: elsevier-harvard.csl
+    output: rticles::elsevier_article
+    ---
 
-The header in this case has been initialized with some important information: about the authors, their addresses, and the abstract. In addition, the header includes the abstract, a field for the journal name (which is used to create footers), as well as the date. It also specifies the BibTex used for the bibliography, the .csl file to use, and the output. Notice that not all .csl files are used: in the default template, only `elsevier-harvard.csl` is called.
+The header in this case has been initialized with some important
+information: about the authors, their addresses, and the abstract. In
+addition, the header includes the abstract, a field for the journal name
+(which is used to create footers), as well as the date. It also
+specifies the BibTex used for the bibliography, the .csl file to use,
+and the output. Notice that not all .csl files are used: in the default
+template, only `elsevier-harvard.csl` is called.
 
 Two fields are commented:
 
-```
-#linenumbers: true
-#numbersections: true
-```
+    #linenumbers: true
+    #numbersections: true
 
-If you want the output document to have line numbers and/or numbered sections, uncomment these as appropriate.
+If you want the output document to have line numbers and/or numbered
+sections, uncomment these as appropriate.
 
-Anything below the YAML header is written in Markdown (with R code as appropriate) and/or LaTeX. Markdown is easier, LaTeX more precise.
+Anything below the YAML header is written in Markdown (with R code as
+appropriate) and/or LaTeX. Markdown is easier, LaTeX more precise.
 
-Notice that in this document, section headings are distinguished in this way:
+Notice that in this document, section headings are distinguished in this
+way:
 
-```
-The Elsevier article class
-==========================
-```
+    The Elsevier article class
+    ==========================
 
-This, for example, would be the title of the first section in the output document. Lower level headings use Markdown formatting styles, so that `##` is a second-level header, `###` a third-level heading, and so on.
+This, for example, would be the title of the first section in the output
+document. Lower level headings use Markdown formatting styles, so that
+`##` is a second-level header, `###` a third-level heading, and so on.
 
-The documented is rendered by _knitting_ it (recall that this relies on the package `knitr`):
+The documented is rendered by *knitting* it (recall that this relies on
+the package `knitr`):
 
 ![Fig. 6 Knitting the Document](Session-10-Figure-6.png)
 
@@ -107,449 +150,557 @@ The output is a pdf file, as follows:
 
 ![Fig. 6 An Elsevier Article!](Session-10-Figure-7.png)
 
-Now that you have a document to work, lets take a look at some ways to present research, beginning with mathematical expressions.
+Now that you have a document to work, lets take a look at some ways to
+present research, beginning with mathematical expressions.
 
 ## Mathematical notation in LaTeX
 
-Markdown is simple to use, but lacks the functionality to format mathematical notation. In fairness, the same was true of other word processing applications. For instance, Word did not have the functionality for a long time, and now that it does it is super-clunky. The downside of writing in LaTeX is that you need to learn LaTeX. Fortunately, Markdown provides a relatively gentle introduction to LaTeX, including mathematical notation. It is like learning the way Martians (or Mathematicians) write.
+Markdown is simple to use, but lacks the functionality to format
+mathematical notation. In fairness, the same was true of other word
+processing applications. For instance, Word did not have the
+functionality for a long time, and now that it does it is super-clunky.
+The downside of writing in LaTeX is that you need to learn LaTeX.
+Fortunately, Markdown provides a relatively gentle introduction to
+LaTeX, including mathematical notation. It is like learning the way
+Martians (or Mathematicians) write.
 
-> First rule: inline LaTeX in Markdown goes between string signs, like so \$x\$
+> First rule: inline LaTeX in Markdown goes between string signs, like
+> so $x$
 
-Just like that, we wrote something in mathematical notation: $x$.
+Just like that, we wrote something in mathematical notation:
+![x](https://latex.codecogs.com/png.latex?x "x").
 
-> Second rule: to write mathematical notation in _display_ mode, you need two string signs \$\$ enclosing the LaTeX stuff
+> Second rule: to write mathematical notation in *display* mode, you
+> need two string signs $$ enclosing the LaTeX stuff
 
 For example:
 
-```
-$$
-x + y
-$$
-```
+    $$
+    x + y
+    $$
 
 The above renders as:
 
-$$
+![
 x + y
-$$
+](https://latex.codecogs.com/png.latex?%0Ax%20%2B%20y%0A "
+x + y
+")
 
 It is also possible to use LaTeX directly. For example, the following:
 
-```
-\[x + y\]
-```
+    \[x + y\]
 
-_also_ renders as:
+*also* renders as:
 
-\[x + y\]
+![x + y](https://latex.codecogs.com/png.latex?x%20%2B%20y "x + y")
 
-Some common elements of mathematical notation are signs. Whenever the signs are available in the keyboard, they can be used. For example, the following three expressions:
+Some common elements of mathematical notation are signs. Whenever the
+signs are available in the keyboard, they can be used. For example, the
+following three expressions:
 
-```
-x + y = z\\
-x - y > z\\
-x  y < z
-```
+    x + y = z\\
+    x - y > z\\
+    x  y < z
 
 render as:
-$$
+
+![
+x + y = z\\\\
+x - y &gt; z\\\\
+x  y &lt; z
+](https://latex.codecogs.com/png.latex?%0Ax%20%2B%20y%20%3D%20z%5C%5C%0Ax%20-%20y%20%3E%20z%5C%5C%0Ax%20%20y%20%3C%20z%0A "
 x + y = z\\
 x - y > z\\
 x  y < z
-$$
+")
 
-Notice that I used "`\\`" to introduce line breaks between my three expressions. Had I not used these signs, my expressions would have been mashed together. The following:
-```
-x + y = z
-x - y > z
-x  y < z
-```
+Notice that I used “`\\`” to introduce line breaks between my three
+expressions. Had I not used these signs, my expressions would have been
+mashed together. The following:
+
+    x + y = z
+    x - y > z
+    x  y < z
 
 renders as:
-$$
+
+![
+x + y = z  
+x - y &gt; z  
+x  y &lt; z
+](https://latex.codecogs.com/png.latex?%0Ax%20%2B%20y%20%3D%20z%20%20%0Ax%20-%20y%20%3E%20z%20%20%0Ax%20%20y%20%3C%20z%0A "
 x + y = z  
 x - y > z  
 x  y < z
-$$
+")
 
-Other common elements of mathematical notation are subscripts and superscripts. Subscripts are obtained by using the underscore sign `_`:
-```
+Other common elements of mathematical notation are subscripts and
+superscripts. Subscripts are obtained by using the underscore sign `_`:
+
+    x_i + y_i = z_i\\
+    x_i - y_i > z_i\\
+    x_i  y_i < z_i
+
+which renders as:
+
+![
+x\_i + y\_i = z\_i\\\\
+x\_i - y\_i &gt; z\_i\\\\
+x\_i  y\_i &lt; z\_i
+](https://latex.codecogs.com/png.latex?%0Ax_i%20%2B%20y_i%20%3D%20z_i%5C%5C%0Ax_i%20-%20y_i%20%3E%20z_i%5C%5C%0Ax_i%20%20y_i%20%3C%20z_i%0A "
 x_i + y_i = z_i\\
 x_i - y_i > z_i\\
 x_i  y_i < z_i
-```
+")
+
+Superscripts are obtained by using the *caret* sign `^`:
+
+    x^2 + y^2 = z^2\\
+    x^2 - y^2 > z^2\\
+    x^2  y^2 < z^2
 
 which renders as:
-$$
-x_i + y_i = z_i\\
-x_i - y_i > z_i\\
-x_i  y_i < z_i
-$$
 
-Superscripts are obtained by using the _caret_ sign `^`:
-```
+![
+x^2 + y^2 = z^2\\\\
+x^2 - y^2 &gt; z^2\\\\
+x^2  y^2 &lt; z^2
+](https://latex.codecogs.com/png.latex?%0Ax%5E2%20%2B%20y%5E2%20%3D%20z%5E2%5C%5C%0Ax%5E2%20-%20y%5E2%20%3E%20z%5E2%5C%5C%0Ax%5E2%20%20y%5E2%20%3C%20z%5E2%0A "
 x^2 + y^2 = z^2\\
 x^2 - y^2 > z^2\\
 x^2  y^2 < z^2
-```
+")
 
-which renders as:
-$$
-x^2 + y^2 = z^2\\
-x^2 - y^2 > z^2\\
-x^2  y^2 < z^2
-$$
+If you need more than one subscript or superscript you can group them
+using curly brackets “`{}`”:
 
-If you need more than one subscript or superscript you can group them using curly brackets "`{}`":
-```
-x_{ij} + y_{ij} = z_{ij}\\
-x_{ij} - y_{ij} > z_{ij}\\
-x_{ij}  y_{ij} < z_{ij}
-```
+    x_{ij} + y_{ij} = z_{ij}\\
+    x_{ij} - y_{ij} > z_{ij}\\
+    x_{ij}  y_{ij} < z_{ij}
 
 to give:
-$$
+
+![
+x\_{ij} + y\_{ij} = z\_{ij}\\\\
+x\_{ij} - y\_{ij} &gt; z\_{ij}\\\\
+x\_{ij}  y\_{ij} &lt; z\_{ij}
+](https://latex.codecogs.com/png.latex?%0Ax_%7Bij%7D%20%2B%20y_%7Bij%7D%20%3D%20z_%7Bij%7D%5C%5C%0Ax_%7Bij%7D%20-%20y_%7Bij%7D%20%3E%20z_%7Bij%7D%5C%5C%0Ax_%7Bij%7D%20%20y_%7Bij%7D%20%3C%20z_%7Bij%7D%0A "
 x_{ij} + y_{ij} = z_{ij}\\
 x_{ij} - y_{ij} > z_{ij}\\
 x_{ij}  y_{ij} < z_{ij}
-$$
+")
 
-Fractions are written using the LaTeX expression `\frac{}{}`, where the first set of curly brackets encompasses the numerator and the second the denominator:
-```
-\frac{x - y}{x + y}
-```
+Fractions are written using the LaTeX expression `\frac{}{}`, where the
+first set of curly brackets encompasses the numerator and the second the
+denominator:
+
+    \frac{x - y}{x + y}
 
 This fraction is displayed as:
-$$
+
+![
+\\frac{x - y}{x + y}
+](https://latex.codecogs.com/png.latex?%0A%5Cfrac%7Bx%20-%20y%7D%7Bx%20%2B%20y%7D%0A "
 \frac{x - y}{x + y}
-$$
+")
 
 The notation can be nested. See for example:
-```
-\frac{x^2 + y^2}{\frac{x^2}{2} + y^2}
-```
+
+    \frac{x^2 + y^2}{\frac{x^2}{2} + y^2}
 
 which renders as:
-$$
-\frac{x^2 - y^2}{\frac{x^2}{2} + y^2}
-$$
 
-Notice the use of the backslash "`\`" before the LaTeX command `frac`. Commonly, the backslash indicates a LaTeX command. Another common command is "`\sum`", to write summations:
-```
-\sum x_i
-```
+![
+\\frac{x^2 - y^2}{\\frac{x^2}{2} + y^2}
+](https://latex.codecogs.com/png.latex?%0A%5Cfrac%7Bx%5E2%20-%20y%5E2%7D%7B%5Cfrac%7Bx%5E2%7D%7B2%7D%20%2B%20y%5E2%7D%0A "
+\frac{x^2 - y^2}{\frac{x^2}{2} + y^2}
+")
+
+Notice the use of the backslash “`\`” before the LaTeX command `frac`.
+Commonly, the backslash indicates a LaTeX command. Another common
+command is “`\sum`”, to write summations:
+
+    \sum x_i
 
 to give:
-$$
-\sum x_i
-$$
 
-To which we can add the limits of the summation as follows (using the same notation for subscripts and superscripts):
-```
-\sum_{i=1}^n x_i
-```
+![
+\\sum x\_i
+](https://latex.codecogs.com/png.latex?%0A%5Csum%20x_i%0A "
+\sum x_i
+")
+
+To which we can add the limits of the summation as follows (using the
+same notation for subscripts and superscripts):
+
+    \sum_{i=1}^n x_i
 
 Now, the summation displays as:
-$$
-\sum_{i=1}^n x_i
-$$
 
-Then, of course, we could not write math without Greek letters! These letters are also LaTeX commands:
-```
-\alpha\\
-\beta\\
-\delta
-```
+![
+\\sum\_{i=1}^n x\_i
+](https://latex.codecogs.com/png.latex?%0A%5Csum_%7Bi%3D1%7D%5En%20x_i%0A "
+\sum_{i=1}^n x_i
+")
+
+Then, of course, we could not write math without Greek letters! These
+letters are also LaTeX commands:
+
+    \alpha\\
+    \beta\\
+    \delta
 
 This produces the following letters:
-$$
+
+![
+\\alpha\\\\
+\\beta\\\\
+\\delta
+](https://latex.codecogs.com/png.latex?%0A%5Calpha%5C%5C%0A%5Cbeta%5C%5C%0A%5Cdelta%0A "
 \alpha\\
 \beta\\
 \delta
-$$
+")
 
-One thing that R Markdown does not do (at least not yet), is automatically numbering equations. However, since we can use LaTeX, we could write mathematical notation in an _environment_:
-```
-\begin{equation}
-\sum_{i=1}^n x_i
-\end{equation}
-```
+One thing that R Markdown does not do (at least not yet), is
+automatically numbering equations. However, since we can use LaTeX, we
+could write mathematical notation in an *environment*:
 
-We can also add _labels_ to the equations, so that we can reference them in the text, for example:
-```
-\begin{equation}
-\label{my-equation}
-\sum_{i=1}^n x_i
-\end{equation}
-```
+    \begin{equation}
+    \sum_{i=1}^n x_i
+    \end{equation}
 
-References to that equation would take this form: "`\ref{my-equation}`"
+We can also add *labels* to the equations, so that we can reference them
+in the text, for example:
+
+    \begin{equation}
+    \label{my-equation}
+    \sum_{i=1}^n x_i
+    \end{equation}
+
+References to that equation would take this form: “`\ref{my-equation}`”
 
 As an example, copy the following text in your article file and knit:
 
----
+------------------------------------------------------------------------
 
-```
-Methods
-============
+    Methods
+    ============
 
-## Spatial Autocorrelation and Map Pattern
+    ## Spatial Autocorrelation and Map Pattern
 
-Spatial autocorrelation is a condition whereby the value of a variable at one location is correlated with the value(s) of the same variable at one or more proximal locations. A tool widely used to measure spatial autocorrelation is Moran’s coefficient of autocorrelation, or $MC$ for short. In matrix form, $MC$ can be formulated as follows:
+    Spatial autocorrelation is a condition whereby the value of a variable at one location is correlated with the value(s) of the same variable at one or more proximal locations. A tool widely used to measure spatial autocorrelation is Moran’s coefficient of autocorrelation, or $MC$ for short. In matrix form, $MC$ can be formulated as follows:
 
-\begin{equation} 
-\label{eq:1}
-MC=\frac{n}{\sum_{i}{\sum_{j}{w_{ij}}}}\frac{x'Wx}{x'x}
-\end{equation}
+    \begin{equation} 
+    \label{eq:1}
+    MC=\frac{n}{\sum_{i}{\sum_{j}{w_{ij}}}}\frac{x'Wx}{x'x}
+    \end{equation}
 
-where $x$ is a vector $(n\times1)$ of mean-centered values of a georeferenced variable, and $W$ is a spatial weights matrix of dimensions $(n\times n)$ with elements $w_{ij}$. The elements of the spatial weights matrix take non-zero values if locations $i$ and $j$ are deemed to be spatially proximate in some sense, and 0 otherwise. It can be appreciated that the coefficient is composed to two elements: the variance of the random variable (i.e., $(x' x)⁄n$) and its spatial autocovariance $\frac{(x'Wx)}{\sum_{i}{\sum_{j}{w_{ij}}}}$. As an alternative, the numerator of the right-hand term of Equation \ref{eq:1} can be expressed as follows:
+    where $x$ is a vector $(n\times1)$ of mean-centered values of a georeferenced variable, and $W$ is a spatial weights matrix of dimensions $(n\times n)$ with elements $w_{ij}$. The elements of the spatial weights matrix take non-zero values if locations $i$ and $j$ are deemed to be spatially proximate in some sense, and 0 otherwise. It can be appreciated that the coefficient is composed to two elements: the variance of the random variable (i.e., $(x'x)/n$) and its spatial autocovariance $\frac{(x'Wx)}{\sum_{i}{\sum_{j}{w_{ij}}}}$. As an alternative, the numerator of the right-hand term of Equation \ref{eq:1} can be expressed as follows:
 
-\begin{equation} 
-\label{eq:2}
-x'\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)x
-\end{equation}
+    \begin{equation} 
+    \label{eq:2}
+    x'\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)x
+    \end{equation}
 
-with $I$ as the identity matrix of size $n\times n$ and $1$ a conformable vector of ones.
+    with $I$ as the identity matrix of size $n\times n$ and $1$ a conformable vector of ones.
 
-One possible interpretation of spatial autocorrelation is as map pattern. More concretely, the eigenvalues of the following matrix represent the range of possible values of $MC$ given a spatial weights matrix $W$, and the extreme eigenvalues are in fact associated with the minimum and maximum values of $MC$ for the system of relationships represented by $W$:
+    One possible interpretation of spatial autocorrelation is as map pattern. More concretely, the eigenvalues of the following matrix represent the range of possible values of $MC$ given a spatial weights matrix $W$, and the extreme eigenvalues are in fact associated with the minimum and maximum values of $MC$ for the system of relationships represented by $W$:
 
-\begin{equation} 
-\label{eq:3}
-\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)
-\end{equation}
+    \begin{equation} 
+    \label{eq:3}
+    \Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)
+    \end{equation}
 
-A remarkable discovery is that the eigenvectors associated with the eigenvalues of the matrix in Expression \ref{eq:3} represent a catalogue of latent map patterns, each with a level of autocorrelation (as measured by $MC$) given by its corresponding eigenvalue. Furthermore, the patterns represented by the eigenvectors are orthogonal by design, and so they furnish $n$ maps that are independent from each other. Since these map patterns depend only on the spatial weights matrix – and not the spatial random variable – they constitute an extensive set of latent map patterns that can be used in regression analysis as filters. This is explained next.
-```
+    A remarkable discovery is that the eigenvectors associated with the eigenvalues of the matrix in Expression \ref{eq:3} represent a catalogue of latent map patterns, each with a level of autocorrelation (as measured by $MC$) given by its corresponding eigenvalue. Furthermore, the patterns represented by the eigenvectors are orthogonal by design, and so they furnish $n$ maps that are independent from each other. Since these map patterns depend only on the spatial weights matrix – and not the spatial random variable – they constitute an extensive set of latent map patterns that can be used in regression analysis as filters. This is explained next.
 
----
+------------------------------------------------------------------------
 
-Another expressions that I have found useful is the _array_ to organize matrices, long equations, systems of equations. For example:
-```
-\left(
-\begin{array}\\
+Another expressions that I have found useful is the *array* to organize
+matrices, long equations, systems of equations. For example:
+
+    \left[
+    \begin{array}{l c r}
+    x & y & z \\
+    x - 1 & y + 1 & 2z
+    \end{array}
+    \right)
+
+After `begin{array}` we specify the alignment of the elements by column,
+so in this example the first column is aligned on the left, the second
+to the center, and the third to the right. This is displayed as follows:
+
+![
+\\left\[
+\\begin{array}{l c r}
+x & y & z \\\\
+x - 1 & y + 1 & 2z
+\\end{array}
+\\right\]
+](https://latex.codecogs.com/png.latex?%0A%5Cleft%5B%0A%5Cbegin%7Barray%7D%7Bl%20c%20r%7D%0Ax%20%26%20y%20%26%20z%20%5C%5C%0Ax%20-%201%20%26%20y%20%2B%201%20%26%202z%0A%5Cend%7Barray%7D%0A%5Cright%5D%0A "
+\left[
+\begin{array}{l c r}
 x & y & z \\
 x - 1 & y + 1 & 2z
 \end{array}
-\right)
-```
+\right]
+")
 
-This is displayed as follows:
-$$
-\left(
-\begin{array}\\
-x & y & z \\
-x - 1 & y + 1 & 2z
-\end{array}
-\right)
-$$
+Notice that “`\left`” and “`\right`” are used to create the large
+parentheses that enclose the matrix, and the ampersand sign “`&`” is
+used to separate element of the array.
 
-Notice that "`\left`" and "`\right`" are used to create the large parentheses that enclose the matrix, and the ampersand sign "`&`" is used to separate element of the array.
+Finally, piecewise functions can be written using the “`\case`” command:
 
-Finally, piecewise functions can be written using the "`\case`" command:
-```
-y = \begin{cases}\\
-1 & \text{if } r \leq 1\\
-0 & \text{otherwise}
-\end{cases}
-```
+    y = \begin{cases}\\
+    1 & \text{if } r \leq 1\\
+    0 & \text{otherwise}
+    \end{cases}
 
 The above displays as follows:
-$$
+
+![
+y = \\begin{cases}
+1 & \\text{if } r \\leq 1\\\\
+0 & \\text{otherwise}
+\\end{cases}
+](https://latex.codecogs.com/png.latex?%0Ay%20%3D%20%5Cbegin%7Bcases%7D%0A1%20%26%20%5Ctext%7Bif%20%7D%20r%20%5Cleq%201%5C%5C%0A0%20%26%20%5Ctext%7Botherwise%7D%0A%5Cend%7Bcases%7D%0A "
 y = \begin{cases}
 1 & \text{if } r \leq 1\\
 0 & \text{otherwise}
 \end{cases}
-$$
+")
 
 More examples of mathematical notation can be seen below.
 
 ## Figures
 
-You have already seen that figures can be introduced into Markdown files as follows:
-```
-![caption](my-figure.png)
-```
+You have already seen that figures can be introduced into Markdown files
+as follows:
 
-with the caption or title of the figure between the square brackets, and the path to the file between the brackets. If you save all your figures as files, you could easily use this approach to populate your paper with your graphical output. This assumes that the figures were produced elsewhere and then that they were saved. While possible, this is not a very attractive alternative, because it separates a key element of the process of your analysis (visualization) from the rest of your paper. 
+    ![caption](my-figure.png)
 
-One of the most appealing aspects of working with R Markdown is that the figures can be produced internally as part of the document. We saw examples of this before, with vignettes, for instance.
+with the caption or title of the figure between the square brackets, and
+the path to the file between the brackets. If you save all your figures
+as files, you could easily use this approach to populate your paper with
+your graphical output. This assumes that the figures were produced
+elsewhere and then that they were saved. While possible, this is not a
+very attractive alternative, because it separates a key element of the
+process of your analysis (visualization) from the rest of your paper.
 
-Suppose that I want to do report some analysis using data set in the package `packr`. Loading this and other packages is not part of what I wish to present, so I want that to happen under the hood, as it were, in the output document. This is how I would prepare my document for data analysis:
+One of the most appealing aspects of working with R Markdown is that the
+figures can be produced internally as part of the document. We saw
+examples of this before, with vignettes, for instance.
 
+Suppose that I want to do report some analysis using data set in the
+package `packr`. Loading this and other packages is not part of what I
+wish to present, so I want that to happen under the hood, as it were, in
+the output document. This is how I would prepare my document for data
+analysis:
 
-```
-{r load-packages, include = FALSE}
-# Run only if you need to install `packr``
-#devtools::install_github("paezha/Reproducible-Research-Workflow/Session-07-Creating-R-Packages-and-Documenting-Data/packr", build_vignettes = TRUE)`
+    {r load-packages, include = FALSE}
+    # Run only if you need to install `packr``
+    #devtools::install_github("paezha/Reproducible-Research-Workflow/Session-07-Creating-R-Packages-and-Documenting-Data/packr", build_vignettes = TRUE)`
 
-library(packr)
-library(tidyverse)
-library(gridExtra)
-```
+    library(packr)
+    library(tidyverse)
+    library(gridExtra)
 
-The chunk option `include = FALSE` means that the chunk will be evaluated (the code will run), but the code and any output will not be included in the output. This chunk of code could go at the top of my document, right after the YAML header (see [here](https://github.com/paezha/Reproducible-Research-Workflow/blob/master/Session-10-Rticles-Math-and-Figures/Elsevier-Template/Elsevier-Template.Rmd)).
+The chunk option `include = FALSE` means that the chunk will be
+evaluated (the code will run), but the code and any output will not be
+included in the output. This chunk of code could go at the top of my
+document, right after the YAML header (see
+[here](https://github.com/paezha/Reproducible-Research-Workflow/blob/master/Session-10-Rticles-Math-and-Figures/Elsevier-Template/Elsevier-Template.Rmd)).
 
-Notice that the chunk is named. Its name is `load-packages`. Naming chunks is good practice for both for reference and ease of navigation. Furthermore, I included a comment with instructions on how to install `packr` if needed. The other two packages can be obtained from CRAN, but `packr` is not available there, so I need to direct the reader to its location.
+Notice that the chunk is named. Its name is `load-packages`. Naming
+chunks is good practice for both for reference and ease of navigation.
+Furthermore, I included a comment with instructions on how to install
+`packr` if needed. The other two packages can be obtained from CRAN, but
+`packr` is not available there, so I need to direct the reader to its
+location.
 
-I can load the data in another chunk, also with the option `include` set to false, since I want this to happen in the background.
+I can load the data in another chunk, also with the option `include` set
+to false, since I want this to happen in the background.
 
-```
-{r load-data, include = FALSE}
-data("energy_and_emissions")
-```
+    {r load-data, include = FALSE}
+    data("energy_and_emissions")
 
-The analysis requires that I create two new variables, GDP and energy consumption per capita. This is done in the following chunk:
+The analysis requires that I create two new variables, GDP and energy
+consumption per capita. This is done in the following chunk:
 
-```
-{r data-preparation, include = FALSE}
-# Use `dplyr::mutate` to create two new variables: GDP, obtained as the product of GDP per capita times the population, and ECP, the energy consumption per capita, obtained as the ratio of bblpd to population
+    {r data-preparation, include = FALSE}
+    # Use `dplyr::mutate` to create two new variables: GDP, obtained as the product of GDP per capita times the population, and ECP, the energy consumption per capita, obtained as the ratio of bblpd to population
 
-energy_and_emissions <- energy_and_emissions %>%
-  mutate(GDP = GDPPC * Population, EPC = bblpd / Population)
-```
+    energy_and_emissions <- energy_and_emissions %>%
+      mutate(GDP = GDPPC * Population, EPC = bblpd / Population)
 
-It is likely that I have already done some analysis elsewhere (probably a notebook, where I documented the analysis). When transplanting the analysis to an article, I do not necessarily want to describe every step of the analysis in the output document; however, it is still important that I document what is going on. I do this by including comments in the chunks of code with explanations about the process.
+It is likely that I have already done some analysis elsewhere (probably
+a notebook, where I documented the analysis). When transplanting the
+analysis to an article, I do not necessarily want to describe every step
+of the analysis in the output document; however, it is still important
+that I document what is going on. I do this by including comments in the
+chunks of code with explanations about the process.
 
-Once that I have prepared the data, I am ready to begin writing my article. For instance:
+Once that I have prepared the data, I am ready to begin writing my
+article. For instance:
 
-```
-Introduction
-============
+    Introduction
+    ============
 
-The economy of a nation is tied to its consumption of energy, since every process of production requires energy as an input. However, the strength of the relationship between the economy and the consumption of energy varies. Some countries (e.g., Japan) were more successful than others in terms of decoupling their productive processes from energy after the oil shocks of the 1970s. This was achieved by increasing the efficiency of production, so that the same output could be produced using less energy, or in somewhat different terms, by improving their energy intensity.
+    The economy of a nation is tied to its consumption of energy, since every process of production requires energy as an input. However, the strength of the relationship between the economy and the consumption of energy varies. Some countries (e.g., Japan) were more successful than others in terms of decoupling their productive processes from energy after the oil shocks of the 1970s. This was achieved by increasing the efficiency of production, so that the same output could be produced using less energy, or in somewhat different terms, by improving their energy intensity.
 
-The relationship between economic output and energy consumption is of interest at a time when the effects of a carbon-intense economy is creating a heavy environmental burden. A relevant question is, what countries are more energy-efficient, and can we learn from them. To explore this question we will consider data on national energy use (in barrels of oil per day), economic output (GDP), and $CO_2$ emissions.
-```
+    The relationship between economic output and energy consumption is of interest at a time when the effects of a carbon-intense economy is creating a heavy environmental burden. A relevant question is, what countries are more energy-efficient, and can we learn from them. To explore this question we will consider data on national energy use (in barrels of oil per day), economic output (GDP), and $CO_2$ emissions.
 
-At this point, I would like to show a scatterplot with some of these relationships. The scatterplot can be created using different strategies. In base R, a scatterplot is created using the `plot` function:
-```
-plot(x = energy_and_emissions$bblpd, y = energy_and_emissions$GDP, main = "Energy and Economic Output",
-     xlab = "Energy (bblpd)", ylab = "GDP",
-     pch = 19, frame = FALSE)
-```
+At this point, I would like to show a scatterplot with some of these
+relationships. The scatterplot can be created using different
+strategies. In base R, a scatterplot is created using the `plot`
+function:
 
-The package [`ggplot2`](https://ggplot2.tidyverse.org/) has become a standard for 2-D graphs in R due to its flexibility and extensibility. A chunk to create a `ggplot2` scatterplot is as follows:
-```
-```{r fig-energy-to-gdp, echo = FALSE, fig.cap="\\label{fig:energy-to-gdp} The relationship between energy consumption and economic output by world countries"}
-ggplot(data = energy_and_emissions, aes(x = GDP, y = bblpd)) +
-  geom_point() +
-  ggtitle("Energy and Economic Output") +
-  xlab("Energy (bblpd)") +
-  ylab("GDP")
-```
+    plot(x = energy_and_emissions$bblpd, y = energy_and_emissions$GDP, main = "Energy and Economic Output",
+         xlab = "Energy (bblpd)", ylab = "GDP",
+         pch = 19, frame = FALSE)
 
-Notice that the option `echo` is set to `FALSE`: I do not want the code to show in the output document, but I do want the output (i.e., the figure) to be in the output. Also, notice the use of the `fig.cap` chunk option. This option allows us to write a caption for the figure. And the caption can include a `\\label{}` so that the figure can be referenced in the text. For example:
-```
-Figure \ref{fig:energy-to-gdp} is a scatterplot of energy consumption to GPD. It can be seen that in general, greater economic output is associated with greater consumption of energy. 
-```
+The package [`ggplot2`](https://ggplot2.tidyverse.org/) has become a
+standard for 2-D graphs in R due to its flexibility and extensibility. A
+chunk to create a `ggplot2` scatterplot is as follows:
 
-More complex figures can be obtained by using the package [`gridExtra`](https://cran.r-project.org/web/packages/gridExtra/vignettes/arrangeGrob.html), which is used to arrange multiple graphic objects (or _grobs_). A convenient way to do this is to name the graphic objects so that they can be called for the output. A chunk that arranges two plots side by side is as follows:
-```
-```{r fig-two-panel-plot, echo = FALSE, fig.cap="\\label{fig:two-panel-plot} Two plots in a single figure; left panel is Figure 1 and right panel is Figure 2"}
+![ The relationship between energy consumption and economic output by
+world countries](README_files/figure-gfm/fig-energy-to-gdp-1.png)
 
+Notice that the option `echo` is set to `FALSE`: I do not want the code
+to show in the output document, but I do want the output (i.e., the
+figure) to be in the output. Also, notice the use of the `fig.cap` chunk
+option. This option allows us to write a caption for the figure. And the
+caption can include a `\\label{}` so that the figure can be referenced
+in the text. For example:
+
+    Figure \ref{fig:energy-to-gdp} is a scatterplot of energy consumption to GPD. It can be seen that in general, greater economic output is associated with greater consumption of energy. 
+
+More complex figures can be obtained by using the package
+[{patchwork}](https://patchwork.data-imaginist.com/), which is used to
+arrange multiple {ggplot2} objects. A convenient way to do this is to
+name the graphic objects so that they can be called for the output. A
+chunk that arranges two plots side by side is as follows:
+
+``` r
 # Recreate Figure 1
-fig1 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = bblpd)) +
+fig1 <- ggplot(data = energy_and_emissions, aes(x = GDPPC, y = bblpd)) +
   geom_point() +
   ggtitle("Energy and Economic Output") +
   xlab("Energy (bblpd)") +
   ylab("GDP")
 
 # Recreate Figure 2
-fig2 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = bblpd)) +
+fig2 <- ggplot(data = energy_and_emissions, aes(x = GDPPC, y = bblpd)) +
   geom_point() +
-  geom_smooth(method = "lm") +
+  geom_smooth(method = "lm",
+              formula = y ~ x) +
   ggtitle("Energy and Economic Output: Expected vs Observed") +
   xlab("Energy (bblpd)") +
   ylab("GDP")
 
-grid.arrange(fig1, fig2, ncol = 2)
+fig1 + fig2 # Use {patchwork} to compose the two figures into a single plot
 ```
 
-Here, I used `ggplot2` to create two plots, which I named `fig1` and `fig1`. The function `grid.arrange()` takes as input the graphic objects and the number of columns (`ncol`) and/or the number of rows (`nrow`) for the output figure. This command essentially creates a _table_ of graphic objects.
+![ Two plots in a single figure; left panel is Figure 1 and right panel
+is Figure 2](README_files/figure-gfm/fig-two-panel-plot-1.png)
 
-Another way of creating multi-panel figures is by means of the faceting functionality in `ggplot2`. Faceting is an elegant way of doing this, but often requires data to be organized in a certain way. For example, suppose that I wanted to show a plot with $CO_2$ emissions in the three years for which I have data. I could do that using `grid.arrange()` in this way:
-```
-co2_1995 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_1995)) +
-  geom_point() +
-  ggtitle("GDP and Emissions (1995)") +
-  xlab("GDP") +
-  ylab("CO_2 Emissions")
+Here, I used `ggplot2` to create two plots, which I named `fig1` and
+`fig1`. The package [{patchwork}](https://patchwork.data-imaginist.com/)
+uses an intuitive syntax for arranging figures.
 
-co2_2005 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_2005)) +
-  geom_point()  +
-  ggtitle("GDP and Emissions (1995)") +
-  xlab("GDP") +
-  ylab("CO_2 Emissions")
+A chunk that arranges two plots in a single column is as follows:
 
-co2_2015 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_2015)) +
-  geom_point() +
-    ggtitle("GDP and Emissions (1995)") +
-  xlab("GDP") +
-  ylab("CO_2 Emissions")
-
-grid.arrange(co2_1995, co2_2005, co2_2015, nrow = 3)
+``` r
+fig1 / fig2 # Use {patchwork} to compose the two figures into a single plot
 ```
 
-Alternatively, I could rearrange the data so that $CO_2$ emissions are in a single column, and year is an attribute. This is done using the `dplyr` function `gather()`, which gathers several columns into a single column. This is the task of the following chunk:
-```
-```{r gather-co2, include=FALSE}
+![ Two plots in a single figure; top panel is Figure 1 and bottom panel
+is Figure
+2](README_files/figure-gfm/fig-two-panel-plot-one-column-1.png)
 
-# I will gather all CO_2 variables into a single column
+Another way of creating multi-panel figures is by means of the faceting
+functionality in `ggplot2`. Faceting is an elegant way of doing this,
+but often requires data to be organized in a certain way. For example,
+suppose that I wanted to show a plot with
+![CO\_2](https://latex.codecogs.com/png.latex?CO_2 "CO_2") emissions in
+the three years for which I have data. I could do that using
+`grid.arrange()` in this way:
 
-co2_95to15 <- energy_and_emissions %>% 
-  dplyr::select(Country, GDP, CO2_1995, CO2_2005, CO2_2015) %>% # First select relevant variables
-  gather(Year, CO2, -c(Country, GDP)) %>% # Gather CO2 columns: it is important to exclude from this operation the columns Country and GDP
-  mutate(Year = factor(Year, 
-                       levels = c("CO2_1995", "CO2_2005", "CO2_2015"),
-                       labels = c("1995", "2005", "2015"))) # Relabel the years
-```
+    co2_1995 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_1995)) +
+      geom_point() +
+      ggtitle("GDP and Emissions (1995)") +
+      xlab("GDP") +
+      ylab("CO_2 Emissions")
+
+    co2_2005 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_2005)) +
+      geom_point()  +
+      ggtitle("GDP and Emissions (1995)") +
+      xlab("GDP") +
+      ylab("CO_2 Emissions")
+
+    co2_2015 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_2015)) +
+      geom_point() +
+        ggtitle("GDP and Emissions (1995)") +
+      xlab("GDP") +
+      ylab("CO_2 Emissions")
+
+    grid.arrange(co2_1995, co2_2005, co2_2015, nrow = 3)
+
+Alternatively, I could rearrange the data so that
+![CO\_2](https://latex.codecogs.com/png.latex?CO_2 "CO_2") emissions are
+in a single column, and year is an attribute. This is done using the
+`dplyr` function `gather()`, which gathers several columns into a single
+column. This is the task of the following chunk:
 
 Then, I can use the variable `Year` to facet using `facet_wrap()`:
-```
-```{r fig-gdp-emissions-by-year, echo = FALSE, fig.cap="\\label{fig:gdp-emissions-by-year} CO_2 emissions versus GDP by year"}
-ggplot(data = co2_95to15, aes(x = GDP, y = CO2)) +
-  geom_point() +
-  ggtitle("GDP and Emissions by Year") +
-  xlab("GDP") +
-  ylab("CO_2 Emissions") +
-  facet_wrap(~ Year)
-```
+
+![ CO\_2 emissions versus GDP by
+year](README_files/figure-gfm/fig-gdp-emissions-by-year-1.png)
 
 ## More examples of mathematical notation
 
-Here are a few more examples of mathematical notation (followed by their displayed version).
+Here are a few more examples of mathematical notation (followed by their
+displayed version).
 
-```
+    \hat{\beta}=(X'X)^{-1}X'Y
+
+![
+\\hat{\\beta}=(X'X)^{-1}X'Y
+](https://latex.codecogs.com/png.latex?%0A%5Chat%7B%5Cbeta%7D%3D%28X%27X%29%5E%7B-1%7DX%27Y%0A "
 \hat{\beta}=(X'X)^{-1}X'Y
-```
-$$
-\hat{\beta}=(X'X)^{-1}X'Y
-$$
+")
 
-```
+    Y=f\big([X^+, E_q],[\beta,\delta_q]\big)+\epsilon
+
+![
+Y=f\\big(\[X^+, E\_q\],\[\\beta,\\delta\_q\]\\big)+\\epsilon
+](https://latex.codecogs.com/png.latex?%0AY%3Df%5Cbig%28%5BX%5E%2B%2C%20E_q%5D%2C%5B%5Cbeta%2C%5Cdelta_q%5D%5Cbig%29%2B%5Cepsilon%0A "
 Y=f\big([X^+, E_q],[\beta,\delta_q]\big)+\epsilon
-```
-$$
-Y=f\big([X^+, E_q],[\beta,\delta_q]\big)+\epsilon
-$$
+")
 
-```
-\begin{array}
-V_{i,\text{N}} - V_{i,\text{P}} & = \beta_1\text{cost}_{i,\text{N}} + \beta_2\text{ speed}_{i,\text{N}} + \beta_3\text{income}_i - \mu - \beta_1\text{cost}_{i,\text{P}} - \beta_1\text{speed}_{\text{i, P}} - \beta_1\text{income}_i\\ 
-& = \beta_1(\text{cost}_{i, \text{N}} - \text{cost}_{i, \text{P}}) + \beta_2(\text{ speed}_{i, \text{N}} - \text{ speed}_{i, \text{P}}) + \beta_3(\text{ income}_i - \text{ income}_i) - \mu
-\end{array}
-```
+    \begin{array}
+    V_{i,\text{N}} - V_{i,\text{P}} & = \beta_1\text{cost}_{i,\text{N}} + \beta_2\text{ speed}_{i,\text{N}} + \beta_3\text{income}_i - \mu - \beta_1\text{cost}_{i,\text{P}} - \beta_1\text{speed}_{\text{i, P}} - \beta_1\text{income}_i\\ 
+    & = \beta_1(\text{cost}_{i, \text{N}} - \text{cost}_{i, \text{P}}) + \beta_2(\text{ speed}_{i, \text{N}} - \text{ speed}_{i, \text{P}}) + \beta_3(\text{ income}_i - \text{ income}_i) - \mu
+    \end{array}
 
-$$
+![
+\\begin{array}\\\\
+V\_{i,\\text{N}} - V\_{i,\\text{P}} & = \\beta\_1\\text{cost}\_{i,\\text{N}} + \\beta\_2\\text{ speed}\_{i,\\text{N}} + \\beta\_3\\text{income}\_i - \\mu - \\beta\_1\\text{cost}\_{i,\\text{P}} - \\beta\_1\\text{speed}\_{\\text{i, P}} - \\beta\_1\\text{income}\_i\\\\ 
+& = \\beta\_1(\\text{cost}\_{i, \\text{N}} - \\text{cost}\_{i, \\text{P}}) + \\beta\_2(\\text{ speed}\_{i, \\text{N}} - \\text{ speed}\_{i, \\text{P}}) + \\beta\_3(\\text{ income}\_i - \\text{ income}\_i) - \\mu
+\\end{array}
+](https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Barray%7D%5C%5C%0AV_%7Bi%2C%5Ctext%7BN%7D%7D%20-%20V_%7Bi%2C%5Ctext%7BP%7D%7D%20%26%20%3D%20%5Cbeta_1%5Ctext%7Bcost%7D_%7Bi%2C%5Ctext%7BN%7D%7D%20%2B%20%5Cbeta_2%5Ctext%7B%20speed%7D_%7Bi%2C%5Ctext%7BN%7D%7D%20%2B%20%5Cbeta_3%5Ctext%7Bincome%7D_i%20-%20%5Cmu%20-%20%5Cbeta_1%5Ctext%7Bcost%7D_%7Bi%2C%5Ctext%7BP%7D%7D%20-%20%5Cbeta_1%5Ctext%7Bspeed%7D_%7B%5Ctext%7Bi%2C%20P%7D%7D%20-%20%5Cbeta_1%5Ctext%7Bincome%7D_i%5C%5C%20%0A%26%20%3D%20%5Cbeta_1%28%5Ctext%7Bcost%7D_%7Bi%2C%20%5Ctext%7BN%7D%7D%20-%20%5Ctext%7Bcost%7D_%7Bi%2C%20%5Ctext%7BP%7D%7D%29%20%2B%20%5Cbeta_2%28%5Ctext%7B%20speed%7D_%7Bi%2C%20%5Ctext%7BN%7D%7D%20-%20%5Ctext%7B%20speed%7D_%7Bi%2C%20%5Ctext%7BP%7D%7D%29%20%2B%20%5Cbeta_3%28%5Ctext%7B%20income%7D_i%20-%20%5Ctext%7B%20income%7D_i%29%20-%20%5Cmu%0A%5Cend%7Barray%7D%0A "
 \begin{array}\\
 V_{i,\text{N}} - V_{i,\text{P}} & = \beta_1\text{cost}_{i,\text{N}} + \beta_2\text{ speed}_{i,\text{N}} + \beta_3\text{income}_i - \mu - \beta_1\text{cost}_{i,\text{P}} - \beta_1\text{speed}_{\text{i, P}} - \beta_1\text{income}_i\\ 
 & = \beta_1(\text{cost}_{i, \text{N}} - \text{cost}_{i, \text{P}}) + \beta_2(\text{ speed}_{i, \text{N}} - \text{ speed}_{i, \text{P}}) + \beta_3(\text{ income}_i - \text{ income}_i) - \mu
 \end{array}
-$$
+")
 
 ## Suggested readings
 
-[LaTeX for Beginners](http://www.docs.is.ed.ac.uk/skills/documents/3722/3722-2014.pdf)  
-[`ggplot2`: A Package for a Grammar of Graphics](https://ggplot2.tidyverse.org/)  
-
-
+[LaTeX for
+Beginners](http://www.docs.is.ed.ac.uk/skills/documents/3722/3722-2014.pdf)  
+[`ggplot2`: A Package for a Grammar of
+Graphics](https://ggplot2.tidyverse.org/)  
+[\`ggplot2: the textbook](https://ggplot2-book.org/)

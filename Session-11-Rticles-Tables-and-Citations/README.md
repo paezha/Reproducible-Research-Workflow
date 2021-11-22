@@ -1,376 +1,706 @@
+
+<!-- badges: start -->
+<!-- badges: end -->
+
 # GEOG 712 Reproducible Research
 
-## Session 11. `rticles` and practical issues: references and tables
+## Session 10. `rticles` and practical issues: mathematical notation and figures
 
-Last session we used the package `rticles` to generate templates for writing self-contained, reproducible documents in the format of journal articles. We already had many of the necessary elements to do that; the key is the way an R Markdown document is set up, with a header in a particular way, and supporting style files that control the aspect of the output.
+A package with a vignette is a neat example of a self-contained
+reproducible research unit. The package can be used to share data,
+documentation, code, and a document with data analysis.
 
-After last seminar you have the basics to write mathematical notation in LaTeX, as well as the fundamentals to place figures or, better yet, to generate figures within the document. In this session we will complement those skills with two additional features: references and tables.
+Vignettes, however, are not the most common vehicle for research
+dissemination, and they are better seen as training documents. For most
+of us, a key format for research dissemination is the journal paper. In
+this and the following sessions we will introduce some useful tools for
+writing research in the form of a paper. To this end, we will build on
+our previous work with R Markdown. To recap, Markdown is a lightweight
+markup language that can be used to render documents into different
+kinds of outputs, such as html, pdf, and Word.
 
-### References
+R Markdown expands on Markdown by allowing a document to include
+executable code. Previously we saw how chunks of code could be used in a
+Markdown document, and a number of different options to control the
+behavior of the code. Since R Markdown can be rendered into different
+formats, producing an article is a matter of presentation. A package to
+support the creation of a wide array of article formats was created by
+[Allaire et al.](https://github.com/rstudio/rticles). Here we will see
+how to create an article using `rticles`, with a focus on the use of
+mathematical notation and graphical output.
 
-Actually, you already were using references for equations and figures. References work by pasing LaTeX pertinent information. In the case of equations, this worked by creating a label in an equation environment, for example:
+### The package `rticles` and article templates
 
+To begin, you will need to install the package `rticles`. You can do
+this from the console as follows:
+
+`install.packages("rticles")`
+
+Or using the package management utilities in RStudio (see the `Packages`
+tab):
+
+![1. Packages Tab](Session-10-Figure-1.png)
+
+Once you have installed `rticles`, you can create a new R Markdown file
+from a template as follows, using the command line:
+
+    rmarkdown::draft("My-Paper.Rmd", template = "jss_article", package = "rticles")
+
+Or, conveniently, you can create a new R Markdown file from the `File`
+drop-down menu:
+
+![Fig. 2 New R Markdown File](Session-10-Figure-2.png)
+
+And then selecting the option to create an R Markdown file from a
+template:
+
+![Fig. 3 R Markdown Templates](Session-10-Figure-3.png)
+
+As you can see, there is a large selection of templates to choose from,
+based on different publisher’s specifications. Begin by selecting the
+template for an Elsevier Journal Article. You need to select a location
+for the new R Markdown file. Once you do so, and create the new file, a
+folder for it will be created in the designated location. It will look
+like this:
+
+![Fig. 4 Folder with New R Markdown File](Session-10-Figure-4.png)
+
+The R Markdown file is accompanied by a set of support files that
+include the document configurations preferred by the publisher (with the
+extension .cls). Another file that accompanies the R Markdown document
+is `nuncompress.sty`; this includes styling descriptions for the output.
+Finally, there is a file called `mybibfile.bib`; this is a
+[BibTex](https://en.wikipedia.org/wiki/BibTeX) file used to store and
+manage references (more on this in the following session).
+
+## The R Markdown Template
+
+If you open the R Markdown document in R Studio, this is what you will
+see:
+
+![Fig. 5 R Markdown File based on Elsevier Article
+Template](Session-10-Figure-5.png)
+
+Recall that the first part of the document is the YAML header:
+
+    ---
+    title: Short Paper
+    author:
+      - name: Alice Anonymous
+        email: alice@example.com
+        affiliation: Some Institute of Technology
+        footnote: Corresponding Author
+      - name: Bob Security
+        email: bob@example.com
+        affiliation: Another University
+    address:
+      - code: Some Institute of Technology
+        address: Department, Street, City, State, Zip
+      - code: Another University
+        address: Department, Street, City, State, Zip
+    abstract: |
+      This is the abstract.
+
+      It consists of two paragraphs.
+
+    journal: "An awesome journal"
+    date: "2021-11-22"
+    bibliography: mybibfile.bib
+    #linenumbers: true
+    #numbersections: true
+    csl: elsevier-harvard.csl
+    output: rticles::elsevier_article
+    ---
+
+The header in this case has been initialized with some important
+information: about the authors, their addresses, and the abstract. In
+addition, the header includes the abstract, a field for the journal name
+(which is used to create footers), as well as the date. It also
+specifies the BibTex used for the bibliography, the .csl file to use,
+and the output. Notice that not all .csl files are used: in the default
+template, only `elsevier-harvard.csl` is called.
+
+Two fields are commented:
+
+    #linenumbers: true
+    #numbersections: true
+
+If you want the output document to have line numbers and/or numbered
+sections, uncomment these as appropriate.
+
+Anything below the YAML header is written in Markdown (with R code as
+appropriate) and/or LaTeX. Markdown is easier, LaTeX more precise.
+
+Notice that in this document, section headings are distinguished in this
+way:
+
+    The Elsevier article class
+    ==========================
+
+This, for example, would be the title of the first section in the output
+document. Lower level headings use Markdown formatting styles, so that
+`##` is a second-level header, `###` a third-level heading, and so on.
+
+The documented is rendered by *knitting* it (recall that this relies on
+the package `knitr`):
+
+![Fig. 6 Knitting the Document](Session-10-Figure-6.png)
+
+The output is a pdf file, as follows:
+
+![Fig. 6 An Elsevier Article!](Session-10-Figure-7.png)
+
+Now that you have a document to work, lets take a look at some ways to
+present research, beginning with mathematical expressions.
+
+## Mathematical notation in LaTeX
+
+Markdown is simple to use, but lacks the functionality to format
+mathematical notation. In fairness, the same was true of other word
+processing applications. For instance, Word did not have the
+functionality for a long time, and now that it does it is super-clunky.
+The downside of writing in LaTeX is that you need to learn LaTeX.
+Fortunately, Markdown provides a relatively gentle introduction to
+LaTeX, including mathematical notation. It is like learning the way
+Martians (or Mathematicians) write.
+
+> First rule: inline LaTeX in Markdown goes between string signs, like
+> so $x$
+
+Just like that, we wrote something in mathematical notation:
+![x](https://latex.codecogs.com/png.latex?x "x").
+
+> Second rule: to write mathematical notation in *display* mode, you
+> need two string signs $$ enclosing the LaTeX stuff
+
+For example:
+
+    $$
+    x + y
+    $$
+
+The above renders as:
+
+![
+x + y
+](https://latex.codecogs.com/png.latex?%0Ax%20%2B%20y%0A "
+x + y
+")
+
+It is also possible to use LaTeX directly. For example, the following:
+
+    \[x + y\]
+
+*also* renders as:
+
+![x + y](https://latex.codecogs.com/png.latex?x%20%2B%20y "x + y")
+
+Some common elements of mathematical notation are signs. Whenever the
+signs are available in the keyboard, they can be used. For example, the
+following three expressions:
+
+    x + y = z\\
+    x - y > z\\
+    x  y < z
+
+render as:
+
+![
+x + y = z\\\\
+x - y &gt; z\\\\
+x  y &lt; z
+](https://latex.codecogs.com/png.latex?%0Ax%20%2B%20y%20%3D%20z%5C%5C%0Ax%20-%20y%20%3E%20z%5C%5C%0Ax%20%20y%20%3C%20z%0A "
+x + y = z\\
+x - y > z\\
+x  y < z
+")
+
+Notice that I used “`\\`” to introduce line breaks between my three
+expressions. Had I not used these signs, my expressions would have been
+mashed together. The following:
+
+    x + y = z
+    x - y > z
+    x  y < z
+
+renders as:
+
+![
+x + y = z  
+x - y &gt; z  
+x  y &lt; z
+](https://latex.codecogs.com/png.latex?%0Ax%20%2B%20y%20%3D%20z%20%20%0Ax%20-%20y%20%3E%20z%20%20%0Ax%20%20y%20%3C%20z%0A "
+x + y = z  
+x - y > z  
+x  y < z
+")
+
+Other common elements of mathematical notation are subscripts and
+superscripts. Subscripts are obtained by using the underscore sign `_`:
+
+    x_i + y_i = z_i\\
+    x_i - y_i > z_i\\
+    x_i  y_i < z_i
+
+which renders as:
+
+![
+x\_i + y\_i = z\_i\\\\
+x\_i - y\_i &gt; z\_i\\\\
+x\_i  y\_i &lt; z\_i
+](https://latex.codecogs.com/png.latex?%0Ax_i%20%2B%20y_i%20%3D%20z_i%5C%5C%0Ax_i%20-%20y_i%20%3E%20z_i%5C%5C%0Ax_i%20%20y_i%20%3C%20z_i%0A "
+x_i + y_i = z_i\\
+x_i - y_i > z_i\\
+x_i  y_i < z_i
+")
+
+Superscripts are obtained by using the *caret* sign `^`:
+
+    x^2 + y^2 = z^2\\
+    x^2 - y^2 > z^2\\
+    x^2  y^2 < z^2
+
+which renders as:
+
+![
+x^2 + y^2 = z^2\\\\
+x^2 - y^2 &gt; z^2\\\\
+x^2  y^2 &lt; z^2
+](https://latex.codecogs.com/png.latex?%0Ax%5E2%20%2B%20y%5E2%20%3D%20z%5E2%5C%5C%0Ax%5E2%20-%20y%5E2%20%3E%20z%5E2%5C%5C%0Ax%5E2%20%20y%5E2%20%3C%20z%5E2%0A "
+x^2 + y^2 = z^2\\
+x^2 - y^2 > z^2\\
+x^2  y^2 < z^2
+")
+
+If you need more than one subscript or superscript you can group them
+using curly brackets “`{}`”:
+
+    x_{ij} + y_{ij} = z_{ij}\\
+    x_{ij} - y_{ij} > z_{ij}\\
+    x_{ij}  y_{ij} < z_{ij}
+
+to give:
+
+![
+x\_{ij} + y\_{ij} = z\_{ij}\\\\
+x\_{ij} - y\_{ij} &gt; z\_{ij}\\\\
+x\_{ij}  y\_{ij} &lt; z\_{ij}
+](https://latex.codecogs.com/png.latex?%0Ax_%7Bij%7D%20%2B%20y_%7Bij%7D%20%3D%20z_%7Bij%7D%5C%5C%0Ax_%7Bij%7D%20-%20y_%7Bij%7D%20%3E%20z_%7Bij%7D%5C%5C%0Ax_%7Bij%7D%20%20y_%7Bij%7D%20%3C%20z_%7Bij%7D%0A "
+x_{ij} + y_{ij} = z_{ij}\\
+x_{ij} - y_{ij} > z_{ij}\\
+x_{ij}  y_{ij} < z_{ij}
+")
+
+Fractions are written using the LaTeX expression `\frac{}{}`, where the
+first set of curly brackets encompasses the numerator and the second the
+denominator:
+
+    \frac{x - y}{x + y}
+
+This fraction is displayed as:
+
+![
+\\frac{x - y}{x + y}
+](https://latex.codecogs.com/png.latex?%0A%5Cfrac%7Bx%20-%20y%7D%7Bx%20%2B%20y%7D%0A "
+\frac{x - y}{x + y}
+")
+
+The notation can be nested. See for example:
+
+    \frac{x^2 + y^2}{\frac{x^2}{2} + y^2}
+
+which renders as:
+
+![
+\\frac{x^2 - y^2}{\\frac{x^2}{2} + y^2}
+](https://latex.codecogs.com/png.latex?%0A%5Cfrac%7Bx%5E2%20-%20y%5E2%7D%7B%5Cfrac%7Bx%5E2%7D%7B2%7D%20%2B%20y%5E2%7D%0A "
+\frac{x^2 - y^2}{\frac{x^2}{2} + y^2}
+")
+
+Notice the use of the backslash “`\`” before the LaTeX command `frac`.
+Commonly, the backslash indicates a LaTeX command. Another common
+command is “`\sum`”, to write summations:
+
+    \sum x_i
+
+to give:
+
+![
+\\sum x\_i
+](https://latex.codecogs.com/png.latex?%0A%5Csum%20x_i%0A "
+\sum x_i
+")
+
+To which we can add the limits of the summation as follows (using the
+same notation for subscripts and superscripts):
+
+    \sum_{i=1}^n x_i
+
+Now, the summation displays as:
+
+![
+\\sum\_{i=1}^n x\_i
+](https://latex.codecogs.com/png.latex?%0A%5Csum_%7Bi%3D1%7D%5En%20x_i%0A "
+\sum_{i=1}^n x_i
+")
+
+Then, of course, we could not write math without Greek letters! These
+letters are also LaTeX commands:
+
+    \alpha\\
+    \beta\\
+    \delta
+
+This produces the following letters:
+
+![
+\\alpha\\\\
+\\beta\\\\
+\\delta
+](https://latex.codecogs.com/png.latex?%0A%5Calpha%5C%5C%0A%5Cbeta%5C%5C%0A%5Cdelta%0A "
+\alpha\\
+\beta\\
+\delta
+")
+
+One thing that R Markdown does not do (at least not yet), is
+automatically numbering equations. However, since we can use LaTeX, we
+could write mathematical notation in an *environment*:
+
+    \begin{equation}
+    \sum_{i=1}^n x_i
+    \end{equation}
+
+We can also add *labels* to the equations, so that we can reference them
+in the text, for example:
+
+    \begin{equation}
+    \label{my-equation}
+    \sum_{i=1}^n x_i
+    \end{equation}
+
+References to that equation would take this form: “`\ref{my-equation}`”
+
+As an example, copy the following text in your article file and knit:
+
+------------------------------------------------------------------------
+
+    Methods
+    ============
+
+    ## Spatial Autocorrelation and Map Pattern
+
+    Spatial autocorrelation is a condition whereby the value of a variable at one location is correlated with the value(s) of the same variable at one or more proximal locations. A tool widely used to measure spatial autocorrelation is Moran’s coefficient of autocorrelation, or $MC$ for short. In matrix form, $MC$ can be formulated as follows:
+
+    \begin{equation} 
+    \label{eq:1}
+    MC=\frac{n}{\sum_{i}{\sum_{j}{w_{ij}}}}\frac{x'Wx}{x'x}
+    \end{equation}
+
+    where $x$ is a vector $(n\times1)$ of mean-centered values of a georeferenced variable, and $W$ is a spatial weights matrix of dimensions $(n\times n)$ with elements $w_{ij}$. The elements of the spatial weights matrix take non-zero values if locations $i$ and $j$ are deemed to be spatially proximate in some sense, and 0 otherwise. It can be appreciated that the coefficient is composed to two elements: the variance of the random variable (i.e., $(x'x)/n$) and its spatial autocovariance $\frac{(x'Wx)}{\sum_{i}{\sum_{j}{w_{ij}}}}$. As an alternative, the numerator of the right-hand term of Equation \ref{eq:1} can be expressed as follows:
+
+    \begin{equation} 
+    \label{eq:2}
+    x'\Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)x
+    \end{equation}
+
+    with $I$ as the identity matrix of size $n\times n$ and $1$ a conformable vector of ones.
+
+    One possible interpretation of spatial autocorrelation is as map pattern. More concretely, the eigenvalues of the following matrix represent the range of possible values of $MC$ given a spatial weights matrix $W$, and the extreme eigenvalues are in fact associated with the minimum and maximum values of $MC$ for the system of relationships represented by $W$:
+
+    \begin{equation} 
+    \label{eq:3}
+    \Big(I - \frac{11'}{n}\Big)W\Big(I - \frac{11'}{n}\Big)
+    \end{equation}
+
+    A remarkable discovery is that the eigenvectors associated with the eigenvalues of the matrix in Expression \ref{eq:3} represent a catalogue of latent map patterns, each with a level of autocorrelation (as measured by $MC$) given by its corresponding eigenvalue. Furthermore, the patterns represented by the eigenvectors are orthogonal by design, and so they furnish $n$ maps that are independent from each other. Since these map patterns depend only on the spatial weights matrix – and not the spatial random variable – they constitute an extensive set of latent map patterns that can be used in regression analysis as filters. This is explained next.
+
+------------------------------------------------------------------------
+
+Another expressions that I have found useful is the *array* to organize
+matrices, long equations, systems of equations. For example:
+
+    \left[
+    \begin{array}{l c r}
+    x & y & z \\
+    x - 1 & y + 1 & 2z
+    \end{array}
+    \right)
+
+After `begin{array}` we specify the alignment of the elements by column,
+so in this example the first column is aligned on the left, the second
+to the center, and the third to the right. This is displayed as follows:
+
+![
+\\left\[
+\\begin{array}{l c r}
+x & y & z \\\\
+x - 1 & y + 1 & 2z
+\\end{array}
+\\right\]
+](https://latex.codecogs.com/png.latex?%0A%5Cleft%5B%0A%5Cbegin%7Barray%7D%7Bl%20c%20r%7D%0Ax%20%26%20y%20%26%20z%20%5C%5C%0Ax%20-%201%20%26%20y%20%2B%201%20%26%202z%0A%5Cend%7Barray%7D%0A%5Cright%5D%0A "
+\left[
+\begin{array}{l c r}
+x & y & z \\
+x - 1 & y + 1 & 2z
+\end{array}
+\right]
+")
+
+Notice that “`\left`” and “`\right`” are used to create the large
+parentheses that enclose the matrix, and the ampersand sign “`&`” is
+used to separate element of the array.
+
+Finally, piecewise functions can be written using the “`\case`” command:
+
+    y = \begin{cases}\\
+    1 & \text{if } r \leq 1\\
+    0 & \text{otherwise}
+    \end{cases}
+
+The above displays as follows:
+
+![
+y = \\begin{cases}
+1 & \\text{if } r \\leq 1\\\\
+0 & \\text{otherwise}
+\\end{cases}
+](https://latex.codecogs.com/png.latex?%0Ay%20%3D%20%5Cbegin%7Bcases%7D%0A1%20%26%20%5Ctext%7Bif%20%7D%20r%20%5Cleq%201%5C%5C%0A0%20%26%20%5Ctext%7Botherwise%7D%0A%5Cend%7Bcases%7D%0A "
+y = \begin{cases}
+1 & \text{if } r \leq 1\\
+0 & \text{otherwise}
+\end{cases}
+")
+
+More examples of mathematical notation can be seen below.
+
+## Figures
+
+You have already seen that figures can be introduced into Markdown files
+as follows:
+
+    ![caption](my-figure.png)
+
+with the caption or title of the figure between the square brackets, and
+the path to the file between the brackets. If you save all your figures
+as files, you could easily use this approach to populate your paper with
+your graphical output. This assumes that the figures were produced
+elsewhere and then that they were saved. While possible, this is not a
+very attractive alternative, because it separates a key element of the
+process of your analysis (visualization) from the rest of your paper.
+
+One of the most appealing aspects of working with R Markdown is that the
+figures can be produced internally as part of the document. We saw
+examples of this before, with vignettes, for instance.
+
+Suppose that I want to do report some analysis using data set in the
+package `packr`. Loading this and other packages is not part of what I
+wish to present, so I want that to happen under the hood, as it were, in
+the output document. This is how I would prepare my document for data
+analysis:
+
+    {r load-packages, include = FALSE}
+    # Run only if you need to install `packr``
+    #devtools::install_github("paezha/Reproducible-Research-Workflow/Session-07-Creating-R-Packages-and-Documenting-Data/packr", build_vignettes = TRUE)`
+
+    library(packr)
+    library(tidyverse)
+    library(gridExtra)
+
+The chunk option `include = FALSE` means that the chunk will be
+evaluated (the code will run), but the code and any output will not be
+included in the output. This chunk of code could go at the top of my
+document, right after the YAML header (see
+[here](https://github.com/paezha/Reproducible-Research-Workflow/blob/master/Session-10-Rticles-Math-and-Figures/Elsevier-Template/Elsevier-Template.Rmd)).
+
+Notice that the chunk is named. Its name is `load-packages`. Naming
+chunks is good practice for both for reference and ease of navigation.
+Furthermore, I included a comment with instructions on how to install
+`packr` if needed. The other two packages can be obtained from CRAN, but
+`packr` is not available there, so I need to direct the reader to its
+location.
+
+I can load the data in another chunk, also with the option `include` set
+to false, since I want this to happen in the background.
+
+    {r load-data, include = FALSE}
+    data("energy_and_emissions")
+
+The analysis requires that I create two new variables, GDP and energy
+consumption per capita. This is done in the following chunk:
+
+    {r data-preparation, include = FALSE}
+    # Use `dplyr::mutate` to create two new variables: GDP, obtained as the product of GDP per capita times the population, and ECP, the energy consumption per capita, obtained as the ratio of bblpd to population
+
+    energy_and_emissions <- energy_and_emissions %>%
+      mutate(GDP = GDPPC * Population, EPC = bblpd / Population)
+
+It is likely that I have already done some analysis elsewhere (probably
+a notebook, where I documented the analysis). When transplanting the
+analysis to an article, I do not necessarily want to describe every step
+of the analysis in the output document; however, it is still important
+that I document what is going on. I do this by including comments in the
+chunks of code with explanations about the process.
+
+Once that I have prepared the data, I am ready to begin writing my
+article. For instance:
+
+    Introduction
+    ============
+
+    The economy of a nation is tied to its consumption of energy, since every process of production requires energy as an input. However, the strength of the relationship between the economy and the consumption of energy varies. Some countries (e.g., Japan) were more successful than others in terms of decoupling their productive processes from energy after the oil shocks of the 1970s. This was achieved by increasing the efficiency of production, so that the same output could be produced using less energy, or in somewhat different terms, by improving their energy intensity.
+
+    The relationship between economic output and energy consumption is of interest at a time when the effects of a carbon-intense economy is creating a heavy environmental burden. A relevant question is, what countries are more energy-efficient, and can we learn from them. To explore this question we will consider data on national energy use (in barrels of oil per day), economic output (GDP), and $CO_2$ emissions.
+
+At this point, I would like to show a scatterplot with some of these
+relationships. The scatterplot can be created using different
+strategies. In base R, a scatterplot is created using the `plot`
+function:
+
+    plot(x = energy_and_emissions$bblpd, y = energy_and_emissions$GDP, main = "Energy and Economic Output",
+         xlab = "Energy (bblpd)", ylab = "GDP",
+         pch = 19, frame = FALSE)
+
+The package [`ggplot2`](https://ggplot2.tidyverse.org/) has become a
+standard for 2-D graphs in R due to its flexibility and extensibility. A
+chunk to create a `ggplot2` scatterplot is as follows:
+
+![ The relationship between energy consumption and economic output by
+world countries](README_files/figure-gfm/fig-energy-to-gdp-1.png)
+
+Notice that the option `echo` is set to `FALSE`: I do not want the code
+to show in the output document, but I do want the output (i.e., the
+figure) to be in the output. Also, notice the use of the `fig.cap` chunk
+option. This option allows us to write a caption for the figure. And the
+caption can include a `\\label{}` so that the figure can be referenced
+in the text. For example:
+
+    Figure \ref{fig:energy-to-gdp} is a scatterplot of energy consumption to GPD. It can be seen that in general, greater economic output is associated with greater consumption of energy. 
+
+More complex figures can be obtained by using the package
+[{patchwork}](https://patchwork.data-imaginist.com/), which is used to
+arrange multiple {ggplot2} objects. A convenient way to do this is to
+name the graphic objects so that they can be called for the output. A
+chunk that arranges two plots side by side is as follows:
+
+``` r
+# Recreate Figure 1
+fig1 <- ggplot(data = energy_and_emissions, aes(x = GDPPC, y = bblpd)) +
+  geom_point() +
+  ggtitle("Energy and Economic Output") +
+  xlab("Energy (bblpd)") +
+  ylab("GDP")
+
+# Recreate Figure 2
+fig2 <- ggplot(data = energy_and_emissions, aes(x = GDPPC, y = bblpd)) +
+  geom_point() +
+  geom_smooth(method = "lm",
+              formula = y ~ x) +
+  ggtitle("Energy and Economic Output: Expected vs Observed") +
+  xlab("Energy (bblpd)") +
+  ylab("GDP")
+
+fig1 + fig2 # Use {patchwork} to compose the two figures into a single plot
 ```
-\begin{equation}
-\label{my-equation}
-x + y = z
-\end{equation}
+
+![ Two plots in a single figure; left panel is Figure 1 and right panel
+is Figure 2](README_files/figure-gfm/fig-two-panel-plot-1.png)
+
+Here, I used `ggplot2` to create two plots, which I named `fig1` and
+`fig1`. The package [{patchwork}](https://patchwork.data-imaginist.com/)
+uses an intuitive syntax for arranging figures.
+
+A chunk that arranges two plots in a single column is as follows:
+
+``` r
+fig1 / fig2 # Use {patchwork} to compose the two figures into a single plot
 ```
 
-In the case of figures generated as part of a chunk of code, the label was created as part of the option `fig.cap`, for example:
-
-```
-```{r sample-scatterplot, echo = FALSE, fig.cap = "\\label{my-plot} A Sample Scatterplot"}
-ggplot(data = cars, aes(x = speed, y = dist)) + geom_point()
-
-```
-
-Once the item (equation or figure) have a label, you can refer to it by using the LaTeX command `\ref{}`. More generally, referencing objects works for chapters, sections, subsections, footnotes, equations, figures, and tables, and takes the following form:
-
-Format | Use
--|-
-`\label{marker}` | Used to give a _marker_ to an object. The _marker_ is a short, self-explanatory text, possibly accompanied of additional information; for instance `fig:` to identify figures, `tab:` to identify tables, and `eq:` to identify equations.
-`\ref{marker}` | Used to reference the object corresponding to the _marker_; it will number the objects automatically.
-
-### But what about bibliographic references?
-
-Bibliographic references, on the other hand, work in a somewhat different way.
-
-Recall that when the `rticle` template was created, a supporting file (possibly called `mybibfile.bib`) was created. This is a [BibTeX file](http://www.bibtex.org/). BibTeX is a reference management package that is used to process lists in conjunction with LaTeX. The `.bib` file contains bibliographical references in a specific format that looks like this:
-
-```
-@article{Paez2019demand,
-  title={Demand and level of service inflation in Floating Catchment Area (FCA) methods},
-  author={Paez, Antonio and Higgins, Christopher D and Vivona, Salvatore F},
-  journal={PloS one},
-  volume={14},
-  number={6},
-  year={2019},
-  publisher={Public Library of Science}
-}
-
-```
-
-There are definitions for different kinds of entries. The entry above, for example, is an article. There is an extensive list of [entry types](https://en.wikipedia.org/wiki/BibTeX#Entry_types), including "book", "conference", "incollection" (for chapters in edited books), "manual", and so on.
-
-Each entry requires a unique _name_; in the example above, the name of the entry is `Paez2019demand`. It is common to use the last name of the first author, the year, and a keyword for this name, but this is not mandatory. After the name of the entry, come all relevant fields to reference the object. For an article, this would include the `title`, the `author`, which could be a list of authors separated by `and`, the `journal`, `volume`, `number`, and possibly `pages` of the article.
-
-There are three formats for writing names of authors: "Eveline van Leeuwen", "van Leeuwen, Eveline", "van Leeuwen, III, Eveline" (in case Eveline had a [regnal number](https://en.wikipedia.org/wiki/Regnal_number)). See in the following examples Eveline van Leeuwen, Teresa de Norhonha Vaz, and John Paul Jones III:
-
-```
-@article{van2010multifunctional,
-  title={The multifunctional use of urban greenspace},
-  author={van Leeuwen, Eveline and Nijkamp, Peter and de Noronha Vaz, Teresa},
-  journal={International journal of agricultural sustainability},
-  volume={8},
-  number={1-2},
-  pages={20--25},
-  year={2010},
-  publisher={Taylor \& Francis}
-}
-```
-
-```
-@book{Casetti2003applications,
-  title={Applications of the expansion method},
-  author={Casetti, Emilio and Jones, III, John Paul},
-  year={2003},
-  publisher={Routledge}
-}
-```
-
-In the case of institutional authors such as the United Nations, the World Health Organization, and such, the name is written between curly brackets to prevent the software from identifying parts of an institutional name as given names and last names. For example:
-
-```
-@article{Nations2014world,
-  title={World urbanization prospects: The 2014 revision, highlights. department of economic and social affairs},
-  author={{United Nations}},
-  journal={Population Division, United Nations},
-  year={2014}
-}
-```
-
-It is very important that every field is followed by a comma! Failure to include the commas leads to errors that are a pain to debug, as my early experiences with BibTeX taught me.
-
-### Obtaining references in the appropriate format
-
-There are different ways of retrieving entries for a BibTeX file.
-
-The simplest is to use Google Scholar. Search for the topic or item that you are interested in:
-
-![Google Scholar search](Session-11-Figure-1.png)
-
-Once you have found the reference that you want, click on the quotation mark:
-
-![Getting a reference in Google Scholar](Session-11-Figure-2.png)
-
-Then, in the window that pops up, select BibTeX. You can copy and paste the entry from there.
-
-![Selecting BibTeX in Google Scholar](Session-11-Figure-3.png)
-
-I often use Google Scholar, especially for references in the "gray" literature, that is, government reports, reports by international organizations, NGOs, etc., or for a more "shotgun" search. For more focused searches of the scientific and academic literature my preference is to use Web of Science (subscription needed, but most universities have access to this).
-
-![Web of Science search](Session-11-Figure-4.png)
-
-Once you have done a search, select the items that you wish to export and click the "Export" button:
-
-![Selecting Web of Science items](Session-11-Figure-5.png)
-
-This will give you the option to save in other file formats:
-
-![Saving items in other file formats](Session-11-Figure-6.png)
-
-Other file formats include BibTeX:
-
-![Saving items in BibTeX format](Session-11-Figure-7.png)
-
-I currently keep a hybrid reference management system. I continue to use EndNote to keep my references, and then I export from EndNote to BibTeX as needed. If you already use EndNote, this might work for you. The only thing that you need to do is select BibTeX Export as the format, before copying all selected references with formatting. You can then paste these references to you `.bib` file:
-
-![Exporting in BibTeX format from EndNote](Session-11-Figure-8.png)
-
-### In-text citations
-
-The bibliography/list of references is generated automatically by the software, using the style defined in the `.csl` file. The bibliography will contain all references cited in the manuscript. There are different ways of citing references, as follows.
-
-You can cite a reference in the text by using square brackets and the name of the entry preceded by the `@` symbol. For example, the text:
-
-"According to recent research, urban green spaces serve multiple functions [see @van2010multifunctional; also @Reyes2014green]."
-
-This would be rendered more or less in this fashion:
-
-"According to recent research, urban green spaces serve multiple functions (see van Leeuwen et al., 2010; also Reyes et al., 2014)."
-
-When referencing multiple entries at the same time, it is important to separate them by a semi-colon `;`. Don't forget the semi-colon!
-
-It is also possible to use an in-text citation this way:
-
-"According to @van2010multifunctional, urban green spaces serve multiple functions, a view that is echoed by other authors, including @Reyes2014green."
-
-which would render as follows:
-
-"According to van Leeuwen et al. (2010), urban green spaces serve multiple functions, a view that is echoed by other authors, including Reyes et al. (2014)."
-
-As an alternative, a minus sign (i.e., `-`) before the `@` sign has the effect of suppressing the name(s) of the author(s) to render only the date:
-
-"According to van Leeuwen et al. [-@van2010multifunctional], urban green spaces serve multiple functions, a view that is echoed by other authors, including Reyes et al. [-@Reyes2014green]."
-
-### Tables
-
-Tables are important elements in the presentation of research: they are used to summarize information in a form that is convenient and easy to understand. Creating tables using a word processor (\*cough\* Word \*cough\*) can be a pain due to strange behaviors when formatting cells, merging cells, etc. Furthermore, some tables need to be reproduced manually if the analyses change, something that is almost guaranteed to happen during the course of revisions, if not before.
-
-Markdown has a simple way of creating tables, as we saw before in [Session 2](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-02-R-and-Markdown). This only requires the following format:
-
-```
-Header 1 | Header 2
-- | -
-Item 1 | Item 2
-```
-
-Which renders as:
-
-Header 1 | Header 2
-- | -
-Item 1 | Item 2
-
-There are several packages in `R` that are useful to create more sophisticated tables. My go-to package for this is `kableExtra`. The input for `kableExtra` is a dataframe, which is convenient because likely most of the information you need to tabulate is there, or is the result of analysis thereof.
-
-A table can be generated in a chunk of code using `kableExtra` as follows:
-
-```
-```{r descriptive-statistics, echo=FALSE}
-descriptive.df <- data.frame(Statistic = c("Mean", "Min", "Max", "Standard Deviation"),
-                             Population = c(mean(energy_and_emissions$Population),
-                                            min(energy_and_emissions$Population),
-                                            max(energy_and_emissions$Population),
-                                            sd(energy_and_emissions$Population)),
-                             GDPPC = c(mean(energy_and_emissions$GDPPC),
-                                       min(energy_and_emissions$GDPPC),
-                                       max(energy_and_emissions$GDPPC),
-                                       sd(energy_and_emissions$GDPPC)),
-                             bblpd = c(mean(energy_and_emissions$bblpd),
-                                       min(energy_and_emissions$bblpd),
-                                       max(energy_and_emissions$bblpd),
-                                       sd(energy_and_emissions$bblpd)),
-                             CO2_1995 = c(mean(energy_and_emissions$CO2_1995),
-                                       min(energy_and_emissions$CO2_1995),
-                                       max(energy_and_emissions$CO2_1995),
-                                       sd(energy_and_emissions$CO2_1995)),
-                             CO2_2005 = c(mean(energy_and_emissions$CO2_2005),
-                                       min(energy_and_emissions$CO2_2005),
-                                       max(energy_and_emissions$CO2_2005),
-                                       sd(energy_and_emissions$CO2_2005)),
-                             CO2_2015 = c(mean(energy_and_emissions$CO2_2015),
-                                       min(energy_and_emissions$CO2_2015),
-                                       max(energy_and_emissions$CO2_2015),
-                                       sd(energy_and_emissions$CO2_2015)))
-
-kable(descriptive.df)
-```
-
-This gives the following table in the output:
-
-![First not very successful example of table](Session-11-Figure-9.png)
-
-As you can see, this is not a great-looking table. It is too wide and difficult to read. I can improve this table in several different ways. First, it is possible to run `kable()` with `latex_options()`, one of which is to scale down the table so that it fits within the margins of the page:
-
-```
-kable(descriptive.df) %>%
-  kable_styling(latex_options = c("scale_down"))
-```
-
-The result is a table that does not overflow, but now the font is too small for comfort. See:
-
-![Second example of table: latex_options](Session-11-Figure-10.png)
-
-A reason why the table is so wide in the first place is that the numbers reported are humongous. I can scale the values upstream to report smaller, easier to read numbers, and then pass that dataframe to `kable()`:
-
-```
-descriptive.df <- data.frame(Statistic = c("Mean", "Min", "Max", "Standard Deviation"),
-                             Population = c(mean(energy_and_emissions$Population/1e6),
-                                            min(energy_and_emissions$Population/1e6),
-                                            max(energy_and_emissions$Population/1e6),
-                                            sd(energy_and_emissions$Population/1e6)),
-                             GDPPC = c(mean(energy_and_emissions$GDPPC),
-                                       min(energy_and_emissions$GDPPC),
-                                       max(energy_and_emissions$GDPPC),
-                                       sd(energy_and_emissions$GDPPC)),
-                             bblpd = c(mean(energy_and_emissions$bblpd/1e6),
-                                       min(energy_and_emissions$bblpd/1e6),
-                                       max(energy_and_emissions$bblpd/1e6),
-                                       sd(energy_and_emissions$bblpd/1e6)),
-                             CO2_1995 = c(mean(energy_and_emissions$CO2_1995/1e6),
-                                       min(energy_and_emissions$CO2_1995/1e6),
-                                       max(energy_and_emissions$CO2_1995/1e6),
-                                       sd(energy_and_emissions$CO2_1995/1e6)),
-                             CO2_2005 = c(mean(energy_and_emissions$CO2_2005/1e6),
-                                       min(energy_and_emissions$CO2_2005/1e6),
-                                       max(energy_and_emissions$CO2_2005/1e6),
-                                       sd(energy_and_emissions$CO2_2005/1e6)),
-                             CO2_2015 = c(mean(energy_and_emissions$CO2_2015/1e6),
-                                       min(energy_and_emissions$CO2_2015/1e6),
-                                       max(energy_and_emissions$CO2_2015/1e6),
-                                       sd(energy_and_emissions$CO2_2015/1e6)))
-
-kable(descriptive.df) %>%
-  kable_styling(latex_options = c("scale_down"))
-```
-
-This improves to some extent the aspect of the table: it is not as wide and the numbers are easier to comprehend. See:
-
-![Third example of table: manipulating data upstream](Session-11-Figure-11.png)
-
-But I still have way too many decimals which are not particularly informative (typically only two to four [significant digits](https://en.wikipedia.org/wiki/Significant_figures) are needed). I can define the number of digits to use in the figure by using the argument `digits` in the call to `kable`:
-
-```
-kable(descriptive.df,
-      digits = 3) %>%
-  kable_styling(latex_options = c("scale_down"))
-```
-
-This gives a more compact table without all the trailing, less informative digits:
-
-![Fourth example of table: rounding numbers](Session-11-Figure-12.png)
-
-I can further make the table easier to read by adding stripes; also, I like the aspect of tables with booktabs, which removes unnecessary elements from the tables (like all those horizontal and vertical lines). The stripes are added as one of the `latex_options`, whereas booktabs are obtained by setting `booktabs = TRUE` in the call to `kable`:
-
-```
-kable(descriptive.df,
-      digits = 3,
-      booktabs = TRUE) %>%
-  kable_styling(latex_options = c("striped", "scale_down"))
-```
-
-The table now is more pleasant to the eye, easier to read, and easier to understand too:
-
-![Fifth example of table: booktabs and stripes as a latex_option](Session-11-Figure-13.png)
-
-An issue after transforming the variables is that the units have changed! It is important to inform the reader of the units. I can change the names of the columns by creating a string for `col.names` as follows:
-
-```
-kable(descriptive.df,
-      digits = 3,
-      booktabs = TRUE,
-      col.names = c("Statistic", 
-                    "Population (in millions)", 
-                    "GDP per capita", 
-                    "Energy use (in millions of barrels per day)", 
-                    "CO2 emissions (in millions, 1995)", 
-                    "CO2 emissions (in millions, 1995)", 
-                    "CO2 emissions (in millions, 1995)")) %>%
-  kable_styling(latex_options = c("striped", "scale_down"))
-```
-
-Unfortunately, the long names of the columns again make the table too wide and the font too small:
-
-![Sixth example of table: changing the column names](Session-11-Figure-14.png)
-
-To introduce line breaks in the names of the columns, we need to use the function `linebreak()`. Line breaks are identified by `\n`. At this point, I also want to label the table for referencing purposes. The label is created by using a `caption` in the call to `kable`. The caption looks very similar to `fig.cap`, the captions of figures created within a chunk of code; see below:
-
-```
-kable(descriptive.df,
-      digits = 3,
-      booktabs = TRUE,
-      escape = FALSE,
-      col.names = linebreak(c("Statistic", 
-                              "Population\n(millions)",
-                              "GDP per capita\n(USD)",
-                              "Energy use\n(millions of \nbarrels per day)", 
-                              "CO2 1995\n(millions\nkilotonnes)", 
-                              "CO2 2005\n(millions\nkilotonnes)", 
-                              "CO2 2015\n(millions\nkilotonnes)"),
-                            align = "c"), #Lower case "c" for center
-      caption = "\\label{tab:descriptive-statistics} Descriptive statistics: energy and emissions of world countries") %>% 
-  kable_styling(latex_options = c("striped", "scale_down"))
-```
-
-This leads to my final table:
-
-![Final table: fixing the column names and using a caption](Session-11-Figure-15.png)
-
-It is possible to create tables with the results of different kinds of analysis, and the only trick is knowing where to extract the different parts of the analysis that you wish to report (for example the coefficients, p-values, coefficients of determination, etc.)
-
-The following code is an example of a table that reports the results of regressing $CO_2$ emissions on GDP by year:
-
-```
-```{r table-emissions-models-results, echo=FALSE}
-models.df <- data.frame(Estimate.1 = mod_1995$coefficients, 
-                        pval.1 = paste(ifelse(summary(mod_1995)$coefficients[,4] > 0.0001, 
-                                              round(summary(mod_1995)$coefficients[,4], 4), 
-                                              "< 0.0001")),
-                        Estimate.2 = mod_2005$coefficients, 
-                        pval.2 = paste(ifelse(summary(mod_2005)$coefficients[,4] > 0.0001, 
-                                              round(summary(mod_2005)$coefficients[,4], 4), 
-                                              "< 0.0001")),
-                        Estimate.3 = mod_2015$coefficients, 
-                        pval.3 = paste(ifelse(summary(mod_2015)$coefficients[,4] > 0.0001, 
-                                              round(summary(mod_2015)$coefficients[,4], 4), 
-                                              "< 0.0001")))
-
-kable(models.df,
-      digits = 4,
-      booktabs = TRUE,
-      escape = FALSE,
-      col.names = c("$\\beta$", "p-val", "$\\beta$", "p-val", "$\\beta$", "p-val"),
-      caption = "\\label{tab:gdp-emissions-model-results} Regression results: Emissions by GDP by year") %>%
-  add_header_above(c("Variable" = 1, 
-                     "1995" = 2, 
-                     "2005" = 2, 
-                     "2015" = 2),
-                   escape = FALSE) %>%
-  footnote(c(paste("$R^2$ (1995) = ", as.character(round(summary(mod_1995)$r.squared, 2))),
-             paste("$R^2$ (2005) = ", as.character(round(summary(mod_2005)$r.squared, 2))),
-             paste("$R^2$ (2015) = ", as.character(round(summary(mod_2015)$r.squared, 2)))),
-           escape = FALSE)
-```
-
-The table in the output document is this:
-
-![Example of table with regression results](Session-11-Figure-16.png)
-
-With this, we have most of the elements to write a self-contained paper that reports reproducible research.
+![ Two plots in a single figure; top panel is Figure 1 and bottom panel
+is Figure
+2](README_files/figure-gfm/fig-two-panel-plot-one-column-1.png)
+
+Another way of creating multi-panel figures is by means of the faceting
+functionality in `ggplot2`. Faceting is an elegant way of doing this,
+but often requires data to be organized in a certain way. For example,
+suppose that I wanted to show a plot with
+![CO\_2](https://latex.codecogs.com/png.latex?CO_2 "CO_2") emissions in
+the three years for which I have data. I could do that using
+`grid.arrange()` in this way:
+
+    co2_1995 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_1995)) +
+      geom_point() +
+      ggtitle("GDP and Emissions (1995)") +
+      xlab("GDP") +
+      ylab("CO_2 Emissions")
+
+    co2_2005 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_2005)) +
+      geom_point()  +
+      ggtitle("GDP and Emissions (1995)") +
+      xlab("GDP") +
+      ylab("CO_2 Emissions")
+
+    co2_2015 <- ggplot(data = energy_and_emissions, aes(x = GDP, y = CO2_2015)) +
+      geom_point() +
+        ggtitle("GDP and Emissions (1995)") +
+      xlab("GDP") +
+      ylab("CO_2 Emissions")
+
+    grid.arrange(co2_1995, co2_2005, co2_2015, nrow = 3)
+
+Alternatively, I could rearrange the data so that
+![CO\_2](https://latex.codecogs.com/png.latex?CO_2 "CO_2") emissions are
+in a single column, and year is an attribute. This is done using the
+`dplyr` function `gather()`, which gathers several columns into a single
+column. This is the task of the following chunk:
+
+Then, I can use the variable `Year` to facet using `facet_wrap()`:
+
+![ CO\_2 emissions versus GDP by
+year](README_files/figure-gfm/fig-gdp-emissions-by-year-1.png)
+
+## More examples of mathematical notation
+
+Here are a few more examples of mathematical notation (followed by their
+displayed version).
+
+    \hat{\beta}=(X'X)^{-1}X'Y
+
+![
+\\hat{\\beta}=(X'X)^{-1}X'Y
+](https://latex.codecogs.com/png.latex?%0A%5Chat%7B%5Cbeta%7D%3D%28X%27X%29%5E%7B-1%7DX%27Y%0A "
+\hat{\beta}=(X'X)^{-1}X'Y
+")
+
+    Y=f\big([X^+, E_q],[\beta,\delta_q]\big)+\epsilon
+
+![
+Y=f\\big(\[X^+, E\_q\],\[\\beta,\\delta\_q\]\\big)+\\epsilon
+](https://latex.codecogs.com/png.latex?%0AY%3Df%5Cbig%28%5BX%5E%2B%2C%20E_q%5D%2C%5B%5Cbeta%2C%5Cdelta_q%5D%5Cbig%29%2B%5Cepsilon%0A "
+Y=f\big([X^+, E_q],[\beta,\delta_q]\big)+\epsilon
+")
+
+    \begin{array}
+    V_{i,\text{N}} - V_{i,\text{P}} & = \beta_1\text{cost}_{i,\text{N}} + \beta_2\text{ speed}_{i,\text{N}} + \beta_3\text{income}_i - \mu - \beta_1\text{cost}_{i,\text{P}} - \beta_1\text{speed}_{\text{i, P}} - \beta_1\text{income}_i\\ 
+    & = \beta_1(\text{cost}_{i, \text{N}} - \text{cost}_{i, \text{P}}) + \beta_2(\text{ speed}_{i, \text{N}} - \text{ speed}_{i, \text{P}}) + \beta_3(\text{ income}_i - \text{ income}_i) - \mu
+    \end{array}
+
+![
+\\begin{array}\\\\
+V\_{i,\\text{N}} - V\_{i,\\text{P}} & = \\beta\_1\\text{cost}\_{i,\\text{N}} + \\beta\_2\\text{ speed}\_{i,\\text{N}} + \\beta\_3\\text{income}\_i - \\mu - \\beta\_1\\text{cost}\_{i,\\text{P}} - \\beta\_1\\text{speed}\_{\\text{i, P}} - \\beta\_1\\text{income}\_i\\\\ 
+& = \\beta\_1(\\text{cost}\_{i, \\text{N}} - \\text{cost}\_{i, \\text{P}}) + \\beta\_2(\\text{ speed}\_{i, \\text{N}} - \\text{ speed}\_{i, \\text{P}}) + \\beta\_3(\\text{ income}\_i - \\text{ income}\_i) - \\mu
+\\end{array}
+](https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Barray%7D%5C%5C%0AV_%7Bi%2C%5Ctext%7BN%7D%7D%20-%20V_%7Bi%2C%5Ctext%7BP%7D%7D%20%26%20%3D%20%5Cbeta_1%5Ctext%7Bcost%7D_%7Bi%2C%5Ctext%7BN%7D%7D%20%2B%20%5Cbeta_2%5Ctext%7B%20speed%7D_%7Bi%2C%5Ctext%7BN%7D%7D%20%2B%20%5Cbeta_3%5Ctext%7Bincome%7D_i%20-%20%5Cmu%20-%20%5Cbeta_1%5Ctext%7Bcost%7D_%7Bi%2C%5Ctext%7BP%7D%7D%20-%20%5Cbeta_1%5Ctext%7Bspeed%7D_%7B%5Ctext%7Bi%2C%20P%7D%7D%20-%20%5Cbeta_1%5Ctext%7Bincome%7D_i%5C%5C%20%0A%26%20%3D%20%5Cbeta_1%28%5Ctext%7Bcost%7D_%7Bi%2C%20%5Ctext%7BN%7D%7D%20-%20%5Ctext%7Bcost%7D_%7Bi%2C%20%5Ctext%7BP%7D%7D%29%20%2B%20%5Cbeta_2%28%5Ctext%7B%20speed%7D_%7Bi%2C%20%5Ctext%7BN%7D%7D%20-%20%5Ctext%7B%20speed%7D_%7Bi%2C%20%5Ctext%7BP%7D%7D%29%20%2B%20%5Cbeta_3%28%5Ctext%7B%20income%7D_i%20-%20%5Ctext%7B%20income%7D_i%29%20-%20%5Cmu%0A%5Cend%7Barray%7D%0A "
+\begin{array}\\
+V_{i,\text{N}} - V_{i,\text{P}} & = \beta_1\text{cost}_{i,\text{N}} + \beta_2\text{ speed}_{i,\text{N}} + \beta_3\text{income}_i - \mu - \beta_1\text{cost}_{i,\text{P}} - \beta_1\text{speed}_{\text{i, P}} - \beta_1\text{income}_i\\ 
+& = \beta_1(\text{cost}_{i, \text{N}} - \text{cost}_{i, \text{P}}) + \beta_2(\text{ speed}_{i, \text{N}} - \text{ speed}_{i, \text{P}}) + \beta_3(\text{ income}_i - \text{ income}_i) - \mu
+\end{array}
+")
 
 ## Suggested readings
 
-[BibTeX](http://www.bibtex.org/)  
-[KableExtra for HTML](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)  
-[KableExtra for PDF](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)
+[LaTeX for
+Beginners](http://www.docs.is.ed.ac.uk/skills/documents/3722/3722-2014.pdf)  
+[`ggplot2`: A Package for a Grammar of
+Graphics](https://ggplot2.tidyverse.org/)  
+[\`ggplot2: the textbook](https://ggplot2-book.org/)
