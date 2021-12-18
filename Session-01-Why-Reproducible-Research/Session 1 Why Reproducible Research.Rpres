@@ -55,6 +55,17 @@ By the time the errors of Reinhart and Rogoff were revealed, the impact of their
 
 ...and, as some have argued, the worst of the damage was [done](https://www.theguardian.com/business/ng-interactive/2015/apr/29/the-austerity-delusion)
 
+Alas, old habits die hard
+========================================================
+
+A 2021 [review](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008984) found that lessons were not learned in computational biology.
+
+Speaking of biologists...
+
+Vignette 2: The spiders that were not
+========================================================
+
+Jonathan Pruitt...
 
 Vignette 2: The master student
 ========================================================

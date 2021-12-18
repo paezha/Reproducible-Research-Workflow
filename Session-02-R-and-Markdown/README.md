@@ -40,7 +40,7 @@ Once that you have installed R Studio, launch it. It should look like this:
 
 ![R Studio IDE](Session-2-Figure-2.png)
 
-Lets take a few minutes to explore the different parts of the IDE.
+Let us take a few minutes to explore the different parts of the IDE.
 
 ### Markdown and R Markdown
 
