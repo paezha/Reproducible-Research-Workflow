@@ -4,11 +4,22 @@
 # GEOG 712 Reproducible Research Workflow with GitHub and `R`
 
 <!-- badges: start -->
+
+[![CC BY-SA
+4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike
+4.0 International
+License](http://creativecommons.org/licenses/by-sa/4.0/).
+
+[![CC BY-SA
+4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+
 <!-- badges: end -->
 
 ## School of Geography and Earth Sciences, McMaster University
 
-## Course Description[1]
+## Course Description[^1]
 
 Scientific discovery is typically a collective process, as researchers
 build their work on the preceding efforts of other researchers. This is
@@ -50,13 +61,13 @@ comply with reproducibility criteria.
 
 The course will cover the following topics:
 
-1.  Fundamentals of reproducible research
-2.  Basic tools for implementing a reproducible research workflow:
+1)  Fundamentals of reproducible research
+2)  Basic tools for implementing a reproducible research workflow:
     GitHub and R
-3.  Data Management Plans
-4.  Creating basic units of shareable code
-5.  Documenting the process of doing research
-6.  Generating reproducible research documents
+3)  Data Management Plans
+4)  Creating basic units of shareable code
+5)  Documenting the process of doing research
+6)  Generating reproducible research documents
 
 By the end of the course, the students will produce a report with all
 the necessary components to make it a unit of reproducible research. In
@@ -243,5 +254,5 @@ PDF](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)
 **Week 13** (Dec. 6, 10:00 am - 12:00 pm) *Topic*: Extras: 3D plots  
 *Readings*: No readings assigned
 
-[1] The University reserves the right to change any aspect of this
-course outline.
+[^1]: The University reserves the right to change any aspect of this
+    course outline.
