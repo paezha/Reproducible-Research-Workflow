@@ -17,7 +17,7 @@ License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 <!-- badges: end -->
 
-## School of Geography and Earth Sciences, McMaster University
+## [School of Earth, Environment and Society](https://www.science.mcmaster.ca/ees/), [McMaster University](https://www.mcmaster.ca/)
 
 ## Course Description[^1]
 
@@ -59,11 +59,11 @@ qualitative or quantitative data. The course is also appropriate for
 experienced researchers who would like to update their workflow to
 comply with reproducibility criteria.
 
-The course will cover the following topics:
+The course covers the following topics:
 
 1)  Fundamentals of reproducible research
 2)  Basic tools for implementing a reproducible research workflow:
-    GitHub and R
+    GitHub and `R`
 3)  Data Management Plans
 4)  Creating basic units of shareable code
 5)  Documenting the process of doing research
@@ -76,12 +76,12 @@ mostly open resources.
 
 ## Instructors
 
-| Antonio Paez | Professor                                 |
-|:-------------|:------------------------------------------|
-|              | Office: GSB 236                           |
-|              | Office Hours: Tuesday 11:30 am – 12:30 pm |
-|              | Phone: (905) 525-9140, ext. 26099         |
-|              | Email: <paezha@mcmaster.ca>               |
+| [Antonio Paez](https://experts.mcmaster.ca/display/paezha) | Professor                         |
+|:-----------------------------------------------------------|:----------------------------------|
+|                                                            | Office: GSB 236                   |
+|                                                            | Office Hours: TBD                 |
+|                                                            | Phone: (905) 525-9140, ext. 26099 |
+|                                                            | Email: <paezha@mcmaster.ca>       |
 
 | Krysha Dukacz | GWF Data Manager                  |
 |:--------------|:----------------------------------|
@@ -105,7 +105,7 @@ instructors.
 
 ## Assessment
 
-Students will be assessed based on the completion of a sequence of
+Students are assessed based on the completion of a sequence of
 activities. Note that the activities are designed to combine towards one
 final deliverable, so it is not advisable to skip any of them.
 
@@ -121,8 +121,8 @@ final deliverable, so it is not advisable to skip any of them.
 | Final Deliverable                       | 20% |
 
 McMaster’s graduate grading system will be used. Note that according to
-section 2.5.3 of the Graduate Calendar located at
-<http://www.mcmaster.ca/graduate/grad_calendar.pdf> passing grades are
+section 2.5.3 of the [Graduate
+Calendar](https://academiccalendars.romcmaster.ca/) passing grades are
 A+, A, A-, B+, B and B- only.
 
 ## Academic Dishonesty
@@ -134,8 +134,8 @@ transcript (notation reads: “Grade of F assigned for academic
 dishonesty”), and/or suspension or expulsion from the university. It is
 your responsibility to understand what constitutes academic dishonesty.
 For information on the various kinds of academic dishonesty please refer
-to the Academic Integrity Policy, specifically Appendix 3, located at
-<http://www.mcmaster.ca/univsec/policy/AcademicIntegrity.pdf>
+to the Academic Integrity Policy, specifically [Appendix
+3](https://secretariat.mcmaster.ca/app/uploads/Academic-Integrity-Policy-1-1.pdf).
 
 The following illustrates only three forms of academic dishonesty:
 
@@ -144,7 +144,7 @@ The following illustrates only three forms of academic dishonesty:
 2.  Improper collaboration in group work.
 3.  Copying or using unauthorized aids tests and examinations.
 
-## Course Schedule (September-December 2021)
+## Course Schedule (September-December 2021) (Next offering of the course: September 2023)
 
 **Week 1** (Sept. 13, 11:00 am - 1:00 pm)  
 *Topic*: [Course overview and introduction: Why reproducible
@@ -154,25 +154,24 @@ research?](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/
 policy environment, journal policies and the publication process,
 roadmap for course
 
-**Week 2** (Sept. 20, 10:00 am - 12:00 pm) *Topic*: [R + RStudio +
+**Week 2** (Sept. 20, 10:00 am - 12:00 pm) *Topic*: [`R` + RStudio +
 markdown](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-02-R-and-Markdown)  
 *Suggested Readings*:  
-[What is R?](https://www.r-project.org/about.html)  
+[What is `R`?](https://www.r-project.org/about.html)  
 [R for Data Science](https://r4ds.had.co.nz/)  
 [What is
 Markdown](https://rmoff.net/2017/09/12/what-is-markdown-and-why-is-it-awesome/)  
 *Activity 1*: Use markdown to create a document with basic operations in
-R
+`R`
 
 **Week 3** (Sept. 27, 10:00 am - 12:00 pm) *Topic*: [Version Control and
 GitHub](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-03-Git-and-GitHub)  
 *Readings*:  
 [What is version
 control?](https://en.wikipedia.org/wiki/Version_control)  
-[What is
-GitHub?](https://www.economist.com/the-economist-explains/2018/06/18/what-is-github)  
+[What is GitHub?](https://en.wikipedia.org/wiki/GitHub)  
 *Activity 2*: Post a README notice in GitHub and one document with basic
-operations in R
+operations in `R`
 
 **Week 4** (Oct. 4, 10:00 am - 12:00 pm)  
 *Topic*: [Data Management Plans (DMP):
@@ -199,15 +198,15 @@ archiving](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/
 *Activity 4*: Update the DMP and post in GitHub
 
 **Week 8** (Nov. 1, 10:00 am - 12:00 pm)  
-*Topic*: [Creating packages in R and documenting
+*Topic*: [Creating packages in `R` and documenting
 datasets](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-07-Creating-R-Packages-and-Documenting-Data)  
 *Readings*:  
 [Writing an R package from
 scratch](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)  
-[R Package Primer - A minimal
+[`R` Package Primer - A minimal
 Example](https://kbroman.org/pkg_primer/)  
-[R Packages](http://r-pkgs.had.co.nz/)  
-[Building R
+[`R` Packages](http://r-pkgs.had.co.nz/)  
+[Building `R`
 Packages](https://rstats-pkgs.readthedocs.io/en/latest/index.html)  
 *Activity 5*: Create a small package with a dataset
 
@@ -233,10 +232,9 @@ practical issues preparing self-contained open research documents (math
 notation and
 figures)](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-10-Rticles-Math-and-Figures)  
 *Readings*:  
-[LaTeX for
-Beginners](http://www.docs.is.ed.ac.uk/skills/documents/3722/3722-2014.pdf)  
+[LaTeX for Beginners]()  
 [`ggplot2`: A Package for a Grammar of
-Graphics](https://ggplot2.tidyverse.org/)  
+Graphics](https://ggplot2-book.org/)  
 *Activity*: No activity this week
 
 **Week 12** (Nov. 29, 10:00 am - 12:00 pm) *Topic*: [`Rticles` and
@@ -251,7 +249,9 @@ HTML](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table
 PDF](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)  
 *Activity*: Final deliverable due on DATE TBD.
 
-**Week 13** (Dec. 6, 10:00 am - 12:00 pm) *Topic*: Extras: 3D plots  
+**Week 13** (Dec. 6, 10:00 am - 12:00 pm) *Topic*: Package
+[{macdown}](https://paezha.github.io/macdown/): writing a thesis in R
+markdown  
 *Readings*: No readings assigned
 
 [^1]: The University reserves the right to change any aspect of this
