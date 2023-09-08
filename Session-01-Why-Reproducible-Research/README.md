@@ -12,7 +12,7 @@
 
 #### What costs?
 
-The majority of the cost of Reproducible Research are associated with Time:
+The majority of the cost of Reproducible Research are associated with time:
 
 1. Planning – Understand where you want to end up and plot a course to get there. 
 
@@ -66,9 +66,11 @@ https://www.acm.org/publications/policies/artifact-review-and-badging-current
 
 4.	End product
 
-  + An example of a reproducible research [project.](https://github.com/paezha/Non-Orthogonal-and-Non-Linear-Partitions-in-Decision-Trees-via-Interactive-Basis-Functions)
+  + An example of a reproducible research [project.](https://github.com/paezha/Reproductive-Rate-and-Density-US-Reanalyzed)
 
   + An example of an open [paper.](https://github.com/Robinlovelace/integrating-gat#abstract)
+  
+  + An [Open Data Product.](https://soukhova.github.io/TTS2016R/)
 
 ### Suggested readings
 
