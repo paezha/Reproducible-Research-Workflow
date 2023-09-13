@@ -6,7 +6,7 @@
 
 One of the key tools to implement reproducible research in this course is R, a free software environment for statistical computing and graphics.
 
-The present notes were developed using R version 3.6.1 (2019-07-05) -- "Action of the Toes". If you have an older version of R, your might want to install this or a newer version.
+The present notes were developed using R version 4.2.2 (2022-10-31) -- "Innocent and Trusting". If you have an older version of R, your might want to install this or a newer version.
 
 #### R
 
@@ -249,7 +249,7 @@ with $I$ as the identity matrix of size $n\times n$ and $1$ a conformable vector
 
 ### Activity
 
-1. Create a new R Markdown file, name it "Your Name Activity 1"
+1. Create a new R Markdown file, name it "Your-Last-Name-Activity-1"
 
 2. Create a level-1 header and write in less than 200 words what is your main research interest. Use formatting for emphasis as appropriate.
 
@@ -259,9 +259,9 @@ with $I$ as the identity matrix of size $n\times n$ and $1$ a conformable vector
 
 5. Still under favorites, create a new level-2 header "Favorite Equation" and type your favorite equation
 
-6. Still under favoritesm create a new level-2 header "Favorite Artists" and create a table with two columns "Name" and "Achievements". Populate the table with 5 favorite artists.
+6. Still under favorites create a new level-2 header "Favorite Artists" and create a table with two columns "Name" and "Achievements". Populate the table with 5 favorite artists.
 
-7. Create a new level-1 header and type "A Chunk of Code". Under this header create a chunk of code, whatever you want R to do immediately for you.
+7. Create a new level-1 header and type "A Chunk of Code". Under this header write a chunk of code, something you would like `R` to do immediately for you.
 
 8. Once you have done this, knit your document to PDF and email to both instructors.
 
