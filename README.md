@@ -114,9 +114,9 @@ final deliverable, so it is not advisable to skip any of them.
 |                                         |     |
 |-----------------------------------------|-----|
 | Activity 1: R Markdown Exercise         | 5%  |
-| Activity 2: Version Control Exercise    | 5%  |
-| Activity 3: Initial DMP                 | 10% |
-| Activity 4: Data Brief                  | 10% |
+| Activity 2: First project               | 5%  |
+| Activity 3: Version Control Exercise    | 10% |
+| Activity 4: DMP                         | 10% |
 | Activity 5: Data Package                | 15% |
 | Activity 6: Data Analysis Documentation | 15% |
 | Activity 7: Peer Review Exercise        | 20% |
@@ -169,38 +169,49 @@ Markdown](https://rmoff.net/2017/09/12/what-is-markdown-and-why-is-it-awesome/)
 *Activity 1*: Use markdown to create a document with basic operations in
 `R`
 
-**Week 3** (Sept. 20, 1:00 pm - 3:30 pm) *Topic*: [Version Control and
-GitHub](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-03-Git-and-GitHub)  
+**Week 3** (Sept. 20, 1:00 pm - 3:30 pm) *Topic*: [Projects and
+Reproducible
+Environments](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-03-Projects-and-Reproducible-Environments)  
+*Readings*:  
+[What is version control?](https://intro2r.com/rsprojs.html)  
+[{here}: a package for projet oriented
+workflows](https://here.r-lib.org/) [{renv}: a package for reproducible
+environments in `R`](https://rstudio.github.io/renv/index.html)  
+*Activity 2*: Create a project with your proposed directory structure,
+and initialize a reproducible environment
+
+**Week 4** (Sept. 27, 1:00 pm - 3:30 pm) *Topic*: [Version Control and
+GitHub](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-04-Git-and-GitHub)  
 *Readings*:  
 [What is version
 control?](https://en.wikipedia.org/wiki/Version_control)  
 [What is GitHub?](https://en.wikipedia.org/wiki/GitHub)  
-*Activity 2*: Post a README notice in GitHub and one document with basic
+*Activity 3*: Post a README notice in GitHub and one document with basic
 operations in `R`
 
-**Week 4** (Sept. 27, 1:00 pm - 3:30 pm)  
+**Week 5** (Oct. 4, 1:00 pm - 3:30 pm)  
 *Topic*: [Data Management Plans (DMP):
-Principles](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-04-Research-Data-Management-Principles)  
+Principles](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-05-Research-Data-Management-Principles)  
 *Readings*:  
 [10 aspects of highly effective research
 data](https://www.elsevier.com/connect/10-aspects-of-highly-effective-research-data)  
-*Activity*: Create a list of data that you will be creating and using as
-part of your project
-
-**Week 5** (Oct. 4, 1:00 pm - 3:30 pm) *Topic*: [Data Management Plans
-(DMP):
-Tools](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-05-Data-Management-Plans)  
-*Readings*: TBD  
-*Activity 3*: Write an initial DMP and post in GitHub
+<!--_Activity 3_:   Create a list of data that you will be creating and using as part of your project-->
 
 **Week 6** (Oct. 11) *Topic*: Reading week  
 *Readings*: N/A
 
-**Week 7** (Oct. 18, 1:00 pm - 3:30 pm)  
-*Topic*: [Forensic issues and
-archiving](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-06-Forensic-Issues-and-Archiving)  
+**Week 7** (Oct. 18, 1:00 pm - 3:30 pm) *Topic*: [Data Management Plans
+(DMP):
+Tools](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-06-Data-Management-Plans)  
 *Readings*: TBD  
-*Activity 4*: Update the DMP and post in GitHub
+*Activity 3*: Write a DMP and post in GitHub
+
+<!-- 
+**Week 7** (Oct. 25, 1:00 pm - 3:30 pm)  
+_Topic_:    [Forensic issues and archiving](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-06-Forensic-Issues-and-Archiving)  
+_Readings_: TBD  
+_Activity 4_:   Update the DMP and post in GitHub  
+-->
 
 **Week 8** (Oct. 25, 1:00 pm - 3:30 pm)  
 *Topic*: [Creating packages in `R` and documenting
@@ -213,7 +224,7 @@ Example](https://kbroman.org/pkg_primer/)
 [`R` Packages](http://r-pkgs.had.co.nz/)  
 [Building `R`
 Packages](https://rstudio.github.io/r-manuals/r-exts/Creating-R-packages.html)  
-*Activity 5*: Create a small package with a dataset
+*Activity 4*: Create a small package with a dataset
 
 **Week 9** (Nov. 1, 1:00 pm - 3:30 pm) *Topic*: [Documenting data
 analysis and use of
@@ -232,18 +243,18 @@ collaboration](https://github.com/paezha/Reproducible-Research-Workflow/tree/mas
 *Activity 7*: In-class activity peer reviewing packages, vignettes, and
 revisions due in GitHub
 
-**Week 11** (Nov. 15, 1:00 pm - 3:30 pm) *Topic*: [`Rticles` and
+**Week 11** (Nov. 15, 1:00 pm - 3:30 pm) *Topic*: [{Rticles} and
 practical issues preparing self-contained open research documents (math
 notation and
 figures)](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-10-Rticles-Math-and-Figures)  
 *Readings*:  
 [LaTeX for
 Beginners](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)  
-[`ggplot2`: A Package for a Grammar of
+[{ggplot2}: A Package for a Grammar of
 Graphics](https://ggplot2-book.org/)  
 *Activity*: No activity this week
 
-**Week 12** (Nov. 22, 1:00 pm - 3:30 pm) *Topic*: [`Rticles` and
+**Week 12** (Nov. 22, 1:00 pm - 3:30 pm) *Topic*: [{Rticles} and
 practical issues preparing self-contained open research documents
 (tables and
 citations)](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-11-Rticles-Tables-and-Citations)  
