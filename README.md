@@ -173,7 +173,7 @@ Markdown](https://rmoff.net/2017/09/12/what-is-markdown-and-why-is-it-awesome/)
 Reproducible
 Environments](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-03-Projects-and-Reproducible-Environments)  
 *Readings*:  
-[What is version control?](https://intro2r.com/rsprojs.html)  
+[Projects](https://intro2r.com/rsprojs.html)  
 [{here}: a package for projet oriented
 workflows](https://here.r-lib.org/) [{renv}: a package for reproducible
 environments in `R`](https://rstudio.github.io/renv/index.html)  

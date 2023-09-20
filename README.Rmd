@@ -122,7 +122,7 @@ _Activity 1_: 	Use markdown to create a document with basic operations in `R`
 **Week 3** (Sept. 20, 1:00 pm - 3:30 pm)
 _Topic_:	[Projects and Reproducible Environments](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-03-Projects-and-Reproducible-Environments)  
 _Readings_:  
-[What is version control?](https://intro2r.com/rsprojs.html)  
+[Projects](https://intro2r.com/rsprojs.html)  
 [{here}: a package for projet oriented workflows](https://here.r-lib.org/)
 [{renv}: a package for reproducible environments in `R`](https://rstudio.github.io/renv/index.html)  
 _Activity 2_: 	Create a project with your proposed directory structure, and initialize a reproducible environment  
