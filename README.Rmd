@@ -132,6 +132,7 @@ _Topic_:	[Version Control and GitHub](https://github.com/paezha/Reproducible-Res
 _Readings_:  
 [What is version control?](https://en.wikipedia.org/wiki/Version_control)  
 [What is GitHub?](https://en.wikipedia.org/wiki/GitHub)  
+[{gitcreds}: a package to query git credentials from `R`](https://gitcreds.r-lib.org/)
 _Activity 3_: 	Post a README notice in GitHub and one document with basic operations in `R`  
 
 **Week 5** (Oct. 4, 1:00 pm - 3:30 pm)  

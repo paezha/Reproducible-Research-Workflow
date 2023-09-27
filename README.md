@@ -186,8 +186,9 @@ GitHub](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Ses
 [What is version
 control?](https://en.wikipedia.org/wiki/Version_control)  
 [What is GitHub?](https://en.wikipedia.org/wiki/GitHub)  
-*Activity 3*: Post a README notice in GitHub and one document with basic
-operations in `R`
+[{gitcreds}: a package to query git credentials from
+`R`](https://gitcreds.r-lib.org/) *Activity 3*: Post a README notice in
+GitHub and one document with basic operations in `R`
 
 **Week 5** (Oct. 4, 1:00 pm - 3:30 pm)  
 *Topic*: [Data Management Plans (DMP):
