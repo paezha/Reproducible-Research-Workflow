@@ -171,6 +171,7 @@ Tatiane | Ferrari | Economics
 Fernando | Romero | Engineering
 Jane | Doe | Geography
 Elizabeth | Phillips | PNB
+Claire | Gillespie | Chemistry
 
 #### Workflow
 
