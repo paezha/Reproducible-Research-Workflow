@@ -172,6 +172,7 @@ Fernando | Romero | Engineering
 Jane | Doe | Geography
 Noah | Britt | PNB
 Elizabeth | Phillips | PNB
+Claire | Gillespie | Chemistry
 
 #### Workflow
 
