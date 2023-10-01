@@ -7,3 +7,4 @@ procedure-to-create-package.R
 .Rdata
 .httr-oauth
 .DS_Store
+.quarto
