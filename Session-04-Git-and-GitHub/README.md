@@ -171,6 +171,7 @@ Tatiane | Ferrari | Economics
 Fernando | Romero | Engineering
 Jane | Doe | Geography
 
+
 #### Workflow
 
 The workflow with GitHub Desktop, once you have cloned a repository, is as follows:
