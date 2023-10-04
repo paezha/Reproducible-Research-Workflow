@@ -169,8 +169,12 @@ Sears | Sean | Geography
 Rajveer | Ubhis | Geography
 Tatiane | Ferrari | Economics
 Fernando | Romero | Engineering
-Jane | Doe | Geography
 Sadia | Tasnim | Engineering
+Almodather | Mohamed | Civil Engineering
+Emilie | Diesbourg | Biology
+Noah | Britt | PNB
+Elizabeth | Phillips | PNB
+Claire | Gillespie | Chemistry
 
 #### Workflow
 

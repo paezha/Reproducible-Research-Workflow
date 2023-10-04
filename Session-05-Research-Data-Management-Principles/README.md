@@ -128,7 +128,7 @@ The CARE Principles aim to complement the FAIR Principles and encourage the cons
 
 ![https://www.adalovelaceinstitute.org/blog/care-principles-operationalising-indigenous-data-governance/](CARE-1.png)
 
-#### OCAP(Ownership, Control, Access, Possession) Principles (First Nations Information Governance Centre - FNIGC) 
+#### OCAP (Ownership, Control, Access, Possession) Principles (First Nations Information Governance Centre - FNIGC) 
 
 OCAP is a data governance framework developed by FNIGC to establish guidance for the collection, protection, use and sharing of First Nations data and information. The following excerpts from [FNIGC](https://fnigc.ca/ocap-training/) outline the OCAP Principles aimed to establish rules around the collection, protection, use and sharing of First Nations data and information:
 
