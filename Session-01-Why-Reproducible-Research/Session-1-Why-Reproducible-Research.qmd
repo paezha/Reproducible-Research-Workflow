@@ -1,0 +1,134 @@
+---
+title: "Why reproducible research"
+author: "Antonio Paez"
+format: revealjs
+---
+
+Vignette 1: The case for austerity
+========================================================
+
+2008 Financial Crisis
+
+- Possibly the most serious economic crisis since Great Depression
+- Slowed economic growth
+- Increased economic inequality
+
+The case for austerity
+========================================================
+
+Harvard economists Carmen Reinhart and Keneth Rogoff published _Growth in a Time of Debt_ in 2010
+
+- Paper argued that large national debt is associated with slowed growth
+- With gross external debt of 60%, annual growth declines by 2%
+- With gross external debt in excess of 90%, annual growth cut approximatley by half
+
+The case for austerity
+========================================================
+
+The message of Reinhart and Rogoff (that debt slowed growth) was quoted by influential politicians 
+
+- Congressman Paul Ryan, later Speaker of the House in the USA
+- Vice-president of the European Commission Olli Rehn
+
+[The 90% Question](https://www.economist.com/finance-and-economics/2013/04/20/the-90-question)
+
+The case for austerity
+========================================================
+
+Reinhart and Rogoff made the data publicly available in spreadsheets
+
+However, the analysis was not documented and other researchers could not replicate the results
+
+
+The case for austerity
+========================================================
+
+Herndon (then a grad student at the University of Massachusetts Amherst), [failed to reproduce the results](https://www.bbc.com/news/magazine-22223190) of Reinhart and Rogoff while working on a course assignment 
+
+He was encouraged by two professors, Ash and Pollin, to contact Reinhart and Rogoff, who eventually shared their Excel spreadsheet with the original analysis...which revealed gross errors in data processing and questionable modelling choices  
+
+
+The case for austerity?
+========================================================
+
+By the time the errors of Reinhart and Rogoff were [revealed](https://doi.org/10.1093/cje/bet075), the impact of their flawed research had already been felt
+
+...and, as some have argued, the worst of the damage was [done](https://www.theguardian.com/business/ng-interactive/2015/apr/29/the-austerity-delusion)  
+
+
+Alas, old habits die hard
+========================================================
+
+A 2021 [review](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008984) found that lessons were not learned in computational biology.
+
+Speaking of biologists...  
+
+
+Vignette 2: The spiders that were not
+========================================================
+
+Jonathan Pruitt...
+
+Recruited by McMaster as a rising star, enticed into Canada with a prestigious Canada 150 Research Chair
+
+The spiders that were not
+========================================================
+
+Kate Laskowski, who co-authored several papers with Pruitt, became suspicious of the data Pruitt had provided
+
+After lengthy data forensics exercise, Laskowski [discovered troubling regularities in the data]([https://laskowskilab.faculty.ucdavis.edu/2020/01/29/retractions/])
+
+The spiders that were not
+========================================================
+
+Long story short, an investigation concluded that Pruitt had [fabricated at least some of his data](https://www.science.org/content/article/university-investigation-found-prominent-spider-biologist-fabricated-falsified-data)
+
+The spiders that were not
+========================================================
+
+Pruitt [lost his research chair](https://www.cbc.ca/news/canada/hamilton/jonathan-pruitt-canada-150-chairs-funding-suspended-1.6268238) and [resigned from McMaster in disgrace](https://www.cbc.ca/news/canada/hamilton/johnathan-pruitt-investigation-mcmaster-resigns-1.6517727) 
+
+Vignette 3: The master student
+========================================================
+
+A master student is working on their dissertation and they have an incentive to publish their research
+
+The master student
+========================================================
+
+The student and their supervisor spend countless hours working on a project
+
+- Collecting data
+- Organizing and cleaning the data
+- Doing data analysis
+- Writing a paper
+
+The master student
+========================================================
+
+A paper is submitted for possible publication  
+
+...just in time before the student graduates
+
+The master student
+========================================================
+
+Several months later, response that the paper was positively reviewed is received
+
+But some of the revisions require a partial reanalysis
+
+
+The master student
+========================================================
+
+At that point, the former master student was living in a different country, and they cannot find the original data files and analysis scripts  
+
+The supervisor has an obsolete version of the data files but no copy of the scripts  
+
+
+The master student
+========================================================
+
+The effort needed to reanalyze the data to revise the paper means that revisions take a long time
+
+...or are never completed
