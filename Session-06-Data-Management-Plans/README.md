@@ -10,18 +10,19 @@
 
 ![https://biblio.uottawa.ca/sites/biblio.uottawa.ca/files/data_life_cycl](DLC_Plan.png)
 
-### Portage Data Management Plan Assistant 
+### Portage Data Management Plan Assistant  
 
 As discussed last session, many project or funding proposals require data management to be factored into the research process. Often this requirement will be a formal Data Management Plan (DMP). Even if not required, the process of creating a DMP can help solidify the data acquisition and management processes necessary to generate the data outputs necessary to support reproducible research, funding and journal requirements as well as institutional or project needs. To support researchers in developing DMPs, the Portage Network (now part of the Digital Research Alliance of Canada) provides an online tool that can be used to develop, collaborate/share, and output DMPs (Export to pdf, csv, text, xml, html, json, docx).  The guiding questions help to assess data needs from start to finish.
 
 The following are extracted from the Portage Network Data Management Assistant (guiding questions)
 
-URL:   https://assistant.portagenetwork.ca/
+URL:   https://assistant.portagenetwork.ca/  
 
 
 ### DMP Assistant: Data Collection
 
-### What types of data will you collect, create, link to, acquire and/or record?
+### What types of data will you collect, create, link to, acquire and/or record?  
+
 ### What file formats will your data be collected in? Will these formats allow for data re-use, sharing and long-term access to the data? 
 
 From this, a researcher can take an inventory of the data that they will need to collect or obtain for their project, for example:
@@ -34,11 +35,11 @@ Vegetation | Secondary| Identify from imagery| HDF | GEOTIFF
 Vegetation (Ground Truth) | Primary | In situ sampling/GPS guided | XLS | CSV
 
 To reiterate the quick hits from last meeting, consider:
-### File formats
+
+### File formats  
 
 * Open formats, non-proprietary where possible
 * Lossless formats for imagery
-        
         
 ### What conventions and procedures will you use to structure, name and version-control your files to help you and others better understand how your data are organized?
 
@@ -52,8 +53,10 @@ Develop your conventions with the following in mind:
 *  Think about how you would search for information, (e.g. by location, by experiment, by variable).  Also consider how colleagues may search for data/information.
 
 ![https://www.ukdataservice.ac.uk/manage-data/format/organising](folderstructure.gif)
-##### From UK Data Service: https://www.ukdataservice.ac.uk/manage-data/format/organising
-### File Naming
+
+##### From UK Data Service: https://www.ukdataservice.ac.uk/manage-data/format/organising  
+
+### File Naming  
 
 Identify what elements you want in your file name to assist you and others to find data quickly.
 
@@ -81,11 +84,14 @@ Names should:
 
 ### DMP Assistant: Documentation and Metadata
 
-### What documentation will be needed for the data to be read and interpreted correctly in the future?
-### How will you make sure that documentation is created or captured consistently throughout your project?
-### If you are using a metadata standard and/or tools to document and describe your data, please list here.
+### What documentation will be needed for the data to be read and interpreted correctly in the future?  
 
-#### Reflections and Best Practices
+### How will you make sure that documentation is created or captured consistently throughout your project?  
+
+### If you are using a metadata standard and/or tools to document and describe your data, please list here.  
+
+
+#### Reflections and Best Practices  
 
 Creating a set of policies/procedures will benefit the current project and provide a foundation for future projects as well.  This is another way that we can "reuse" in our research.
 Process Documentation
@@ -106,9 +112,11 @@ Metadata standards
 
 ### DMP Assistant: Storage and Backup
 
-### What are the anticipated storage requirements for your project, in terms of storage space (in megabytes, gigabytes, terabytes, etc.) and the length of time you will be storing it?
-### How and where will your data be stored and backed up during your research project?
-### How will the research team and other collaborators access, modify, and contribute data throughout the project?
+### What are the anticipated storage requirements for your project, in terms of storage space (in megabytes, gigabytes, terabytes, etc.) and the length of time you will be storing it?  
+
+### How and where will your data be stored and backed up during your research project?  
+
+### How will the research team and other collaborators access, modify, and contribute data throughout the project?  
 
 ### McMaster Storage Resources
 
