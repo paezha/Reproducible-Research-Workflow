@@ -155,6 +155,7 @@ In your forked repo edit the following table to include your name and program:
 
 Student Name | Last Name | Program
 -|-|-
+Claire | Estey | Biology
 Niloofar | Nalaee | Geography
 Ricardo | Barros Lourenco | Geography
 Anastasia | Soukhov | Geography
@@ -176,6 +177,10 @@ Noah | Britt | PNB
 Elizabeth | Phillips | PNB
 Claire | Gillespie | Chemistry
 Athena | Flores Miranda | Medical Sciences 
+Haoran | Xu | Geography
+Zaineb | Hamoodi | Chemical Biology
+Liam | Surry | Chemical Biology 
+Zehui | Yin | Geography
 
 #### Workflow
 
