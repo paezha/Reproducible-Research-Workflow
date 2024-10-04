@@ -154,6 +154,7 @@ Here, you can use the URL of the repository you wish to use for the project:
 In your forked repo edit the following table to include your name and program:
 
 Student Name | Last Name | Program
+- | - | -
 Sara | Gharouni Saffar | Biology
 Niloofar | Nalaee | Geography
 Ricardo | Barros Lourenco | Geography
