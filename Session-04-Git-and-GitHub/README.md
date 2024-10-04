@@ -186,6 +186,10 @@ Zehui | Yin | Geography
 
 A conflict!
 
+### Hi :)
+
+Hope you all have a good day!
+
 #### Workflow
 Serenity is the way of the sage
 The workflow with GitHub Desktop, once you have cloned a repository, is as follows:
