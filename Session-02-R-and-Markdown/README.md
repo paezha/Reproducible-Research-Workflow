@@ -46,7 +46,7 @@ Let us take a few minutes to explore the different parts of the IDE.
 
 Once that you are familiar with the different parts of the R Studio IDE, we are ready to use the _Source_ pane. This pane is basically a text editor that allows you to work with many different types of text files. 
 
-A basic type of text file is an R script. R scripts have the extension ".R" and recognize all text as if it was R code. When working with R code, you can add comments by using this nark: "#". Any lines that begin with this mark are ignored when executing code. 
+A basic type of text file is an R script. R scripts have the extension ".R" and recognize all text as if it was R code. When working with R code, you can add comments by using this mark: "#". Any lines that begin with this mark are ignored when executing code. 
 
 The traditional way of scripting is to write code and add commentary around it. Create a new script and try the following:
 
