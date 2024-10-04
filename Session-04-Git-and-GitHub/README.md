@@ -184,7 +184,8 @@ Zehui | Yin | Geography
 
 #### I am creating conflict
 
-A conflict!
+A conflict! Conflicts are fun!
+
 
 ### Hi :)
 
