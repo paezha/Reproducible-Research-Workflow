@@ -176,6 +176,8 @@ Noah | Britt | PNB
 Elizabeth | Phillips | PNB
 Claire | Gillespie | Chemistry
 Zaineb | Hamoodi | Chemical Biology
+Liam | Surry | Chemical Biology 
+Zehui | Yin | Geography
 
 #### Workflow
 
