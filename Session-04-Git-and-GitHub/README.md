@@ -187,7 +187,7 @@ Zehui | Yin | Geography
 A conflict!
 
 #### Workflow
-
+Serenity is the way of the sage
 The workflow with GitHub Desktop, once you have cloned a repository, is as follows:
 
 1. Make changes to your project (i.e., edit files, create new files, delete files, etc.)
