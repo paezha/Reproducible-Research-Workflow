@@ -155,6 +155,7 @@ In your forked repo edit the following table to include your name and program:
 
 Student Name | Last Name | Program
 -|-|-
+Claire | Estey | Biology
 Niloofar | Nalaee | Geography
 Ricardo | Barros Lourenco | Geography
 Anastasia | Soukhov | Geography
