@@ -177,6 +177,10 @@ Noah | Britt | PNB
 Elizabeth | Phillips | PNB
 Claire | Gillespie | Chemistry
 
+### Hi :)
+
+Hope you all have a good day!
+
 #### Workflow
 
 The workflow with GitHub Desktop, once you have cloned a repository, is as follows:
