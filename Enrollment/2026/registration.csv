@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Registration Number,Name,email,Supervisor,Unit,Activity-1
 1,Jadesola Lawal,lawalj@mcmaster.ca,Sang-Tae Kim,SEES,
 2,Yihao Xin,xiny36@mcmaster.ca,Alemu Gonsamo,SEES,
@@ -9,3 +10,16 @@ Registration Number,Name,email,Supervisor,Unit,Activity-1
 8,Liam Gabriel Bendzsa,bendzsal@mcmaster.ca,Darren Scott,SEES,Complete
 9,Damian Clemens Glauser,glauserd@mcmaster.ca,Exchange student,,Complete
 10,Sara Victoria Hess,hesses@mcmaster.ca,Alemu Gonsamo,SEES,Complete
+=======
+Registration Number,Name,email,Supervisor,Unit
+1,Jadesola Lawal,lawalj@mcmaster.ca,Sang-Tae Kim,SEES
+3,Yihao Xin,xiny36@mcmaster.ca,Alemu Gonsamo,SEES
+4,Amanda Rorat,rorata@mcmaster.ca,Antonio Paez,SEES
+5,Julian Vella,vellaj1@mcmaster.ca,Antonio Paez,SEES
+6,Ben Betteto,bettetob@mcmaster.ca,Darren Scott,
+7,Jun Tan,tan17@mcmaster.ca,Alemu Gonsamo,SEES
+8,Tessa Forth,fortht@mcmaster.ca,Alemu Gonsamo,SEES
+9,Liam Gabriel Bendzsa,bendzsal@mcmaster.ca,,
+10,Damian Clemens Glauser,glauserd@mcmaster.ca,,
+11,Sara Victoria Hess,hesses@mcmaster.ca,,
+>>>>>>> a6ea58fa7a104f225efb9485536798f47966e505

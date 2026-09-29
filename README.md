@@ -159,7 +159,8 @@ research?](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/
 policy environment, journal policies and the publication process,
 roadmap for course
 
-**Week 2** (Sept. 23, 12:00 pm - 2:00 pm) *Topic*: [`R` + RStudio +
+**Week 2** (Sept. 23, 12:00 pm - 2:00 pm)  
+*Topic*: [`R` + RStudio +
 markdown](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-02-R-and-Markdown)  
 *Suggested Readings*:  
 [What is `R`?](https://www.r-project.org/about.html)  
@@ -169,7 +170,8 @@ Markdown](https://rmoff.net/2017/09/12/what-is-markdown-and-why-is-it-awesome/)
 *Activity 1*: Use markdown to create a document with basic operations in
 `R`
 
-**Week 3** (Sept. 30, 12:00 pm - 2:00 pm) *Topic*: [Version Control and
+**Week 3** (Sept. 30, 12:00 pm - 2:00 pm)  
+*Topic*: [Version Control and
 GitHub](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-04-Git-and-GitHub)  
 *Readings*:  
 [What is version
@@ -179,10 +181,11 @@ control?](https://en.wikipedia.org/wiki/Version_control)
 `R`](https://gitcreds.r-lib.org/) *Activity 2*: Post a README notice in
 GitHub and one document with basic operations in `R`
 
-**Week 4** (Oct. 9, 12:00 pm - 2:00 pm) Antonio will be retreating in
-silence on October 7
+**Week 4** (Oct. 7)  
+Antonio will be retreating in silence on October 7
 
-**Week 5** (Oct. 14) *Topic*: Reading week  
+**Week 5** (Oct. 14)  
+*Topic*: Reading week  
 *Readings*: N/A
 
 **Week 6** (Oct. 21, 12:00 pm - 2:00 pm)  
@@ -204,12 +207,6 @@ Principles](https://github.com/paezha/Reproducible-Research-Workflow/tree/master
 data](https://www.elsevier.com/connect/10-aspects-of-highly-effective-research-data)  
 <!--_Activity 3_:   Create a list of data that you will be creating and using as part of your project-->
 
-**Week 8** (Nov. 4, 12:00 pm - 2:00 pm) *Topic*: [Data Management Plans
-(DMP):
-Tools](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-06-Data-Management-Plans)  
-*Readings*: TBD  
-*Activity 4*: Write a DMP and post in GitHub
-
 <!-- 
 **Week 7** (Oct. 25, 12:00 pm - 2:00 pm)  
 _Topic_:    [Forensic issues and archiving](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-06-Forensic-Issues-and-Archiving)  
@@ -217,7 +214,7 @@ _Readings_: TBD
 _Activity 4_:   Update the DMP and post in GitHub  
 -->
 
-**Week 9** (Nov. 11, 12:00 pm - 2:00 pm)  
+**Week 8** (Nov. 4, 12:00 pm - 2:00 pm)  
 *Topic*: [Creating packages in `R` and documenting
 datasets](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-07-Creating-R-Packages-and-Documenting-Data)  
 *Readings*:  
@@ -230,8 +227,8 @@ Example](https://kbroman.org/pkg_primer/)
 Packages](https://rstudio.github.io/r-manuals/r-exts/Creating-R-packages.html)  
 *Activity 5*: Create a small package with a dataset
 
-**Week 9** (Nov. 13, 2:30 pm - 4:30 pm) *Topic*: [Documenting data
-analysis and use of
+**Week 9** (Nov. 11, 12:00 pm - 2:00 pm)  
+*Topic*: [Documenting data analysis and use of
 RMarkdown](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-08-Documenting-Data-Analysis-with-RMarkdown)  
 *Readings*:  
 [Ten Simple Rules for Reproducible Computational
@@ -241,26 +238,21 @@ Computing](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio
 *Activity 6*: Create an R Makdown file with documented data analysis (a
 vignette for your package)
 
-**Week 10** (Nov. 18, 12:00 pm - 2:00 pm) *Topic*: [Peer review and
+**Week 9** (Nov. 13, 2:30 pm - 4:30 pm)  
+*Topic*: [Peer review and
 collaboration](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-09-Peer-Review-and-Collaboration)  
 *Readings*: Review readings of Sessions 7 and 8  
 *Activity 7*: In-class activity peer reviewing packages, vignettes, and
 revisions due in GitHub
 
-**Week 10** (Nov. 20, 2:30 pm - 4:30 pm) *Topic*: [{Rticles} and
-practical issues preparing self-contained open research
-documents](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-10-Rticles-Math-and-Figures)  
-*Readings*:  
-[LaTeX for
-Beginners](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)  
-[{ggplot2}: A Package for a Grammar of
-Graphics](https://ggplot2-book.org/)  
-*Activity*: No activity this week
+**Week 10** (Nov. 18, 12:00 pm - 2:00 pm)  
+*Topic*: [Peer review and
+collaboration](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-09-Peer-Review-and-Collaboration)  
+*Readings*: Review readings of Sessions 7 and 8  
+*Activity 7*: In-class activity peer reviewing packages, vignettes, and
+revisions due in GitHub
 
-**Week 11** (Nov. 25, 12:00 pm - 2:00 pm) Antonio will be in Brussels on
-November 25
-
-**Week 12** (Dec. 2, 12:00 pm - 2:00 pm) *Topic*: Package *Topic*:
+**Week 10** (Nov. 20, 2:30 pm - 4:30 pm) *Topic*: Package *Topic*:
 [{Rticles} and practical issues preparing self-contained open research
 documents (tables and
 citations)](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-11-Rticles-Tables-and-Citations)  
@@ -272,10 +264,24 @@ HTML](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table
 PDF](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)  
 *Activity*: Final deliverable due on DATE TBD.
 
-**Week 13** (Nov. 25, 12:00 pm - 2:00 pm) Antonio will be retreating in
-silence on December 9
+**Week 11** (Nov. 25, 12:00 pm - 2:00 pm)  
+Antonio will be in Brussels on November 25
 
-**BONUS SESSION** (Dec. 16, 12:00 pm - 2:00 pm)
+**Week 12** (Dec. 2, 12:00 pm - 2:00 pm)  
+*Topic*: [{Rticles} and practical issues preparing self-contained open
+research
+documents](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-10-Rticles-Math-and-Figures)  
+*Readings*:  
+[LaTeX for
+Beginners](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)  
+[{ggplot2}: A Package for a Grammar of
+Graphics](https://ggplot2-book.org/)  
+*Activity*: No activity this week
+
+**Week 13** (Dec. 9)  
+Antonio will be retreating in silence on December 9
+
+**BONUS SESSION** (Dec. 16, 12:00 pm - 2:00 pm)  
 [{macdown}](https://paezha.github.io/macdown/): writing a thesis in R
 markdown  
 *Readings*: No readings assigned
