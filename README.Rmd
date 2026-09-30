@@ -175,7 +175,7 @@ _Activity 6_: 	Create an R Makdown file with documented data analysis (a vignett
   
 **Week 9** (Nov. 13, 2:30 pm - 4:30 pm)  
 _Topic_:	[Peer review and collaboration](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-09-Peer-Review-and-Collaboration)  
-_Readings_: Review readings of previous two sessions    
+_Readings_: Review readings of Sessions 7 and 8  
 _Activity 7_: 	In-class activity peer reviewing packages, vignettes, and revisions due in GitHub
   
 **Week 10** (Nov. 18, 12:00 pm - 2:00 pm)  
@@ -192,7 +192,7 @@ _Readings_:
 [{ggplot2}: A Package for a Grammar of Graphics](https://ggplot2-book.org/)  
 _Activity_:	Final deliverable due on DATE TBD  
 
-**Week 11** (Nov. 25, 12:00 pm - 2:00 pm)  
+**Week 11** (Nov. 25)  
 Antonio will be in Brussels on November 25
 
 **Week 12** (Dec. 2, 12:00 pm - 2:00 pm)  

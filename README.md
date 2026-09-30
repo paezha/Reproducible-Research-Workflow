@@ -244,7 +244,7 @@ vignette for your package)
 **Week 9** (Nov. 13, 2:30 pm - 4:30 pm)  
 *Topic*: [Peer review and
 collaboration](https://github.com/paezha/Reproducible-Research-Workflow/tree/master/Session-09-Peer-Review-and-Collaboration)  
-*Readings*: Review readings of previous two sessions  
+*Readings*: Review readings of Sessions 7 and 8  
 *Activity 7*: In-class activity peer reviewing packages, vignettes, and
 revisions due in GitHub
 
@@ -270,7 +270,7 @@ Beginners](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 Graphics](https://ggplot2-book.org/)  
 *Activity*: Final deliverable due on DATE TBD
 
-**Week 11** (Nov. 25, 12:00 pm - 2:00 pm)  
+**Week 11** (Nov. 25)  
 Antonio will be in Brussels on November 25
 
 **Week 12** (Dec. 2, 12:00 pm - 2:00 pm)  
