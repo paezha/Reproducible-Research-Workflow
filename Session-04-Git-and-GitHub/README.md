@@ -182,6 +182,7 @@ Zaineb | Hamoodi | Chemical Biology
 Liam | Surry | Chemical Biology 
 Zehui | Yin | Geography
 Sara | Hesse | Environmental Sciences
+Liam | Bendzsa | Environmental Sciences
 
 #### I am creating conflict
 
