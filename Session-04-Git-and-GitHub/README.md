@@ -241,10 +241,6 @@ Instead (or in addition) to credentialling your system with GitHub from `R` acco
 
 7. Once you have done this, go to GitHub and in the repository settings look for "Collaborators". Invite me to collaborate (my GitHub handle is `paezha`)  
 
-### Also for next week: 
-
-Please sign-up for a DMP Assistant @ https://dmp-pgd.ca
-
 ### Suggested readings
 
 [Data Science Training for the Arctic Data Center - Introduction to R and R Markdown](http://training.arcticdata.io/materials/arctic-data-center-training/version-control-with-git-and-github.html)

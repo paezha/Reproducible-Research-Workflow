@@ -106,6 +106,10 @@ A reproducible environment is portable, which means that it can be used by yours
 
 1. Add a section to your README.Rmd to explain what goes where in your folder structure
 
+### Also for next week: 
+
+Please sign-up for a DMP Assistant @ https://dmp-pgd.ca
+
 ### Suggested readings
 
 [What is version control?](https://intro2r.com/rsprojs.html)  
