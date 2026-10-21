@@ -243,7 +243,7 @@ Instead (or in addition) to credentialling your system with GitHub from `R` acco
 
 ### Also for next week: 
 
-Please sign-up for a DMP Assistant @ https://assistant.portagenetwork.ca/?locale=en
+Please sign-up for a DMP Assistant @ https://dmp-pgd.ca
 
 ### Suggested readings
 
