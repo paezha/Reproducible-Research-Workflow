@@ -181,10 +181,13 @@ Haoran | Xu | Geography
 Zaineb | Hamoodi | Chemical Biology
 Liam | Surry | Chemical Biology 
 Zehui | Yin | Geography
+Tessa | Forth | Earth & Environmental Science
+Sara | Hesse | Environmental Sciences
+Liam | Bendzsa | Environmental Sciences
 
 #### I am creating conflict
 
-A conflict! Conflicts are fun! But I am also writing something else here.
+Conflicts are fun! But I am also writing something else here.
 
 ### Hi :)
 
