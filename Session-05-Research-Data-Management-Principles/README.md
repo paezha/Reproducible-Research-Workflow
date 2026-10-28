@@ -13,8 +13,6 @@ From the [McMaster Research Office for Administration, Development and Support (
 
  - Active
  - On-going (Throughout the research process)
- 
- **Add:** 
  - Best Practices and Standards
 
 ## The Case for RDM?
@@ -66,6 +64,8 @@ The policies of funding agencies around the world have increased their focus on 
 - Supporting best practices
 - Providing access to resources
 - Creating guidance and policies
+
+At McMaster we have excellent support from the [Sherman Centre](https://scds.ca).
 
 **Research Funders**
 - Developing policies & guidance
